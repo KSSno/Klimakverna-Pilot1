@@ -1,0 +1,5 @@
+{
+    "file_pattern": [
+        "/home/shamlym/workspace/klima-kverna/nc/cnrm-r1i1p1f2-hclim/pr/[hks][ips][s4p][tc3]*/*.nc4"
+    ]
+}

@@ -1,0 +1,14 @@
+from snakemake.utils import min_version
+
+configfile: "./config/config.yaml"
+
+include: "rules/test_case1.smk"
+include: "rules/common_util.smk"
+include: "rules/test_case2.smk"
+
+rule all:
+    input:
+        rules.kapy_all.input,
+        expand(os.path.join(MMD_OUT_DIR, "{filename}.xml") , filename=all_file_paths),
+        expand(os.path.join(NC_OUT_DIR, "{filename}.nc4") , filename=all_file_paths)    
+    default_target: True

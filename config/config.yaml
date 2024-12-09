@@ -1,0 +1,38 @@
+# Basic configuration file
+#---------------------------
+testcase_1:
+    configurationTables:
+        inputs:  'config/inputs.tsv'
+        indicators: 'config/indicators.tsv'
+        scenarios:  'config/scenarios.tsv'
+        periods:  'config/periods.tsv'
+        seasons: 'config/seasons.tsv'
+    dirs:
+        variables: 'outputs/testcase_1/1.variables/time_binning_periods/noresm_hclim'
+        indicators: 'outputs/testcase_1/2.indicators/time_binning_periods/noresm_hclim'
+        regridded: 'outputs/testcase_1/3.commmon_grid'
+        ensstats: 'outputs/testcase_1/4.ensstats/time_binning_periods/noresm_hclim'
+        arealstats: 'outputs/testcase_1/5.areal_statistics/time_binning_periods/noresm_hclim'
+        plots: 'outputs/testcase_1/6.plots/noresm_hclim'
+        netcdf: 'outputs/testcase_1/7.netcdf/noresm_hclim'
+
+    # Configuration options------------------------------------
+    arealstats:
+        calcForMembers: False
+    cutouts:
+        method: 'lonlatbox'
+        xmin: 4.088
+        xmax: 31.761
+        ymin: 57.759
+        ymax: 71.384
+    ensembles:
+        upperPercentile: 90
+        centralPercentile: 50
+        lowerPercentile: 10
+    outputGrid:
+        regriddingEngine: None
+testcase_2:        
+        input_json: "config/testcase_2.json"
+        mmd_output: "outputs/testcase_2/mmd"
+        nc_output: "outputs/testcase_2"
+        input_base: "inputs/testcase_2/"

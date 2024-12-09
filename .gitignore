@@ -1,0 +1,18 @@
+# /*.ini
+# .snakemake
+# __pycache__
+# .ipynb_checkpoints
+# .Rproj.user
+# config.yaml
+# *.Rproj
+
+__pycache__
+*/__pycache__
+*/*/__pycache__
+.vscode
+
+.github
+workflow/.snakemake
+outputs/
+inputs/
+logs/
