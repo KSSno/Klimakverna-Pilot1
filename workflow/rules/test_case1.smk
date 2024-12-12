@@ -3,4 +3,4 @@ module kapy:
         "/home/shamlym/workspace/klima-kverna/KAPy/workflow/Snakefile"
     config:config['testcase_1']
 
-use rule * from kapy as testcase_1_*
+use rule * from kapy as testcase1_*
