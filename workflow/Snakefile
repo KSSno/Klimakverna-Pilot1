@@ -6,7 +6,7 @@ include: "rules/test_case2.smk"
 
 rule all:
     input:
-        rules.kapy_all.input,
+        rules.testcase1_all.input,
         expand(os.path.join(MMD_OUT_DIR, "{filename}.xml") , filename=all_file_paths),
         expand(os.path.join(NC_OUT_DIR, "{filename}.nc4") , filename=all_file_paths)    
     default_target: True
