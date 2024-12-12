@@ -8,13 +8,13 @@ testcase_1:
         periods:  'config/periods.tsv'
         seasons: 'config/seasons.tsv'
     dirs:
-        variables: 'outputs/testcase_1/1.variables/time_binning_periods/noresm_hclim'
-        indicators: 'outputs/testcase_1/2.indicators/time_binning_periods/noresm_hclim'
-        regridded: 'outputs/testcase_1/3.commmon_grid'
-        ensstats: 'outputs/testcase_1/4.ensstats/time_binning_periods/noresm_hclim'
-        arealstats: 'outputs/testcase_1/5.areal_statistics/time_binning_periods/noresm_hclim'
-        plots: 'outputs/testcase_1/6.plots/noresm_hclim'
-        netcdf: 'outputs/testcase_1/7.netcdf/noresm_hclim'
+        variables: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_1/1.variables/time_binning_periods/noresm_hclim'
+        indicators: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_1/2.indicators/time_binning_periods/noresm_hclim'
+        regridded: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_1/3.commmon_grid'
+        ensstats: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_1/4.ensstats/time_binning_periods/noresm_hclim'
+        arealstats: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_1/5.areal_statistics/time_binning_periods/noresm_hclim'
+        plots: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_1/6.plots/noresm_hclim'
+        netcdf: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_1/7.netcdf/noresm_hclim'
 
     # Configuration options------------------------------------
     arealstats:
@@ -33,6 +33,6 @@ testcase_1:
         regriddingEngine: None
 testcase_2:        
         input_json: "config/testcase_2.json"
-        mmd_output: "outputs/testcase_2/mmd"
-        nc_output: "outputs/testcase_2"
-        input_base: "inputs/testcase_2/"
+        mmd_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/mmd"
+        nc_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2"
+        input_base: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/"
