@@ -1,0 +1,19 @@
+name: klima
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - python==3.12.0
+  - pandas
+  - snakemake
+  - netcdf4
+  - xarray
+  - yaml
+  - arrow
+  - zarr
+  - xclim
+  - python-cdo
+  - plotnine
+  - pip
+  - pip:
+    - git+https://github.com/metno/py-mmd-tools.git 

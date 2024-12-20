@@ -1,0 +1,26 @@
+.
+├── config
+│   ├── calibration.tsv
+│   ├── config.yaml
+│   ├── griddes.txt
+│   ├── indicators.tsv
+│   ├── inputs.tsv
+│   ├── periods.tsv
+│   ├── seasons.tsv
+│   └── testcase_2.json
+├── inputs
+├── logs   
+├── outputs
+|   ├── testcase_2    
+│   └── testcase_2
+├── README.md
+└── workflow
+    ├── envs
+    │   └── klimakverna.yaml
+    ├── rules
+    │   ├── common_util.smk
+    │   ├── test_case1.smk
+    │   ├── test_case2.smk
+    │   └── testcase_2.smk
+    ├── scripts
+    └── Snakefile
