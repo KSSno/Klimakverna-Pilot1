@@ -1,0 +1,39 @@
+{
+    "global":
+    {
+        "observation": "",
+        "observation_id": "",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > WEATHER EVENTS > HEAT WAVE, GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "iso_topic_category": "climatologyMeteorologyAtmosphere",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)  ",
+        "creator_role": "Investigator, Technical contact, Technical contact, Metadata author, Metadata author",
+        "creator_type": "person, person, person, person, person",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no, climatedata@nve.no, climatedata@nve.no, climatedata@nve.no",
+        "creator_name": "Andreas Dobler, Andreas Dobler, Wai Kwok Wong, Irene Brox Nilsen, Sigrid Jørgensen Bakke",
+        "institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE)",
+        "institution_short_name": "",
+        "date_metadata_modified": "",
+        "title": "",
+        "title_no": "",
+        "summary": "",
+        "summary_no": "",
+        "product_name": ""
+    },
+    "diff-norheatwave":
+    {
+        "_FillValue": "",
+        "long_name": "Difference in number of Norwegian heatwave events between reference and future periods",
+        "standard_name": "",
+        "norwegian_name": "",
+        "metno_name": "",
+        "description": "DIfference in norwegian heat wave events. Change in the number of events with maximum temperature above or equal to 27 degrees (tasmax>=27°C) five days in a row between the reference period (1991-2020) and a future period. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "norwegian_description": "Differanse i norske hetebølgehendelser. Endring i antall hendelser med maksimumstemperatur over eller like 27 grader (tasmax>=27°C) fem dager på rad mellom referanseperioden (1991-2020) og en fremtidsperiode. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "units": "1",
+        "coordinates": "lat lon",
+        "grid_mapping": "projection_utm",
+        "timeinfo": "",
+        "cell_methods": "",
+        "threshold": "28"
+    }
+ 
+}

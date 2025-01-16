@@ -1,0 +1,26 @@
+{
+    "keywords_vocabulary": "GCMDSK:GCMD Science Keywords:https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords, GCMDPROV:GCMD Providers:https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/providers, GCMDLOC:GCMD Locations:https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/locations, GEMET:INSPIRE Themes:http://inspire.ec.europa.eu/theme, NORTHEMES:GeoNorge Themes:https://register.geonorge.no/metadata-kodelister/nasjonal-temainndeling",
+    "publisher_name": "Norwegian Meteorological Institute / Arctic Data Centre (NO/MET/ADC)",
+    "publisher_url": "https://adc.met.no",
+    "publisher_email": "adc-support@met.no",
+    "publisher_institution": "Norwegian Meteorological Institute",
+    "publisher_type": "institution",
+    "platform": "",
+    "platform_vocabulary": "",
+    "processing_level": "scientific",
+    "project": "Klima i Norge 2100-v2025 (KiN2100-v2025)",
+    "project_short_name": "",
+    "license": "http://spdx.org/licenses/CC-BY-4.0 (CC-BY-4.0)",
+    "references": "",
+    "source": "Climate Indicator",
+    "acknowledgement": "",
+    "Conventions": "",
+    "distribution_statement": "Free",
+    "spatial_representation": "grid",
+    "geospatial_lat_min": "57.765099",
+    "geospatial_lat_max": "72.094704",
+    "geospatial_lon_min": "-1.30915",
+    "geospatial_lon_max": "32.514702",
+    "geospatial_bounds": ""  
+    
+}

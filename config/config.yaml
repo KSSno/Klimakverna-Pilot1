@@ -36,3 +36,10 @@ testcase_2:
         mmd_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/mmd"
         nc_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2"
         input_base: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/"
+
+testcase_7:
+        attributes: "config/testcase_7/global_attr.json"
+        variables_pr: "config/testcase_7/variable_pr.json"
+        updated_nc: "output/testcase_7"
+        input_nc: "config/testcase_7/input.json"
+        input_base: "/home/shamlym/workspace/klima-kverna/nc/"
