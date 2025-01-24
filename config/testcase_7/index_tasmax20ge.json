@@ -1,39 +1,29 @@
 {
-    "global":
-    {
-        "observation": "",
-        "observation_id": "",
+    "global": {
+        
         "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate indicator",
         "iso_topic_category": "climatologyMeteorologyAtmosphere",
-        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE) ",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
         "creator_role": "Investigator, Technical contact, Metadata author, Metadata author",
         "creator_type": "person, person, person, person",
-        "creator_email": "climatedata@nve.no, klimavakten@met.no, climatedata@nve.no, climatedata@nve.no",
-        "creator_name": "Irene Brox Nilsen, Cristian Lussana, Irene Brox Nilsen, Sigrid Jørgensen Bakke",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no, climatedata@nve.no, climatedata@nve.no",
+        "creator_name": "Helga Therese Tilley Tajet, Cristian Lussana, Irene Brox Nilsen, Sigrid Jørgensen Bakke",
         "institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE)",
-        "institution_short_name": "",
-        "date_metadata_modified": "",
-        "title": "",
-        "title_no": "",
-        "summary": "",
-        "summary_no": "",
-        "product_name": ""
+        "institution_short_name": "MET Norway, NVE"
     },
-    "tasmax20ge":
-    {
-        "_FillValue": "",
+    "tasmax20ge": {
+        "_FillValue": "1.e+20f",
         "long_name": "Number of nordic summer days",
         "standard_name": "number_of_days_with_air_temperature_above_threshold",
-        "norwegian_name": "",
-        "metno_name": "",
+        "norwegian_name": "Antall nordiske sommerdager",
         "description": "Nordic summer days. Number of days with maximum temperature above or equal to 20 degrees (tasmax>=20 °C) for the period _PERIOD_",
         "norwegian_description": "Nordiske sommerdager. Antall dager med maksimumstemperatur over eller lik 20 grader (tasmax>=20 °C) for perioden _PERIOD_",
         "units": "1",
         "coordinates": "lat lon",
         "grid_mapping": "projection_utm",
-        "timeinfo": "",
-        "cell_methods": "",
+        "timeinfo": "18UTC-18UTC",
+        "cell_methods": "time: max time: mean",
         "threshold": "20"
     }
-            
 }
