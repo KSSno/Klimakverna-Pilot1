@@ -10,7 +10,6 @@ modified = False
 def update_metadata(input_file, output_file, global_attributes, attributes_variable_pr,attributes_variable_tasmax20ge,variable_diff_norheatwave, file_pattern_list):
     # Copy input file to the output location before editing
     copyfile(input_file, output_file)
-    print(input_file)
     add_common_global_attribute( output_file, global_attributes)
     for  type, pattern  in file_pattern_list.items():
         if (fnmatch.fnmatch(input_file, pattern)):
@@ -93,7 +92,8 @@ if __name__ == "__main__":
         variable_pr="variables.json"
         variable_diff_norheatwave="variable_diff_norheatwave.json"
         pattern_list= "pattern_list.json"
-    # Load global attributes from JSON
+        
+    # Load attributes from JSON
     with open(attributes, "r") as f:
         global_attributes = json.load(f)
     with open(variable_pr, "r") as f:
@@ -104,10 +104,9 @@ if __name__ == "__main__":
         attributes_variable_diff_norheatwave = json.load(f)    
     with open(pattern_list, "r") as f:
         data = json.load(f)
+        
     # Extract the list from the "file_pattern" key
     file_pattern_list = data["file_pattern"]
-    # Extract the list from the "file_pattern" key
-    # print_global_attributes(input_file)
+    
     update_metadata(input_file, output_file, global_attributes, attributes_variable_pr,attributes_variable_tasmax20ge,attributes_variable_diff_norheatwave, file_pattern_list)
-    # print_global_attributes(output_file)
 
