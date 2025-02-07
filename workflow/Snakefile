@@ -4,6 +4,7 @@ include: "rules/common_util.smk"
 include: "rules/testcase_1.smk"
 include: "rules/testcase_2.smk"
 include: "rules/testcase_6.smk"
+include: "rules/testcase_7.smk"
 
 rule all:
     input:
@@ -11,4 +12,5 @@ rule all:
         expand(os.path.join(MMD_OUT_DIR, "{filename}.xml") , filename=all_file_paths), # testcase 2
         expand(os.path.join(NC_OUT_DIR, "{filename}.nc4") , filename=all_file_paths),    # testcase 2
         rules.testcase_6_all.input, # testcase 6
+        expand(os.path.join(UPDATED_NC_OUT, "{filename}.nc4"), filename=all_file_paths),  # testcase 7
     default_target: True

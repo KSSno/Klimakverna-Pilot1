@@ -35,7 +35,7 @@ testcase_2:
         input_json: "/lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/config/testcase_2.json"
         mmd_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/mmd"
         nc_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2"
-        input_base: "/lustre/storeC-ext/users/kin2100/"
+        input_base: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/"
 testcase_6:
     configurationTables:
         inputs:  '../config/testcase_6/inputs.tsv'
@@ -62,3 +62,11 @@ testcase_6:
         lowerPercentile: 10
     outputGrid:
         regriddingEngine: None
+testcase_7:
+        attributes: "config/testcase_7/global_attr.json"
+        variables_pr: "config/testcase_7/variable_pr.json"
+        index_tasmax20ge: "config/testcase_7/index_tasmax20ge.json"
+        30_year_mean: "config/testcase_7/30_year_mean_diff_norheatwave.json"
+        updated_nc: "output/testcase_7"
+        input_nc: "config/testcase_7/input.json"
+        input_base: "/lustre/storeC-ext/users/kin2100/"
