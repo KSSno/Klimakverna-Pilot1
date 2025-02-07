@@ -1,4 +1,4 @@
-rule validate_and_move:
+rule testcase_2_validate_and_move:
     input:
         f"{INPUT_BASE}{{filename}}.nc4",
     output:

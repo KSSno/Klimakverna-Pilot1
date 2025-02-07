@@ -1,0 +1,28 @@
+{
+    "global": {
+        
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "iso_topic_category": "climatologyMeteorologyAtmosphere",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_role": "Investigator, Technical contact, Technical contact, Metadata author, Metadata author",
+        "creator_type": "person, person, person, person, person",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no, climatedata@nve.no, climatedata@nve.no, climatedata@nve.no",
+        "creator_name": "Julia Lutz, Andreas Dobler, Wai Kwok Wong, Irene Brox Nilsen, Sigrid Jørgensen Bakke",
+        "institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE)",
+        "institution_short_name": "MET Norway, NVE",
+        "product_name": "Bias-adjusted precipitation projections for Norway, 1 km2 spatial resolution"
+    },
+    "pr": {
+        "_FillValue": "1.e+20f",
+        "long_name": "Bias-Adjusted Precipitation",
+        "standard_name": "precipitation_flux",
+        "description": "",
+        "norwegian_description": "",
+        "units": "kg m-2 s-1",
+        "coordinates": "lat lon",
+        "grid_mapping": "projection_utm",
+        "timeinfo": "06-06 UTC",
+        "cell_methods": "time: mean"
+    }
+}
