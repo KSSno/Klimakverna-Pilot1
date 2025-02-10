@@ -2,11 +2,11 @@
 #---------------------------
 testcase_1:
     configurationTables:
-        inputs:  '../config/testcase_1/inputs.tsv'
-        indicators: '../config/testcase_1/indicators.tsv'
-        scenarios:  '../config/testcase_1/scenarios.tsv'
-        periods:  '../config/testcase_1/periods.tsv'
-        seasons: '../config/testcase_1/seasons.tsv'
+        inputs:  'config/testcase_1/inputs.tsv'
+        indicators: 'config/testcase_1/indicators.tsv'
+        scenarios:  'config/testcase_1/scenarios.tsv'
+        periods:  'config/testcase_1/periods.tsv'
+        seasons: 'config/testcase_1/seasons.tsv'
     dirs:
         variables: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_1/KAPy_results/1.variables/time_binning_periods/mpi_racmo'
         indicators: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_1/KAPy_results/2.indicators/time_binning_periods/mpi_racmo'
@@ -38,12 +38,12 @@ testcase_2:
         input_base: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/"
 testcase_6:
     configurationTables:
-        inputs:  '../config/testcase_6/inputs.tsv'
-        indicators: '../config/testcase_6/indicators.tsv'
-        scenarios:  '../config/testcase_6/scenarios.tsv'
-        periods:  '../config/testcase_6/periods.tsv'
-        seasons: '../config/testcase_6/seasons.tsv'
-        region: '../config/testcase_6/region.tsv'
+        inputs:  'config/testcase_6/inputs.tsv'
+        indicators: 'config/testcase_6/indicators.tsv'
+        scenarios:  'config/testcase_6/scenarios.tsv'
+        periods:  'config/testcase_6/periods.tsv'
+        seasons: 'config/testcase_6/seasons.tsv'
+        region: 'config/testcase_6/region.tsv'
     dirs:
         region: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_6/model_results/ecearth-racmo'
 
