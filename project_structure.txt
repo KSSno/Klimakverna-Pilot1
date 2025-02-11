@@ -8,19 +8,22 @@
 │   ├── periods.tsv
 │   ├── seasons.tsv
 │   └── testcase_2.json
+│   └── testcase_3.json
 ├── inputs
 ├── logs   
 ├── outputs
 |   ├── testcase_2    
-│   └── testcase_2
+│   └── testcase_3
+    └── testcase_7
 ├── README.md
 └── workflow
     ├── envs
     │   └── klimakverna.yaml
     ├── rules
     │   ├── common_util.smk
-    │   ├── test_case1.smk
-    │   ├── test_case2.smk
+    │   └── testcase_1.smk
     │   └── testcase_2.smk
+    │   └── testcase_3.smk
+    │   └── testcase_7.smk
     ├── scripts
     └── Snakefile

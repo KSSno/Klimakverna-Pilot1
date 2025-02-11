@@ -31,17 +31,43 @@ testcase_1:
         lowerPercentile: 10
     outputGrid:
         regriddingEngine: None
-testcase_2:        
-        input_json: "config/testcase_2.json"
-        mmd_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/mmd"
-        nc_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2"
-        input_base: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/"
+
+
+testcase_2:
+    input_json: "config/testcase_2.json"
+    mmd_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/mmd"
+    nc_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2"
+    input_base: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/"
+
+
+testcase_3:
+    output_dir: "output/testcase_3"
+    input_base: "/lustre/storeC-ext/users/klimakverna/CMIP/CMIP6.monthly"
+    file_pattern:
+        tas: "ssp*/tas_*2100.nc"
+        pr:  "ssp*/pr_*2100.nc"
+        psl:  "ssp*/psl_*2100.nc"
+    var_ranges:
+        tas_min: 206.0
+        tas_max: 318.0
+        pr_min: -1e-10
+        pr_max: 1e-03
+        psl_min: 95400
+        psl_max: 105100
+    cutouts:
+        # "none" or "lonlatbox"
+        method: "none"
+        xmin: 4.088
+        xmax: 31.761
+        ymin: 57.759
+        ymax: 71.384
+
 
 testcase_7:
-        attributes: "config/testcase_7/global_attr.json"
-        variables_pr: "config/testcase_7/variable_pr.json"
-        index_tasmax20ge: "config/testcase_7/index_tasmax20ge.json"
-        30_year_mean: "config/testcase_7/30_year_mean_diff_norheatwave.json"
-        updated_nc: "output/testcase_7"
-        input_nc: "config/testcase_7/input.json"
-        input_base: "/lustre/storeC-ext/users/kin2100/"
+    attributes: "config/testcase_7/global_attr.json"
+    variables_pr: "config/testcase_7/variable_pr.json"
+    index_tasmax20ge: "config/testcase_7/index_tasmax20ge.json"
+    30_year_mean: "config/testcase_7/30_year_mean_diff_norheatwave.json"
+    updated_nc: "output/testcase_7"
+    input_nc: "config/testcase_7/input.json"
+    input_base: "/lustre/storeC-ext/users/kin2100/"
