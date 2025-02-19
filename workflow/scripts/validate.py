@@ -1,7 +1,8 @@
 import netCDF4 
 from pydantic import BaseModel, Field, ValidationError , model_validator
 from dateutil import parser
-
+from shutil import copyfile
+import os
 
 
 class NetCDFMetadata(BaseModel):
@@ -14,16 +15,29 @@ class NetCDFMetadata(BaseModel):
     time_coverage_end :str = Field()
     time_coverage_start:str = Field()
     time_coverage_resolution:str = Field()
+    history:str = Field()
+    date_created:str = Field()
+    date_modified:str = Field()
+    observation:str =Field()
+    observation_id:str = Field()
+    product_name :str = Field()
 
 
+class NetCDFVariablePr(BaseModel):
+    FillValue: str = Field()
+    long_name: str = Field()
+    norwegian_name: str = Field()
+    description: str = Field()
+    norwegian_description: str = Field()
+    units: str = Field()
+    coordinates: str = Field()
+    grid_mapping: str = Field()
+    cell_methods: str = Field()
 
-class NetCDFVariable(BaseModel):
-    name: str = Field(..., description="Variable name")
-    dimensions: list[str] = Field(..., description="Variable dimensions")
-    dtype: str = Field(..., description="Variable data type")
+
 class NetCDFValidation(BaseModel):
     global_attrs: NetCDFMetadata
-    # variables: list[NetCDFVariable]
+    variable_pr: NetCDFVariablePr
 
 @model_validator(mode="after")
 def check_datetime_iso(self) -> "NetCDFMetadata":
@@ -35,45 +49,52 @@ def check_datetime_iso(self) -> "NetCDFMetadata":
         raise e
 
 
-def validate_nc_file(file_path):
+def validate_nc_file(file_path,ouput_dir):
 
     dataset = netCDF4.Dataset(file_path, mode='r')
 
     # Extract all global attributes dynamically
     global_attrs = {attr: getattr(dataset, attr) for attr in dataset.ncattrs()}
 
+
+    # Extract attributes for variable 'pr' 
+    var_name = "pr"
+    
+    if var_name in dataset.variables:
+        variable = dataset.variables[var_name]
+        pr_attributes = {}
+        for attr in variable.ncattrs():
+            new_attr_name = attr.lstrip("_")  # Remove leading underscore if present
+            pr_attributes[new_attr_name] = getattr(variable, attr)
+        # Store attributes in a dictionary
+        
+    else:
+        print(f"Variable '{var_name}' not found in the NetCDF file.")
+
     dataset.close()
 
     # Validate using Pydantic
     try:
         validated_data = NetCDFValidation(
-            global_attrs=NetCDFMetadata(**global_attrs)
+            global_attrs=NetCDFMetadata(**global_attrs),
+            variable_pr = NetCDFVariablePr(**pr_attributes)
         )
+        destination = os.path.join(ouput_dir, input_file)
+        copyfile(input_file, ouput_dir)
+
         print("Validation successful:", validated_data)
     except ValidationError as e:
         print("Validation failed:", e)
 
-        
-        # print("\n==== Variables ====")
-        # variables = [
-        #     {
-        #         "name": var_name,
-        #         "dimensions": list(var.dimensions),
-        #         "dtype": str(var.dtype),
-        #         "shape": var.shape,  # Optional: Include shape
-        #         "attributes": {attr: getattr(var, attr) for attr in var.ncattrs()}  # Extract variable-specific attributes
-        #     }
-        #     for var_name, var in nc.variables.items()
-        #     ]
-    
-        # try:
-        #     validated_data = NetCDFValidation(
-        #         global_attrs=NetCDFMetadata(**global_attrs),
-        #         variables=[NetCDFVariable(**var) for var in variables]
-        #     )
-        #     print("Validation successful:", validated_data)
-        # except ValidationError as e:
-        #     print("Validation failed:", e)
+if __name__ == "__main__":
 
-# Usage
-validate_nc_file("/home/shamlym/workspace/klima-kverna/nc/cnrm-r1i1p1f2-hclim_ssp370_3dbc-eqm-sn2018v2005_rawbc_norway_1km_tasmax20ge_annual_merged.nc")
+    try:
+        input_file = snakemake.input[0]
+        output_dir = snakemake.output[0]
+
+    except NameError:
+            # Default values for standalone testing
+            input_file = "example.nc"
+            
+    # Usage
+    validate_nc_file(input_file,output_dir)
