@@ -1,5 +1,3 @@
-configfile: "/lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/config/config.yaml"
-
 module testcase_1:
     snakefile:
         "/lustre/storeC-ext/users/klimakverna/development/KAPy/workflow/Snakefile"
