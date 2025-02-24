@@ -14,13 +14,13 @@ def update_metadata(input_file, output_file, global_attributes, attributes_varia
     for  type, pattern  in file_pattern_list.items():
         if (fnmatch.fnmatch(input_file, pattern)):
             if type=="pr" :
-                add_attributes_variables(output_file, "pr", attributes_variable_pr)
+                add_attributes_variables(output_file, type, attributes_variable_pr)
     
-            if type=="tasmax":
-                add_attributes_variables(output_file,"tasmax" , attributes_variable_tasmax20ge)
+            if type=="tasmax20ge":
+                add_attributes_variables(output_file,type , attributes_variable_tasmax20ge)
 
-            if type=="diff-norheatwave":
-                add_attributes_variables(output_file,"diff-norheatwave" , variable_diff_norheatwave)  
+            if type=="norheatwave":
+                add_attributes_variables(output_file,type , variable_diff_norheatwave)  
     global modified
     if modified:
         with Dataset(output_file, "r+") as nc:
