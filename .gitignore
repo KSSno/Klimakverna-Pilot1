@@ -16,3 +16,4 @@ workflow/.snakemake
 outputs/
 inputs/
 logs/
+.snakemake

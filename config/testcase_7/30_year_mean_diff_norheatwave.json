@@ -11,7 +11,7 @@
         "institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE)",
         "institution_short_name": "MET Norway, NVE"
     },
-    "diff-norheatwave": {
+    "norheatwave": {
         "_FillValue": "1.e+20f",
         "long_name": "Difference in number of Norwegian heatwave events between reference and future periods",
         "standard_name": "",

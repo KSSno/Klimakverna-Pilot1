@@ -1,7 +1,7 @@
 {
     "file_pattern": {
-        "pr": "/home/shamlym/workspace/klima-kverna/nc/3DBC/application/CMIP6/*/pr/*/*nc4",
-        "tasmax": "/home/shamlym/workspace/klima-kverna/nc/annmeans_bc/CMIP6/*/*_tasmax20ge_annual_merged.nc",
-        "diff-norheatwave": "/home/shamlym/workspace/klima-kverna/nc/annmeans_bc/ensmeans/norheatwave/*.nc"
+        "pr": "/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/*/pr/*/*nc4",
+        "tasmax20ge": "/lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/*/*_tasmax20ge_annual_merged.nc",
+        "norheatwave": "/lustre/storeC-ext/users/kin2100/MET/annmeans_bc/ensmeans/norheatwave/*.nc"
     }
 }
