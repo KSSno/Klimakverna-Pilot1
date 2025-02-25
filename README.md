@@ -118,15 +118,18 @@ where the filepath is to the run script which is run_snakemake.sh. Remember to c
 Check queue by 
 
 ```console
-qstat -q <queue_name> -u <user>
+qstat -q <queue_name> -u <user_name>
 ```
+where the `queue_name` is `all.q` as given in the run script.
 
 Delete job by running
+
 ```console
 qdel <job_id>
 ```
 
 The console output of the job is stored in `/lustre/storeC-ext/users/klimakverna/development/jobs/ERR_Klimakverna.<job_id>`.
+
 
 ## Output
 
