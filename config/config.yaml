@@ -48,12 +48,12 @@ testcase_3:
         pr:  "ssp*/pr_*2100.nc"
         psl:  "ssp*/psl_*2100.nc"
     var_ranges:
-        tas_min: 200.0
-        tas_max: 330.0
-        pr_min: 0.0
-        pr_max: 0.002
+        tas_min: 180.0
+        tas_max: 335.0
+        pr_min: -0.000001
+        pr_max: 0.005
         psl_min: 94000
-        psl_max: 107000
+        psl_max: 110000
     cutouts:
         # "none" or "lonlatbox"
         method: "none"
