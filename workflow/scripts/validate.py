@@ -33,6 +33,7 @@ class NetCDFVariablePr(BaseModel):
     coordinates: str = Field()
     grid_mapping: str = Field()
     cell_methods: str = Field()
+    timeinfo:str = Field()
 
 
 class NetCDFValidation(BaseModel):
