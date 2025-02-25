@@ -31,14 +31,17 @@ Source conda on PPI store-C by
 ```console
 source /modules/centos7/conda/prod_04_2021/etc/profile.d/conda.sh
 ```
-
-Activate environment for klimakverna pilot 1 by go to `/lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1` and run 
+*klimakverna environment is already created, jump to activate environment*
+Create environment for Klimakverna-Pilot1 by go to `/lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1` and run 
 
 ```console
-conda env create -f ./workflow/envs/klimakverna.yaml
-source activate klima
-``` 
+conda env create --name=klimakverna -f workflow/envs/environment.yml
+```
 
+Activate environment by
+```
+conda activate ../conda/klimakverna
+```
 
 ## Configuration
 
@@ -106,7 +109,26 @@ in the terminal. If everything is ok, the calculation is started by
 snakemake --cores 1
 ```
 
-## output
+Run on PPI with qsub
+
+```console
+qsub -V -b n -cwd <filepath>
+```
+where the filepath is to the run script which is run_snakemake.sh. Remember to change to your own mail in the run script.
+Check queue by 
+
+```console
+qstat -q <queue_name> -u <user>
+```
+
+Delete job by running
+```console
+qdel <job_id>
+```
+
+The console output of the job is stored in `/lustre/storeC-ext/users/klimakverna/development/jobs/ERR_Klimakverna.<job_id>`.
+
+## Output
 
 The output files from one calculation is saved in `.../lustre/storeC/development/output/`, where the different subdirectories correspond to the testcases. 
 
