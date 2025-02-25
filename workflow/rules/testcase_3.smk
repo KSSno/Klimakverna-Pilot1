@@ -20,7 +20,6 @@ for var, pattern in FILE_PATTERNS.items():
     for file_path in glob.glob(INPUT_BASE + '/' + pattern):
         infile = os.path.relpath(file_path, INPUT_BASE)
         infile_base = os.path.splitext(infile)[0]  # Discard the extension
-        #print(infile_base)
         ALL_FILES.append(infile_base)  # Append the file name without extension
 
 print('INPUT_BASE:', INPUT_BASE)
