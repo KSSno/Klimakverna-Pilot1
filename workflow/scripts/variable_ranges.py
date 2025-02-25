@@ -20,25 +20,24 @@ def check_variable_minmax(nc_file, var, var_ranges, cutouts, outfp):
         min_value = var_ranges[f'{var}_min']
         max_value = var_ranges[f'{var}_max']
 
+        print(var, 'minmax:', min_value, max_value)
         # Find indices where 'tas' values are below and above the thresholds
-        try:
-            outside_range = np.argwhere((da[var].values < min_value) | (da[var].values > max_value))
-        except:
-            print(f"Error: Range check failed", file=outfp)
-            print(f"Error: Range check failed: {nc_file}")
-            #da.to_netcdf(output_file + '.nc')
-            return
+        outside_range = np.argwhere((da[var].values < min_value) | (da[var].values > max_value))
 
-        print('# %s: %s' % (nc_file, "OK." if len(outside_range) == 0 else "Warning: values out of range:"), file=outfp)
-        for t, x, y in outside_range:
-            print('\t%s\t%s\t%g\t%s\t%.2f\t%.2f\t%s' %
-                  (var,
-                  f'>{max_value}' if da[var].values[t][x][y] > max_value else f'<{min_value}',
-                  da[var].values[t][x][y],
-                  da['time'].values[t],
-                  da['lat'].values[x],
-                  da['lon'].values[y],
-                  nc_file), file=outfp)
+        if len(outside_range) == 0:
+            print(f'# {nc_file}: OK: values are within range ({min_value}, {max_value})', file=outfp)
+        else:
+            print(f'# {nc_file}: WARN: values out of range:', file=outfp)
+            for t, x, y in outside_range:
+                print('\t%s\t%s\t%g\t%s\t%.2f\t%.2f\t%s' %
+                      (var,
+                      f'>{max_value}' if da[var].values[t][x][y] > max_value else f'<{min_value}',
+                      da[var].values[t][x][y],
+                      da['time'].values[t],
+                      da['lat'].values[x],
+                      da['lon'].values[y],
+                      nc_file), file=outfp)
+            da.to_netcdf(output_file + '.nc') # Save the area outside
 
 
 if __name__ == "__main__":
