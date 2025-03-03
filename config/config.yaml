@@ -35,7 +35,7 @@ testcase_2:
         input_json: "/lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/config/testcase_2.json"
         mmd_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/mmd"
         nc_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2"
-        input_base: "/lustre/storeC-ext/users/kin2100/"
+        input_base: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_7/"
 testcase_6:
     configurationTables:
         inputs:  'config/testcase_6/inputs.tsv'
