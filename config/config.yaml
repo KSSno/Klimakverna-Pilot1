@@ -32,7 +32,7 @@ testcase_1:
     outputGrid:
         regriddingEngine: None
 testcase_2:        
-        input_json: "/lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/config/testcase_2.json"
+        input_json: "config/testcase_2.json"
         mmd_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/mmd"
         nc_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2"
         input_base: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_7/"
