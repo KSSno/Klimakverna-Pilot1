@@ -70,3 +70,8 @@ testcase_7:
         updated_nc: "output/testcase_7"
         input_nc: "config/testcase_7/input.json"
         input_base: "/lustre/storeC-ext/users/kin2100/"
+testcase_hydro:
+        modell: "/lustre/storeC-ext/users/klimakverna/development/NVE/hydro/hbv/SourceDistHbv/hbv"
+        input: "/lustre/storeC-ext/users/klimakverna/development/NVE/hydro/hbv/test_shamly/control_hbv_cal.txt"
+        nse: "/lustre/storeC-ext/users/klimakverna/development/NVE/hydro/hbv/test_shamly/nse.r"
+        output: "/lustre/storeC-ext/users/klimakverna/development/NVE/hydro/hbv/test_shamly/"
