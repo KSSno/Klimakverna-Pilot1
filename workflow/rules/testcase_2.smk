@@ -4,9 +4,9 @@ import pandas as pd
 import glob
 import json
 
-testcase = config["testcase_2"]
+testcase =config["testcase_2"]
 
-NC_OUT_DIR = testcase["nc_output"]
+NC_OUT_DIR =testcase["nc_output"]
 INPUT_DIR = testcase["input_json"]
 INPUT_BASE = testcase["input_base"]
 
