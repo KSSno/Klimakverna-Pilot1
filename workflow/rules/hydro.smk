@@ -1,13 +1,13 @@
 config =config["testcase_hydro"]
 modell = config["modell"]
-input = config["input"]
+control_text = config["input"]
 nse = config["nse"]
 output = config["output"]
-print(output)
+print(output,modell)
 rule run_hbv_analysis:
     input:
         modell,
-        input,
+        control_text,
         nse
 
     output:
@@ -16,9 +16,7 @@ rule run_hbv_analysis:
 
     shell:
         """
-        tcsh -c '
-        modell input;
+        {modell} {control_text};
         mv *var results/;
-        R CMD BATCH nse
-        '
+        R CMD BATCH {nse}
         """
