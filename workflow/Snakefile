@@ -1,10 +1,10 @@
 configfile: "config/config.yaml"
 
 # include: "rules/common_util.smk" To be moved to testcase_2
-include: "rules/testcase_1.smk"
+#include: "rules/testcase_1.smk"
 # include: "rules/testcase_2.smk"
-include: "rules/testcase_6.smk"
-include: "rules/testcase_7.smk"
+#include: "rules/testcase_6.smk"
+#include: "rules/testcase_7.smk"
 include: "rules/testcase_8.smk"
 
 rule all:
