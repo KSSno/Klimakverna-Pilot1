@@ -1,6 +1,6 @@
 config =config["testcase_hydro"]
 modell = config["modell"]
-control_text = config["input"]
+control_text = config["control_hbv"]
 nse = config["nse"]
 output = config["output"]
 print(output,modell)
