@@ -18,15 +18,15 @@ Path (hursPath) to forcing data (hurs) : /proj-data/KiN2100/ForcingData/ObsData/
 ForcingName : obs
 RCPName : hist
 BiasName : raw
-File with meteorological stations                                         : met_stations.txt
-File with common parameters                                               : hbv_common_parameters.dta
-File with landsurface parameters                                          : hbv_landsurface_parameters.dta
-File with HBV subsurface parameters                                       : hbv_soil_parameters.dta
-File with landscape elements selected for time series output              : hbv_elements.dta
-File with landscape element information                                   : hbv_landscape.txt
+File with meteorological stations                                         : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/met_stations.txt
+File with common parameters                                               : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/hbv_common_parameters.dta
+File with landsurface parameters                                          : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/hbv_landsurface_parameters.dta
+File with HBV subsurface parameters                                       : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/hbv_soil_parameters.dta
+File with landscape elements selected for time series output              : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/hbv_elements.dta
+File with landscape element information                                   : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/hbv_landscape.txt
 File with observed streamflow data                                        : empty_file
-File with sub-catchment hierarchy                                         : watershed.txt
-File with sub-catchment elements and landscape element information        : hbv_waterland.txt
-File with precipitation and temperature correction for catchments         : catchment_correction.txt
-File with grids for Norway                                                : Landmask.txt
+File with sub-catchment hierarchy                                         : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/watershed.txt
+File with sub-catchment elements and landscape element information        : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5&hbv_waterland.txt
+File with precipitation and temperature correction for catchments         : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/catchment_correction.txt
+File with grids for Norway                                                : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/Landmask.txt
 
