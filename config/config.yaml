@@ -72,6 +72,6 @@ testcase_7:
         input_base: "/lustre/storeC-ext/users/kin2100/"
 testcase_hydro:
         modell: "/lustre/storeC-ext/users/klimakverna/development/NVE/hydro/hbv/SourceDistHbv/hbv"
-        control_hbv: "/lustre/storeC-ext/users/klimakverna/development/NVE/hydro/hbv/test_shamly/control_hbv_cal.txt"
-        nse: "/lustre/storeC-ext/users/klimakverna/development/NVE/hydro/hbv/test_shamly/nse.r"
+        control_hbv: "config/testcase_5/control_hbv_cal.txt"
+        nse: "config/testcase_5/nse.r"
         output: "/lustre/storeC-ext/users/klimakverna/development/NVE/hydro/hbv/test_shamly/"
