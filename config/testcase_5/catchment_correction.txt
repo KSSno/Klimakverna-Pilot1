@@ -1,0 +1,2 @@
+Catchment id.   Precipitation correction    Temperature correction
+10000001   1.0000000                    0.000

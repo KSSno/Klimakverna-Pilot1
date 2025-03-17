@@ -18,5 +18,5 @@ rule run_hbv_analysis:
         """
         {modell} {control_text};
         mv *var results/;
-        R CMD BATCH {nse}
+        # R CMD BATCH {nse}
         """
