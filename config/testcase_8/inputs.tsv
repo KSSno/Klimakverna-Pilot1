@@ -4,6 +4,7 @@ id	srcName	varName	path	stemRegex	internalVarName	hasScenarios	applyPreprocessor
 #CMIP6-MET-cnrm_hclim-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/cnrm-r1i1p1f2-hclim/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
 #CMIP6-MET-cnrm_racmo-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/cnrm-r1i1p1f2-racmo/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
 CMIP6-MET-ecearth_racmo-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/ecearth-r1i1p1f1-racmo/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+CMIP6-MET-ecearth_racmo-eqm-pr	CMIP6	pr  /lustre/storeC-ext/users/kin2100/NVE/EQM/CMIP6/ecearth-r1i1p1f1-racmo/pr/*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
 #CMIP6-MET-ecearthveg_cclm-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/ecearthveg-r1i1p1f1-cclm/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
 #CMIP6-MET-ecearthveg_hclim-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/ecearthveg-r1i1p1f1-hclim/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
 #CMIP6-MET-miroc_icon-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/miroc-r1i1p1f1-icon/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
