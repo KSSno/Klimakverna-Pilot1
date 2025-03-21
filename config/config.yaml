@@ -79,7 +79,8 @@ testcase_8:
         seasons: 'config/testcase_8/seasons.tsv'
         region: 'config/testcase_8/region.tsv'
     dirs:
-        region: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results/ecearth_racmo'
+        region: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results/EQM/ecearth_racmo'
+        csv: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results/EQM/ecearth_racmo'
 
     # Configuration options------------------------------------
     arealstats:
