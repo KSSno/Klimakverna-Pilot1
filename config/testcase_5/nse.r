@@ -2,7 +2,7 @@
 library("hydroGOF")
 #library("zoo")
 
-setwd("/lustre/storeC-ext/users/klimakverna/development/NVE/hydro/hbv/test_shamly")
+setwd("/lustre/storeC-ext/users/klimakverna/development/output/testcase_5")
 print("Processing started...")
 
 gauge <- c("2.268","12.178","12.70","12.193","2.323","12.171","2.279","16.140","2.634","12.215")   # sorted based on the gauge name not gauge id
@@ -73,9 +73,8 @@ print(getwd())
 out_all <- apply(abs(out),2,mean)
 out_m <- data.frame(gauge=gauge3,kge=out[,1],nse=out[,2],lnse=out[,3],bias=out[,4],lkge=out[,5],rmov=out[,6],rms=out[,7],rms_h1=out[,8],rms_l1=out[,9],boxkge=out[,10])
 
-write(c("NSE",out_all), file = "results/nse.txt",
+write(c("NSE",out_all), file = "nse.txt",
       ncolumns = 1,
       append = F, sep = " ")
-write.table(out_m,"results/nse_all.txt",col.names=T,row.names=F)
+write.table(out_m,"nse_all.txt",col.names=T,row.names=F)
 
-print("Processing started 3")

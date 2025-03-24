@@ -12,7 +12,7 @@ rule run_hbv_analysis:
 
     output:
         #"output/print_done.txt",
-        hydro_output_var=os.path.join(output, "results/output.var"),
+        hydro_output_var=os.path.join(output, "results"),
         hydro_output_nse=os.path.join(output, "nse.txt"),
 
     shell:
