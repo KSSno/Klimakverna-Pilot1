@@ -3,30 +3,30 @@ Input data format, grid files(G) or time series file(T)                   : G
 Read netcdf or bil grid files (N= netcdf, B= bil)                         : N
 Evapotranspiration scheme (T=tempindex, P= penman) : P
 Output file name                                                          : hbv_out.txt
-Write all grid outputs (1,yes, 0, only PET, 2 none)                       : 2                          
+Write all grid outputs (1,yes, 0, only PET, 2 none)                       : 1                          
 Start model date and time (day, month, year, hour, minute) : 1 1 2000 12 0
 Start simulation date and time (day, month, year, hour, minute) : 1 1 2001 12 0
-End simulation date and time (day, month, year, hour, minute) : 31 12 2020 12 0
+End simulation date and time (day, month, year, hour, minute) : 31 12 2015 12 0
 Type of forcing data (S=senorge type obsdata, C=climate proj)             : S
-Path (precPath) to forcing data (precip) : /proj-data/KiN2100/ForcingData/ObsData/seNorge2018_v20.05/netcdf/seNorge2018_RR_
-Path (tmeanPath) to forcing data (tmean) : /proj-data/KiN2100/ForcingData/ObsData/seNorge2018_v20.05/netcdf/seNorge2018_
-Path (tmaxPath) to forcing data (tmax) : /proj-data/KiN2100/ForcingData/ObsData/seNorge2018_v20.05/netcdf/seNorge2018_
-Path (tminPath) to forcing data (tmin) : /proj-data/KiN2100/ForcingData/ObsData/seNorge2018_v20.05/netcdf/seNorge2018_
-Path (windPath) to forcing data (wind) : /proj-data/KiN2100/ForcingData/ObsData/klinogrid/netcdf/ffm24h06_
-Path (rsdsPath) to forcing data (shortwave) : /proj-data/KiN2100/ForcingData/ObsData/HySN2018v2005ERA5/netcdf/HySN2018v2005ERA5_historical_
-Path (hursPath) to forcing data (hurs) : /proj-data/KiN2100/ForcingData/ObsData/HySN2018v2005ERA5/netcdf/HySN2018v2005ERA5_historical_
+Path (precPath) to forcing data (precip) : /lustre/storeC-ext/users/kin2100/MET/ReferenceData/seNorge2018/seNorge2018_RR_
+Path (tmeanPath) to forcing data (tmean) : /lustre/storeC-ext/users/kin2100/MET/ReferenceData/seNorge2018/seNorge2018_
+Path (tmaxPath) to forcing data (tmax) : /lustre/storeC-ext/users/kin2100/MET/ReferenceData/seNorge2018/seNorge2018_
+Path (tminPath) to forcing data (tmin) : /lustre/storeC-ext/users/kin2100/MET/ReferenceData/seNorge2018/seNorge2018_
+Path (windPath) to forcing data (wind) : /lustre/storeC-ext/users/kin2100/MET/ReferenceData/KlinoGrid/KliNoGrid_FFMRR-Nor_utm33_sN2_analysis_Nor_
+Path (rsdsPath) to forcing data (shortwave) : /lustre/storeC-ext/users/kin2100/MET/ReferenceData/HySN2018v2005ERA5/HySN5_historical_
+Path (hursPath) to forcing data (hurs) : /lustre/storeC-ext/users/kin2100/MET/ReferenceData/HySN2018v2005ERA5/HySN5_historical_
 ForcingName : obs
 RCPName : hist
 BiasName : raw
-File with meteorological stations                                         : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/met_stations.txt
-File with common parameters                                               : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/hbv_common_parameters.dta
-File with landsurface parameters                                          : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/hbv_landsurface_parameters.dta
-File with HBV subsurface parameters                                       : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/hbv_soil_parameters.dta
-File with landscape elements selected for time series output              : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/hbv_elements.dta
-File with landscape element information                                   : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/hbv_landscape.txt
+File with meteorological stations                                         : config/testcase_5/met_stations.txt
+File with common parameters                                               : config/testcase_5/hbv_common_parameters.dta
+File with landsurface parameters                                          : config/testcase_5/hbv_landsurface_parameters.dta
+File with HBV subsurface parameters                                       : config/testcase_5/hbv_soil_parameters.dta
+File with landscape elements selected for time series output              : config/testcase_5/hbv_elements.dta
+File with landscape element information                                   : config/testcase_5/hbv_landscape.txt
 File with observed streamflow data                                        : empty_file
-File with sub-catchment hierarchy                                         : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/watershed.txt
-File with sub-catchment elements and landscape element information        : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5&hbv_waterland.txt
-File with precipitation and temperature correction for catchments         : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/catchment_correction.txt
-File with grids for Norway                                                : /lustre/storeC-ext/users/klimakverna/development/shamly/Klimakverna-Pilot1/config/testcase_5/Landmask.txt
+File with sub-catchment hierarchy                                         : config/testcase_5/watershed.txt
+File with sub-catchment elements and landscape element information        : config/testcase_5/hbv_waterland.txt
+File with precipitation and temperature correction for catchments         : config/testcase_5/catchment_correction.txt
+File with grids for Norway                                                : config/testcase_5/Landmask.txt
 

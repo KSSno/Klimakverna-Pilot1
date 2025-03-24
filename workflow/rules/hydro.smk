@@ -11,12 +11,14 @@ rule run_hbv_analysis:
         nse
 
     output:
+        #"output/print_done.txt",
         hydro_output_var=os.path.join(output, "results/output.var"),
-        hydro_output_nse=os.path.join(output, "results/nse.Rout"),
+        hydro_output_nse=os.path.join(output, "nse.txt"),
 
     shell:
         """
-        {modell} {control_text};
-        mv *var results/;
-        # R CMD BATCH {nse}
+	#echo "Current Directory: $(pwd)" > {output}
+        #{modell} {control_text};
+        #mv *var results/;
+        R CMD BATCH {nse}
         """

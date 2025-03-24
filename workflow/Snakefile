@@ -8,7 +8,7 @@ configfile: "config/config.yaml"
 include: "rules/hydro.smk"
 
 output_var = os.path.join(output, "results/output.var")
-output_nse = os.path.join(output, "results/nse.Rout")
+output_nse = os.path.join(output, "nse.txt")
 
 rule all:
     input:
@@ -19,4 +19,5 @@ rule all:
         #expand(os.path.join(UPDATED_NC_OUT, "{filename}.nc4"), filename=all_file_paths),  # testcase 7
         output_var,
         output_nse
+        #"output/print_done.txt"
     default_target: True
