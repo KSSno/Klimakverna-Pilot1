@@ -1,8 +1,0 @@
-{
-    "file_pattern": [
-        "/lustre/storeC-ext/users/kin2100/NVE/EQM/*/pr/[hrr][icc][spp][t24]*/*nc4 ",
-        "/lustre/storeC-ext/users/kin2100/NVE/EQM/CMIP6/*/pr/*/*nc4",
-        "/lustre/storeC-ext/users/kin2100/MET/3DBC/application/*/pr/[hrr][icc][spp][t24]*/*nc4",
-        "/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/*/pr/*/*nc4"
-    ]
-}
