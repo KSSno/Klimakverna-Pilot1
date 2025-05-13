@@ -4,6 +4,7 @@ from shutil import copyfile
 from datetime import date
 import fnmatch
 import os
+import os
 
 modified = False
 
@@ -65,7 +66,7 @@ def add_common_global_attribute(output_file, global_attributes):
                 print(f"Updated global metadata {key}:{value}")
 
 #Adding variable attributes for different types of inputs(pr, tasmax20ge,norheatwave)
-def add_attributes_variables(output_file, variable_name, variable_attributes, scenario= None):
+def add_attributes_variables(output_file, variable_name, variable_attributes, scenario= None,scenario):
     global modified
 
     with Dataset(output_file, "r+") as nc:
@@ -74,6 +75,8 @@ def add_attributes_variables(output_file, variable_name, variable_attributes, sc
             if key not in nc.ncattrs():
                 if '{scenario}' in value:
                     value = value.format(scenario=scenario)                             
+                if '{scenario}' in value:
+                    value = value.format(scenario=scenario)
                 nc.setncattr(key, value)
                 modified = True
                 print(f"Updated global attribute {variable_name} {key}:{value}")
