@@ -11,7 +11,8 @@
         "creator_name": "Julia Lutz, Andreas Dobler, Wai Kwok Wong, Irene Brox Nilsen, Sigrid Jørgensen Bakke",
         "institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE)",
         "institution_short_name": "MET Norway, NVE",
-        "product_name": "Bias-adjusted precipitation projections for Norway, 1 km2 spatial resolution"
+        "product_name": "Bias-adjusted precipitation projections for Norway, 1 km2 spatial resolution",
+        "title": "Daily bias-adjusted precipitation using forcing scenario {scenario}"
     },
     "pr": {
         "_FillValue": "1.e+20f",
