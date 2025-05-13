@@ -3,18 +3,26 @@ import json
 from shutil import copyfile
 from datetime import date
 import fnmatch
+import os
 
 modified = False
 
 
 def update_metadata(input_file, output_file, global_attributes, attributes_variable_pr,attributes_variable_tasmax20ge,variable_diff_norheatwave, file_pattern_list):
     # Copy input file to the output location before editing
+    print(input_file)
+    filename, _ = os.path.splitext(input_file)  # Discard the extension
+    print(filename)
+    parts = filename.split("_")
+    if len(parts)>= 4:
+        scenario = parts[3]
+
     copyfile(input_file, output_file)
     add_common_global_attribute( output_file, global_attributes)
     for  type, pattern  in file_pattern_list.items():
         if (fnmatch.fnmatch(input_file, pattern)):
             if type=="pr" :
-                add_attributes_variables(output_file, type, attributes_variable_pr)
+                add_attributes_variables(output_file, type, attributes_variable_pr,scenario)
     
             if type=="tasmax20ge":
                 add_attributes_variables(output_file,type , attributes_variable_tasmax20ge)
@@ -43,13 +51,15 @@ def add_common_global_attribute(output_file,  global_attributes):
                 print(f"Updated global metadata {key}:{value}")   
         
 
-def add_attributes_variables(output_file,variable_name, variable_attributes):
+def add_attributes_variables(output_file,variable_name, variable_attributes,scenario):
     global modified 
 
     with Dataset(output_file, "r+") as nc:
     # Check and update metadata attributes
         for key, value in variable_attributes.get("global", {}).items():
             if key not in nc.ncattrs():
+                if '{scenario}' in value:
+                    value = value.format(scenario=scenario)
                 nc.setncattr(key, value) 
                 modified=True
                 print(f"Updated global attribute {variable_name} {key}:{value}")
