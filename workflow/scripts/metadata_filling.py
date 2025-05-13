@@ -11,12 +11,12 @@ modified = False
 def update_metadata(input_file, output_file, global_attributes, attributes_variable_pr,attributes_variable_tasmax20ge,variable_diff_norheatwave, file_pattern_list):
     # Copy input file to the output location before editing
     print(input_file)
-    filename, _ = os.path.splitext(input_file)  # Discard the extension
+    filename = os.path.basename(input_file)  # Discard the extension
     print(filename)
     parts = filename.split("_")
-    if len(parts)>= 4:
-        scenario = parts[3]
-
+    if len(parts)>= 2:
+        scenario = parts[1]
+        print(scenario)
     copyfile(input_file, output_file)
     add_common_global_attribute( output_file, global_attributes)
     for  type, pattern  in file_pattern_list.items():
