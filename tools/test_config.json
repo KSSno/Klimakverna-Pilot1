@@ -1,10 +1,10 @@
 {
     "indicator": "pr",
-    "periods": ["2019-2020", "2041-2043"],
+    "periods": ["1991-1993", "2051-2053"],
     "scenarios": ["hist", "rcp45"],
     "models": ["cnrm_aladin"],
-    "bias_method": "3DBC",
+    "bias_method": "EQM",
     "region_id": 2,
     "region_shapefile": "/lustre/storeC-ext/users/klimakverna/development/kaja/data/shapefile",
-    "output_location": "/lustre/storeC-ext/users/klimakverna/development/output/testcase_8/test"
+    "output_location": "/lustre/storeC-ext/users/klimakverna/development/output/testcase_8/test/EQM/cnrm_aladin/30y"
 }

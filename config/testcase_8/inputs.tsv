@@ -1,32 +1,44 @@
 id	srcName	varName	path	stemRegex	internalVarName	hasScenarios	applyPreprocessor	preprocessorPath	preprocessorFunction
 #
-# CMIP6, 3DBC
-#CMIP6-MET-cnrm_hclim-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/cnrm-r1i1p1f2-hclim/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP6-MET-cnrm_racmo-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/cnrm-r1i1p1f2-racmo/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP6-MET-ecearth_racmo-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/ecearth-r1i1p1f1-racmo/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP6-MET-ecearthveg_cclm-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/ecearthveg-r1i1p1f1-cclm/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP6-MET-ecearthveg_hclim-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/ecearthveg-r1i1p1f1-hclim/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP6-MET-miroc_icon-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/miroc-r1i1p1f1-icon/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP6-MET-mpi_hclim-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/mpi-r1i1p1f1-hclim/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP6-MET-mpi_icon-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/mpi-r1i1p1f1-icon/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP6-MET-mpi_racmo-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/mpi-r1i1p1f1-racmo/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP6-MET-noresm_hclim-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/noresm-r1i1p1f1-hclim/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+# CMIP6, 3DBC, 24h
+#CMIP6-3DBC-24h-cnrm_hclim-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/cnrm-r1i1p1f2-hclim/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP6-3DBC-24h-cnrm_racmo-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/cnrm-r1i1p1f2-racmo/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP6-3DBC-24h-ecearth_racmo-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/ecearth-r1i1p1f1-racmo/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP6-3DBC-24h-ecearthveg_cclm-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/ecearthveg-r1i1p1f1-cclm/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP6-3DBC-24h-ecearthveg_hclim-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/ecearthveg-r1i1p1f1-hclim/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP6-3DBC-24h-miroc_icon-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/miroc-r1i1p1f1-icon/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP6-3DBC-24h-mpi_hclim-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/mpi-r1i1p1f1-hclim/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP6-3DBC-24h-mpi_icon-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/mpi-r1i1p1f1-icon/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP6-3DBC-24h-mpi_racmo-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/mpi-r1i1p1f1-racmo/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP6-3DBC-24h-noresm_hclim-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/noresm-r1i1p1f1-hclim/pr/[sh][si][ps][3t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
 #
-# CMIP6, EQM
-CMIP6-MET-ecearth_racmo-eqm-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/NVE/EQM/CMIP6/ecearth-r1i1p1f1-racmo/pr/*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+# CMIP6, EQM, 24h
+#CMIP6-EQM-24h-ecearth_racmo-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/NVE/EQM/CMIP6/ecearth-r1i1p1f1-racmo/pr/*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
 #
-# CMIP5, 3DBC
-#CMIP5-MET-cnrm_aladin-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/cnrm-r1i1p1-aladin/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP5-MET-ecearth_cclm-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/ecearth-r12i1p1-cclm/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP5-MET-ecearth_hirham-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/ecearth-r3i1p1-hirham/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP5-MET-ecearth_rca-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/ecearth-r12i1p1-rca/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP5-MET-hadgem_rca-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/hadgem-r1i1p1-rca/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP5-MET-hadgem_remo-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/hadgem-r1i1p1-remo/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP5-MET-mpi_cclm-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/mpi-r1i1p1-cclm/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP5-MET-mpi_remo-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/mpi-r2i1p1-remo/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP5-MET-noresm_rca-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/noresm-r1i1p1-rca/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
-#CMIP5-MET-noresm_remo-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/noresm-r1i1p1-remo/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+# CMIP6, 3DBC, 30y
+#CMIP6-3DBC-30y-ecearth_racmo-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/[r,n,f]*_mean/pr/30yrmean_[n,f,r][f,f,e][-,-,f]*_ecearth-r1i1p1f1-racmo_ssp370_3*.nc	(.*).nc4	pr	TRUE	FALSE
 #
-# CMIP5, EQM
-#CMIP5-MET-cnrm_aladin-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/NVE/EQM/cnrm-r1i1p1-aladin/pr/*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+# CMIP6, EQM, 30y
+CMIP6-EQM-30y-ecearth_racmo-pr	CMIP6	pr	/lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/[r,n,f]*_mean/pr/30yrmean_[n,f,r][f,f,e][-,-,f]*_ecearth-r1i1p1f1-racmo_ssp370_e*.nc	(.*).nc4	pr	TRUE	FALSE
 #
+#
+# CMIP5, 3DBC, 24h
+#CMIP5-3DBC-24h-cnrm_aladin-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/cnrm-r1i1p1-aladin/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP5-3DBC-24h-ecearth_cclm-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/ecearth-r12i1p1-cclm/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP5-3DBC-24h-ecearth_hirham-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/ecearth-r3i1p1-hirham/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP5-3DBC-24h-ecearth_rca-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/ecearth-r12i1p1-rca/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP5-3DBC-24h-hadgem_rca-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/hadgem-r1i1p1-rca/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP5-3DBC-24h-hadgem_remo-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/hadgem-r1i1p1-remo/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP5-3DBC-24h-mpi_cclm-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/mpi-r1i1p1-cclm/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP5-3DBC-24h-mpi_remo-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/mpi-r2i1p1-remo/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP5-3DBC-24h-noresm_rca-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/noresm-r1i1p1-rca/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#CMIP5-3DBC-24h-noresm_remo-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/3DBC/application/noresm-r1i1p1-remo/pr/[rrh][cci][pps][24t]*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#
+# CMIP5, EQM, 24h
+#CMIP5-EQM-24h-cnrm_aladin-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/NVE/EQM/cnrm-r1i1p1-aladin/pr/*/*_????.nc4	(.*).nc4	pr	TRUE	FALSE
+#
+# CMIP5, 3DBC, 30y
+#CMIP5-3DBC-30y-cnrm_aladin-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/annmeans_bc/[r,n,f]*_mean/pr/30yrmean_[n,f,r][f,f,e][-,-,f]*_cnrm-r1i1p1-aladin_[r][c][p][24][65]*_3*.nc	(.*).nc4	pr	TRUE	FALSE
+#
+# CMIP5, EQM, 30y
+#CMIP5-EQM-30y-cnrm_aladin-pr	CMIP5	pr	/lustre/storeC-ext/users/kin2100/MET/annmeans_bc/[r,n,f]*_mean/pr/30yrmean_[n,f,r][f,f,e][-,-,f]*_cnrm-r1i1p1-aladin_[r][c][p][24][65]*_e*.nc	(.*).nc4	pr	TRUE	FALSE
