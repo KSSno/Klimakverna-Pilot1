@@ -2,9 +2,9 @@
     "indicator": "pr",
     "periods": ["1991-1993", "2051-2053"],
     "scenarios": ["hist", "rcp45"],
-    "models": ["cnrm_aladin"],
-    "bias_method": "EQM",
+    "models": ["cnrm_aladin", "hadgem_remo"],
+    "bias_method": "3DBC",
     "region_id": 2,
     "region_shapefile": "/lustre/storeC-ext/users/klimakverna/development/kaja/data/shapefile",
-    "output_location": "/lustre/storeC-ext/users/klimakverna/development/output/testcase_8/test/EQM/cnrm_aladin/30y"
+    "output_location": "/lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results"
 }
