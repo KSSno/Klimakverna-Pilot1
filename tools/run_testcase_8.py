@@ -11,26 +11,26 @@ import geopandas as gpd
 import subprocess
 
 model_info = {
-    "cnrm_hclim": {"filename": "cnrm-r1i1p1f2-hclim", "cmip_version": 6},
-    "cnrm_racmo": {"filename": "cnrm-r1i1p1f2-racmo", "cmip_version": 6},
-    "ecearth_racmo": {"filename": "ecearth-r1i1p1f1-racmo", "cmip_version": 6},
-    "ecearthveg_cclm": {"filename": "ecearthveg-r1i1p1f1-cclm", "cmip_version": 6},
-    "ecearthveg_hclim": {"filename": "ecearthveg-r1i1p1f1-hclim", "cmip_version": 6},
-    "miroc_icon": {"filename": "miroc-r1i1p1f1-icon", "cmip_version": 6},
-    "mpi_hclim": {"filename": "mpi-r1i1p1f1-hclim", "cmip_version": 6},
-    "mpi_icon": {"filename":"mpi-r1i1p1f1-icon", "cmip_version": 6},
-    "mpi_racmo": {"filename": "mpi-r1i1p1f1-racmo", "cmip_version": 6},
-    "noresm_hclim": {"filename": "noresm-r1i1p1f1-hclim", "cmip_version": 6},
-    "cnrm_aladin": {"filename": "cnrm-r1i1p1-aladin", "cmip_version": 5},
-    "ecearth_cclm": {"filename": "ecearth-r12i1p1-cclm", "cmip_version": 5},
-    "ecearth_hirham": {"filename": "ecearth-r3i1p1-hirham", "cmip_version": 5},
-    "ecearth_rca": {"filename": "ecearth-r12i1p1-rca", "cmip_version": 5},
-    "hadgem_rca": {"filename": "hadgem-r1i1p1-rca", "cmip_version": 5},
-    "hadgem_remo": {"filename": "hadgem-r1i1p1-remo", "cmip_version": 5},
-    "mpi_cclm": {"filename": "mpi-r1i1p1-cclm", "cmip_version": 5},
-    "mpi_remo": {"filename": "mpi-r2i1p1-remo", "cmip_version": 5},
-    "noresm_rca": {"filename": "noresm-r1i1p1-rca", "cmip_version": 5},
-    "noresm_remo": {"filename": "noresm-r1i1p1-remo", "cmip_version": 5}
+    "cnrm_hclim": {"full_name": "cnrm-r1i1p1f2-hclim", "cmip_version": 6},
+    "cnrm_racmo": {"full_name": "cnrm-r1i1p1f2-racmo", "cmip_version": 6},
+    "ecearth_racmo": {"full_name": "ecearth-r1i1p1f1-racmo", "cmip_version": 6},
+    "ecearthveg_cclm": {"full_name": "ecearthveg-r1i1p1f1-cclm", "cmip_version": 6},
+    "ecearthveg_hclim": {"full_name": "ecearthveg-r1i1p1f1-hclim", "cmip_version": 6},
+    "miroc_icon": {"full_name": "miroc-r1i1p1f1-icon", "cmip_version": 6},
+    "mpi_hclim": {"full_name": "mpi-r1i1p1f1-hclim", "cmip_version": 6},
+    "mpi_icon": {"full_name":"mpi-r1i1p1f1-icon", "cmip_version": 6},
+    "mpi_racmo": {"full_name": "mpi-r1i1p1f1-racmo", "cmip_version": 6},
+    "noresm_hclim": {"full_name": "noresm-r1i1p1f1-hclim", "cmip_version": 6},
+    "cnrm_aladin": {"full_name": "cnrm-r1i1p1-aladin", "cmip_version": 5},
+    "ecearth_cclm": {"full_name": "ecearth-r12i1p1-cclm", "cmip_version": 5},
+    "ecearth_hirham": {"full_name": "ecearth-r3i1p1-hirham", "cmip_version": 5},
+    "ecearth_rca": {"full_name": "ecearth-r12i1p1-rca", "cmip_version": 5},
+    "hadgem_rca": {"full_name": "hadgem-r1i1p1-rca", "cmip_version": 5},
+    "hadgem_remo": {"full_name": "hadgem-r1i1p1-remo", "cmip_version": 5},
+    "mpi_cclm": {"full_name": "mpi-r1i1p1-cclm", "cmip_version": 5},
+    "mpi_remo": {"full_name": "mpi-r2i1p1-remo", "cmip_version": 5},
+    "noresm_rca": {"full_name": "noresm-r1i1p1-rca", "cmip_version": 5},
+    "noresm_remo": {"full_name": "noresm-r1i1p1-remo", "cmip_version": 5}
 }
 ssp370_models = [model for model, info in model_info.items() if info["cmip_version"] == 6]
 rcp26_rcp45_models = [model for model, info in model_info.items() if info["cmip_version"] == 5]
@@ -79,30 +79,30 @@ def write_config_to_tsv(config: dict, output_file: str) -> None:
 
 def get_input_path(model: str, bias_method: str, calculation_type: str, indicator: str) -> str:
     path = ""
-    model_name = model_info[model]["filename"]
+    model_name = model_info[model]["full_name"]
     cmip_version = model_info[model]["cmip_version"]
 
     if bias_method == "3DBC" and cmip_version == 5:
         if calculation_type == "24h":
-            path = f"{path_dbc_24h}/{model_name}/{indicator}/[rrh][cci][pps][24t]*/*_????.nc4"
+            path = f"{path_dbc_24h}/{model_name}/{indicator}/[rrh][cci][pps][24t]*/*_????.nc"
         else: # 30y, 30 year means
             path = f"{path_30y_mean}/[r,n,f]*_mean/{indicator}/30yrmean_[n,f,r][f,f,e][-,-,f]*_{model_name}_[r][c][p][24][65]*_3*.nc"
 
     elif bias_method == "EQM" and cmip_version == 5:
         if calculation_type == "24h":
-            path = f"{path_eqm_24h}/{model_name}/{indicator}/*/*_????.nc4"
+            path = f"{path_eqm_24h}/{model_name}/{indicator}/*/*_????.nc"
         else:
             path = f"{path_30y_mean}/[r,n,f]*_mean/{indicator}/30yrmean_[n,f,r][f,f,e][-,-,f]*_{model_name}_[r][c][p][24][65]*_e*.nc"
 
     elif bias_method == "3DBC" and cmip_version == 6:
         if calculation_type == "24h":
-            path = f"{path_dbc_24h}/CMIP6/{model_name}/{indicator}/[sh][si][ps][3t]*/*_????.nc4"
+            path = f"{path_dbc_24h}/CMIP6/{model_name}/{indicator}/[sh][si][ps][3t]*/*_????.nc"
         else:
             path = f"{path_30y_mean}/CMIP6/[r,n,f]*_mean/{indicator}/30yrmean_[n,f,r][f,f,e][-,-,f]*_{model_name}_ssp370_3*.nc"
 
     elif bias_method == "EQM" and cmip_version == 6:
         if calculation_type == "24h":
-            path = f"{path_eqm_24h}/CMIP6/{model_name}/{indicator}/*/*_????.nc4"
+            path = f"{path_eqm_24h}/CMIP6/{model_name}/{indicator}/*/*_????.nc"
         else:
             path = f"{path_30y_mean}/CMIP6/[r,n,f]*_mean/{indicator}/30yrmean_[n,f,r][f,f,e][-,-,f]*_{model_name}_ssp370_e*.nc"
     else:
@@ -158,6 +158,7 @@ parser.add_argument("-o", "--output-location", type=Path, help="Absolute path to
 parser.add_argument("-c", "--config-file", type=Path, help="Absolute path to json configuration file. See example /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json")
 
 parser.add_argument("-n", "--dry-run", action='store_true',  help="If this option is set, a dry run of the snakemake pipeline will be performed where no calculations will be done")
+parser.add_argument("-ppi", "--use-ppi-queue", action='store_true',  help="If this option is set the calculation will be run in the PPI queue")
 
 args = parser.parse_args()
 indicator = args.indicator 
@@ -169,6 +170,10 @@ region_id = args.region_id
 region_shapefile = args.region_shapefile
 output_location = args.output_location
 dry_run = args.dry_run
+use_ppi_queue = args.use_ppi_queue
+
+if dry_run and use_ppi_queue:
+    raise ValueError("Can't use both dry run and PPI queue at the same time. Dry runs are only run locally")
 
 if args.config_file:
     try:
@@ -407,13 +412,15 @@ if change_region_id:
     set_config_path(change_region_id, "region")
 elif change_region_shapefile:
     set_config_path(change_region_shapefile, "region")
+else:
+    default_config["configurationTables"]["region"] = f"{klimakverna_pilot1_path}/config/testcase_8/region.tsv"
 
 for model in models:
     if model != "cnrm_aladin" or bias_method != "3DBC" or indicator != "pr" or calculation_type != "30y":
         # input file name depends on models, bias_method, calcualtions_type, cmip_version (=scenario) and indicator 
         # periods are filtered afterwards
         input_config = {"id": [], "srcName": [], "varName": [], "path": [], "stemRegex": [], "internalVarName": [], "hasScenarios": [], "applyPreprocessor": []}
-        stem_regex = "(.*).nc4"
+        stem_regex = "(.*).nc"
         has_scenarios = "TRUE"
         apply_preprocessor = "FALSE"
 
@@ -448,19 +455,19 @@ for model in models:
     with open(klimakverna_pilot1_path / "config/testcase_8_config.yaml", "w") as f:
         yaml.dump(old_default_config, f)
 
-    # Run calculation locally
-    if dry_run:
-        print(f"\n\nDry run for {model} with bias method {bias_method} and calculation type {calculation_type}")
-        process = subprocess.Popen([f"{klimakverna_pilot1_path}/tools/dry_run_snakemake_local.sh"])
-    else:
-        print(f"\n\nRunning calculation for {model} with bias method {bias_method} and calculation type {calculation_type}")
-        process = subprocess.Popen([f"{klimakverna_pilot1_path}/tools/run_snakemake_local.sh"])
-    process.wait()
-
+    if use_ppi_queue:
     # Run calculation in PPI queue
-    # print(f"\n\nRunning calculation for {model} with bias method {bias_method} and calculation type {calculation_type}")
-    # process = subprocess.Popen(["qsub", "-V", "-b", "n", "-cwd", f"{klimakverna_pilot1_path}/tools/run_snakemake_ppi_C.sh"])
-    # process.wait()
+        print(f"\n\nRunning calculation for {model} with bias method {bias_method} and calculation type {calculation_type}")
+        process = subprocess.Popen(["qsub", "-V", "-b", "n", "-cwd", f"{klimakverna_pilot1_path}/tools/run_snakemake_ppi_C.sh"])
+        process.wait()
+    else:
+    # Run calculation locally
+        if dry_run:
+            print(f"\n\nDry run for {model} with bias method {bias_method} and calculation type {calculation_type}")
+            process = subprocess.Popen([f"{klimakverna_pilot1_path}/tools/dry_run_snakemake_local.sh"])
+        else:
+            print(f"\n\nRunning calculation for {model} with bias method {bias_method} and calculation type {calculation_type}")
+            process = subprocess.Popen([f"{klimakverna_pilot1_path}/tools/run_snakemake_local.sh"])
+        process.wait()
 
 # Add: possibility to choose both bias methods (save_areal mean supports  it)
-# add possibility to dry run cmd option

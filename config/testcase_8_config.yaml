@@ -69,10 +69,10 @@ testcase_8:
     calcForMembers: false
   configurationTables:
     indicators: /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/config/testcase_8/indicators.tsv
-    inputs: /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/config/testcase_8/inputs.tsv
-    periods: /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/config/testcase_8/periods.tsv
-    region: config/testcase_8/region.tsv
-    scenarios: /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/config/testcase_8/scenarios.tsv
+    inputs: /lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results/config/inputs.tsv
+    periods: /lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results/config/periods.tsv
+    region: /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/config/testcase_8/region.tsv
+    scenarios: /lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results/config/scenarios.tsv
     seasons: /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/config/testcase_8/seasons.tsv
   cutouts:
     method: lonlatbox
@@ -81,8 +81,8 @@ testcase_8:
     ymax: 71.384
     ymin: 57.759
   dirs:
-    csv: /lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results/3DBC/30y/cnrm_aladin
-    region: /lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results/3DBC/30y/cnrm_aladin
+    csv: /lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results/3DBC/30y/hadgem_remo
+    region: /lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results/3DBC/30y/hadgem_remo
   ensembles:
     centralPercentile: 50
     lowerPercentile: 10

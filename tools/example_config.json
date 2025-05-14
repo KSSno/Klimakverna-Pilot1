@@ -1,8 +1,8 @@
 {
     "indicator": "pr",
-    "periods": ["1991-1993", "2051-2053"],
+    "periods": ["hist", "ff"],
     "scenarios": ["hist", "rcp45"],
-    "models": ["cnrm_aladin", "hadgem_remo"],
+    "models": ["cnrm_aladin"],
     "bias_method": "3DBC",
     "region_id": 3,
     "region_shapefile": "/lustre/storeC-ext/users/klimakverna/development/kaja/data/shapefile",

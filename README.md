@@ -43,7 +43,7 @@ Activate environment by
 conda activate ../conda/klimakverna
 ```
 
-## Configuration
+## KAPy configuration files
 
 Configuration files are located in the `/config` directory, where the `config.yaml` contains all the configurations for each testcase.
 
@@ -88,7 +88,7 @@ testcase_2:
 ```  
 
 
-## setting up new rules
+## Setting up new rules
 
 - A testcase.smk is created for each testcase in the directory `./workflow/rules`.
 - And this .smk file is included in the `.workflow/Snakefile`
@@ -130,16 +130,16 @@ qdel <job_id>
 
 The console output of the job is stored in `/lustre/storeC-ext/users/klimakverna/development/jobs/ERR_Klimakverna.<job_id>`.
 
-# Run testcase 8
+### Run testcase 8
 
-Testcase 8 can be run with default configuration from the command line by 
+Testcase 8 can be run from the command line by 
 
 ```console
 python /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/run_testcase_8.py
 ```
+Default configuration is then used in the calculations. There are two options to run with modified configuration, either use a configuraion file or set options directly in the command line.
 
-To use other configurations in the calcualtion a configuraion file can be used or option can be set directly in the command line.
-For an example of a configuration file see `/lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json`.
+An example of a configuration file is found at `/lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json`.
 Run with a configuration file by
 
 ```console
@@ -154,14 +154,14 @@ python /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools
 
 Note that the configuration file or options overwrite default settings, but use of both methods at the same time will not work.
 
-To do a test run, a dry run, of snakemake use the `-n` option
+To do a test run, a dry run, of the snakemake pipeline use the `-n` option
 
 ```console
 python /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/run_testcase_8.py -c /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json -n
 ```
 
-The testcase is run locally, but for larger calculations it can be run in the PPI queue. Comment out line 451 to 458 in `run_testcase_8.py` and uncomment lines 460 to 463.
-Logged into PPI ext, the calculations are started as described above.
+The testcase is run locally, but for larger calculations it can be run in the PPI queue.
+Logged into PPI ext add the `-ppi` option in the command line when running the calculations as described above.
 
 ## Output
 
