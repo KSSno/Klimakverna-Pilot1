@@ -14,5 +14,5 @@ echo "*** Starting ***"
 source /modules/centos7/conda/prod_04_2021/etc/profile.d/conda.sh
 conda activate /lustre/storeC-ext/users/klimakverna/development/conda/klimakverna
 echo "*** Running snakemake ***"
-snakemake --cores=3 --rerun-incomplete --snakefile /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/workflow/Snakefile --configfile /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/config/testing_config.yaml
+snakemake --cores=3 --rerun-incomplete --snakefile /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/workflow/Snakefile --configfile /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/config/testcase_8_config.yaml
 echo "*** Done ***"

@@ -50,17 +50,6 @@ with open(default_config_file, "r") as f:
     default_config = yaml.safe_load(f)
     default_config = default_config["testcase_8"]
 
-calculation_type = "30y"
-
-change_indicator = False
-change_periods = False
-change_scenarios = False
-change_region_id = False
-change_region_shapefile = False
-change_output_location = False
-change_inputs = False
-change = True
-
 def parse_config_tsv_file(file_path: str) -> dict:
     config = {}
     try:
@@ -128,22 +117,47 @@ def set_config_path(change: Path | bool, config_type: str):
     else:
         default_config["configurationTables"][config_type] = f"{klimakverna_pilot1_path}/config/testcase_8/{config_type}.tsv"
 
+calculation_type = "30y"
+
+change_indicator = False
+change_periods = False
+change_scenarios = False
+change_region_id = False
+change_region_shapefile = False
+change_output_location = False
+change_inputs = False
+
+default_indicator = "pr"
+default_periods = ["nf"]
+default_scenarios = ["rcp26", "rcp45"]
+default_models = ["cnrm_aladin"]
+default_bias_method = "3DBC"
+default_region_id = 1
+default_output_location = output_path
 default_region_config = parse_config_tsv_file(f"{klimakverna_pilot1_path}/{default_config['configurationTables']['region']}")
 default_region_shapefile_path = Path(default_region_config["shapefile"][0])
 
-parser = ap.ArgumentParser(description="Testcase 8: 30 year means and 24-hour time series in csv output format")
+parser = ap.ArgumentParser(description=(
+    "Testcase 8: 30 year means and 24-hour time series in csv output format. "
+    "A configuration file or options set in command line overwrites default configuration. "
+    f"Default configuration is indicator={default_indicator}, periods={default_periods}, scenarios={default_scenarios}, models={default_models}, "
+    f"bias method={default_bias_method}, region id={default_region_id}, region shapefile={default_region_shapefile_path}, output location={default_output_location}"
+    )
+)      
 
-parser.add_argument("-i", "--indicator", type=str, help="Indicator for calculation (pr or tas)", default="pr")
-parser.add_argument("-s", "--scenarios", nargs='+', type=str, help="Scenario(s) to calculate for (rcp26, rcp45, ssp370, hist)", default=["rcp26", "rcp45"])
-parser.add_argument("-p", "--periods", nargs='+', type=str, help="Period for calculation (For 30 year mean: 'hist' for 1991-2020, 'nf' for 2041-2070 or 'ff' for 2071-2100. For daily time series: 2041 or 2041-2043)", default=["nf"]) # --> calculation-type
-parser.add_argument("-m", "--models", nargs='+', type=str, help="Model for calculation", default=["cnrm_aladin"])
-parser.add_argument("-b", "--bias-method", type=str, help="Bias-adjustment method (EQM or 3DBC)", default="3DBC")
-parser.add_argument("-ri", "--region-id", type=int, help="Region id in shapefile", default=1)
+parser.add_argument("-i", "--indicator", type=str, help="Indicator for calculation (pr or tas)", default=default_indicator)
+parser.add_argument("-s", "--scenarios", nargs='+', type=str, help="Scenario(s) to calculate for (rcp26, rcp45, ssp370, hist)", default=default_scenarios)
+parser.add_argument("-p", "--periods", nargs='+', type=str, help="Period for calculation (For 30 year mean: 'hist' for 1991-2020, 'nf' for 2041-2070 or 'ff' for 2071-2100. For daily time series: 2041 or 2041-2043)", default=default_periods) # --> calculation-type
+parser.add_argument("-m", "--models", nargs='+', type=str, help="Model for calculation", default=default_models)
+parser.add_argument("-b", "--bias-method", type=str, help="Bias-adjustment method (EQM or 3DBC)", default=default_bias_method)
+parser.add_argument("-ri", "--region-id", type=int, help="Region id in shapefile", default=default_region_id)
 
-parser.add_argument("-r", "--region-shapefile", type=Path, help="Absolute path to shapefile for region to do calculation for", default="/lustre/storeC-ext/users/klimakverna/development/kaja/data/shapefile")
-parser.add_argument("-o", "--output-location", type=Path, help="Absolute path to output location for csv file and netcdf file", default= "/lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results")
+parser.add_argument("-r", "--region-shapefile", type=Path, help="Absolute path to shapefile for region to do calculation for", default=default_region_shapefile_path)
+parser.add_argument("-o", "--output-location", type=Path, help="Absolute path to output location for csv file and netcdf file", default= default_output_location)
 
-parser.add_argument("-c", "--config-file", type=Path, help="Absolute path to configuration file")
+parser.add_argument("-c", "--config-file", type=Path, help="Absolute path to json configuration file. See example /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json")
+
+parser.add_argument("-n", "--dry-run", action='store_true',  help="If this option is set, a dry run of the snakemake pipeline will be performed where no calculations will be done")
 
 args = parser.parse_args()
 indicator = args.indicator 
@@ -154,6 +168,7 @@ bias_method = args.bias_method
 region_id = args.region_id
 region_shapefile = args.region_shapefile
 output_location = args.output_location
+dry_run = args.dry_run
 
 if args.config_file:
     try:
@@ -255,8 +270,7 @@ else:
 # Modify default config according to inputs
 # default_config_file contains paths to where the csv and the region netcdf fiels should be stored,
 # in addition to paths to rest of config files (inputs, indicators, sceanrios, periods, region)
-if indicator != "pr":
-    # pr is the default indicator
+if indicator != default_indicator:
     indicator_config = parse_config_tsv_file(f"{klimakverna_pilot1_path}/{default_config['configurationTables']['indicators']}")
 
     indicator_config["variables"] = [indicator]
@@ -268,8 +282,7 @@ if indicator != "pr":
     change_indicator = Path(f"{output_path}/config/indicators.tsv")
     write_config_to_tsv(indicator_config, f"{change_indicator}")
 
-if periods != ["nf"]:
-    # nf is the default period
+if periods != default_periods:
     periods_config = {"id": [], "name": [], "short_name": [], "start": [], "end": []}
 
     for period_id, period in enumerate(periods):
@@ -326,8 +339,7 @@ if periods != ["nf"]:
     change_periods = Path(f"{output_path}/config/periods.tsv")
     write_config_to_tsv(periods_config, f"{change_periods}")
 
-if scenarios != ["rcp26", "rcp45"]:
-    # rcp26 and rcp45 are the default scenarios
+if scenarios != default_scenarios:
     scenarios_config = {"id": [], "description": [], "scenarioStrings": [], "hexcolour": []}
     # burde leses fra default config
     for scenario in scenarios:
@@ -358,7 +370,7 @@ if scenarios != ["rcp26", "rcp45"]:
     write_config_to_tsv(scenarios_config, f"{change_scenarios}")
 
 if str(region_shapefile) == str(default_region_shapefile_path):
-    if region_id != 1:
+    if region_id != default_region_id:
         if region_id > 11 or region_id < 1:
             raise ValueError(f"Region id {region_id} should be between 1 and 11")
         
@@ -385,13 +397,16 @@ else:
     write_config_to_tsv(region_config, f"{change_region_shapefile}")
 
 
-# Update cconfig.yaml to use new config files
+# Update config.yaml to use new config files
 default_config["configurationTables"]["seasons"] = f"{klimakverna_pilot1_path}/config/testcase_8/seasons.tsv"
 set_config_path(change_indicator, "indicators")
 set_config_path(change_periods, "periods")
 set_config_path(change_scenarios, "scenarios")
-set_config_path(change_region_id, "region")
-set_config_path(change_region_shapefile, "region")
+
+if change_region_id:
+    set_config_path(change_region_id, "region")
+elif change_region_shapefile:
+    set_config_path(change_region_shapefile, "region")
 
 for model in models:
     if model != "cnrm_aladin" or bias_method != "3DBC" or indicator != "pr" or calculation_type != "30y":
@@ -425,18 +440,21 @@ for model in models:
         default_config["dirs"]["csv"] = f"{output_path}/{bias_method}/{calculation_type}/{model}"
         default_config["dirs"]["region"] = f"{output_path}/{bias_method}/{calculation_type}/{model}"
 
-    if change:
-        with open(default_config_file) as f:
-            old_default_config = yaml.safe_load(f)
+    with open(default_config_file) as f:
+        old_default_config = yaml.safe_load(f)
 
-        old_default_config["testcase_8"] = default_config
+    old_default_config["testcase_8"] = default_config
 
-        with open(klimakverna_pilot1_path / "config/testing_config.yaml", "w") as f:
-            yaml.dump(old_default_config, f)
+    with open(klimakverna_pilot1_path / "config/testcase_8_config.yaml", "w") as f:
+        yaml.dump(old_default_config, f)
 
     # Run calculation locally
-    print(f"\n\nRunning calculation for {model} with bias method {bias_method} and calculation type {calculation_type}")
-    process = subprocess.Popen([f"{klimakverna_pilot1_path}/tools/run_snakemake_local.sh"])
+    if dry_run:
+        print(f"\n\nDry run for {model} with bias method {bias_method} and calculation type {calculation_type}")
+        process = subprocess.Popen([f"{klimakverna_pilot1_path}/tools/dry_run_snakemake_local.sh"])
+    else:
+        print(f"\n\nRunning calculation for {model} with bias method {bias_method} and calculation type {calculation_type}")
+        process = subprocess.Popen([f"{klimakverna_pilot1_path}/tools/run_snakemake_local.sh"])
     process.wait()
 
     # Run calculation in PPI queue
@@ -444,5 +462,5 @@ for model in models:
     # process = subprocess.Popen(["qsub", "-V", "-b", "n", "-cwd", f"{klimakverna_pilot1_path}/tools/run_snakemake_ppi_C.sh"])
     # process.wait()
 
-# Add: possibility to choose both bias methods (save_Areal mean supports  it)
-# rename testing_config.yaml
+# Add: possibility to choose both bias methods (save_areal mean supports  it)
+# add possibility to dry run cmd option

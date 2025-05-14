@@ -130,6 +130,38 @@ qdel <job_id>
 
 The console output of the job is stored in `/lustre/storeC-ext/users/klimakverna/development/jobs/ERR_Klimakverna.<job_id>`.
 
+# Run testcase 8
+
+Testcase 8 can be run with default configuration from the command line by 
+
+```console
+python /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/run_testcase_8.py
+```
+
+To use other configurations in the calcualtion a configuraion file can be used or option can be set directly in the command line.
+For an example of a configuration file see `/lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json`.
+Run with a configuration file by
+
+```console
+python /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/run_testcase_8.py -c /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json
+```
+
+Here the option `-c` is used, to see all possible options run
+
+```console
+python /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/run_testcase_8.py -h
+```
+
+Note that the configuration file or options overwrite default settings, but use of both methods at the same time will not work.
+
+To do a test run, a dry run, of snakemake use the `-n` option
+
+```console
+python /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/run_testcase_8.py -c /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json -n
+```
+
+The testcase is run locally, but for larger calculations it can be run in the PPI queue. Comment out line 451 to 458 in `run_testcase_8.py` and uncomment lines 460 to 463.
+Logged into PPI ext, the calculations are started as described above.
 
 ## Output
 
