@@ -43,7 +43,7 @@ Activate environment by
 conda activate ../conda/klimakverna
 ```
 
-## Configuration
+## KAPy configuration files
 
 Configuration files are located in the `/config` directory, where the `config.yaml` contains all the configurations for each testcase.
 
@@ -88,7 +88,7 @@ testcase_2:
 ```  
 
 
-## setting up new rules
+## Setting up new rules
 
 - A testcase.smk is created for each testcase in the directory `./workflow/rules`.
 - And this .smk file is included in the `.workflow/Snakefile`
@@ -130,6 +130,38 @@ qdel <job_id>
 
 The console output of the job is stored in `/lustre/storeC-ext/users/klimakverna/development/jobs/ERR_Klimakverna.<job_id>`.
 
+### Run testcase 8
+
+Testcase 8 can be run from the command line by 
+
+```console
+python /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/run_testcase_8.py
+```
+Default configuration is then used in the calculations. There are two options to run with modified configuration, either use a configuraion file or set options directly in the command line.
+
+An example of a configuration file is found at `/lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json`.
+Run with a configuration file by
+
+```console
+python /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/run_testcase_8.py -c /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json
+```
+
+Here the option `-c` is used, to see all possible options run
+
+```console
+python /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/run_testcase_8.py -h
+```
+
+Note that the configuration file or options overwrite default settings, but use of both methods at the same time will not work.
+
+To do a test run, a dry run, of the snakemake pipeline use the `-n` option
+
+```console
+python /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/run_testcase_8.py -c /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json -n
+```
+
+The testcase is run locally, but for larger calculations it can be run in the PPI queue.
+Logged into PPI ext add the `-ppi` option in the command line when running the calculations as described above.
 
 ## Output
 

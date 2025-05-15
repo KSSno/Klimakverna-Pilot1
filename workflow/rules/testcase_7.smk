@@ -5,15 +5,15 @@ import pandas as pd
 import glob
 import json
 
-config =config["testcase_7"]
-ATTRIBUTES = config["attributes"]
-VARIABLES = config["variables_pr"]
-INDEX = config["index_tasmax20ge"]
-MEAN = config["30_year_mean"]
+testcase_config = config["testcase_7"]
+ATTRIBUTES = testcase_config["attributes"]
+VARIABLES = testcase_config["variables_pr"]
+INDEX = testcase_config["index_tasmax20ge"]
+MEAN = testcase_config["30_year_mean"]
 
-UPDATED_NC_OUT = config["updated_nc"]
-INPUT_DIR = config["input_nc"]
-INPUT_BASE = config["input_base"]
+UPDATED_NC_OUT = testcase_config["updated_nc"]
+INPUT_DIR = testcase_config["input_nc"]
+INPUT_BASE = testcase_config["input_base"]
 with open(INPUT_DIR, "r") as f:
     data = json.load(f)
 
