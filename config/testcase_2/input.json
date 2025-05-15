@@ -1,0 +1,8 @@
+{
+    "file_pattern": [
+        
+        "/lustre/storeC-ext/users/klimakverna/development/output/testcase_7/MET/3DBC/application/CMIP6/*/pr/*/*nc4",
+        "/lustre/storeC-ext/users/klimakverna/development/output/testcase_7/MET/annmeans_bc/CMIP6/*/*_tasmax20ge_annual_merged.nc",
+        "/lustre/storeC-ext/users/klimakverna/development/output/testcase_7/MET/annmeans_bc/ensmeans/norheatwave/*.nc"
+    ]
+}
