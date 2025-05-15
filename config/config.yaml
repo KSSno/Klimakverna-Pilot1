@@ -63,13 +63,13 @@ testcase_6:
     outputGrid:
         regriddingEngine: None
 testcase_7:
-        attributes: "config/testcase_7/global_attr.json"
-        variables_pr: "config/testcase_7/variable_pr.json"
-        index_tasmax20ge: "config/testcase_7/index_tasmax20ge.json"
-        30_year_mean: "config/testcase_7/30_year_mean_diff_norheatwave.json"
-        updated_nc: "output/testcase_7"
-        input_nc: "config/testcase_7/input.json"
-        input_base: "/lustre/storeC-ext/users/kin2100/"
+    attributes: "config/testcase_7/global_attr.json"
+    variables_pr: "config/testcase_7/variable_pr.json"
+    index_tasmax20ge: "config/testcase_7/index_tasmax20ge.json"
+    30_year_mean: "config/testcase_7/30_year_mean_diff_norheatwave.json"
+    updated_nc: "output/testcase_7"
+    input_nc: "config/testcase_7/input.json"
+    input_base: "/lustre/storeC-ext/users/kin2100/"
 testcase_8:
     configurationTables:
         inputs:  'config/testcase_8/inputs.tsv'
