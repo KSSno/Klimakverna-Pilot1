@@ -8,27 +8,34 @@ import os
 modified = False
 
 
-def update_metadata(input_file, output_file, global_attributes, attributes_variable_pr,attributes_variable_tasmax20ge,variable_diff_norheatwave, file_pattern_list):
+def update_metadata(input_file, output_file, global_attributes, variable_config, file_pattern_list, scenario_list):
     # Copy input file to the output location before editing
-    print(input_file)
-    filename = os.path.basename(input_file)  # Discard the extension
-    print(filename)
-    parts = filename.split("_")
-    if len(parts)>= 2:
-        scenario = parts[1]
-        print(scenario)
+    filename = os.path.basename(input_file)  # Discard the extension   
     copyfile(input_file, output_file)
     add_common_global_attribute( output_file, global_attributes)
-    for  type, pattern  in file_pattern_list.items():
+    for  var_type, pattern  in file_pattern_list.items():
         if (fnmatch.fnmatch(input_file, pattern)):
-            if type=="pr" :
-                add_attributes_variables(output_file, type, attributes_variable_pr,scenario)
-    
-            if type=="tasmax20ge":
-                add_attributes_variables(output_file,type , attributes_variable_tasmax20ge)
+            config = variable_config.get(var_type)
+            
+            # Deriving scenario from filename for different type of inputs(pr, tasmax20ge, norheatwave)
+            if config:
+                parts = filename.split("_")
+                index = config["scenario_index"]
+                derived_scenario = parts[index] if len(parts) > index else None
 
-            if type=="norheatwave":
-                add_attributes_variables(output_file,type , variable_diff_norheatwave)  
+                if derived_scenario:
+                    scenario = scenario_list.get(derived_scenario)
+                    if scenario:
+                        print(f"Scenario: {scenario}")
+                    else:
+                        print(f"Warning: Scenario not found in scenario_list") 
+
+                add_attributes_variables(
+                        output_file,
+                        var_type,
+                        config["attributes"],
+                        scenario
+                    )
     global modified
     if modified:
         with Dataset(output_file, "r+") as nc:
@@ -50,8 +57,8 @@ def add_common_global_attribute(output_file,  global_attributes):
                 modified=True
                 print(f"Updated global metadata {key}:{value}")   
         
-
-def add_attributes_variables(output_file,variable_name, variable_attributes,scenario):
+#Adding variable attributes for different types of inputs(pr, tasmax20ge,norheatwave)
+def add_attributes_variables(output_file,variable_name, variable_attributes,scenario= None):
     global modified 
 
     with Dataset(output_file, "r+") as nc:
@@ -59,7 +66,7 @@ def add_attributes_variables(output_file,variable_name, variable_attributes,scen
         for key, value in variable_attributes.get("global", {}).items():
             if key not in nc.ncattrs():
                 if '{scenario}' in value:
-                    value = value.format(scenario=scenario)
+                    value = value.format(scenario=scenario)                             
                 nc.setncattr(key, value) 
                 modified=True
                 print(f"Updated global attribute {variable_name} {key}:{value}")
@@ -91,8 +98,7 @@ if __name__ == "__main__":
         variable_tasmax20ge = snakemake.input[3]
         variable_diff_norheatwave = snakemake.input[4]
         pattern_list = snakemake.input[5]
-
-
+        template_variables = snakemake.input[6]
        
     except NameError:
         # Default values for standalone testing
@@ -114,9 +120,26 @@ if __name__ == "__main__":
         attributes_variable_diff_norheatwave = json.load(f)    
     with open(pattern_list, "r") as f:
         data = json.load(f)
-        
+    with open(template_variables, "r") as f:
+        templates = json.load(f)    
     # Extract the list from the "file_pattern" key
     file_pattern_list = data["file_pattern"]
+    scenario_list = templates["scenario"]
+    # Define mapping for variable types to attributes and scenario index
+    variable_config = {
+        "pr": {
+            "attributes": attributes_variable_pr,
+            "scenario_index": 1
+        },
+        "tasmax20ge": {
+            "attributes": attributes_variable_tasmax20ge,
+            "scenario_index": 1
+        },
+        "norheatwave": {
+            "attributes": attributes_variable_diff_norheatwave,
+            "scenario_index": 2
+        }
+    }
     
-    update_metadata(input_file, output_file, global_attributes, attributes_variable_pr,attributes_variable_tasmax20ge,attributes_variable_diff_norheatwave, file_pattern_list)
+    update_metadata(input_file, output_file, global_attributes, variable_config, file_pattern_list, scenario_list)
 
