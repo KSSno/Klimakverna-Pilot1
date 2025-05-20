@@ -10,7 +10,9 @@
         "creator_email": "klimavakten@met.no, klimavakten@met.no, climatedata@nve.no, climatedata@nve.no",
         "creator_name": "Helga Therese Tilley Tajet, Cristian Lussana, Irene Brox Nilsen, Sigrid Jørgensen Bakke",
         "institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE)",
-        "institution_short_name": "MET Norway, NVE"
+        "institution_short_name": "MET Norway, NVE",
+        "title": "Annual number of nordic summer days using forcing scenario {scenario}",
+        "title_no": "Antall nordiske sommerdager for år, ved bruk av utviklingsbane {scenario}"
     },
     "tasmax20ge": {
         "_FillValue": "1.e+20f",
