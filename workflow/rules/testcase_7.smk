@@ -14,7 +14,9 @@ MEAN = config["30_year_mean"]
 UPDATED_NC_OUT = config["updated_nc"]
 INPUT_DIR = config["input_nc"]
 INPUT_BASE = config["input_base"]
+
 TEMPLATE_VAR = config["template_variables"]
+
 with open(INPUT_DIR, "r") as f:
     data = json.load(f)
 
@@ -35,9 +37,7 @@ rule metadata_filling:
     input:
         lambda wildcards: glob.glob(f"{INPUT_BASE}{wildcards.filename}.nc4") or glob.glob(f"{INPUT_BASE}{wildcards.filename}.nc"),
         ATTRIBUTES,
-        VARIABLES,
-        INDEX,
-        MEAN,
+        OBJECTS,
         INPUT_DIR,
         TEMPLATE_VAR
     output:
