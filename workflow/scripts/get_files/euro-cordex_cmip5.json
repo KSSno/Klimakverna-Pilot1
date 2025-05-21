@@ -1,0 +1,7 @@
+{
+    "name": "EURO-CORDEX CMIP5",
+    "base_path": "/lustre/storeC-ext/users/kin2100/MET/cordex/output/",
+    "filter_keys": ["domain", "institute", "model", "scenario", "ensemble", "rcm", "rcm_version", "frequency", "variable", "create_ver", "start_year", "end_year"],
+    "folder_pattern": "(?P<domain>[^/]+)/(?P<institute>[^/]+)/(?P<model>[^/]+)/(?P<scenario>[^/]+)/(?P<ensemble>[^/]+)/(?P<rcm>[^/]+)/(?P<rcm_version>[^/]+)/(?P<frequency>[^/]+)/(?P<variable>[^/]+)/(?P<create_ver>[^/]+)",
+    "file_pattern": "(?P<variable>[^_]+)_(?P<domain>[^_]+)_(?P<model>[^_]+)_(?P<scenario>[^_]+)_(?P<ensemble>[^_]+)_(?P<institute_rcm>[^_]+)_(?P<rcm_version>[^_]+)_(?P<frequency>[^_]+)_(?P<start_year>[0-9]{4})[0-9]*-(?P<end_year>[0-9]{4})[0-9]*\\.nc"
+}
