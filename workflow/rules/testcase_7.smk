@@ -14,7 +14,9 @@ MEAN = testcase_config["30_year_mean"]
 UPDATED_NC_OUT = config["updated_nc"]
 INPUT_DIR = config["input_nc"]
 INPUT_BASE = config["input_base"]
+
 TEMPLATE_VAR = config["template_variables"]
+
 with open(INPUT_DIR, "r") as f:
     data = json.load(f)
 
