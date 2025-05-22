@@ -32,10 +32,10 @@ testcase_1:
     outputGrid:
         regriddingEngine: None
 testcase_2:        
-        input_json: "config/testcase_2/input.json"
-        mmd_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/mmd"
-        nc_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2"
-        input_base: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_7/"
+    input_json: "config/testcase_2/input.json"
+    mmd_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2/mmd"
+    nc_output: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_2"
+    input_base: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_7/"
 testcase_6:
     configurationTables:
         inputs:  'config/testcase_6/inputs.tsv'
@@ -63,9 +63,36 @@ testcase_6:
     outputGrid:
         regriddingEngine: None
 testcase_7:
-        attributes: "config/testcase_7/global_attr.json"
-        objects: "config/testcase_7/objects.json"
-        updated_nc: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_7"
-        input_nc: "config/testcase_7/input.json"
-        input_base: "/lustre/storeC-ext/users/kin2100/"
-        template_variables: "config/testcase_7/template_variables.json"
+    attributes: "config/testcase_7/global_attr.json"
+    objects: "config/testcase_7/objects.json"
+    updated_nc: "/lustre/storeC-ext/users/klimakverna/development/output/testcase_7"
+    input_nc: "config/testcase_7/input.json"
+    input_base: "/lustre/storeC-ext/users/kin2100/"
+    template_variables: "config/testcase_7/template_variables.json"
+testcase_8:
+    configurationTables:
+        inputs:  'config/testcase_8/inputs.tsv'
+        indicators: 'config/testcase_8/indicators.tsv'
+        scenarios:  'config/testcase_8/scenarios.tsv'
+        periods:  'config/testcase_8/periods.tsv'
+        seasons: 'config/testcase_8/seasons.tsv'
+        region: 'config/testcase_8/region.tsv'
+    dirs:
+        region: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results/EQM/ecearth_racmo'
+        csv: '/lustre/storeC-ext/users/klimakverna/development/output/testcase_8/model_results/EQM/ecearth_racmo'
+
+    # Configuration options------------------------------------
+    arealstats:
+        calcForMembers: False
+    cutouts:
+        method: 'lonlatbox'
+        xmin: 4.088
+        xmax: 31.761
+        ymin: 57.759
+        ymax: 71.384
+    ensembles:
+        upperPercentile: 90
+        centralPercentile: 50
+        lowerPercentile: 10
+    outputGrid:
+        regriddingEngine: None
