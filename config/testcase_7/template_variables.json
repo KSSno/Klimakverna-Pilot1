@@ -1,0 +1,9 @@
+{
+    "scenario": {
+        "rcp45": "RCP4.5",
+        "rcp85": "RCP8.5",
+        "rcp26": "RCP2.6",
+        "ssp370": "SSP3-7.0",
+        "hist": "HIST"
+    }
+}
