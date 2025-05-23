@@ -1,0 +1,10 @@
+{
+    "name": "CORDEX-CMIP6",
+    "base_path": "/lustre/storeC-ext/users/kin2100/MET/cordex/CMIP6/RCM/",
+    "filter_keys": ["domain", "institution", "gcm_model", "experiment",
+                    "ensemble", "rcm_model", "inst_rcm_model",
+                    "version_real", "frequency", "variable",
+                    "version_out", "start_year", "end_year", "years"],
+    "folder_pattern": "(?P<domain>[^/]+)/(?P<institution>[^/]+)/(?P<gcm_model>[^/]+)/(?P<experiment>[^/]+)/(?P<ensemble>[ripf0-9]+)/(?P<rcm_model>[^/]+)/(?P<version_real>[vr][^/]+)/(?P<frequency>[^/]+)/(?P<variable>[^/]+)(?:/(?P<version_out>v[^/]+))?",
+    "file_pattern": "(?P<variable>[^_]+)_(?P<domain_ext>[^_]+)_(?P<gcm_model>[^_]+)_(?P<experiment>[^_]+)_(?P<ensemble>[ripf0-9]+)(?:_[^_]+)?_(?P<inst_rcm_model>[^_]+)_(?P<version_real>[vr][^_]+)_(?P<frequency>[^_]+)(?:_(?P<start_year>[0-9]{4})[0-9]*-(?P<end_year>[0-9]{4})[0-9]*)?\\.nc"
+}
