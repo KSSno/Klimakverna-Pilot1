@@ -2,9 +2,6 @@
 # Written by Tyge Løvset, NORCE Research, 2025 for Klimakverna.
 
 import os
-import fnmatch
-import netCDF4 as nc4
-import datetime
 import json
 import re
 
@@ -158,12 +155,13 @@ def get_files(config_path_or_dict, filters={}, base_path=None, return_groups=Fal
 
 if __name__ == '__main__':
     filters = {
+        'institution': ['KNMI'],
+        #'institution': ['CLMcom-BTU'],
+        #'version': [None],
         #'experiment': ['rcp45'],
-        'experiment': ['ssp370'],
-        'variable': ['pr'],
-        'start_year': 1980,
-        'end_year': 1990,
-        'years': [[2020, 2030], 2090, [2095, 2100]]
+        #'experiment': ['ssp370'],
+        #'variable': ['pr'],
+        #'years': [[1980, 1990], [2020, 2030], 2090, [2095, 2100]],
     }
 
     #print('Data path:', base_path)
@@ -174,10 +172,10 @@ if __name__ == '__main__':
     #files = get_files(cordex_cmip5, filters)
     #files = get_files(cordex_cmip5, filters, '/lustre/storeC-ext/users/kin2100/MET/cordex/output/')
     #files, groups = get_files(cordex_cmip5, filters, return_groups=True)
-    #files, groups = get_files('../../config/collections/cordex_cmip5.json', filters, return_groups=True)
-    files, groups = get_files('../../config/collections/cordex_cmip6.json', filters, return_groups=True)
+    files, groups = get_files('../../config/collections/cordex_cmip5.json', filters, return_groups=True)
+    #files, groups = get_files('../../config/collections/cordex_cmip6.json', filters, return_groups=True)
 
     print('\nPrint the first 15 of', len(files), 'found:')
-    for i in range(min(len(files), 15)):
+    for i in range(min(len(files), 10000)):
         print(files[i])
         print('   ', groups[i])
