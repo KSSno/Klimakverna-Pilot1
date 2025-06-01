@@ -1,0 +1,340 @@
+{
+  "hurs": {
+    "metadata": {
+      "data variables": {
+        "long_name": "bias-adjusted daily mean near-surface relative humidity",
+        "norwegian_name": "relativ fuktighet",
+        "standard_name": "relative_humidity",
+        "units": "%"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Wai Kwok Wong, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WATER VAPOR > WATER VAPOR INDICATORS > HUMIDITY > RELATIVE HUMIDITY, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Bias-adjusted daily mean near-surface relative humidity projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Biasjusterte døgnmiddel-framskrivinger for relativ fuktighet under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Bias-adjusted daily mean near-surface relative humidity projections under emission scenario {scenario}.",
+        "title_no": "Biasjusterte døgnmiddel-framskrivinger for relativ fuktighet under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "hurs"
+    ]
+  },
+  "pr": {
+    "metadata": {
+      "data variables": {
+        "long_name": "bias-adjusted daily mean precipitation",
+        "norwegian_name": "nedbør",
+        "standard_name": "precipitation_flux",
+        "units": "kg m-2 s-1"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Wai Kwok Wong, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Bias-adjusted daily mean precipitation projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Biasjusterte døgnmiddel-framskrivinger for nedbør under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Bias-adjusted daily mean precipitation projections under emission scenario {scenario}.",
+        "title_no": "Biasjusterte døgnmiddel-framskrivinger for nedbør under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "pr"
+    ]
+  },
+  "ps": {
+    "metadata": {
+      "data variables": {
+        "long_name": "bias-adjusted daily mean surface air pressure",
+        "norwegian_name": "overflatetrykk",
+        "standard_name": "surface_air_pressure",
+        "units": "Pa"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Wai Kwok Wong, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC PRESSURE > SURFACE PRESSURE, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Bias-adjusted daily mean surface air pressure projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Biasjusterte døgnmiddel-framskrivinger for overflatetrykk under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Bias-adjusted daily mean surface air pressure projections under emission scenario {scenario}.",
+        "title_no": "Biasjusterte døgnmiddel-framskrivinger for overflatetrykk under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "ps"
+    ]
+  },
+  "rlds": {
+    "metadata": {
+      "data variables": {
+        "long_name": "bias-adjusted daily mean surface downwelling longwave radiation",
+        "norwegian_name": "langbølget stråling",
+        "standard_name": "surface_downwelling_longwave_flux_in_air",
+        "units": "W m-2"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Wai Kwok Wong, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC RADIATION > LONGWAVE RADIATION > DOWNWELLING LONGWAVE RADIATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Bias-adjusted daily mean surface downwelling longwave radiation projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Biasjusterte døgnmiddel-framskrivinger for langbølget stråling under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Bias-adjusted daily mean surface downwelling longwave radiation projections under emission scenario {scenario}.",
+        "title_no": "Biasjusterte døgnmiddel-framskrivinger for langbølget stråling under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "rlds"
+    ]
+  },
+  "rsds": {
+    "metadata": {
+      "data variables": {
+        "long_name": "bias-adjusted daily mean surface downwelling shortwave radiation",
+        "norwegian_name": "kortbølget stråling",
+        "standard_name": "surface_downwelling_shortwave_flux_in_air",
+        "units": "W m-2"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Wai Kwok Wong, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC RADIATION > SHORTWAVE RADIATION > DOWNWELLING SHORTWAVE RADIATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Bias-adjusted daily mean surface downwelling shortwave radiation projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Biasjusterte døgnmiddel-framskrivinger for kortbølget stråling under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Bias-adjusted daily mean surface downwelling shortwave radiation projections under emission scenario {scenario}.",
+        "title_no": "Biasjusterte døgnmiddel-framskrivinger for kortbølget stråling under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "rsds"
+    ]
+  },
+  "sfcWind": {
+    "metadata": {
+      "data variables": {
+        "long_name": "bias-adjusted daily mean near-surface wind speed",
+        "norwegian_name": "vindhastighet",
+        "standard_name": "wind_speed",
+        "units": "m s-1"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Wai Kwok Wong, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WINDS > SURFACE WINDS > WIND SPEED, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Bias-adjusted daily mean near-surface wind speed projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Biasjusterte døgnmiddel-framskrivinger for vindhastighet under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Bias-adjusted daily mean near-surface wind speed projections under emission scenario {scenario}.",
+        "title_no": "Biasjusterte døgnmiddel-framskrivinger for vindhastighet under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "sfcWind"
+    ]
+  },
+  "tas": {
+    "metadata": {
+      "data variables": {
+        "long_name": "bias-adjusted daily mean near-surface air temperature",
+        "norwegian_name": "middeltemperatur",
+        "standard_name": "air_temperature",
+        "units": "K"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Wai Kwok Wong, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > SURFACE TEMPERATURE > AIR TEMPERATURE, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Bias-adjusted daily mean near-surface air temperature projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Biasjusterte døgnmiddel-framskrivinger for middeltemperatur under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Bias-adjusted daily mean near-surface air temperature projections under emission scenario {scenario}.",
+        "title_no": "Biasjusterte døgnmiddel-framskrivinger for middeltemperatur under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "tas"
+    ]
+  },
+  "tasmax": {
+    "metadata": {
+      "data variables": {
+        "long_name": "bias-adjusted daily maximum near-surface air temperature",
+        "norwegian_name": "maksimumstemperatur",
+        "standard_name": "air_temperature",
+        "units": "K"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Wai Kwok Wong, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > SURFACE TEMPERATURE > MAXIMUM/MINIMUM TEMPERATURE > 24 HOUR MAXIMUM TEMPERATURE, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Bias-adjusted daily maximum near-surface air temperature projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Biasjusterte døgnmiddel-framskrivinger for maksimumstemperatur under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Bias-adjusted daily maximum near-surface air temperature projections under emission scenario {scenario}.",
+        "title_no": "Biasjusterte døgnmiddel-framskrivinger for maksimumstemperatur under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "tasmax"
+    ]
+  },
+  "tasmin": {
+    "metadata": {
+      "data variables": {
+        "long_name": "bias-adjusted daily minimun near-surface air temperature",
+        "norwegian_name": "minimumstemperatur",
+        "standard_name": "air_temperature",
+        "units": "K"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Wai Kwok Wong, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > SURFACE TEMPERATURE > MAXIMUM/MINIMUM TEMPERATURE > 24 HOUR MAXIMUM TEMPERATURE, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Bias-adjusted daily minimun near-surface air temperature projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Biasjusterte døgnmiddel-framskrivinger for minimumstemperatur under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Bias-adjusted daily minimun near-surface air temperature projections under emission scenario {scenario}.",
+        "title_no": "Biasjusterte døgnmiddel-framskrivinger for minimumstemperatur under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "tasmin"
+    ]
+  },
+  "mrro": {
+    "metadata": {
+      "data variables": {
+        "long_name": "daily mean runoff",
+        "norwegian_name": "avrenning",
+        "standard_name": "runoff_flux",
+        "units": "kg m-2 s-1"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no, climatedata@nve.no, climatedata@nve.no, climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Ingjerd Haddeland, Wai Kwok Wong, Stein Beldring, Kjetil Melvold, Gusong Ruan",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > TERRESTRIAL HYDROSPHERE INDICATORS > FRESHWATER RUNOFF, GCMDSK:EARTH SCIENCE > TERRESTRIAL HYDROSPHERE > SURFACE WATER > SURFACE WATER PROCESSES/MEASUREMENTS > RUNOFF, GEMET:geological / hydrological, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Daily mean runoff projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Døgnmiddel-framskrivinger for avrenning under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Daily mean runoff projections under emission scenario {scenario}.",
+        "title_no": "Døgnmiddel-framskrivinger for avrenning under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "mrro"
+    ]
+  },
+  "evap": {
+    "metadata": {
+      "data variables": {
+        "long_name": "daily mean evapotranspiration",
+        "norwegian_name": "fordampning",
+        "standard_name": "water_evapotranspiration_flux",
+        "units": "kg m-2 s-1"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Ingjerd Haddeland, Wai Kwok Wong",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WATER VAPOR > WATER VAPOR PROCESSES > EVAPOTRANSPIRATION, GEMET:geological / hydrological, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Daily mean evapotranspiration projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Døgnmiddel-framskrivinger for fordampning under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Daily mean evapotranspiration projections under emission scenario {scenario}.",
+        "title_no": "Døgnmiddel-framskrivinger for fordampning under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "evap"
+    ]
+  },
+  "swe": {
+    "metadata": {
+      "data variables": {
+        "long_name": "daily mean snow water equivalent",
+        "norwegian_name": "snøens vannekvivalent",
+        "standard_name": "surface_total_snow_amount",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Ingjerd Haddeland, Wai Kwok Wong",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > CRYOSPHERIC INDICATORS, GCMDSK:EARTH SCIENCE > CRYOSPHERE > SNOW/ICE > SNOW WATER EQUIVALENT, GEMET:Surface Snow Amount, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Daily mean snow water equivalent projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Døgnmiddel-framskrivinger for snøens vannekvivalent under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Daily mean snow water equivalent projections under emission scenario {scenario}.",
+        "title_no": "Døgnmiddel-framskrivinger for snøens vannekvivalent under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "swe"
+    ]
+  },
+  "mrso": {
+    "metadata": {
+      "data variables": {
+        "long_name": "daily mean soil moisture content",
+        "norwegian_name": "markvannsinnhold",
+        "standard_name": "mass_content_of_water_in_soil",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Ingjerd Haddeland, Wai Kwok Wong",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > LAND SURFACE/AGRICULTURE INDICATORS > SOIL MOISTURE, GCMDSK:EARTH SCIENCE > LAND SURFACE > SOILS > SOIL MOISTURE/WATER CONTENT, GEMET:Soil Moisture Content, NORTHEMES:Weather and climate",
+        "source": "Numerical Simulation",
+        "summary": "Daily mean soil moisture content projections under emission scenario {scenario} at a 1x1 km spatial resolution.",
+        "summary_no": "Døgnmiddel-framskrivinger for markvannsinnhold under utslippsscenario {scenario} med 1x1 km romlig oppløsning.",
+        "time_coverage_resolution": "P1D",
+        "title": "Daily mean soil moisture content projections under emission scenario {scenario}.",
+        "title_no": "Døgnmiddel-framskrivinger for markvannsinnhold under utslippsscenario {scenario}."
+      }
+    },
+    "varnames": [
+      "mrso"
+    ]
+  }
+}

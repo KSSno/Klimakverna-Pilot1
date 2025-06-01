@@ -1,0 +1,1991 @@
+{
+  "diff-tas": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in mean air temperature",
+        "norwegian_name": "differanse i middeltemperatur",
+        "units": "degC"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > SURFACE TEMPERATURE > AIR TEMPERATURE, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in mean air temperature (ca. 2 meters above ground) between the reference period (1991-2020) and a future period for year or season, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100.",
+        "summary_no": "Endring i gjennomsnittlig lufttemperatur (ca 2 meter over bakken) mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in mean air temperature averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i middeltemperatur for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      }
+    },
+    "palettes": {
+      "diff-tas_annual": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
+        "intervals": "1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tas_winter": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
+        "intervals": "1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tas_spring": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
+        "intervals": "1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tas_summer": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
+        "intervals": "1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tas_autumn": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
+        "intervals": "1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-tas_annual",
+      "diff-tas_winter",
+      "diff-tas_spring",
+      "diff-tas_summer",
+      "diff-tas_autumn"
+    ]
+  },
+  "diff-tas0lt": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in winter season length",
+        "norwegian_name": "differanse i vintersesongens lengde",
+        "units": "day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Ole Einar Tveito, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the number of days with an average air temperature below zero degrees (tas <0 °C) between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. Based on daily temperature normals.",
+        "summary_no": "Endring i antall dager med gjennomsnittlig lufttemperatur under null grader (tas<0 °C) mellom referanseperioden (1991-2020) og en fremtidsperiode. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. Basert på døgnnormaler for temperatur, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in winter season length averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i vintersesongens lengde for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 0.0
+      }
+    },
+    "palettes": {
+      "diff-tas0lt_annual": {
+        "palette": "#067953,#1da276,#52d6aa,#8bf0ce,#c7fae9",
+        "intervals": "-130,-100,-80,-60,-40,0",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tas0lt_winter": {
+        "palette": "#067953,#1da276,#52d6aa,#8bf0ce,#c7fae9",
+        "intervals": "-130,-100,-80,-60,-40,0",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tas0lt_spring": {
+        "palette": "#067953,#1da276,#52d6aa,#8bf0ce,#c7fae9",
+        "intervals": "-130,-100,-80,-60,-40,0",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tas0lt_summer": {
+        "palette": "#067953,#1da276,#52d6aa,#8bf0ce,#c7fae9",
+        "intervals": "-130,-100,-80,-60,-40,0",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tas0lt_autumn": {
+        "palette": "#067953,#1da276,#52d6aa,#8bf0ce,#c7fae9",
+        "intervals": "-130,-100,-80,-60,-40,0",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-tas0lt_annual",
+      "diff-tas0lt_winter",
+      "diff-tas0lt_spring",
+      "diff-tas0lt_summer",
+      "diff-tas0lt_autumn"
+    ]
+  },
+  "diff-tas10gt": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in summer season length",
+        "norwegian_name": "differanse i sommersesongens lengde\n",
+        "units": "day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Ole Einar Tveito, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the number of days with an average air temperature above 10 degrees (tas>10 °C) between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. Based on daily temperature normals.\n",
+        "summary_no": "Endring i antall dager med gjennomsnittlig lufttemperatur over 10 grader (tas>10 °C) mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. Basert på døgnnormaler for temperatur.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in summer season length averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i sommersesongens lengde for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 10.0
+      }
+    },
+    "palettes": {
+      "diff-tas10gt_annual": {
+        "palette": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
+        "intervals": "20,40,60",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tas10gt_winter": {
+        "palette": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
+        "intervals": "20,40,60",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tas10gt_spring": {
+        "palette": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
+        "intervals": "20,40,60",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tas10gt_summer": {
+        "palette": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
+        "intervals": "20,40,60",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tas10gt_autumn": {
+        "palette": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
+        "intervals": "20,40,60",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-tas10gt_annual",
+      "diff-tas10gt_winter",
+      "diff-tas10gt_spring",
+      "diff-tas10gt_summer",
+      "diff-tas10gt_autumn"
+    ]
+  },
+  "diff-gsl": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in growing season length",
+        "norwegian_name": "differanse i vekstsesongens lengde",
+        "units": "day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Ole Einar Tveito, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > LAND SURFACE/AGRICULTURE INDICATORS > LENGTH OF GROWING SEASON, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the number of days with an average air temperature above or equal to 5 degrees (tas>=5 °C) between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. Based on daily temperature normals.",
+        "summary_no": "Endring i antall dager med gjennomsnittlig lufttemperatur over eller lik 5 grader (tas>=5 °C) mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. Basert på døgnnormaler for temperatur.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in growing season length averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i vekstsesongens lengde for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 5.0
+      }
+    },
+    "palettes": {},
+    "varnames": [
+      "diff-gsl_annual"
+    ]
+  },
+  "diff-degday5ge": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in growing degree-days",
+        "norwegian_name": "differanse i vekstgraddager",
+        "units": "degC day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler, Ole Einar Tveito",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES > GROWING DEGREE DAYS, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the sum of degree days above 5 degrees (tas>5ºC) between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. Growing degree days, also called growing degree numbers, are the sum of the heat of the day and are a measure of how good the conditions are for plant growth. The heat sum for a day is defined as the number of degrees the daily average temperature is above a threshold value (which here is tas > 5 ºC). The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. Based on daily temperature normals.",
+        "summary_no": "Endring i sum av graddager over 5 grader (tas>5°C) mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. Vekstgraddager, også kalt vekstgradtall, er døgnet sin varmesum og er et mål på hvor gode forhold det er for planters vekst. Varmesummen til en dag er definert som antall grader døgnmiddeltemperaturen ligger over en terskelverdi (som her er tas > 5 ºC). Basert på døgnnormaler for temperatur.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in growing degree-days averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i vekstgraddager for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 5.0
+      }
+    },
+    "palettes": {},
+    "varnames": [
+      "diff-degday5ge_annual"
+    ]
+  },
+  "diff-degday17le": {
+    "metadata": {
+      "data variables": {
+        "long_name": "differende in energy degree-days",
+        "norwegian_name": "differanse i energigraddager",
+        "units": "degC day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler, Ole Einar Tveito",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES > GROWING DEGREE DAYS, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the sum of degree days under 17 degrees (tas<17ºC) between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. Based on daily temperature normals.",
+        "summary_no": "Endring i sum av graddager under 17 grader (tas<17°C) mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. Basert på døgnnormaler for temperatur.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal differende in energy degree-days averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i energigraddager for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 17.0
+      }
+    },
+    "palettes": {},
+    "varnames": [
+      "diff-degday17le_annual"
+    ]
+  },
+  "diff-degday22ge": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in cooling degree-day",
+        "norwegian_name": "differanse i avkjølingsgraddager",
+        "units": "degC day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler, Ole Einar Tveito",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES > COOLING DEGREE DAYS, GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > ATMOSPHERIC TEMPERATURE INDICES > COOLING DEGREE DAYS, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the sum of degree days above 22 degrees (tas>22°C) between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. Based on daily temperature normals.",
+        "summary_no": "Endring i sum av graddager over 22 grader (tas >22°C) mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. Basert på døgnnormaler for temperatur.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in cooling degree-day averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i avkjølingsgraddager for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 22.0
+      }
+    },
+    "palettes": {},
+    "varnames": [
+      "diff-degday22ge_annual"
+    ]
+  },
+  "diff-fdgs": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in frost days in the growing season",
+        "norwegian_name": "differanse i frostdager i vekstsesongen",
+        "units": "day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the number of days with minimum temperature below 0 degrees (tasmin<0 °C) in the growing season, computed for each year separately, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i antall dager med minimumstemperatur under 0 grader (tasmin<0 °C) i vekstsesongen beregnet for hvert enkelt år, mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.  ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in frost days in the growing season averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i frostdager i vekstsesongen for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      }
+    },
+    "palettes": {
+      "diff-fdgs_annual": {
+        "palette": "#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd",
+        "intervals": "-5,-1.4,1.4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-fdgs_winter": {
+        "palette": "#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd",
+        "intervals": "-5,-1.4,1.4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-fdgs_spring": {
+        "palette": "#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd",
+        "intervals": "-5,-1.4,1.4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-fdgs_summer": {
+        "palette": "#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd",
+        "intervals": "-5,-1.4,1.4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-fdgs_autumn": {
+        "palette": "#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd",
+        "intervals": "-5,-1.4,1.4,5",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-fdgs_annual",
+      "diff-fdgs_winter",
+      "diff-fdgs_spring",
+      "diff-fdgs_summer",
+      "diff-fdgs_autumn"
+    ]
+  },
+  "diff-tasmax": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in maximum air temperature",
+        "norwegian_name": "differanse i maksimumstemperatur",
+        "units": "degC"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > SURFACE TEMPERATURE > MAXIMUM/MINIMUM TEMPERATURE > 24 HOUR MAXIMUM TEMPERATURE, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the average of each day's highest air temperature (approx. 2 meters above the ground) for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i gjennomsnittet av hvert døgns høyeste lufttemperatur (ca 2 meter over bakken) mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in maximum air temperature averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i maksimumstemperatur for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      }
+    },
+    "palettes": {
+      "diff-tasmax_annual": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
+        "intervals": "1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmax_winter": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
+        "intervals": "1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmax_spring": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
+        "intervals": "1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmax_summer": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
+        "intervals": "1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmax_autumn": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
+        "intervals": "1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-tasmax_annual",
+      "diff-tasmax_winter",
+      "diff-tasmax_spring",
+      "diff-tasmax_summer",
+      "diff-tasmax_autumn"
+    ]
+  },
+  "diff-tasmin": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in minimum air temperature",
+        "norwegian_name": "differanse i minimumstemperatur",
+        "units": "degC"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > SURFACE TEMPERATURE > MAXIMUM/MINIMUM TEMPERATURE > 24 HOUR MINIMUM TEMPERATURE, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the average of each day's lowest air temperature (approx. 2 meters above the ground) for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i gjennomsnittet av hvert døgns laveste lufttemperatur (ca 2 meter over bakken) mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in minimum air temperature averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i minimumstemperatur for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      }
+    },
+    "palettes": {
+      "diff-tasmin_annual": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005",
+        "intervals": "1,2,3,4,5,6",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmin_winter": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005",
+        "intervals": "1,2,3,4,5,6",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmin_spring": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005",
+        "intervals": "1,2,3,4,5,6",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmin_summer": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005",
+        "intervals": "1,2,3,4,5,6",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmin_autumn": {
+        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005",
+        "intervals": "1,2,3,4,5,6",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-tasmin_annual",
+      "diff-tasmin_winter",
+      "diff-tasmin_spring",
+      "diff-tasmin_summer",
+      "diff-tasmin_autumn"
+    ]
+  },
+  "diff-dtr": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in daily air temperature range",
+        "norwegian_name": "differanse i døgnlig temperaturspenn",
+        "units": "degC"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the average difference between maximum and minimum temperature (approx. 2 meters above the ground) for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i gjennomsnittlig forskjell mellom minimumstemperatur og maximumstemperatur (ca 2 meter over bakken) mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in daily air temperature range averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i døgnlig temperaturspenn for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      }
+    },
+    "palettes": {
+      "diff-dtr_annual": {
+        "palette": "#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482",
+        "intervals": "-1,-0.5,0,0.5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-dtr_winter": {
+        "palette": "#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482",
+        "intervals": "-1,-0.5,0,0.5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-dtr_spring": {
+        "palette": "#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482",
+        "intervals": "-1,-0.5,0,0.5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-dtr_summer": {
+        "palette": "#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482",
+        "intervals": "-1,-0.5,0,0.5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-dtr_autumn": {
+        "palette": "#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482",
+        "intervals": "-1,-0.5,0,0.5",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-dtr_annual",
+      "diff-dtr_winter",
+      "diff-dtr_spring",
+      "diff-dtr_summer",
+      "diff-dtr_autumn"
+    ]
+  },
+  "diff-dzc": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in days with zero-crossings",
+        "norwegian_name": "differanse i nullgradspasseringer",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the number of days with air temperature crossing zero degrees (tasmax>0 og tasmin<0) for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i antall dager som lufttemperaturen krysser null grader (tasmax>0 og tasmin<0)  mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in days with zero-crossings averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i nullgradspasseringer for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 0.0
+      }
+    },
+    "palettes": {
+      "diff-dzc_annual": {
+        "palette": "#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0",
+        "intervals": "-30,-20,-10,-5,5,10,20",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-dzc_winter": {
+        "palette": "#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0",
+        "intervals": "-30,-20,-10,-5,5,10,20",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-dzc_spring": {
+        "palette": "#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0",
+        "intervals": "-30,-20,-10,-5,5,10,20",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-dzc_summer": {
+        "palette": "#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0",
+        "intervals": "-30,-20,-10,-5,5,10,20",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-dzc_autumn": {
+        "palette": "#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0",
+        "intervals": "-30,-20,-10,-5,5,10,20",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-dzc_annual",
+      "diff-dzc_winter",
+      "diff-dzc_spring",
+      "diff-dzc_summer",
+      "diff-dzc_autumn"
+    ]
+  },
+  "diff-fd": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in frost days",
+        "norwegian_name": "differanse i frostdager",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the number of days with minimum temperature below zero (tasmin<=0 °C) between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i antall dager med minimumstemperatur under null (tasmin<=0 °C) mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in frost days averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i frostdager for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 0.0
+      }
+    },
+    "palettes": {
+      "diff-fd_annual": {
+        "palette": "#0a455e, #197896, #29a6c6, #abeefd,#F0F8FF",
+        "intervals": "-100,-60,-45,-30,-15, 0",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-fd_winter": {
+        "palette": "#0a455e, #197896, #29a6c6, #abeefd,#F0F8FF",
+        "intervals": "-100,-60,-45,-30,-15, 0",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-fd_spring": {
+        "palette": "#0a455e, #197896, #29a6c6, #abeefd,#F0F8FF",
+        "intervals": "-100,-60,-45,-30,-15, 0",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-fd_summer": {
+        "palette": "#0a455e, #197896, #29a6c6, #abeefd,#F0F8FF",
+        "intervals": "-100,-60,-45,-30,-15, 0",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-fd_autumn": {
+        "palette": "#0a455e, #197896, #29a6c6, #abeefd,#F0F8FF",
+        "intervals": "-100,-60,-45,-30,-15, 0",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-fd_annual",
+      "diff-fd_winter",
+      "diff-fd_spring",
+      "diff-fd_summer",
+      "diff-fd_autumn"
+    ]
+  },
+  "diff-tasmin20ge": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in tropical nights",
+        "norwegian_name": "differanse i tropenattsdøgn ",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the number of days with minimum temperature above or equal to 20 degrees (tasmin>=20 °C) between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i antall døgn med minimumstemperatur over eller lik 20 grader (tasmin>=20 °C) mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in tropical nights averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i tropenattsdøgn for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 20.0
+      }
+    },
+    "palettes": {
+      "diff-tasmin20ge_annual": {
+        "palette": "#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c",
+        "intervals": "-0.1,0.1,1,2,3",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmin20ge_winter": {
+        "palette": "#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c",
+        "intervals": "-0.1,0.1,1,2,3",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmin20ge_spring": {
+        "palette": "#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c",
+        "intervals": "-0.1,0.1,1,2,3",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmin20ge_summer": {
+        "palette": "#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c",
+        "intervals": "-0.1,0.1,1,2,3",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmin20ge_autumn": {
+        "palette": "#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c",
+        "intervals": "-0.1,0.1,1,2,3",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-tasmin20ge_annual",
+      "diff-tasmin20ge_winter",
+      "diff-tasmin20ge_spring",
+      "diff-tasmin20ge_summer",
+      "diff-tasmin20ge_autumn"
+    ]
+  },
+  "diff-tasmax20ge": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in nordic summer days",
+        "norwegian_name": "differanse i nordiske sommerdager",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the number of days with maximum temperature above or equal to 20 degrees (tasmax>=20 °C) between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i antall dager med maksimumstemperatur over eller lik 20 grader (tasmax>=20 °C) mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in nordic summer days averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i nordiske sommerdager for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 20.0
+      }
+    },
+    "palettes": {
+      "diff-tasmax20ge_annual": {
+        "palette": "#eee0e5,#D3B3E7,#B151ED,#810f7c",
+        "intervals": "10,20,30",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmax20ge_winter": {
+        "palette": "#eee0e5,#D3B3E7,#B151ED,#810f7c",
+        "intervals": "10,20,30",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmax20ge_spring": {
+        "palette": "#eee0e5,#D3B3E7,#B151ED,#810f7c",
+        "intervals": "10,20,30",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmax20ge_summer": {
+        "palette": "#eee0e5,#D3B3E7,#B151ED,#810f7c",
+        "intervals": "10,20,30",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-tasmax20ge_autumn": {
+        "palette": "#eee0e5,#D3B3E7,#B151ED,#810f7c",
+        "intervals": "10,20,30",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-tasmax20ge_annual",
+      "diff-tasmax20ge_winter",
+      "diff-tasmax20ge_spring",
+      "diff-tasmax20ge_summer",
+      "diff-tasmax20ge_autumn"
+    ]
+  },
+  "diff-norheatwave": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in Norwegian heatwave events",
+        "norwegian_name": "differanse i norske hetebølger",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > WEATHER EVENTS > HEAT WAVE, GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the number of events with maximum temperature above or equal to 27 degrees (tasmax>=27°C) five days in a row between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i antall hendelser med maksimumstemperatur over eller like 27 grader (tasmax>=27°C) fem dager på rad mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in Norwegian heatwave events averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i norske hetebølger for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 27.0
+      }
+    },
+    "palettes": {
+      "diff-norheatwave_annual": {
+        "palette": "#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c",
+        "intervals": "0.5,1,2,3,4",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-norheatwave_winter": {
+        "palette": "#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c",
+        "intervals": "0.5,1,2,3,4",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-norheatwave_spring": {
+        "palette": "#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c",
+        "intervals": "0.5,1,2,3,4",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-norheatwave_summer": {
+        "palette": "#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c",
+        "intervals": "0.5,1,2,3,4",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-norheatwave_autumn": {
+        "palette": "#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c",
+        "intervals": "0.5,1,2,3,4",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-norheatwave_annual",
+      "diff-norheatwave_winter",
+      "diff-norheatwave_spring",
+      "diff-norheatwave_summer",
+      "diff-norheatwave_autumn"
+    ]
+  },
+  "change-pr": {
+    "metadata": {
+      "data variables": {
+        "long_name": "change in precipitation amount",
+        "norwegian_name": "endring i nedbørsum",
+        "units": "%"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage change in mean precipitation sum for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Prosentvis endring i gjennomsnittlig nedbørsum mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal change in precipitation amount averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "endring i nedbørsum for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      }
+    },
+    "palettes": {
+      "change-pr_annual": {
+        "palette": "#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
+        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20, 24",
+        "openleft": false,
+        "openright": false
+      },
+      "change-pr_winter": {
+        "palette": "#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
+        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20, 24",
+        "openleft": false,
+        "openright": false
+      },
+      "change-pr_spring": {
+        "palette": "#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
+        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20, 24",
+        "openleft": false,
+        "openright": false
+      },
+      "change-pr_summer": {
+        "palette": "#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
+        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20, 24",
+        "openleft": false,
+        "openright": false
+      },
+      "change-pr_autumn": {
+        "palette": "#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
+        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20, 24",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "change-pr_annual",
+      "change-pr_winter",
+      "change-pr_spring",
+      "change-pr_summer",
+      "change-pr_autumn"
+    ]
+  },
+  "diff-pr1mm": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in wet days",
+        "norwegian_name": "differanse i våte dager",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the number of days with precipitation exceeding 1 mm (pr>1 mm) for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i antall dager med nedbør over eller lik 1 mm (pr>=1 mm) mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in wet days averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i våte dager for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 1.0
+      }
+    },
+    "palettes": {
+      "diff-pr1mm_annual": {
+        "palette": "#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85",
+        "intervals": "-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-pr1mm_winter": {
+        "palette": "#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85",
+        "intervals": "-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-pr1mm_spring": {
+        "palette": "#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85",
+        "intervals": "-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-pr1mm_summer": {
+        "palette": "#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85",
+        "intervals": "-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-pr1mm_autumn": {
+        "palette": "#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85",
+        "intervals": "-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-pr1mm_annual",
+      "diff-pr1mm_winter",
+      "diff-pr1mm_spring",
+      "diff-pr1mm_summer",
+      "diff-pr1mm_autumn"
+    ]
+  },
+  "change-sdii": {
+    "metadata": {
+      "data variables": {
+        "long_name": "change in wet day precipitation amount",
+        "norwegian_name": "endring i nedbørsum på våte dager",
+        "units": "%"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage change in mean precipitation sum on wet days (pr >= 1mm) given as mm/day for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Prosentvis endring i gjennomsnittlig nedbørsum på våte dager (pr >= 1mm) gitt som mm/døgn mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal change in wet day precipitation amount averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "endring i nedbørsum på våte dager for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      }
+    },
+    "palettes": {
+      "change-sdii_annual": {
+        "palette": "#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
+        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sdii_winter": {
+        "palette": "#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
+        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sdii_spring": {
+        "palette": "#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
+        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sdii_summer": {
+        "palette": "#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
+        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sdii_autumn": {
+        "palette": "#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
+        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "change-sdii_annual",
+      "change-sdii_winter",
+      "change-sdii_spring",
+      "change-sdii_summer",
+      "change-sdii_autumn"
+    ]
+  },
+  "diff-pr95p": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in very wet days",
+        "norwegian_name": "differanse i veldig våte dager",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the number of days with precipitation exceeding the 95 percentile for the reference period and for the whole year (pr>95p) for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i antall dager med nedbør over 95 persentilen for referanseperioden og hele året (pr>95p) mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in very wet days averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i veldig våte dager for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 95.0
+      }
+    },
+    "varnames": [
+      "diff-pr95p_annual"
+    ]
+  },
+  "diff-pr95ptot": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in precipitation fraction due to very wet days",
+        "norwegian_name": "endring i nedbørandel fra veldig våte dager",
+        "units": "%"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage change in the percentage fraction of precipitation on very wet days (number of days with precipitation exceeding the 95 percentile) for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Prosentvis endring i prosentandel av nedbør på svært våte dager (antall dager med nedbør over 95-persentilen) mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in precipitation fraction due to very wet days averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "endring i nedbørandel fra veldig våte dager for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 95.0
+      }
+    },
+    "varnames": [
+      "diff-pr95ptot_annual"
+    ]
+  },
+  "change-pr997": {
+    "metadata": {
+      "data variables": {
+        "long_name": "change in very heavy precipitation",
+        "norwegian_name": "endring i svært kraftig nedbør",
+        "units": "%"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage change in the 99.7 percentile of daily precipitation for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Prosentvis endring i 99,7 persentil for døgnnedbør mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal change in very heavy precipitation averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "endring i svært kraftig nedbør for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 99.7
+      }
+    },
+    "palettes": {
+      "change-pr997_annual": {
+        "palette": "#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30",
+        "intervals": "-20, -10, 0, 10, 20, 30, 40",
+        "openleft": false,
+        "openright": false
+      },
+      "change-pr997_winter": {
+        "palette": "#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30",
+        "intervals": "-20, -10, 0, 10, 20, 30, 40",
+        "openleft": false,
+        "openright": false
+      },
+      "change-pr997_spring": {
+        "palette": "#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30",
+        "intervals": "-20, -10, 0, 10, 20, 30, 40",
+        "openleft": false,
+        "openright": false
+      },
+      "change-pr997_summer": {
+        "palette": "#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30",
+        "intervals": "-20, -10, 0, 10, 20, 30, 40",
+        "openleft": false,
+        "openright": false
+      },
+      "change-pr997_autumn": {
+        "palette": "#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30",
+        "intervals": "-20, -10, 0, 10, 20, 30, 40",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "change-pr997_annual",
+      "change-pr997_winter",
+      "change-pr997_spring",
+      "change-pr997_summer",
+      "change-pr997_autumn"
+    ]
+  },
+  "diff-pr997p": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in days with very heavy precipitation",
+        "norwegian_name": "differanse i døgn med svært kraftig nedbør",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Difference in the number of days with heavy precipitation given as daily precipitation exceeding the 99.7 percentile for the whole year (pr>99.7p) for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i antall dager med nedbør over 99,7 persentil for hele året (pr>99,7p) for referanseperioden, mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in days with very heavy precipitation averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i døgn med svært kraftig nedbør for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 99.7
+      }
+    },
+    "palettes": {
+      "diff-pr997p_annual": {
+        "palette": "#D1A65A, #F2E2B9, #BCE5DF, #5FB5AB, #0F746C, #003C30",
+        "intervals": "-0.5, 0, 0.5, 1, 1.5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-pr997p_winter": {
+        "palette": "#D1A65A, #F2E2B9, #BCE5DF, #5FB5AB, #0F746C, #003C30",
+        "intervals": "-0.5, 0, 0.5, 1, 1.5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-pr997p_spring": {
+        "palette": "#D1A65A, #F2E2B9, #BCE5DF, #5FB5AB, #0F746C, #003C30",
+        "intervals": "-0.5, 0, 0.5, 1, 1.5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-pr997p_summer": {
+        "palette": "#D1A65A, #F2E2B9, #BCE5DF, #5FB5AB, #0F746C, #003C30",
+        "intervals": "-0.5, 0, 0.5, 1, 1.5",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-pr997p_autumn": {
+        "palette": "#D1A65A, #F2E2B9, #BCE5DF, #5FB5AB, #0F746C, #003C30",
+        "intervals": "-0.5, 0, 0.5, 1, 1.5",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-pr997p_annual",
+      "diff-pr997p_winter",
+      "diff-pr997p_spring",
+      "diff-pr997p_summer",
+      "diff-pr997p_autumn"
+    ]
+  },
+  "diff-pr20mm": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in days with heavy precipitation",
+        "norwegian_name": "differanse i døgn med kraftig nedbør",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the number of days with daily precipitation above or equal to 20 mm (pr>=20mm) for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Endring i antall dager med nedbør over eller lik 20 mm (pr >= 20 mm) mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal difference in days with heavy precipitation averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i døgn med kraftig nedbør for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 20.0
+      }
+    },
+    "palettes": {
+      "diff-pr20mm_annual": {
+        "palette": "#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
+        "intervals": "-2, 0, 2, 4, 6, 8, 10",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-pr20mm_winter": {
+        "palette": "#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
+        "intervals": "-2, 0, 2, 4, 6, 8, 10",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-pr20mm_spring": {
+        "palette": "#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
+        "intervals": "-2, 0, 2, 4, 6, 8, 10",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-pr20mm_summer": {
+        "palette": "#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
+        "intervals": "-2, 0, 2, 4, 6, 8, 10",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-pr20mm_autumn": {
+        "palette": "#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
+        "intervals": "-2, 0, 2, 4, 6, 8, 10",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-pr20mm_annual",
+      "diff-pr20mm_winter",
+      "diff-pr20mm_spring",
+      "diff-pr20mm_summer",
+      "diff-pr20mm_autumn"
+    ]
+  },
+  "change-prmax5day": {
+    "metadata": {
+      "data variables": {
+        "long_name": "change in maximum 5-day precipitation amount",
+        "norwegian_name": "endring i høyeste femdagers nedbørsum",
+        "units": "%"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage change in the highest annual precipitation amount over five consecutive days, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. ",
+        "summary_no": "Prosentvis endring i høyeste nedbørmengde i løpet av 5 påfølgende dagern mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal change in maximum 5-day precipitation amount averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "endring i høyeste femdagers nedbørsum for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      }
+    },
+    "palettes": {
+      "change-prmax5day_annual": {
+        "palette": "#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
+        "intervals": "-15, -10, -5, 0, 5, 10, 15, 20, 25, 30",
+        "openleft": false,
+        "openright": false
+      },
+      "change-prmax5day_winter": {
+        "palette": "#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
+        "intervals": "-15, -10, -5, 0, 5, 10, 15, 20, 25, 30",
+        "openleft": false,
+        "openright": false
+      },
+      "change-prmax5day_spring": {
+        "palette": "#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
+        "intervals": "-15, -10, -5, 0, 5, 10, 15, 20, 25, 30",
+        "openleft": false,
+        "openright": false
+      },
+      "change-prmax5day_summer": {
+        "palette": "#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
+        "intervals": "-15, -10, -5, 0, 5, 10, 15, 20, 25, 30",
+        "openleft": false,
+        "openright": false
+      },
+      "change-prmax5day_autumn": {
+        "palette": "#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
+        "intervals": "-15, -10, -5, 0, 5, 10, 15, 20, 25, 30",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "change-prmax5day_annual",
+      "change-prmax5day_winter",
+      "change-prmax5day_spring",
+      "change-prmax5day_summer",
+      "change-prmax5day_autumn"
+    ]
+  },
+  "change-sfcWind": {
+    "metadata": {
+      "data variables": {
+        "long_name": "change in mean wind speed ",
+        "norwegian_name": "endring i middelvind",
+        "units": "%"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Jan Erik Haugen, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WINDS > WIND INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage change in mean wind speed (ca. 10 meters above ground) for year or season, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100.",
+        "summary_no": "Prosentvis endring i gjennomsnittlig vind (ca 10 meter over bakken) mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal change in mean wind speed  averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "endring i middelvind for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      }
+    },
+    "palettes": {
+      "change-sfcWind_annual": {
+        "palette": "#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B",
+        "intervals": "-5,-4,-3,-2,-1,0,1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind_winter": {
+        "palette": "#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B",
+        "intervals": "-5,-4,-3,-2,-1,0,1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind_spring": {
+        "palette": "#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B",
+        "intervals": "-5,-4,-3,-2,-1,0,1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind_summer": {
+        "palette": "#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B",
+        "intervals": "-5,-4,-3,-2,-1,0,1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind_autumn": {
+        "palette": "#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B",
+        "intervals": "-5,-4,-3,-2,-1,0,1,2,3,4,5",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "change-sfcWind_annual",
+      "change-sfcWind_winter",
+      "change-sfcWind_spring",
+      "change-sfcWind_summer",
+      "change-sfcWind_autumn"
+    ]
+  },
+  "change-sfcWind99": {
+    "metadata": {
+      "data variables": {
+        "long_name": "change in strong wind",
+        "norwegian_name": "endring i kraftig vind",
+        "units": "%"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Jan Erik Haugen, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WINDS > WIND INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage change in the 99 percentile of daily wind speed, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100.",
+        "summary_no": "Prosentvis endring i 99 persentil for døgnmiddelvind, mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal change in strong wind averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "endring i kraftig vind for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 99.0
+      }
+    },
+    "palettes": {
+      "change-sfcWind99_annual": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-3,-2,-1,0,1,2,3",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind99_winter": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-3,-2,-1,0,1,2,3",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind99_spring": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-3,-2,-1,0,1,2,3",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind99_summer": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-3,-2,-1,0,1,2,3",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind99_autumn": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-3,-2,-1,0,1,2,3",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "change-sfcWind99_annual",
+      "change-sfcWind99_winter",
+      "change-sfcWind99_spring",
+      "change-sfcWind99_summer",
+      "change-sfcWind99_autumn"
+    ]
+  },
+  "change-sfcWind997": {
+    "metadata": {
+      "data variables": {
+        "long_name": "change in very strong wind ",
+        "norwegian_name": "endring i svært kraftig vind",
+        "units": "%"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Jan Erik Haugen, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WINDS > WIND INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage change in the 99.7 percentile of daily wind speed, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100.",
+        "summary_no": "Prosentvis endring i 99,7 persentil for døgnmiddelvind, mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal change in very strong wind averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020. ",
+        "title_no": "endring i svært kraftig vind for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 99.7
+      }
+    },
+    "varnames": [
+      "change-sfcWind997_annual"
+    ]
+  },
+  "change-sfcWind100yrRP": {
+    "metadata": {
+      "data variables": {
+        "long_name": "change in the 100-year return level for wind speed ",
+        "norwegian_name": "differanse i 100-års returverdi for vind",
+        "units": "m/s"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Jan Erik Haugen, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WINDS > WIND INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage change in the 100-year return values of daily mean wind speed between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100.",
+        "summary_no": "Endring i gjennomsnittlig 100-år returverdi av døgnmiddelvind mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. ",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal change in the 100-year return level for wind speed  averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "differanse i 100-års returverdi for vind for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      }
+    },
+    "palettes": {
+      "change-sfcWind100yrRP_annual": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-15,-10,-5,0,5,10,15",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind100yrRP_winter": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-15,-10,-5,0,5,10,15",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind100yrRP_spring": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-15,-10,-5,0,5,10,15",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind100yrRP_summer": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-15,-10,-5,0,5,10,15",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind100yrRP_autumn": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-15,-10,-5,0,5,10,15",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "change-sfcWind100yrRP_annual",
+      "change-sfcWind100yrRP_winter",
+      "change-sfcWind100yrRP_spring",
+      "change-sfcWind100yrRP_summer",
+      "change-sfcWind100yrRP_autumn"
+    ]
+  },
+  "change-sfcWind10ms": {
+    "metadata": {
+      "data variables": {
+        "long_name": "change in windy days",
+        "norwegian_name": "endring i døgn med mye vind",
+        "units": "%"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Jan Erik Haugen, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WINDS > WIND INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage change in the number of days with mean wind speed above 10 m/s, between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100.",
+        "summary_no": "Prosentvis endring i antall dager med middelvind over 10 m/s (sfc > 10m/s), mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Annual or seasonal change in windy days averaged over the periods 2041–2070 or 2071–2100 under emission scenario {scenario}, compared to 1991–2020.",
+        "title_no": "endring i døgn med mye vind for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
+      },
+      "variable:threshold": {
+        "threshold": 10.0
+      }
+    },
+    "palettes": {
+      "change-sfcWind10ms_annual": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-3,-2,-1,0,1,2,3",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind10ms_winter": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-3,-2,-1,0,1,2,3",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind10ms_spring": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-3,-2,-1,0,1,2,3",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind10ms_summer": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-3,-2,-1,0,1,2,3",
+        "openleft": false,
+        "openright": false
+      },
+      "change-sfcWind10ms_autumn": {
+        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+        "intervals": "-3,-2,-1,0,1,2,3",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "change-sfcWind10ms_annual",
+      "change-sfcWind10ms_winter",
+      "change-sfcWind10ms_spring",
+      "change-sfcWind10ms_summer",
+      "change-sfcWind10ms_autumn"
+    ]
+  },
+  "change-mrro": {
+    "metadata": {
+      "data variables": {
+        "long_name": "change in mean runoff amount",
+        "norwegian_name": "endring i avrenning",
+        "units": "%"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Wai Kwok Wong",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > TERRESTRIAL HYDROSPHERE INDICATORS > FRESHWATER RUNOFF, GCMDSK:EARTH SCIENCE > TERRESTRIAL HYDROSPHERE > SURFACE WATER > SURFACE WATER PROCESSES/MEASUREMENTS > RUNOFF, GEMET:geological / hydrological, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage change in mean runoff amount between the reference period (1991-2020) and a future period for year or season, at a 1x1 km spatial resolution The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100.",
+        "summary_no": "Prosentvis endring i gjennomsnittlig avrenningsum mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title_no": "Differanse i avrenning for år eller årstider, under utslippsscenario {scenario}."
+      }
+    },
+    "palettes": {},
+    "varnames": [
+      "change-mrro_annual"
+    ]
+  },
+  "diff-mrro": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in mean runoff amount",
+        "norwegian_name": "differanse i avrenning",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Wai Kwok Wong",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > TERRESTRIAL HYDROSPHERE INDICATORS > FRESHWATER RUNOFF, GCMDSK:EARTH SCIENCE > TERRESTRIAL HYDROSPHERE > SURFACE WATER > SURFACE WATER PROCESSES/MEASUREMENTS > RUNOFF, GEMET:geological / hydrological, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in mean runoff amount between the reference period (1991-2020) and a future period for year or season, at a 1x1 km spatial resolution The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. (kg m-2 equals mm)",
+        "summary_no": "Endring i gjennomsnittlig avrenningsum mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. (kg m-2 tilsvarer mm)",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title_no": "Endring i avrenning for år eller årstider, under utslippsscenario {scenario}."
+      }
+    },
+    "palettes": {},
+    "varnames": [
+      "diff-mrro_annual"
+    ]
+  },
+  "change-evap": {
+    "metadata": {
+      "data variables": {
+        "long_name": "change in mean evapotranspiration amount ",
+        "norwegian_name": "endring i fordampning",
+        "units": "%"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Wai Kwok Wong",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WATER VAPOR > WATER VAPOR PROCESSES > EVAPOTRANSPIRATION, GEMET:geological / hydrological, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage change in mean evapotranspiration amount between the reference period (1991-2020) and a future period for year or season, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100.",
+        "summary_no": "Prosentvis endring i gjennomsnittlig fordampningsum mellom referanseperioden (1991-2020) og en fremtidsperiode for år eller sesong, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title_no": "Endring i fordampning for år eller årstider, under utslippsscenario {scenario}."
+      }
+    },
+    "palettes": {},
+    "varnames": [
+      "change-evap_annual"
+    ]
+  },
+  "diff-swemax": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in annual maximum snow water equivalent",
+        "norwegian_name": "differanse i største årlige snømengde ",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Wai Kwok Wong",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > CRYOSPHERIC INDICATORS, GCMDSK:EARTH SCIENCE > CRYOSPHERE > SNOW/ICE > SNOW WATER EQUIVALENT, GEMET:Change Over Time In Surface Snow Amount, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the mean annual maximum snow water equivalent between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. (kg m-2 equals mm)",
+        "summary_no": "Endring i gjennomsnittlig årlig maksimal snømengde (mm vann snøen representerer den dagen i året det er maksimalt med snø) mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. (kg m-2 tilsvarer mm)",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title_no": "Differanse i største årlige snømengde for år, under utslippsscenario {scenario}."
+      }
+    },
+    "palettes": {},
+    "varnames": [
+      "diff-swemax_annual"
+    ]
+  },
+  "diff-swe60ge": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in ski season",
+        "norwegian_name": "differanse i skisesongens lengde",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Wai Kwok Wong",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > CRYOSPHERIC INDICATORS > SNOW COVER, GCMDSK:EARTH SCIENCE > CRYOSPHERE > SNOW/ICE > SNOW COVER, GEMET:geological / hydrological, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the mean annual number of skiing days between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. Skiing days are defined as days with snow water equivalent more than 60 mm (equals snow depth more than 25 cm when the snow density is assumed 0.25 kg/L).",
+        "summary_no": "Endring i skisesong mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. Skisesong defineres som gjennomsnittlig antall døgn per år med snøvannekvivalent over 60 mm (tilsvarer snødybde cirka 25 cm, når tettheten settes til 0,25 kg/L).",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title_no": "Differanse i skisesongens lengde for år, under utslippsscenario {scenario}."
+      },
+      "variable:threshold": {
+        "threshold": 60.0
+      }
+    },
+    "palettes": {
+      "diff-swe60ge_annual": {
+        "palette": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
+        "intervals": "-90, -60, -30, 0",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-swe60ge_winter": {
+        "palette": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
+        "intervals": "-90, -60, -30, 0",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-swe60ge_spring": {
+        "palette": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
+        "intervals": "-90, -60, -30, 0",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-swe60ge_summer": {
+        "palette": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
+        "intervals": "-90, -60, -30, 0",
+        "openleft": false,
+        "openright": false
+      },
+      "diff-swe60ge_autumn": {
+        "palette": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
+        "intervals": "-90, -60, -30, 0",
+        "openleft": false,
+        "openright": false
+      }
+    },
+    "varnames": [
+      "diff-swe60ge_annual",
+      "diff-swe60ge_winter",
+      "diff-swe60ge_spring",
+      "diff-swe60ge_summer",
+      "diff-swe60ge_autumn"
+    ]
+  },
+  "diff-swe120ge": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in ski touring season",
+        "norwegian_name": "differanse i topptursesongens lengde",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Wai Kwok Wong",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > CRYOSPHERIC INDICATORS > SNOW COVER, GCMDSK:EARTH SCIENCE > CRYOSPHERE > SNOW/ICE > SNOW COVER, GEMET:geological / hydrological, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the mean annual number of ski mountaineering days between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. Ski mountaineering days are defined as days with snow water equivalent more than 120 mm (equals snow depth more than 50 cm when the snow density is assumed 0.25 kg/L).",
+        "summary_no": "Endring i gjennomsnittlig antall toppturskidager i året mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. Toppturskidager defineres som gjennomsnittlig antall dager per år med snømengde over 120 mm (tilsvarer snødybde cirka 50 cm, når tettheten settes til 0,25 kg/L).",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title_no": "Differanse i topptursesongens lengde for år, under utslippsscenario {scenario}."
+      },
+      "variable:threshold": {
+        "threshold": 120.0
+      }
+    },
+    "palettes": {},
+    "varnames": [
+      "diff-swe120ge_annual"
+    ]
+  },
+  "diff-mrso": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in summer soil moisture content",
+        "norwegian_name": "differanse i markvannsinnhold",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Wai Kwok Wong",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > LAND SURFACE/AGRICULTURE INDICATORS > SOIL MOISTURE, GCMDSK:EARTH SCIENCE > LAND SURFACE > SOILS > SOIL MOISTURE/WATER CONTENT, GEMET:Soil Moisture Content, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the mean soil moisture content in summer (May, June, July, August and September) between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. (kg m-2 equals mm)",
+        "summary_no": "Endring i gjennomsnittlig markvannsinnhold om sommeren (mai, juni, juli, august og september) mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. (kg m-2 tilsvarer mm)",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title_no": "Differanse i markvannsinnhold for sommersesongen, under utslippsscenario {scenario}."
+      }
+    },
+    "palettes": {},
+    "varnames": [
+      "diff-mrso_annual"
+    ]
+  },
+  "diff-mrro30plt": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in hydrological drought duration",
+        "norwegian_name": "differanse i varighet av hydrologisk tørke ",
+        "units": "day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Wai Kwok Wong, Shaochun Huang",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > LAND SURFACE/AGRICULTURE INDICATORS > DROUGHT DURATION, GCMDSK:EARTH SCIENCE > HUMAN DIMENSIONS > NATURAL HAZARDS > DROUGHTS > DROUGHT DURATION, GEMET:drought, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Change in the mean drought duration in summer (15. June to 15. October) between the reference period (1991-2020) and a future period, at a 1x1 km spatial resolution. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100. Drought duration is defined as number of consecutive days with runoff below the 30th percentile from the flow duration curve for the reference period. The computation is based on smoothed daily runoff using the 11-day moving average procedure.",
+        "summary_no": "Endring i gjennomsnittlig tørkevarighet 15. juni til 15. oktober mellom referanseperioden (1991-2020) og en fremtidsperiode, for 1x1 km romlig oppløsning. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100. Tørkevarighet er definert som antall sammenhengende dager med avrenning under 30-persentilen for referanseperioden. Beregningen er basert på 11-dagers glidende midling av daglig avrenning.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title_no": "Differanse i varighet av hydrologisk tørke for 15. juni til 15. oktober, under utslippsscenario {scenario}."
+      },
+      "variable:threshold": {
+        "threshold": 30.0
+      }
+    },
+    "palettes": {},
+    "varnames": [
+      "diff-mrro30plt_annual"
+    ]
+  },
+  "diff-spei7plt": {
+    "metadata": {
+      "data variables": {
+        "long_name": "difference in severe meteorological drought ",
+        "norwegian_name": "varighet av meteorologisk tørke ",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Ole Einar Tveito, Irene Brox Nilsen",
+        "keywords": "GCMDSK:Earth Science > CLIMATE INDICATORS > LAND SURFACE/AGRICULTURE INDICATORS > DROUGHT SEVERITY, GEMET:Hydrography, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Index for severe meteorological drought (SPEI3 < -1.5 standard deviations) at a 1x1 km spatial resolution. This index gives the difference in the frequency of severe meteorological drought during May, June, July, August and September between the reference period (1991-2020) and a future period. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100.",
+        "summary_no": "Indeks for meteorologisk tørke (SPEI3 < -1.5 standardavvik), for 1x1 km romlig oppløsning. Indeksen gir differanse i forekomst av alvorlig meteorologisk tørke i sommermånedene mai, juni, juli, august og september.",
+        "time_coverage_end": "2086-01-01T00:00:00Z",
+        "time_coverage_resolution": "P30Y",
+        "time_coverage_start": "2056-01-01T00:00:00Z",
+        "title": "Seasonal severe meteorological drought under forcing scenario SSP3-7.0.",
+        "title_no": "Alvorlig meteorologisk tørke for sommersesongen, under utslippsscenario SSP3-7.0."
+      }
+    },
+    "varnames": [
+      "diff-spei7plt_annual"
+    ]
+  }
+}
