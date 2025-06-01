@@ -158,10 +158,10 @@ def object_config_palettes(collection, varname, row):
         # add row to config
         for var in varnames:
             palette_config[var] = {
-                'palette': row['Palette'],
+                'colors': row['Palette'],
                 'intervals': row['Intervals'],
-                'openleft': row['OpenLeft'] == 'TRUE',
-                'openright': row['OpenRight'] == 'TRUE',
+                'openLowestInterval': row['OpenLeft'] == 'TRUE',
+                'openHighestInterval': row['OpenRight'] == 'TRUE',
                 #'variables': varnames
             }
 
