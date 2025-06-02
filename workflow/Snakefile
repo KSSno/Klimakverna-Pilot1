@@ -6,11 +6,18 @@ include: "rules/testcase_6.smk"
 include: "rules/testcase_7.smk"
 include: "rules/testcase_8.smk"
 
-rule all:
+rule run_testcse_1:
     input:
-        rules.testcase_1_all.input, # testcase 1 
-        expand(os.path.join(NC_OUT_DIR, "{filename}.nc4") , filename=all_file_paths),    # testcase 2
-        rules.testcase_6_all.input, # testcase 6
-        expand(os.path.join(UPDATED_NC_OUT, "{filename}.nc4"), filename=all_file_paths),  # testcase 7
-        rules.testcase_8_all.input # testcase 8
-    default_target: True
+        rules.testcase_1_all.input 
+rule run_testcase_2:        
+    input:
+        expand(os.path.join(NC_OUT_DIR, "{filename}.nc4") , filename=all_file_paths)
+rule run_testcase_6:        
+    input:        
+        rules.testcase_6_all.input
+rule run_testcase_7:        
+    input:
+        expand(os.path.join(UPDATED_NC_OUT, "{filename}.nc4"), filename=all_file_paths)
+rule run_testcase_8:        
+    input:
+        rules.testcase_8_all.input
