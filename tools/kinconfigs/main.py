@@ -25,10 +25,11 @@ collections = [
 ]
 
 # Path of palettes file (Note: specifically for collections ClimateStatistics and ReferenceIndices)
-# Header: Variable, Type, Palette, Intervals, OpenLeft, OpenRight
+# Header: Collection, Variable, Suffixes, Palette, Intervals, OpenLeft, OpenRight
+# Collection: Refers to the collection of the variable, e.g. ReferenceIndices, ClimateStatistics
 # Variable: (object level) variable name as used in other contexts
-# Type: One of {ref-annual, ref-seasonal, projection}. Will be used in combination with Variable to make list of actual varnames
-#     Example: Variable 'tas', Type 'ref-seasonal': variable names will be {tas_winter, tas_spring, tas_summer, tas_autumn}
+# Suffixes: Comma separated list of suffixes that will be used to create variable names. May be empty.
+#     Example: Variable 'tas', Suffixes 'winter,summer': variable names will be {tas_winter, tas_summer}
 # Palette: Comma separated list of hex codes
 # Intervals: Comma separated list of interval limits
 # OpenLeft and OpenRight: Boolean indicators defining the type of interval
@@ -37,27 +38,6 @@ palette_file = input_dir + 'palettes.csv'
 # First cache palettes
 df_pal = pd.read_csv(palette_file, sep=',', header=0)
 df_pal = df_pal.set_index('Variable')
-
-# Setup a dict of palettes connected to collections 
-palettes = {
-    'ReferenceIndices': df_pal[ df_pal['Type'].isin( ['ref-annual','ref-seasonal'] ) ],
-    'ClimateStatistics': df_pal[ df_pal['Type'] == 'projection' ]
-}
-# what Type means for the definition of variable palettes
-pal_suffixes = {
-    'projection': ['annual','winter','spring','summer','autumn'],
-    'ref-annual': ['annual'],
-    'ref-seasonal': ['winter','spring','summer','autumn']
-}
-
-# default suffixes when relevant
-def_suffixes = {
-    'YearlyTimeSeries': ['annual','winter','spring','summer','autumn'],
-    '30YearStatistics': ['annual','winter','spring','summer','autumn'],
-    'ReferenceIndices': ['annual','winter','spring','summer','autumn'],
-    'ClimateStatistics': ['annual','winter','spring','summer','autumn'],
-}
-
 
 # create json file for given collection
 def create_collection_config(collection):
@@ -91,12 +71,12 @@ def object_config(collection, varname, row):
         varconfig['metadata'] = metadata
 
     # set palette config if any
-    palettes = object_config_palettes(collection, varname, row)
-    if palettes is not None:
+    palettes, varnames = object_config_palettes(collection, varname, row)
+    if palettes is not None and len(palettes) > 0:
         varconfig['palettes'] = palettes
 
     # set varnames config
-    varconfig['varnames'] = object_config_varnames(collection, varname, row, palettes)
+    varconfig['varnames'] = varnames
 
     return varconfig
 
@@ -122,27 +102,31 @@ def object_config_metadata(collection, varname, row):
 
 # define palette config
 def object_config_palettes(collection, varname, row):
-    # skip if not relevant to this collection
-    if collection not in palettes:
-        return None
+    # skip if nothing defined for this collection
+    df_pal_sub = df_pal[df_pal['Collection'] == collection]
+    if len(df_pal_sub) == 0:
+        return None, [varname]
 
-    df_pal_sub = palettes[collection]
-
-    # skip if not defined for this variable
+    # skip if nothing defined for this variable
     if varname not in df_pal_sub.index:
         print('Did not find', collection, 'variable', varname, 'in palette CSV')
-        return None
+        return None, [varname]
 
     df_pal_rows = df_pal_sub.loc[[varname]]
 
     # loop over each sub definition
-    palette_config = {}
+    palette_config = []
+    all_varnames = []
     for _, row in df_pal_rows.iterrows():
-        # skip if this type of palette not recognized
-        pal_type = row['Type']
-        if pal_type not in pal_suffixes:
-            print('Palette type', pal_type, 'unrecognized, found for variable', varname)
-            continue
+        # deduce variable names for this palette config
+        if pd.isna(row['Suffixes']):
+            varnames = [varname]
+        else:
+            suffixes = [x.strip() for x in row['Suffixes'].split(',')]
+            varnames = [varname + '_' + v for v in suffixes]
+
+        # save list of variable names for later
+        all_varnames.extend(varnames)
 
         # are palettes and intervals both defined?
         nanpal = pd.isna(row['Palette'])
@@ -151,45 +135,16 @@ def object_config_palettes(collection, varname, row):
             print('Skipping incomplete definition for', collection, 'variable', varname)
             continue
 
-        # deduce variable names for this palette config
-        suffixes = pal_suffixes[pal_type]
-        varnames = [varname + '_' + v for v in suffixes]
-
         # add row to config
-        for var in varnames:
-            palette_config[var] = {
-                'colors': row['Palette'],
-                'intervals': row['Intervals'],
-                'openLowestInterval': row['OpenLeft'] == 'TRUE',
-                'openHighestInterval': row['OpenRight'] == 'TRUE',
-                #'variables': varnames
-            }
+        palette_config.append({
+            'colors': row['Palette'],
+            'intervals': row['Intervals'],
+            'openLowestInterval': row['OpenLeft'] == 'TRUE',
+            'openHighestInterval': row['OpenRight'] == 'TRUE',
+            'variables': varnames
+        })
 
-    return palette_config
-
-
-# return list of variable names that may appear in files of this object
-def object_config_varnames(collection, varname, row, palettes):
-    # most collection do not have variable name variations
-    if collection not in def_suffixes:
-        return [varname]
-
-    # what are the default suffixes for this collection?
-    defaults = def_suffixes[collection]
-
-    # if palettes defined for seasons then seasons exist
-    # Note: is palettes is None, we don't really know!
-    has_seasons = False
-    if palettes is not None:
-        for k in palettes.keys():
-            if 'winter' in k:
-                has_seasons = True
-
-    # return full list if seasons, otherwise only _annual
-    if has_seasons:
-        return [varname + '_' + v for v in defaults]
-    else:
-        return [varname + '_annual']
+    return palette_config, all_varnames
 
 
 # when run, create json for all defined collections

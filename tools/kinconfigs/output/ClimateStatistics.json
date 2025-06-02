@@ -22,38 +22,21 @@
         "title_no": "differanse i middeltemperatur for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
       }
     },
-    "palettes": {
-      "diff-tas_annual": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
+    "palettes": [
+      {
+        "colors": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
         "intervals": "1,2,3,4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tas_winter": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
-        "intervals": "1,2,3,4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tas_spring": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
-        "intervals": "1,2,3,4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tas_summer": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
-        "intervals": "1,2,3,4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tas_autumn": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
-        "intervals": "1,2,3,4,5",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-tas_annual",
+          "diff-tas_winter",
+          "diff-tas_spring",
+          "diff-tas_summer",
+          "diff-tas_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-tas_annual",
       "diff-tas_winter",
@@ -88,38 +71,21 @@
         "threshold": 0.0
       }
     },
-    "palettes": {
-      "diff-tas0lt_annual": {
-        "palette": "#067953,#1da276,#52d6aa,#8bf0ce,#c7fae9",
+    "palettes": [
+      {
+        "colors": "#067953,#1da276,#52d6aa,#8bf0ce,#c7fae9",
         "intervals": "-130,-100,-80,-60,-40,0",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tas0lt_winter": {
-        "palette": "#067953,#1da276,#52d6aa,#8bf0ce,#c7fae9",
-        "intervals": "-130,-100,-80,-60,-40,0",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tas0lt_spring": {
-        "palette": "#067953,#1da276,#52d6aa,#8bf0ce,#c7fae9",
-        "intervals": "-130,-100,-80,-60,-40,0",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tas0lt_summer": {
-        "palette": "#067953,#1da276,#52d6aa,#8bf0ce,#c7fae9",
-        "intervals": "-130,-100,-80,-60,-40,0",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tas0lt_autumn": {
-        "palette": "#067953,#1da276,#52d6aa,#8bf0ce,#c7fae9",
-        "intervals": "-130,-100,-80,-60,-40,0",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-tas0lt_annual",
+          "diff-tas0lt_winter",
+          "diff-tas0lt_spring",
+          "diff-tas0lt_summer",
+          "diff-tas0lt_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-tas0lt_annual",
       "diff-tas0lt_winter",
@@ -154,38 +120,21 @@
         "threshold": 10.0
       }
     },
-    "palettes": {
-      "diff-tas10gt_annual": {
-        "palette": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
+    "palettes": [
+      {
+        "colors": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
         "intervals": "20,40,60",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tas10gt_winter": {
-        "palette": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
-        "intervals": "20,40,60",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tas10gt_spring": {
-        "palette": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
-        "intervals": "20,40,60",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tas10gt_summer": {
-        "palette": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
-        "intervals": "20,40,60",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tas10gt_autumn": {
-        "palette": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
-        "intervals": "20,40,60",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-tas10gt_annual",
+          "diff-tas10gt_winter",
+          "diff-tas10gt_spring",
+          "diff-tas10gt_summer",
+          "diff-tas10gt_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-tas10gt_annual",
       "diff-tas10gt_winter",
@@ -220,9 +169,12 @@
         "threshold": 5.0
       }
     },
-    "palettes": {},
     "varnames": [
-      "diff-gsl_annual"
+      "diff-gsl_annual",
+      "diff-gsl_winter",
+      "diff-gsl_spring",
+      "diff-gsl_summer",
+      "diff-gsl_autumn"
     ]
   },
   "diff-degday5ge": {
@@ -251,9 +203,12 @@
         "threshold": 5.0
       }
     },
-    "palettes": {},
     "varnames": [
-      "diff-degday5ge_annual"
+      "diff-degday5ge_annual",
+      "diff-degday5ge_winter",
+      "diff-degday5ge_spring",
+      "diff-degday5ge_summer",
+      "diff-degday5ge_autumn"
     ]
   },
   "diff-degday17le": {
@@ -282,9 +237,12 @@
         "threshold": 17.0
       }
     },
-    "palettes": {},
     "varnames": [
-      "diff-degday17le_annual"
+      "diff-degday17le_annual",
+      "diff-degday17le_winter",
+      "diff-degday17le_spring",
+      "diff-degday17le_summer",
+      "diff-degday17le_autumn"
     ]
   },
   "diff-degday22ge": {
@@ -313,9 +271,12 @@
         "threshold": 22.0
       }
     },
-    "palettes": {},
     "varnames": [
-      "diff-degday22ge_annual"
+      "diff-degday22ge_annual",
+      "diff-degday22ge_winter",
+      "diff-degday22ge_spring",
+      "diff-degday22ge_summer",
+      "diff-degday22ge_autumn"
     ]
   },
   "diff-fdgs": {
@@ -341,38 +302,21 @@
         "title_no": "differanse i frostdager i vekstsesongen for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
       }
     },
-    "palettes": {
-      "diff-fdgs_annual": {
-        "palette": "#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd",
+    "palettes": [
+      {
+        "colors": "#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd",
         "intervals": "-5,-1.4,1.4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-fdgs_winter": {
-        "palette": "#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd",
-        "intervals": "-5,-1.4,1.4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-fdgs_spring": {
-        "palette": "#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd",
-        "intervals": "-5,-1.4,1.4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-fdgs_summer": {
-        "palette": "#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd",
-        "intervals": "-5,-1.4,1.4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-fdgs_autumn": {
-        "palette": "#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd",
-        "intervals": "-5,-1.4,1.4,5",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-fdgs_annual",
+          "diff-fdgs_winter",
+          "diff-fdgs_spring",
+          "diff-fdgs_summer",
+          "diff-fdgs_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-fdgs_annual",
       "diff-fdgs_winter",
@@ -404,38 +348,21 @@
         "title_no": "differanse i maksimumstemperatur for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
       }
     },
-    "palettes": {
-      "diff-tasmax_annual": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
+    "palettes": [
+      {
+        "colors": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
         "intervals": "1,2,3,4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmax_winter": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
-        "intervals": "1,2,3,4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmax_spring": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
-        "intervals": "1,2,3,4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmax_summer": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
-        "intervals": "1,2,3,4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmax_autumn": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
-        "intervals": "1,2,3,4,5",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-tasmax_annual",
+          "diff-tasmax_winter",
+          "diff-tasmax_spring",
+          "diff-tasmax_summer",
+          "diff-tasmax_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-tasmax_annual",
       "diff-tasmax_winter",
@@ -467,38 +394,21 @@
         "title_no": "differanse i minimumstemperatur for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
       }
     },
-    "palettes": {
-      "diff-tasmin_annual": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005",
+    "palettes": [
+      {
+        "colors": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005",
         "intervals": "1,2,3,4,5,6",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmin_winter": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005",
-        "intervals": "1,2,3,4,5,6",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmin_spring": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005",
-        "intervals": "1,2,3,4,5,6",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmin_summer": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005",
-        "intervals": "1,2,3,4,5,6",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmin_autumn": {
-        "palette": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005",
-        "intervals": "1,2,3,4,5,6",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-tasmin_annual",
+          "diff-tasmin_winter",
+          "diff-tasmin_spring",
+          "diff-tasmin_summer",
+          "diff-tasmin_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-tasmin_annual",
       "diff-tasmin_winter",
@@ -530,38 +440,21 @@
         "title_no": "differanse i døgnlig temperaturspenn for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
       }
     },
-    "palettes": {
-      "diff-dtr_annual": {
-        "palette": "#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482",
+    "palettes": [
+      {
+        "colors": "#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482",
         "intervals": "-1,-0.5,0,0.5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-dtr_winter": {
-        "palette": "#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482",
-        "intervals": "-1,-0.5,0,0.5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-dtr_spring": {
-        "palette": "#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482",
-        "intervals": "-1,-0.5,0,0.5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-dtr_summer": {
-        "palette": "#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482",
-        "intervals": "-1,-0.5,0,0.5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-dtr_autumn": {
-        "palette": "#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482",
-        "intervals": "-1,-0.5,0,0.5",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-dtr_annual",
+          "diff-dtr_winter",
+          "diff-dtr_spring",
+          "diff-dtr_summer",
+          "diff-dtr_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-dtr_annual",
       "diff-dtr_winter",
@@ -596,38 +489,21 @@
         "threshold": 0.0
       }
     },
-    "palettes": {
-      "diff-dzc_annual": {
-        "palette": "#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0",
+    "palettes": [
+      {
+        "colors": "#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0",
         "intervals": "-30,-20,-10,-5,5,10,20",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-dzc_winter": {
-        "palette": "#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0",
-        "intervals": "-30,-20,-10,-5,5,10,20",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-dzc_spring": {
-        "palette": "#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0",
-        "intervals": "-30,-20,-10,-5,5,10,20",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-dzc_summer": {
-        "palette": "#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0",
-        "intervals": "-30,-20,-10,-5,5,10,20",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-dzc_autumn": {
-        "palette": "#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0",
-        "intervals": "-30,-20,-10,-5,5,10,20",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-dzc_annual",
+          "diff-dzc_winter",
+          "diff-dzc_spring",
+          "diff-dzc_summer",
+          "diff-dzc_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-dzc_annual",
       "diff-dzc_winter",
@@ -662,38 +538,21 @@
         "threshold": 0.0
       }
     },
-    "palettes": {
-      "diff-fd_annual": {
-        "palette": "#0a455e, #197896, #29a6c6, #abeefd,#F0F8FF",
+    "palettes": [
+      {
+        "colors": "#0a455e, #197896, #29a6c6, #abeefd,#F0F8FF",
         "intervals": "-100,-60,-45,-30,-15, 0",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-fd_winter": {
-        "palette": "#0a455e, #197896, #29a6c6, #abeefd,#F0F8FF",
-        "intervals": "-100,-60,-45,-30,-15, 0",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-fd_spring": {
-        "palette": "#0a455e, #197896, #29a6c6, #abeefd,#F0F8FF",
-        "intervals": "-100,-60,-45,-30,-15, 0",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-fd_summer": {
-        "palette": "#0a455e, #197896, #29a6c6, #abeefd,#F0F8FF",
-        "intervals": "-100,-60,-45,-30,-15, 0",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-fd_autumn": {
-        "palette": "#0a455e, #197896, #29a6c6, #abeefd,#F0F8FF",
-        "intervals": "-100,-60,-45,-30,-15, 0",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-fd_annual",
+          "diff-fd_winter",
+          "diff-fd_spring",
+          "diff-fd_summer",
+          "diff-fd_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-fd_annual",
       "diff-fd_winter",
@@ -728,38 +587,21 @@
         "threshold": 20.0
       }
     },
-    "palettes": {
-      "diff-tasmin20ge_annual": {
-        "palette": "#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c",
+    "palettes": [
+      {
+        "colors": "#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c",
         "intervals": "-0.1,0.1,1,2,3",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmin20ge_winter": {
-        "palette": "#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c",
-        "intervals": "-0.1,0.1,1,2,3",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmin20ge_spring": {
-        "palette": "#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c",
-        "intervals": "-0.1,0.1,1,2,3",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmin20ge_summer": {
-        "palette": "#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c",
-        "intervals": "-0.1,0.1,1,2,3",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmin20ge_autumn": {
-        "palette": "#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c",
-        "intervals": "-0.1,0.1,1,2,3",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-tasmin20ge_annual",
+          "diff-tasmin20ge_winter",
+          "diff-tasmin20ge_spring",
+          "diff-tasmin20ge_summer",
+          "diff-tasmin20ge_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-tasmin20ge_annual",
       "diff-tasmin20ge_winter",
@@ -794,38 +636,21 @@
         "threshold": 20.0
       }
     },
-    "palettes": {
-      "diff-tasmax20ge_annual": {
-        "palette": "#eee0e5,#D3B3E7,#B151ED,#810f7c",
+    "palettes": [
+      {
+        "colors": "#eee0e5,#D3B3E7,#B151ED,#810f7c",
         "intervals": "10,20,30",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmax20ge_winter": {
-        "palette": "#eee0e5,#D3B3E7,#B151ED,#810f7c",
-        "intervals": "10,20,30",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmax20ge_spring": {
-        "palette": "#eee0e5,#D3B3E7,#B151ED,#810f7c",
-        "intervals": "10,20,30",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmax20ge_summer": {
-        "palette": "#eee0e5,#D3B3E7,#B151ED,#810f7c",
-        "intervals": "10,20,30",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-tasmax20ge_autumn": {
-        "palette": "#eee0e5,#D3B3E7,#B151ED,#810f7c",
-        "intervals": "10,20,30",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-tasmax20ge_annual",
+          "diff-tasmax20ge_winter",
+          "diff-tasmax20ge_spring",
+          "diff-tasmax20ge_summer",
+          "diff-tasmax20ge_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-tasmax20ge_annual",
       "diff-tasmax20ge_winter",
@@ -860,38 +685,21 @@
         "threshold": 27.0
       }
     },
-    "palettes": {
-      "diff-norheatwave_annual": {
-        "palette": "#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c",
+    "palettes": [
+      {
+        "colors": "#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c",
         "intervals": "0.5,1,2,3,4",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-norheatwave_winter": {
-        "palette": "#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c",
-        "intervals": "0.5,1,2,3,4",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-norheatwave_spring": {
-        "palette": "#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c",
-        "intervals": "0.5,1,2,3,4",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-norheatwave_summer": {
-        "palette": "#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c",
-        "intervals": "0.5,1,2,3,4",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-norheatwave_autumn": {
-        "palette": "#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c",
-        "intervals": "0.5,1,2,3,4",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-norheatwave_annual",
+          "diff-norheatwave_winter",
+          "diff-norheatwave_spring",
+          "diff-norheatwave_summer",
+          "diff-norheatwave_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-norheatwave_annual",
       "diff-norheatwave_winter",
@@ -923,38 +731,21 @@
         "title_no": "endring i nedbørsum for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
       }
     },
-    "palettes": {
-      "change-pr_annual": {
-        "palette": "#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
+    "palettes": [
+      {
+        "colors": "#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
         "intervals": "-8, -4, 0, 4, 8, 12, 16, 20, 24",
-        "openleft": false,
-        "openright": false
-      },
-      "change-pr_winter": {
-        "palette": "#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
-        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20, 24",
-        "openleft": false,
-        "openright": false
-      },
-      "change-pr_spring": {
-        "palette": "#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
-        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20, 24",
-        "openleft": false,
-        "openright": false
-      },
-      "change-pr_summer": {
-        "palette": "#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
-        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20, 24",
-        "openleft": false,
-        "openright": false
-      },
-      "change-pr_autumn": {
-        "palette": "#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
-        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20, 24",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "change-pr_annual",
+          "change-pr_winter",
+          "change-pr_spring",
+          "change-pr_summer",
+          "change-pr_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "change-pr_annual",
       "change-pr_winter",
@@ -989,38 +780,21 @@
         "threshold": 1.0
       }
     },
-    "palettes": {
-      "diff-pr1mm_annual": {
-        "palette": "#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85",
+    "palettes": [
+      {
+        "colors": "#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85",
         "intervals": "-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-pr1mm_winter": {
-        "palette": "#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85",
-        "intervals": "-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-pr1mm_spring": {
-        "palette": "#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85",
-        "intervals": "-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-pr1mm_summer": {
-        "palette": "#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85",
-        "intervals": "-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-pr1mm_autumn": {
-        "palette": "#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85",
-        "intervals": "-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-pr1mm_annual",
+          "diff-pr1mm_winter",
+          "diff-pr1mm_spring",
+          "diff-pr1mm_summer",
+          "diff-pr1mm_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-pr1mm_annual",
       "diff-pr1mm_winter",
@@ -1052,38 +826,21 @@
         "title_no": "endring i nedbørsum på våte dager for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
       }
     },
-    "palettes": {
-      "change-sdii_annual": {
-        "palette": "#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
+    "palettes": [
+      {
+        "colors": "#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
         "intervals": "-8, -4, 0, 4, 8, 12, 16, 20",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sdii_winter": {
-        "palette": "#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
-        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sdii_spring": {
-        "palette": "#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
-        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sdii_summer": {
-        "palette": "#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
-        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sdii_autumn": {
-        "palette": "#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
-        "intervals": "-8, -4, 0, 4, 8, 12, 16, 20",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "change-sdii_annual",
+          "change-sdii_winter",
+          "change-sdii_spring",
+          "change-sdii_summer",
+          "change-sdii_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "change-sdii_annual",
       "change-sdii_winter",
@@ -1119,7 +876,7 @@
       }
     },
     "varnames": [
-      "diff-pr95p_annual"
+      "diff-pr95p"
     ]
   },
   "diff-pr95ptot": {
@@ -1149,7 +906,7 @@
       }
     },
     "varnames": [
-      "diff-pr95ptot_annual"
+      "diff-pr95ptot"
     ]
   },
   "change-pr997": {
@@ -1178,38 +935,21 @@
         "threshold": 99.7
       }
     },
-    "palettes": {
-      "change-pr997_annual": {
-        "palette": "#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30",
+    "palettes": [
+      {
+        "colors": "#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30",
         "intervals": "-20, -10, 0, 10, 20, 30, 40",
-        "openleft": false,
-        "openright": false
-      },
-      "change-pr997_winter": {
-        "palette": "#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30",
-        "intervals": "-20, -10, 0, 10, 20, 30, 40",
-        "openleft": false,
-        "openright": false
-      },
-      "change-pr997_spring": {
-        "palette": "#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30",
-        "intervals": "-20, -10, 0, 10, 20, 30, 40",
-        "openleft": false,
-        "openright": false
-      },
-      "change-pr997_summer": {
-        "palette": "#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30",
-        "intervals": "-20, -10, 0, 10, 20, 30, 40",
-        "openleft": false,
-        "openright": false
-      },
-      "change-pr997_autumn": {
-        "palette": "#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30",
-        "intervals": "-20, -10, 0, 10, 20, 30, 40",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "change-pr997_annual",
+          "change-pr997_winter",
+          "change-pr997_spring",
+          "change-pr997_summer",
+          "change-pr997_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "change-pr997_annual",
       "change-pr997_winter",
@@ -1244,44 +984,8 @@
         "threshold": 99.7
       }
     },
-    "palettes": {
-      "diff-pr997p_annual": {
-        "palette": "#D1A65A, #F2E2B9, #BCE5DF, #5FB5AB, #0F746C, #003C30",
-        "intervals": "-0.5, 0, 0.5, 1, 1.5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-pr997p_winter": {
-        "palette": "#D1A65A, #F2E2B9, #BCE5DF, #5FB5AB, #0F746C, #003C30",
-        "intervals": "-0.5, 0, 0.5, 1, 1.5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-pr997p_spring": {
-        "palette": "#D1A65A, #F2E2B9, #BCE5DF, #5FB5AB, #0F746C, #003C30",
-        "intervals": "-0.5, 0, 0.5, 1, 1.5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-pr997p_summer": {
-        "palette": "#D1A65A, #F2E2B9, #BCE5DF, #5FB5AB, #0F746C, #003C30",
-        "intervals": "-0.5, 0, 0.5, 1, 1.5",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-pr997p_autumn": {
-        "palette": "#D1A65A, #F2E2B9, #BCE5DF, #5FB5AB, #0F746C, #003C30",
-        "intervals": "-0.5, 0, 0.5, 1, 1.5",
-        "openleft": false,
-        "openright": false
-      }
-    },
     "varnames": [
-      "diff-pr997p_annual",
-      "diff-pr997p_winter",
-      "diff-pr997p_spring",
-      "diff-pr997p_summer",
-      "diff-pr997p_autumn"
+      "diff-pr997p"
     ]
   },
   "diff-pr20mm": {
@@ -1310,38 +1014,21 @@
         "threshold": 20.0
       }
     },
-    "palettes": {
-      "diff-pr20mm_annual": {
-        "palette": "#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
+    "palettes": [
+      {
+        "colors": "#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
         "intervals": "-2, 0, 2, 4, 6, 8, 10",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-pr20mm_winter": {
-        "palette": "#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
-        "intervals": "-2, 0, 2, 4, 6, 8, 10",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-pr20mm_spring": {
-        "palette": "#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
-        "intervals": "-2, 0, 2, 4, 6, 8, 10",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-pr20mm_summer": {
-        "palette": "#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
-        "intervals": "-2, 0, 2, 4, 6, 8, 10",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-pr20mm_autumn": {
-        "palette": "#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
-        "intervals": "-2, 0, 2, 4, 6, 8, 10",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-pr20mm_annual",
+          "diff-pr20mm_winter",
+          "diff-pr20mm_spring",
+          "diff-pr20mm_summer",
+          "diff-pr20mm_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "diff-pr20mm_annual",
       "diff-pr20mm_winter",
@@ -1373,38 +1060,21 @@
         "title_no": "endring i høyeste femdagers nedbørsum for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
       }
     },
-    "palettes": {
-      "change-prmax5day_annual": {
-        "palette": "#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
+    "palettes": [
+      {
+        "colors": "#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
         "intervals": "-15, -10, -5, 0, 5, 10, 15, 20, 25, 30",
-        "openleft": false,
-        "openright": false
-      },
-      "change-prmax5day_winter": {
-        "palette": "#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
-        "intervals": "-15, -10, -5, 0, 5, 10, 15, 20, 25, 30",
-        "openleft": false,
-        "openright": false
-      },
-      "change-prmax5day_spring": {
-        "palette": "#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
-        "intervals": "-15, -10, -5, 0, 5, 10, 15, 20, 25, 30",
-        "openleft": false,
-        "openright": false
-      },
-      "change-prmax5day_summer": {
-        "palette": "#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
-        "intervals": "-15, -10, -5, 0, 5, 10, 15, 20, 25, 30",
-        "openleft": false,
-        "openright": false
-      },
-      "change-prmax5day_autumn": {
-        "palette": "#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
-        "intervals": "-15, -10, -5, 0, 5, 10, 15, 20, 25, 30",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "change-prmax5day_annual",
+          "change-prmax5day_winter",
+          "change-prmax5day_spring",
+          "change-prmax5day_summer",
+          "change-prmax5day_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "change-prmax5day_annual",
       "change-prmax5day_winter",
@@ -1436,38 +1106,21 @@
         "title_no": "endring i middelvind for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
       }
     },
-    "palettes": {
-      "change-sfcWind_annual": {
-        "palette": "#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B",
+    "palettes": [
+      {
+        "colors": "#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B",
         "intervals": "-5,-4,-3,-2,-1,0,1,2,3,4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind_winter": {
-        "palette": "#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B",
-        "intervals": "-5,-4,-3,-2,-1,0,1,2,3,4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind_spring": {
-        "palette": "#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B",
-        "intervals": "-5,-4,-3,-2,-1,0,1,2,3,4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind_summer": {
-        "palette": "#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B",
-        "intervals": "-5,-4,-3,-2,-1,0,1,2,3,4,5",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind_autumn": {
-        "palette": "#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B",
-        "intervals": "-5,-4,-3,-2,-1,0,1,2,3,4,5",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "change-sfcWind_annual",
+          "change-sfcWind_winter",
+          "change-sfcWind_spring",
+          "change-sfcWind_summer",
+          "change-sfcWind_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "change-sfcWind_annual",
       "change-sfcWind_winter",
@@ -1502,38 +1155,21 @@
         "threshold": 99.0
       }
     },
-    "palettes": {
-      "change-sfcWind99_annual": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+    "palettes": [
+      {
+        "colors": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
         "intervals": "-3,-2,-1,0,1,2,3",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind99_winter": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
-        "intervals": "-3,-2,-1,0,1,2,3",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind99_spring": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
-        "intervals": "-3,-2,-1,0,1,2,3",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind99_summer": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
-        "intervals": "-3,-2,-1,0,1,2,3",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind99_autumn": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
-        "intervals": "-3,-2,-1,0,1,2,3",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "change-sfcWind99_annual",
+          "change-sfcWind99_winter",
+          "change-sfcWind99_spring",
+          "change-sfcWind99_summer",
+          "change-sfcWind99_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "change-sfcWind99_annual",
       "change-sfcWind99_winter",
@@ -1569,7 +1205,7 @@
       }
     },
     "varnames": [
-      "change-sfcWind997_annual"
+      "change-sfcWind997"
     ]
   },
   "change-sfcWind100yrRP": {
@@ -1595,38 +1231,21 @@
         "title_no": "differanse i 100-års returverdi for vind for år eller sesonger, midlet over periodene 2041–2070 eller 2071–2100 under utslippsscenario {scenario}, sammenlignet med 1991–2020"
       }
     },
-    "palettes": {
-      "change-sfcWind100yrRP_annual": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+    "palettes": [
+      {
+        "colors": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
         "intervals": "-15,-10,-5,0,5,10,15",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind100yrRP_winter": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
-        "intervals": "-15,-10,-5,0,5,10,15",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind100yrRP_spring": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
-        "intervals": "-15,-10,-5,0,5,10,15",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind100yrRP_summer": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
-        "intervals": "-15,-10,-5,0,5,10,15",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind100yrRP_autumn": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
-        "intervals": "-15,-10,-5,0,5,10,15",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "change-sfcWind100yrRP_annual",
+          "change-sfcWind100yrRP_winter",
+          "change-sfcWind100yrRP_spring",
+          "change-sfcWind100yrRP_summer",
+          "change-sfcWind100yrRP_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "change-sfcWind100yrRP_annual",
       "change-sfcWind100yrRP_winter",
@@ -1661,38 +1280,21 @@
         "threshold": 10.0
       }
     },
-    "palettes": {
-      "change-sfcWind10ms_annual": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
+    "palettes": [
+      {
+        "colors": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
         "intervals": "-3,-2,-1,0,1,2,3",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind10ms_winter": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
-        "intervals": "-3,-2,-1,0,1,2,3",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind10ms_spring": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
-        "intervals": "-3,-2,-1,0,1,2,3",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind10ms_summer": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
-        "intervals": "-3,-2,-1,0,1,2,3",
-        "openleft": false,
-        "openright": false
-      },
-      "change-sfcWind10ms_autumn": {
-        "palette": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
-        "intervals": "-3,-2,-1,0,1,2,3",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "change-sfcWind10ms_annual",
+          "change-sfcWind10ms_winter",
+          "change-sfcWind10ms_spring",
+          "change-sfcWind10ms_summer",
+          "change-sfcWind10ms_autumn"
+        ]
       }
-    },
+    ],
     "varnames": [
       "change-sfcWind10ms_annual",
       "change-sfcWind10ms_winter",
@@ -1723,9 +1325,35 @@
         "title_no": "Differanse i avrenning for år eller årstider, under utslippsscenario {scenario}."
       }
     },
-    "palettes": {},
+    "palettes": [
+      {
+        "colors": "#bf812d,#dfc27d,#f6e8c3,#f5f5f5,#c7eae5,#80cdc1,#35978f,#01665e",
+        "intervals": "-10, -5,-1,1,5,10,15",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "change-mrro_annual"
+        ]
+      },
+      {
+        "colors": "#8c510a, #bf812d,#dfc27d,#f6e8c3,#f5f5f5,#c7eae5,#80cdc1,#35978f,#01665e",
+        "intervals": "-75,-35,-15,-5,5,15,35,75",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "change-mrro_winter",
+          "change-mrro_spring",
+          "change-mrro_summer",
+          "change-mrro_autumn"
+        ]
+      }
+    ],
     "varnames": [
-      "change-mrro_annual"
+      "change-mrro_annual",
+      "change-mrro_winter",
+      "change-mrro_spring",
+      "change-mrro_summer",
+      "change-mrro_autumn"
     ]
   },
   "diff-mrro": {
@@ -1750,9 +1378,27 @@
         "title_no": "Endring i avrenning for år eller årstider, under utslippsscenario {scenario}."
       }
     },
-    "palettes": {},
+    "palettes": [
+      {
+        "colors": "#8c510a, #bf812d,#dfc27d,#f6e8c3,#f5f5f5,#c7eae5,#80cdc1,#35978f,#01665e",
+        "intervals": "-400, -200, -100, -50, 50, 100, 200, 400",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-mrro_annual",
+          "diff-mrro_winter",
+          "diff-mrro_spring",
+          "diff-mrro_summer",
+          "diff-mrro_autumn"
+        ]
+      }
+    ],
     "varnames": [
-      "diff-mrro_annual"
+      "diff-mrro_annual",
+      "diff-mrro_winter",
+      "diff-mrro_spring",
+      "diff-mrro_summer",
+      "diff-mrro_autumn"
     ]
   },
   "change-evap": {
@@ -1777,9 +1423,21 @@
         "title_no": "Endring i fordampning for år eller årstider, under utslippsscenario {scenario}."
       }
     },
-    "palettes": {},
+    "palettes": [
+      {
+        "colors": "#c7eae5,#80cdc1,#35978f,#01665e, #003c30",
+        "intervals": "10,20,30,40",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "change-evap_annual",
+          "change-evap_summer"
+        ]
+      }
+    ],
     "varnames": [
-      "change-evap_annual"
+      "change-evap_annual",
+      "change-evap_summer"
     ]
   },
   "diff-swemax": {
@@ -1804,9 +1462,8 @@
         "title_no": "Differanse i største årlige snømengde for år, under utslippsscenario {scenario}."
       }
     },
-    "palettes": {},
     "varnames": [
-      "diff-swemax_annual"
+      "diff-swemax"
     ]
   },
   "diff-swe60ge": {
@@ -1834,44 +1491,19 @@
         "threshold": 60.0
       }
     },
-    "palettes": {
-      "diff-swe60ge_annual": {
-        "palette": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
+    "palettes": [
+      {
+        "colors": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
         "intervals": "-90, -60, -30, 0",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-swe60ge_winter": {
-        "palette": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
-        "intervals": "-90, -60, -30, 0",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-swe60ge_spring": {
-        "palette": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
-        "intervals": "-90, -60, -30, 0",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-swe60ge_summer": {
-        "palette": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
-        "intervals": "-90, -60, -30, 0",
-        "openleft": false,
-        "openright": false
-      },
-      "diff-swe60ge_autumn": {
-        "palette": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
-        "intervals": "-90, -60, -30, 0",
-        "openleft": false,
-        "openright": false
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-swe60ge"
+        ]
       }
-    },
+    ],
     "varnames": [
-      "diff-swe60ge_annual",
-      "diff-swe60ge_winter",
-      "diff-swe60ge_spring",
-      "diff-swe60ge_summer",
-      "diff-swe60ge_autumn"
+      "diff-swe60ge"
     ]
   },
   "diff-swe120ge": {
@@ -1899,9 +1531,8 @@
         "threshold": 120.0
       }
     },
-    "palettes": {},
     "varnames": [
-      "diff-swe120ge_annual"
+      "diff-swe120ge"
     ]
   },
   "diff-mrso": {
@@ -1926,9 +1557,8 @@
         "title_no": "Differanse i markvannsinnhold for sommersesongen, under utslippsscenario {scenario}."
       }
     },
-    "palettes": {},
     "varnames": [
-      "diff-mrso_annual"
+      "diff-mrso"
     ]
   },
   "diff-mrro30plt": {
@@ -1956,9 +1586,8 @@
         "threshold": 30.0
       }
     },
-    "palettes": {},
     "varnames": [
-      "diff-mrro30plt_annual"
+      "diff-mrro30plt"
     ]
   },
   "diff-spei7plt": {
@@ -1985,7 +1614,7 @@
       }
     },
     "varnames": [
-      "diff-spei7plt_annual"
+      "diff-spei7plt"
     ]
   }
 }
