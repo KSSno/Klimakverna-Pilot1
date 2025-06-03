@@ -1,0 +1,8 @@
+{
+    "name": "30YearStatistics",
+    "base_path": "/lustre/storeC-ext/users/kin2100/MET/annmeans_bc",
+    "filter_keys": ["time_horizon", "index_id", "period_change", "gcm_id",
+                    "gcm_variant_label", "rcm_id", "scenario", "hydro_model"],
+    "folder_pattern": "(?P<time_horizon>.+)_future_mean/(?P<index_id>[^/]+)",
+    "file_pattern": "30yearmean_(?P<period_change>[^_]+)_(?P<gcm_id>[^_]+)_(?P<gcm_variant_label>[ripf0-9]+)_(?P<rcm_id>[^_]+)_(?P<scenario>[^_]+)_(?P<hydro_model>[^_]+)_norway_1km_(?P<index_id>[^_]+)_annual_merged\\.nc"
+}
