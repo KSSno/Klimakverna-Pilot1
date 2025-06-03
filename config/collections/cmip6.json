@@ -1,7 +1,0 @@
-{
-    "name": "CMIP6",
-    "base_path": "/lustre/storeB/project/CMIP/CMIP6.monthly",
-    "filter_keys": ["experiment_id", "table_id", "source_id", "variant_label", "variable_id"],
-    "folder_pattern": "(?P<experiment_id>[^/]+)",
-    "file_pattern": "(?P<variable_id>[^_]+)_(?P<table_id>[^_]+)_(?P<source_id>[^_]+)_(?P<experiment_id>[^_]+)_(?P<variant_label>[ripf0-9]+)\\.nc"
-}
