@@ -7,20 +7,28 @@ import fnmatch
 modified = False
 
 
-def update_metadata(input_file, output_file, global_attributes, attributes_variable_pr,attributes_variable_tasmax20ge,variable_diff_norheatwave, file_pattern_list):
+def update_metadata(
+    input_file,
+    output_file,
+    global_attributes,
+    attributes_variable_pr,
+    attributes_variable_tasmax20ge,
+    variable_diff_norheatwave,
+    file_pattern_list,
+):
     # Copy input file to the output location before editing
     copyfile(input_file, output_file)
-    add_common_global_attribute( output_file, global_attributes)
-    for  type, pattern  in file_pattern_list.items():
-        if (fnmatch.fnmatch(input_file, pattern)):
-            if type=="pr" :
+    add_common_global_attribute(output_file, global_attributes)
+    for type, pattern in file_pattern_list.items():
+        if fnmatch.fnmatch(input_file, pattern):
+            if type == "pr":
                 add_attributes_variables(output_file, type, attributes_variable_pr)
-    
-            if type=="tasmax20ge":
-                add_attributes_variables(output_file,type , attributes_variable_tasmax20ge)
 
-            if type=="norheatwave":
-                add_attributes_variables(output_file,type , variable_diff_norheatwave)  
+            if type == "tasmax20ge":
+                add_attributes_variables(output_file, type, attributes_variable_tasmax20ge)
+
+            if type == "norheatwave":
+                add_attributes_variables(output_file, type, variable_diff_norheatwave)
     global modified
     if modified:
         with Dataset(output_file, "r+") as nc:
@@ -30,36 +38,36 @@ def update_metadata(input_file, output_file, global_attributes, attributes_varia
             modified = False
 
 
-def add_common_global_attribute(output_file,  global_attributes):
-    global modified 
+def add_common_global_attribute(output_file, global_attributes):
+    global modified
 
     # Open the copied file in 'r+' mode to edit in place
     with Dataset(output_file, "r+") as nc:
         # Check and update metadata attributes
         for key, value in global_attributes.items():
             if key not in nc.ncattrs():
-                nc.setncattr(key, value) 
-                modified=True
-                print(f"Updated global metadata {key}:{value}")   
-        
+                nc.setncattr(key, value)
+                modified = True
+                print(f"Updated global metadata {key}:{value}")
 
-def add_attributes_variables(output_file,variable_name, variable_attributes):
-    global modified 
+
+def add_attributes_variables(output_file, variable_name, variable_attributes):
+    global modified
 
     with Dataset(output_file, "r+") as nc:
-    # Check and update metadata attributes
+        # Check and update metadata attributes
         for key, value in variable_attributes.get("global", {}).items():
             if key not in nc.ncattrs():
-                nc.setncattr(key, value) 
-                modified=True
+                nc.setncattr(key, value)
+                modified = True
                 print(f"Updated global attribute {variable_name} {key}:{value}")
             if variable_name in nc.variables:
                 pr_var = nc.variables[variable_name]
                 for key, value in variable_attributes.get(variable_name, {}).items():
                     if key not in pr_var.ncattrs():
                         pr_var.setncattr(key, value)
-                        modified=True
-                        print(f"Updated variables {variable_name} {key}:{value}")    
+                        modified = True
+                        print(f"Updated variables {variable_name} {key}:{value}")
 
 
 # def print_global_attributes(nc_file):
@@ -82,17 +90,15 @@ if __name__ == "__main__":
         variable_diff_norheatwave = snakemake.input[4]
         pattern_list = snakemake.input[5]
 
-
-       
     except NameError:
         # Default values for standalone testing
         input_file = "example.nc"
         output_file = "example_updated.nc"
         attributes = "attributes.json"
-        variable_pr="variables.json"
-        variable_diff_norheatwave="variable_diff_norheatwave.json"
-        pattern_list= "pattern_list.json"
-        
+        variable_pr = "variables.json"
+        variable_diff_norheatwave = "variable_diff_norheatwave.json"
+        pattern_list = "pattern_list.json"
+
     # Load attributes from JSON
     with open(attributes, "r") as f:
         global_attributes = json.load(f)
@@ -101,12 +107,19 @@ if __name__ == "__main__":
     with open(variable_tasmax20ge, "r") as f:
         attributes_variable_tasmax20ge = json.load(f)
     with open(variable_diff_norheatwave, "r") as f:
-        attributes_variable_diff_norheatwave = json.load(f)    
+        attributes_variable_diff_norheatwave = json.load(f)
     with open(pattern_list, "r") as f:
         data = json.load(f)
-        
+
     # Extract the list from the "file_pattern" key
     file_pattern_list = data["file_pattern"]
-    
-    update_metadata(input_file, output_file, global_attributes, attributes_variable_pr,attributes_variable_tasmax20ge,attributes_variable_diff_norheatwave, file_pattern_list)
 
+    update_metadata(
+        input_file,
+        output_file,
+        global_attributes,
+        attributes_variable_pr,
+        attributes_variable_tasmax20ge,
+        attributes_variable_diff_norheatwave,
+        file_pattern_list,
+    )

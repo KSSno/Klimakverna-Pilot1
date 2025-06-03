@@ -18,7 +18,7 @@ model_info = {
     "ecearthveg_hclim": {"full_name": "ecearthveg-r1i1p1f1-hclim", "cmip_version": 6},
     "miroc_icon": {"full_name": "miroc-r1i1p1f1-icon", "cmip_version": 6},
     "mpi_hclim": {"full_name": "mpi-r1i1p1f1-hclim", "cmip_version": 6},
-    "mpi_icon": {"full_name":"mpi-r1i1p1f1-icon", "cmip_version": 6},
+    "mpi_icon": {"full_name": "mpi-r1i1p1f1-icon", "cmip_version": 6},
     "mpi_racmo": {"full_name": "mpi-r1i1p1f1-racmo", "cmip_version": 6},
     "noresm_hclim": {"full_name": "noresm-r1i1p1f1-hclim", "cmip_version": 6},
     "cnrm_aladin": {"full_name": "cnrm-r1i1p1-aladin", "cmip_version": 5},
@@ -30,7 +30,7 @@ model_info = {
     "mpi_cclm": {"full_name": "mpi-r1i1p1-cclm", "cmip_version": 5},
     "mpi_remo": {"full_name": "mpi-r2i1p1-remo", "cmip_version": 5},
     "noresm_rca": {"full_name": "noresm-r1i1p1-rca", "cmip_version": 5},
-    "noresm_remo": {"full_name": "noresm-r1i1p1-remo", "cmip_version": 5}
+    "noresm_remo": {"full_name": "noresm-r1i1p1-remo", "cmip_version": 5},
 }
 ssp370_models = [model for model, info in model_info.items() if info["cmip_version"] == 6]
 rcp26_rcp45_models = [model for model, info in model_info.items() if info["cmip_version"] == 5]
@@ -50,6 +50,7 @@ with open(default_config_file, "r") as f:
     default_config = yaml.safe_load(f)
     default_config = default_config["testcase_8"]
 
+
 def parse_config_tsv_file(file_path: str) -> dict:
     config = {}
     try:
@@ -67,15 +68,17 @@ def parse_config_tsv_file(file_path: str) -> dict:
 
     return config
 
+
 def write_config_to_tsv(config: dict, output_file: str) -> None:
     headers = list(config.keys())
     # Transpose the dictionary to rows
     rows = zip(*[config[key] for key in headers])
 
-    with open(output_file, mode="w") as csvfile: # newline=""
+    with open(output_file, mode="w") as csvfile:  # newline=""
         writer = csv.writer(csvfile, delimiter="\t")
         writer.writerow(headers)
         writer.writerows(rows)
+
 
 def get_input_path(model: str, bias_method: str, calculation_type: str, indicator: str) -> str:
     path = ""
@@ -85,7 +88,7 @@ def get_input_path(model: str, bias_method: str, calculation_type: str, indicato
     if bias_method == "3DBC" and cmip_version == 5:
         if calculation_type == "24h":
             path = f"{path_dbc_24h}/{model_name}/{indicator}/[rrh][cci][pps][24t]*/*_????.nc"
-        else: # 30y, 30 year means
+        else:  # 30y, 30 year means
             path = f"{path_30y_mean}/[r,n,f]*_mean/{indicator}/30yrmean_[n,f,r][f,f,e][-,-,f]*_{model_name}_[r][c][p][24][65]*_3*.nc"
 
     elif bias_method == "EQM" and cmip_version == 5:
@@ -107,15 +110,21 @@ def get_input_path(model: str, bias_method: str, calculation_type: str, indicato
             path = f"{path_30y_mean}/CMIP6/[r,n,f]*_mean/{indicator}/30yrmean_[n,f,r][f,f,e][-,-,f]*_{model_name}_ssp370_e*.nc"
     else:
         # Will never get here? Have already validated input
-        raise ValueError(f"Combination of bias adjustment method {bias_method} and CMIP version {cmip_version} is not valid for model {model}")
-    
+        raise ValueError(
+            f"Combination of bias adjustment method {bias_method} and CMIP version {cmip_version} is not valid for model {model}"
+        )
+
     return path
+
 
 def set_config_path(change: Path | bool, config_type: str):
     if change:
         default_config["configurationTables"][config_type] = str(change)
     else:
-        default_config["configurationTables"][config_type] = f"{klimakverna_pilot1_path}/config/testcase_8/{config_type}.tsv"
+        default_config["configurationTables"][
+            config_type
+        ] = f"{klimakverna_pilot1_path}/config/testcase_8/{config_type}.tsv"
+
 
 calculation_type = "30y"
 
@@ -134,34 +143,82 @@ default_models = ["cnrm_aladin"]
 default_bias_method = "3DBC"
 default_region_id = 1
 default_output_location = output_path
-default_region_config = parse_config_tsv_file(f"{klimakverna_pilot1_path}/{default_config['configurationTables']['region']}")
+default_region_config = parse_config_tsv_file(
+    f"{klimakverna_pilot1_path}/{default_config['configurationTables']['region']}"
+)
 default_region_shapefile_path = Path(default_region_config["shapefile"][0])
 
-parser = ap.ArgumentParser(description=(
-    "Testcase 8: 30 year means and 24-hour time series in csv output format. "
-    "A configuration file or options set in command line overwrites default configuration. "
-    f"Default configuration is indicator={default_indicator}, periods={default_periods}, scenarios={default_scenarios}, models={default_models}, "
-    f"bias method={default_bias_method}, region id={default_region_id}, region shapefile={default_region_shapefile_path}, output location={default_output_location}"
+parser = ap.ArgumentParser(
+    description=(
+        "Testcase 8: 30 year means and 24-hour time series in csv output format. "
+        "A configuration file or options set in command line overwrites default configuration. "
+        f"Default configuration is indicator={default_indicator}, periods={default_periods}, scenarios={default_scenarios}, models={default_models}, "
+        f"bias method={default_bias_method}, region id={default_region_id}, region shapefile={default_region_shapefile_path}, output location={default_output_location}"
     )
-)      
+)
 
-parser.add_argument("-i", "--indicator", type=str, help="Indicator for calculation (pr or tas)", default=default_indicator)
-parser.add_argument("-s", "--scenarios", nargs='+', type=str, help="Scenario(s) to calculate for (rcp26, rcp45, ssp370, hist)", default=default_scenarios)
-parser.add_argument("-p", "--periods", nargs='+', type=str, help="Period for calculation (For 30 year mean: 'hist' for 1991-2020, 'nf' for 2041-2070 or 'ff' for 2071-2100. For daily time series: 2041 or 2041-2043)", default=default_periods) # --> calculation-type
-parser.add_argument("-m", "--models", nargs='+', type=str, help="Model for calculation", default=default_models)
-parser.add_argument("-b", "--bias-method", type=str, help="Bias-adjustment method (EQM or 3DBC)", default=default_bias_method)
+parser.add_argument(
+    "-i", "--indicator", type=str, help="Indicator for calculation (pr or tas)", default=default_indicator
+)
+parser.add_argument(
+    "-s",
+    "--scenarios",
+    nargs="+",
+    type=str,
+    help="Scenario(s) to calculate for (rcp26, rcp45, ssp370, hist)",
+    default=default_scenarios,
+)
+parser.add_argument(
+    "-p",
+    "--periods",
+    nargs="+",
+    type=str,
+    help="Period for calculation (For 30 year mean: 'hist' for 1991-2020, 'nf' for 2041-2070 or 'ff' for 2071-2100. For daily time series: 2041 or 2041-2043)",
+    default=default_periods,
+)  # --> calculation-type
+parser.add_argument("-m", "--models", nargs="+", type=str, help="Model for calculation", default=default_models)
+parser.add_argument(
+    "-b", "--bias-method", type=str, help="Bias-adjustment method (EQM or 3DBC)", default=default_bias_method
+)
 parser.add_argument("-ri", "--region-id", type=int, help="Region id in shapefile", default=default_region_id)
 
-parser.add_argument("-r", "--region-shapefile", type=Path, help="Absolute path to shapefile for region to do calculation for", default=default_region_shapefile_path)
-parser.add_argument("-o", "--output-location", type=Path, help="Absolute path to output location for csv file and netcdf file", default= default_output_location)
+parser.add_argument(
+    "-r",
+    "--region-shapefile",
+    type=Path,
+    help="Absolute path to shapefile for region to do calculation for",
+    default=default_region_shapefile_path,
+)
+parser.add_argument(
+    "-o",
+    "--output-location",
+    type=Path,
+    help="Absolute path to output location for csv file and netcdf file",
+    default=default_output_location,
+)
 
-parser.add_argument("-c", "--config-file", type=Path, help="Absolute path to json configuration file. See example /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json")
+parser.add_argument(
+    "-c",
+    "--config-file",
+    type=Path,
+    help="Absolute path to json configuration file. See example /lustre/storeC-ext/users/klimakverna/development/Klimakverna-Pilot1/tools/example_config.json",
+)
 
-parser.add_argument("-n", "--dry-run", action='store_true',  help="If this option is set, a dry run of the snakemake pipeline will be performed where no calculations will be done")
-parser.add_argument("-ppi", "--use-ppi-queue", action='store_true',  help="If this option is set the calculation will be run in the PPI queue")
+parser.add_argument(
+    "-n",
+    "--dry-run",
+    action="store_true",
+    help="If this option is set, a dry run of the snakemake pipeline will be performed where no calculations will be done",
+)
+parser.add_argument(
+    "-ppi",
+    "--use-ppi-queue",
+    action="store_true",
+    help="If this option is set the calculation will be run in the PPI queue",
+)
 
 args = parser.parse_args()
-indicator = args.indicator 
+indicator = args.indicator
 periods = args.periods
 scenarios = args.scenarios
 models = args.models
@@ -186,7 +243,7 @@ if args.config_file:
 
     if "indicator" in config:
         indicator = config["indicator"]
-        
+
     if "periods" in config:
         periods = config["periods"]
 
@@ -222,7 +279,7 @@ for scenario in scenarios:
 if "hist" in scenarios or "hist" in periods or ("nf" not in periods and "ff" not in periods):
     if "hist" in periods and "hist" not in scenarios:
         raise ValueError("If periods include 'hist', the scenarios also have to include 'hist'")
-    
+
     hist_period_in_config = False
     for period in periods:
         if period == "hist":
@@ -231,10 +288,11 @@ if "hist" in scenarios or "hist" in periods or ("nf" not in periods and "ff" not
             continue
         elif "-" in period:
             start, end = period.split("-")
-            if (arrow.get(start).is_between(arrow.get(hist_period["start"]), arrow.get(hist_period["end"]), "[]")
-                or arrow.get(end).is_between(arrow.get(hist_period["start"]), arrow.get(hist_period["end"]), "[]")):
+            if arrow.get(start).is_between(
+                arrow.get(hist_period["start"]), arrow.get(hist_period["end"]), "[]"
+            ) or arrow.get(end).is_between(arrow.get(hist_period["start"]), arrow.get(hist_period["end"]), "[]"):
                 hist_period_in_config = True
-            
+
         elif arrow.get(period).is_between(arrow.get(hist_period["start"]), arrow.get(hist_period["end"]), "[]"):
             hist_period_in_config = True
 
@@ -242,20 +300,30 @@ if "hist" in scenarios or "hist" in periods or ("nf" not in periods and "ff" not
         raise ValueError("If periods include years in the 'hist' period, the scenarios also have to include 'hist'")
 
     if not hist_period_in_config and "hist" in scenarios:
-        raise ValueError(f"If sceanrios include 'hist', the periods also have to include 'hist' or years between {hist_period['start']} and {hist_period['end']}")
+        raise ValueError(
+            f"If sceanrios include 'hist', the periods also have to include 'hist' or years between {hist_period['start']} and {hist_period['end']}"
+        )
 
 for model in models:
     if "ssp370" in scenarios:
         if model not in ssp370_models:
-            raise ValueError(f"Model {model} is invalid for scenario ssp370. Valid models for this sceanrio are {', '.join(f'{model}' for model in ssp370_models)}")
+            raise ValueError(
+                f"Model {model} is invalid for scenario ssp370. Valid models for this sceanrio are {', '.join(f'{model}' for model in ssp370_models)}"
+            )
     elif "rcp26" in scenarios or "rcp45" in scenarios:
         if model not in rcp26_rcp45_models:
-            raise ValueError(f"Model {model} is invalid for scenarios rcp26 and rcp45. Valid models for these sceanrios are {', '.join(f'{model}' for model in rcp26_rcp45_models)}")
+            raise ValueError(
+                f"Model {model} is invalid for scenarios rcp26 and rcp45. Valid models for these sceanrios are {', '.join(f'{model}' for model in rcp26_rcp45_models)}"
+            )
     elif scenarios == ["hist"]:
         if model not in rcp26_rcp45_models + ssp370_models:
-            raise ValueError(f"Model {model} is invalid for scenario hist. Valid models for this sceanrio are {', '.join(f'{model}' for model in ssp370_models + rcp26_rcp45_models)}")
+            raise ValueError(
+                f"Model {model} is invalid for scenario hist. Valid models for this sceanrio are {', '.join(f'{model}' for model in ssp370_models + rcp26_rcp45_models)}"
+            )
     else:
-        raise ValueError(f"Model {model} is invalid. Valid models are {', '.join(f'{model}' for model in ssp370_models + rcp26_rcp45_models)}")
+        raise ValueError(
+            f"Model {model} is invalid. Valid models are {', '.join(f'{model}' for model in ssp370_models + rcp26_rcp45_models)}"
+        )
 
 if bias_method not in ["EQM", "3DBC"]:
     raise ValueError(f"Bias adjustment method {bias_method} not equal to 'EQM' or '3DBC'")
@@ -276,7 +344,9 @@ else:
 # default_config_file contains paths to where the csv and the region netcdf fiels should be stored,
 # in addition to paths to rest of config files (inputs, indicators, sceanrios, periods, region)
 if indicator != default_indicator:
-    indicator_config = parse_config_tsv_file(f"{klimakverna_pilot1_path}/{default_config['configurationTables']['indicators']}")
+    indicator_config = parse_config_tsv_file(
+        f"{klimakverna_pilot1_path}/{default_config['configurationTables']['indicators']}"
+    )
 
     indicator_config["variables"] = [indicator]
     if indicator == "tas":
@@ -292,7 +362,7 @@ if periods != default_periods:
 
     for period_id, period in enumerate(periods):
         periods_config["id"].append(f"{period_id+1}")
-        
+
         if period == "hist":
             periods_config["short_name"].append(period)
             periods_config["name"].append(hist_period["name"])
@@ -325,7 +395,7 @@ if periods != default_periods:
                 periods_config["name"].append(f"Year {period}")
                 periods_config["start"].append(period)
                 periods_config["end"].append(period)
-            
+
             if arrow.get(end) >= arrow.get(hist_period["start"]) and arrow.get(start) <= arrow.get(hist_period["end"]):
                 short_name = "hist"
             elif arrow.get(end) >= arrow.get(nf_period["start"]) and arrow.get(start) <= arrow.get(nf_period["end"]):
@@ -333,11 +403,13 @@ if periods != default_periods:
             elif arrow.get(end) >= arrow.get(ff_period["start"]) and arrow.get(start) <= arrow.get(ff_period["end"]):
                 short_name = "ff"
             else:
-                raise ValueError(f"Period {period} is invalid. It should be equal to nf, ff or hist for 30 year means. "
-                                 "For daily time series, it should be a single year or a range of years within one period ('2043' or '2043-2045'). "
-                                 f"hist: {hist_period['start']}-{hist_period['end']}, "
-                                 f"nf: {nf_period['start']}-{nf_period['end']}, "
-                                 f"ff: {ff_period['start']}-{ff_period['end']}")
+                raise ValueError(
+                    f"Period {period} is invalid. It should be equal to nf, ff or hist for 30 year means. "
+                    "For daily time series, it should be a single year or a range of years within one period ('2043' or '2043-2045'). "
+                    f"hist: {hist_period['start']}-{hist_period['end']}, "
+                    f"nf: {nf_period['start']}-{nf_period['end']}, "
+                    f"ff: {ff_period['start']}-{ff_period['end']}"
+                )
 
             periods_config["short_name"].append(short_name)
 
@@ -369,7 +441,9 @@ if scenarios != default_scenarios:
             scenarios_config["scenarioStrings"].append("_hist_")
             scenarios_config["hexcolour"].append("66C2A5")
         else:
-            raise ValueError(f"Scenario {scenario} is invalid. Valid scenarios are 'rcp26', 'rcp45', 'ssp370' or 'hist'")
+            raise ValueError(
+                f"Scenario {scenario} is invalid. Valid scenarios are 'rcp26', 'rcp45', 'ssp370' or 'hist'"
+            )
 
     change_scenarios = Path(f"{output_path}/config/scenarios.tsv")
     write_config_to_tsv(scenarios_config, f"{change_scenarios}")
@@ -378,7 +452,7 @@ if str(region_shapefile) == str(default_region_shapefile_path):
     if region_id != default_region_id:
         if region_id > 11 or region_id < 1:
             raise ValueError(f"Region id {region_id} should be between 1 and 11")
-        
+
         region_config = {"id": [region_id], "shapefile": [region_shapefile]}
         change_region_id = Path(f"{output_path}/config/region.tsv")
         write_config_to_tsv(region_config, f"{change_region_id}")
@@ -395,8 +469,10 @@ else:
             break
 
     if not region_id_valid:
-        raise ValueError(f"Region id {region_id} not found in shapefile {region_shapefile}. Please check the columns and values in the shapefile")
-    
+        raise ValueError(
+            f"Region id {region_id} not found in shapefile {region_shapefile}. Please check the columns and values in the shapefile"
+        )
+
     region_config = {"id": [region_id], "shapefile": [region_shapefile]}
     change_region_shapefile = Path(f"{output_path}/config/region.tsv")
     write_config_to_tsv(region_config, f"{change_region_shapefile}")
@@ -417,15 +493,26 @@ else:
 
 for model in models:
     if model != "cnrm_aladin" or bias_method != "3DBC" or indicator != "pr" or calculation_type != "30y":
-        # input file name depends on models, bias_method, calcualtions_type, cmip_version (=scenario) and indicator 
+        # input file name depends on models, bias_method, calcualtions_type, cmip_version (=scenario) and indicator
         # periods are filtered afterwards
-        input_config = {"id": [], "srcName": [], "varName": [], "path": [], "stemRegex": [], "internalVarName": [], "hasScenarios": [], "applyPreprocessor": []}
+        input_config = {
+            "id": [],
+            "srcName": [],
+            "varName": [],
+            "path": [],
+            "stemRegex": [],
+            "internalVarName": [],
+            "hasScenarios": [],
+            "applyPreprocessor": [],
+        }
         stem_regex = "(.*).nc"
         has_scenarios = "TRUE"
         apply_preprocessor = "FALSE"
 
         source_name = f"CMIP{model_info[model]['cmip_version']}"
-        input_config["id"].append(f"CMIP{model_info[model]['cmip_version']}-{bias_method}-{calculation_type}-{model}-{indicator}")
+        input_config["id"].append(
+            f"CMIP{model_info[model]['cmip_version']}-{bias_method}-{calculation_type}-{model}-{indicator}"
+        )
         input_config["srcName"].append(source_name)
         input_config["varName"].append(indicator)
         input_config["path"].append(get_input_path(model, bias_method, calculation_type, indicator))
@@ -456,17 +543,23 @@ for model in models:
         yaml.dump(old_default_config, f)
 
     if use_ppi_queue:
-    # Run calculation in PPI queue
-        print(f"\n\nRunning calculation for {model} with bias method {bias_method} and calculation type {calculation_type}")
-        process = subprocess.Popen(["qsub", "-V", "-b", "n", "-cwd", f"{klimakverna_pilot1_path}/tools/run_snakemake_ppi_C.sh"])
+        # Run calculation in PPI queue
+        print(
+            f"\n\nRunning calculation for {model} with bias method {bias_method} and calculation type {calculation_type}"
+        )
+        process = subprocess.Popen(
+            ["qsub", "-V", "-b", "n", "-cwd", f"{klimakverna_pilot1_path}/tools/run_snakemake_ppi_C.sh"]
+        )
         process.wait()
     else:
-    # Run calculation locally
+        # Run calculation locally
         if dry_run:
             print(f"\n\nDry run for {model} with bias method {bias_method} and calculation type {calculation_type}")
             process = subprocess.Popen([f"{klimakverna_pilot1_path}/tools/dry_run_snakemake_local.sh"])
         else:
-            print(f"\n\nRunning calculation for {model} with bias method {bias_method} and calculation type {calculation_type}")
+            print(
+                f"\n\nRunning calculation for {model} with bias method {bias_method} and calculation type {calculation_type}"
+            )
             process = subprocess.Popen([f"{klimakverna_pilot1_path}/tools/run_snakemake_local.sh"])
         process.wait()
 
