@@ -66,7 +66,7 @@ def add_common_global_attribute(output_file, global_attributes):
                 print(f"Updated global metadata {key}:{value}")
 
 #Adding variable attributes for different types of inputs(pr, tasmax20ge,norheatwave)
-def add_attributes_variables(output_file, variable_name, variable_attributes, scenario= None,scenario):
+def add_attributes_variables(output_file, variable_name, variable_attributes, scenario= None):
     global modified
 
     with Dataset(output_file, "r+") as nc:
