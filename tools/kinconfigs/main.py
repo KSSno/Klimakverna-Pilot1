@@ -139,8 +139,8 @@ def object_config_palettes(collection, varname, row):
         palette_config.append({
             'colors': row['Palette'],
             'intervals': row['Intervals'],
-            'openLowestInterval': row['OpenLeft'] == 'TRUE',
-            'openHighestInterval': row['OpenRight'] == 'TRUE',
+            'openLowestInterval': row['OpenLeft'],
+            'openHighestInterval': row['OpenRight'],
             'variables': varnames
         })
 

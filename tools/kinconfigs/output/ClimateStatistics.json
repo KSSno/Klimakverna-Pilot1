@@ -26,8 +26,8 @@
       {
         "colors": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
         "intervals": "1,2,3,4,5",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-tas_annual",
           "diff-tas_winter",
@@ -124,8 +124,8 @@
       {
         "colors": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
         "intervals": "20,40,60",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-tas10gt_annual",
           "diff-tas10gt_winter",
@@ -306,8 +306,8 @@
       {
         "colors": "#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd",
         "intervals": "-5,-1.4,1.4,5",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-fdgs_annual",
           "diff-fdgs_winter",
@@ -352,8 +352,8 @@
       {
         "colors": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114",
         "intervals": "1,2,3,4,5",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-tasmax_annual",
           "diff-tasmax_winter",
@@ -398,8 +398,8 @@
       {
         "colors": "#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005",
         "intervals": "1,2,3,4,5,6",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-tasmin_annual",
           "diff-tasmin_winter",
@@ -444,8 +444,8 @@
       {
         "colors": "#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482",
         "intervals": "-1,-0.5,0,0.5",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-dtr_annual",
           "diff-dtr_winter",
@@ -493,8 +493,8 @@
       {
         "colors": "#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0",
         "intervals": "-30,-20,-10,-5,5,10,20",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-dzc_annual",
           "diff-dzc_winter",
@@ -592,7 +592,7 @@
         "colors": "#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c",
         "intervals": "-0.1,0.1,1,2,3",
         "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openHighestInterval": true,
         "variables": [
           "diff-tasmin20ge_annual",
           "diff-tasmin20ge_winter",
@@ -640,8 +640,8 @@
       {
         "colors": "#eee0e5,#D3B3E7,#B151ED,#810f7c",
         "intervals": "10,20,30",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-tasmax20ge_annual",
           "diff-tasmax20ge_winter",
@@ -689,8 +689,8 @@
       {
         "colors": "#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c",
         "intervals": "0.5,1,2,3,4",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-norheatwave_annual",
           "diff-norheatwave_winter",
@@ -735,8 +735,8 @@
       {
         "colors": "#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
         "intervals": "-8, -4, 0, 4, 8, 12, 16, 20, 24",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "change-pr_annual",
           "change-pr_winter",
@@ -784,8 +784,8 @@
       {
         "colors": "#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85",
         "intervals": "-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-pr1mm_annual",
           "diff-pr1mm_winter",
@@ -830,8 +830,8 @@
       {
         "colors": "#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
         "intervals": "-8, -4, 0, 4, 8, 12, 16, 20",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "change-sdii_annual",
           "change-sdii_winter",
@@ -939,8 +939,8 @@
       {
         "colors": "#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30",
         "intervals": "-20, -10, 0, 10, 20, 30, 40",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "change-pr997_annual",
           "change-pr997_winter",
@@ -1018,8 +1018,8 @@
       {
         "colors": "#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30",
         "intervals": "-2, 0, 2, 4, 6, 8, 10",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-pr20mm_annual",
           "diff-pr20mm_winter",
@@ -1064,8 +1064,8 @@
       {
         "colors": "#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30",
         "intervals": "-15, -10, -5, 0, 5, 10, 15, 20, 25, 30",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "change-prmax5day_annual",
           "change-prmax5day_winter",
@@ -1110,8 +1110,8 @@
       {
         "colors": "#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B",
         "intervals": "-5,-4,-3,-2,-1,0,1,2,3,4,5",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "change-sfcWind_annual",
           "change-sfcWind_winter",
@@ -1159,8 +1159,8 @@
       {
         "colors": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
         "intervals": "-3,-2,-1,0,1,2,3",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "change-sfcWind99_annual",
           "change-sfcWind99_winter",
@@ -1235,8 +1235,8 @@
       {
         "colors": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
         "intervals": "-15,-10,-5,0,5,10,15",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "change-sfcWind100yrRP_annual",
           "change-sfcWind100yrRP_winter",
@@ -1284,8 +1284,8 @@
       {
         "colors": "#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83",
         "intervals": "-3,-2,-1,0,1,2,3",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "change-sfcWind10ms_annual",
           "change-sfcWind10ms_winter",
@@ -1329,8 +1329,8 @@
       {
         "colors": "#bf812d,#dfc27d,#f6e8c3,#f5f5f5,#c7eae5,#80cdc1,#35978f,#01665e",
         "intervals": "-10, -5,-1,1,5,10,15",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "change-mrro_annual"
         ]
@@ -1338,8 +1338,8 @@
       {
         "colors": "#8c510a, #bf812d,#dfc27d,#f6e8c3,#f5f5f5,#c7eae5,#80cdc1,#35978f,#01665e",
         "intervals": "-75,-35,-15,-5,5,15,35,75",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "change-mrro_winter",
           "change-mrro_spring",
@@ -1382,8 +1382,8 @@
       {
         "colors": "#8c510a, #bf812d,#dfc27d,#f6e8c3,#f5f5f5,#c7eae5,#80cdc1,#35978f,#01665e",
         "intervals": "-400, -200, -100, -50, 50, 100, 200, 400",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-mrro_annual",
           "diff-mrro_winter",
@@ -1427,8 +1427,8 @@
       {
         "colors": "#c7eae5,#80cdc1,#35978f,#01665e, #003c30",
         "intervals": "10,20,30,40",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "change-evap_annual",
           "change-evap_summer"
@@ -1495,8 +1495,8 @@
       {
         "colors": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
         "intervals": "-90, -60, -30, 0",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "diff-swe60ge"
         ]
