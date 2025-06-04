@@ -1,0 +1,44 @@
+- base_netcdf_directory: ''
+  mapfiles_path: /mapfiles
+  module: mapgen.modules.generic_quicklook
+  module_function: generic_quicklook
+  pattern: ''
+  styles:
+  - colors:
+    - '#ccaa66'
+    - '#ffecbf'
+    - '#9cd6c1'
+    - '#1aa0ed'
+    - '#45508a'
+    intervals:
+    - 50.0
+    - 75.0
+    - 100.0
+    - 125.0
+    name: mrso
+    open_highest_interval: true
+    open_lowest_interval: true
+    variables:
+    - mrso
+- base_netcdf_directory: ''
+  mapfiles_path: /mapfiles
+  module: mapgen.modules.generic_quicklook
+  module_function: generic_quicklook
+  pattern: ''
+  styles:
+  - colors:
+    - '#8D7B68'
+    - '#A4907C'
+    - '#C8B6A6'
+    - '#F1DEC9'
+    - '#D3E8F7'
+    intervals:
+    - -90.0
+    - -60.0
+    - -30.0
+    - 0.0
+    name: diff-swe60ge
+    open_highest_interval: true
+    open_lowest_interval: true
+    variables:
+    - diff-swe60ge
