@@ -1,3 +1,4 @@
+---
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook

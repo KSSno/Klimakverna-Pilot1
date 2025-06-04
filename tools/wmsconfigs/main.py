@@ -89,4 +89,4 @@ for collection in collections:
 # write to YAML file
 output_filename = output_dir + 'wms_config.yaml'
 with open(output_filename, 'w', encoding='utf-8') as f:
-    yaml.dump(wms_config, f, default_flow_style=None, allow_unicode=True)
+    yaml.dump(wms_config, f, default_flow_style=None, allow_unicode=True, explicit_start=True)
