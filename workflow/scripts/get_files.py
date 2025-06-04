@@ -2,6 +2,7 @@
 # Written by Tyge Løvset, NORCE Research, 2025 for Klimakverna.
 
 import os
+import sys
 import json
 import glob
 import re
@@ -178,28 +179,12 @@ def load_collections(collection_root):
     return collections
 
 
-# /lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/fldmean
-# /lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/calib_period_mean/tas
-# /lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/calib_period_mean/tas/diff_to_senorge
-# /lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/miroc-r1i1p1f1-icon
-# /lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/miroc-r1i1p1f1-icon/gsl
-# /lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/miroc-r1i1p1f1-icon/fdgs
-# /lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/noresm-r1i1p1f1-hclim
-# /lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/noresm-r1i1p1f1-hclim/gsl
-# /lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/noresm-r1i1p1f1-hclim/fdgs
-# /lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/1971-2000_mean/pr
-# /lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/1971-2000_mean/tas
-#
-# 30yrmean_nf-diff_ecearthveg-r1i1p1f1-cclm_ssp370_3dbc-eqm-sn2018v2005_rawbc_norway_1km_tas_annual_merged.nc
-# 30yrmean_ff_ecearth-r3i1p1-hirham_rcp45_eqm-sn2018v2005_rawbc_norway_1km_gsl_annual_merged.nc
-
 
 if __name__ == '__main__':
     collections = load_collections('../../config/collections')
 
     filters = {
         'institution': ['KNMI'],
-        #'institution': ['CLMcom-BTU'],
         #'version': [None],
         #'experiment': ['rcp45'],
         #'experiment': ['ssp370'],
@@ -212,10 +197,13 @@ if __name__ == '__main__':
     for k, v in filters.items():
         print(' ', k, ':', v)    
 
+    coll = 'DailyTimeSeries'
     #coll = 'YearlyTimeSeries'
     #coll = '30YearStatistics'
     #coll = 'CORDEX-CMIP5'
-    coll = 'CORDEX-CMIP6'
+    #coll = 'CORDEX-CMIP6'
+    if len(sys.argv) > 1:
+        coll = sys.argv[1]
 
     print(collections[coll])
     files, groups = get_files(collections[coll], filters, return_groups=True)

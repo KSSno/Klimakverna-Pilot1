@@ -1,0 +1,11 @@
+{
+    "name"           : "DailyTimeSeries",
+    "base_path"      : ["/lustre/storeC-ext/users/kin2100/NVE/EQM/",
+                        "/lustre/storeC-ext/users/kin2100/MET/3DBC/application/",
+                        "/lustre/storeC-ext/users/kin2100/NVE/EQM/CMIP6/",
+                        "/lustre/storeC-ext/users/kin2100/MET/3DBC/application/CMIP6/"],
+    "folder_pattern" : "^(?P<gcm_id>[^-]+)-(?P<gcm_variant_label>[ripf0-9]+)-(?P<rcm_id>[^/]+)/(?P<variable>[^/]+)/(?P<scenario>[^/]+)$",
+    "file_pattern"   : "^(?P<gcm_id>[^/]+)-(?P<gcm_variant_label>[ripf0-9]+)-(?P<rcm_id>[^_]+)_(?P<scenario>[^_]+)_(?P<method>[^_]+)_(?P<hydro_model>[^_]+)_norway_1km_(?P<variable>[^_]+)_daily_(?P<start_year>[0-9]{4})\\.nc4?$",
+    "filter_keys"    : ["gcm_id", "gcm_variant_label", "rcm_id", "index", "scenario", "method", "hydro_model", "variable", "start_year"]
+}
+
