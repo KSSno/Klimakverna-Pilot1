@@ -106,22 +106,6 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
                     continue
 
                 folder_group = match.groupdict()
-                #print('Subfolder match:', subdir) #os.path.join(base_path, subdir))
-                #print('               :', folder_group)
-
-                
-                # Filter on the folder elements
-                found = True
-                for key, val in filters.items():
-                    if key in folder_group.keys():
-                        if not folder_group[key] in val:
-                            found = False
-                            break;
-                if not found:
-                    if debug:
-                        print('filtered folder:', folder_group)
-                        print('                 [%s]/[%s]' % (subdir, file))
-                    continue
 
                 # Match the file name againt RE patten
                 match = re.search(re_file, file)
@@ -144,6 +128,20 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
                 
                 # Merge the two groups
                 merged_groups = folder_group | file_group
+
+                # Filter on the merged groups:
+                found = True
+                for key, val in filters.items():
+                    if key in merged_groups.keys():
+                        if not merged_groups[key] in val:
+                            found = False
+                            break;
+                if not found:
+                    if debug:
+                        print('filtered group: %s/%s' % (subdir, file))
+                        print('               ', merged_groups)
+                    continue
+                
                 
                 # Special handing of 'start_year', 'end_year' range filter keys:
                 if flt_years and 'start_year' in merged_groups.keys():
