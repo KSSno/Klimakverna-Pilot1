@@ -1,8 +1,8 @@
 {
     "name"          : "CMIP5",
     "base_path"     : "/lustre/storeB/project/CMIP/CMIP5.monthly",
-    "filter_keys"   : ["table_id", "source_id", "experiment_id",
-                       "variable_id", "start_year", "end_year", "years"],
-    "folder_pattern": "^(?P<experiment_id>[^/]+)$",
-    "file_pattern"  : "^(?P<variable_id>[^_]+)_(?P<table_id>[^_]+)_(?P<source_id>[^_]+)_(?P<experiment_id>[^_]+)_(?P<variant_label>[ripf0-9]+)(?:_(?P<start_year>[0-9]{4})[0-9]*-(?P<end_year>[0-9]{4})[0-9]*)?\\.nc$"
+    "filter_keys"   : ["table", "source", "experiment",
+                       "parameter", "start_year", "end_year", "years"],
+    "folder_pattern": "^(?P<experiment>[^/]+)$",
+    "file_pattern"  : "^(?P<parameter>[^_]+)_(?P<table>[^_]+)_(?P<source>[^_]+)_(?P<experiment>[^_]+)_(?P<variant_label>[ripf0-9]+)(?:_(?P<start_year>[0-9]{4})[0-9]*-(?P<end_year>[0-9]{4})[0-9]*)?\\.nc$"
 }

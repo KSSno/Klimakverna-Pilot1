@@ -185,6 +185,7 @@ if __name__ == '__main__':
         "period": ["near_future_mean", "far_future_mean", "ref_period_mean"],
         "parameter": ["pr"],
         "scenario": ["rcp26", "rcp45"],
+        "institution": "CLMcom-ETH",
         #'years': [[1980, 1990], [2020, 2030], 2090, [2095, 2100]],
     }
 

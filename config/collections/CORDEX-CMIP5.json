@@ -2,8 +2,8 @@
     "name"          : "CORDEX-CMIP5",
     "base_path"     : "/lustre/storeC-ext/users/kin2100/MET/cordex/output",
     "filter_keys"   : ["domain", "institution", "gcm_id", "experiment", "variant_label",
-                       "rcm_id", "version_real", "frequency", "variable", "version", 
-                       "domain_fn", "institution_fn", "rcm_id_fn", "start_year", "end_year", "years"],
-    "folder_pattern": "^(?P<domain>[^/]+)/(?P<institution>[^/]+)/(?P<gcm_id>[^/]+)/(?P<experiment>[^/]+)/(?P<variant_label>[ripf0-9]+)/(?P<rcm_id>[^/]+)/(?P<version_real>[vr][^/]+)/(?P<frequency>[^/]+)/(?P<variable>[^/]+)(?:/(?P<version>v[^/]+))?$",
-    "file_pattern"  : "^(?P<variable>[^_]+)_(?P<domain_fn>[^_]+)_(?P<gcm_id>[^_]+)_(?P<experiment>[^_]+)_(?P<variant_label>[ripf0-9]+)(?:_(?P<institution_fn>[^_]+))?_(?P<rcm_id_fn>[^_]+)_(?P<version_real>[vr][^_]+)_(?P<frequency>[^_]+)(?:_(?P<start_year>[0-9]{4})[0-9]*-(?P<end_year>[0-9]{4})[0-9]*)?\\.nc$"
+                       "rcm_id", "version_real", "frequency", "parameter", "version", 
+                       "source", "institution_name", "rcm_name", "start_year", "end_year", "years"],
+    "folder_pattern": "^(?P<domain>[^/]+)/(?P<institution>[^/]+)/(?P<gcm_id>[^/]+)/(?P<experiment>[^/]+)/(?P<variant_label>[ripf0-9]+)/(?P<rcm_id>[^/]+)/(?P<version_real>[vr][^/]+)/(?P<frequency>[^/]+)/(?P<parameter>[^/]+)(?:/(?P<version>v[^/]+))?$",
+    "file_pattern"  : "^(?P<parameter>[^_]+)_(?P<domain>[^_]+)_(?P<gcm_id>[^_]+)_(?P<experiment>[^_]+)_(?P<variant_label>[ripf0-9]+)(?:_(?P<institution_name>[^_]+))?_(?P<rcm_name>[^_]+)_(?P<version_real>[vr][^_]+)_(?P<frequency>[^_]+)(?:_(?P<start_year>[0-9]{4})[0-9]*-(?P<end_year>[0-9]{4})[0-9]*)?\\.nc$"
 }
