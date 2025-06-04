@@ -184,11 +184,9 @@ if __name__ == '__main__':
     collections = load_collections('../../config/collections')
 
     filters = {
-        #'institution': ['KNMI'],
-        #'version': [None],
-        #'experiment': ['rcp45'],
-        #'experiment': ['ssp370'],
-        #'variable': ['pr'],
+        "period": ["near_future_mean", "far_future_mean", "ref_period_mean"],
+        "parameter": ["pr"],
+        "scenario": ["rcp26", "rcp45"],
         #'years': [[1980, 1990], [2020, 2030], 2090, [2095, 2100]],
     }
 
