@@ -58,19 +58,21 @@ for collection in collections:
             open_highest_interval = palette.get('OpenHighestInterval', True)
 
             # add variable names
+            # TODO: drop these. Instead print once per suffix and use full variable name as name
             variables = palette.get('variables', [])
 
-            # define style config for given variables
-            style_config = {
-                'name': varname,
-                'colors': colors,
-                'intervals': intervals,
-                'open_lowest_interval': open_lowest_interval,
-                'open_highest_interval': open_highest_interval,
-                'variables': variables,
-            }
-            # append to config for all 
-            var_styles.append(style_config)
+            # make one style per variable
+            for variable in variables:
+                # define style config for given variables
+                style_config = {
+                    'name': variable,
+                    'colors': colors,
+                    'intervals': intervals,
+                    'open_lowest_interval': open_lowest_interval,
+                    'open_highest_interval': open_highest_interval,
+                }
+                # append to config
+                var_styles.append(style_config)
 
         # define variable level config
         var_config = {
@@ -87,4 +89,4 @@ for collection in collections:
 # write to YAML file
 output_filename = output_dir + 'wms_config.yaml'
 with open(output_filename, 'w', encoding='utf-8') as f:
-    yaml.dump(wms_config, f, allow_unicode=True)
+    yaml.dump(wms_config, f, default_flow_style=None, allow_unicode=True)

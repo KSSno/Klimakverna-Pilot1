@@ -4,1760 +4,1285 @@
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#114781'
-    - '#2A72B2'
-    - '#4E9AC6'
-    - '#92C5DE'
-    - '#C8E0ED'
-    - '#FBD3BD'
-    - '#F7BC9F'
-    - '#F4A582'
-    - '#CB4B43'
-    - '#BC2C34'
-    intervals:
-    - -8.0
-    - -6.0
-    - -4.0
-    - -2.0
-    - 0.0
-    - 2.0
-    - 4.0
-    - 6.0
-    - 8.0
-    name: tas
+  - colors: ['#114781', '#2A72B2', '#4E9AC6', '#92C5DE', '#C8E0ED', '#FBD3BD', '#F7BC9F',
+      '#F4A582', '#CB4B43', '#BC2C34']
+    intervals: [-8.0, -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0, 8.0]
+    name: tas_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - tas_annual
-  - colors:
-    - '#114781'
-    - '#1D5EA1'
-    - '#4E9AC6'
-    - '#92C5DE'
-    - '#ACD2E5'
-    - '#F7BC9F'
-    - '#F4A582'
-    - '#DA6954'
-    - '#BC2C34'
-    - '#870A24'
-    intervals:
-    - -16.0
-    - -12.0
-    - -8.0
-    - -4.0
-    - 0.0
-    - 4.0
-    - 8.0
-    - 12.0
-    - 16.0
-    name: tas
+  - colors: &id001 ['#114781', '#1D5EA1', '#4E9AC6', '#92C5DE', '#ACD2E5', '#F7BC9F',
+      '#F4A582', '#DA6954', '#BC2C34', '#870A24']
+    intervals: &id002 [-16.0, -12.0, -8.0, -4.0, 0.0, 4.0, 8.0, 12.0, 16.0]
+    name: tas_winter
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - tas_winter
-    - tas_spring
-    - tas_summer
-    - tas_autumn
+  - colors: *id001
+    intervals: *id002
+    name: tas_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id001
+    intervals: *id002
+    name: tas_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id001
+    intervals: *id002
+    name: tas_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#F3F3F3'
-    - '#ccfafc'
-    - '#89F2FA'
-    - '#30C3CD'
-    - '#1697B7'
-    - '#0A6880'
-    intervals:
-    - 1.0
-    - 100.0
-    - 150.0
-    - 200.0
-    - 250.0
-    name: tas0lt
+  - colors: ['#F3F3F3', '#ccfafc', '#89F2FA', '#30C3CD', '#1697B7', '#0A6880']
+    intervals: [1.0, 100.0, 150.0, 200.0, 250.0]
+    name: tas0lt_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - tas0lt_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#F3F3F3'
-    - '#ffe5e5'
-    - '#ffbfbf'
-    - '#e99696'
-    - '#cc6161'
-    - '#a84848'
-    intervals:
-    - 1.0
-    - 30.0
-    - 60.0
-    - 90.0
-    - 120.0
-    name: tas10gt
+  - colors: ['#F3F3F3', '#ffe5e5', '#ffbfbf', '#e99696', '#cc6161', '#a84848']
+    intervals: [1.0, 30.0, 60.0, 90.0, 120.0]
+    name: tas10gt_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - tas10gt_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#ffffcc'
-    - '#d9f0a3'
-    - '#addd8e'
-    - '#78c679'
-    - '#41ab5d'
-    - '#006837'
-    - '#004529'
-    intervals:
-    - 60.0
-    - 90.0
-    - 120.0
-    - 150.0
-    - 180.0
-    - 210.0
-    name: gsl
+  - colors: ['#ffffcc', '#d9f0a3', '#addd8e', '#78c679', '#41ab5d', '#006837', '#004529']
+    intervals: [60.0, 90.0, 120.0, 150.0, 180.0, 210.0]
+    name: gsl_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - gsl_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#F3F3F3'
-    - '#bdc9e1'
-    - '#67a9cf'
-    - '#016c59'
-    intervals:
-    - 0.5
-    - 5.0
-    - 10.0
-    name: fdgs
+  - colors: ['#F3F3F3', '#bdc9e1', '#67a9cf', '#016c59']
+    intervals: [0.5, 5.0, 10.0]
+    name: fdgs_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - fdgs_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#114781'
-    - '#2A72B2'
-    - '#4E9AC6'
-    - '#92C5DE'
-    - '#C8E0ED'
-    - '#FBD3BD'
-    - '#F7BC9F'
-    - '#F4A582'
-    - '#CB4B43'
-    - '#BC2C34'
-    intervals:
-    - -8.0
-    - -6.0
-    - -4.0
-    - -2.0
-    - 0.0
-    - 2.0
-    - 4.0
-    - 6.0
-    - 8.0
-    name: tasmax
+  - colors: ['#114781', '#2A72B2', '#4E9AC6', '#92C5DE', '#C8E0ED', '#FBD3BD', '#F7BC9F',
+      '#F4A582', '#CB4B43', '#BC2C34']
+    intervals: [-8.0, -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0, 8.0]
+    name: tasmax_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - tasmax_annual
-  - colors:
-    - '#114781'
-    - '#1D5EA1'
-    - '#4E9AC6'
-    - '#92C5DE'
-    - '#ACD2E5'
-    - '#F7BC9F'
-    - '#F4A582'
-    - '#DA6954'
-    - '#BC2C34'
-    - '#870A24'
-    intervals:
-    - -16.0
-    - -12.0
-    - -8.0
-    - -4.0
-    - 0.0
-    - 4.0
-    - 8.0
-    - 12.0
-    - 16.0
-    name: tasmax
+  - colors: &id003 ['#114781', '#1D5EA1', '#4E9AC6', '#92C5DE', '#ACD2E5', '#F7BC9F',
+      '#F4A582', '#DA6954', '#BC2C34', '#870A24']
+    intervals: &id004 [-16.0, -12.0, -8.0, -4.0, 0.0, 4.0, 8.0, 12.0, 16.0]
+    name: tasmax_winter
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - tasmax_winter
-    - tasmax_spring
-    - tasmax_summer
-    - tasmax_autumn
+  - colors: *id003
+    intervals: *id004
+    name: tasmax_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id003
+    intervals: *id004
+    name: tasmax_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id003
+    intervals: *id004
+    name: tasmax_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#114781'
-    - '#2A72B2'
-    - '#4E9AC6'
-    - '#92C5DE'
-    - '#C8E0ED'
-    - '#FBD3BD'
-    - '#F7BC9F'
-    - '#F4A582'
-    - '#CB4B43'
-    - '#BC2C34'
-    intervals:
-    - -8.0
-    - -6.0
-    - -4.0
-    - -2.0
-    - 0.0
-    - 2.0
-    - 4.0
-    - 6.0
-    - 8.0
-    name: tasmin
+  - colors: ['#114781', '#2A72B2', '#4E9AC6', '#92C5DE', '#C8E0ED', '#FBD3BD', '#F7BC9F',
+      '#F4A582', '#CB4B43', '#BC2C34']
+    intervals: [-8.0, -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0, 8.0]
+    name: tasmin_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - tasmin_annual
-  - colors:
-    - '#114781'
-    - '#1D5EA1'
-    - '#4E9AC6'
-    - '#92C5DE'
-    - '#ACD2E5'
-    - '#F7BC9F'
-    - '#F4A582'
-    - '#DA6954'
-    - '#BC2C34'
-    - '#870A24'
-    intervals:
-    - -16.0
-    - -12.0
-    - -8.0
-    - -4.0
-    - 0.0
-    - 4.0
-    - 8.0
-    - 12.0
-    - 16.0
-    name: tasmin
+  - colors: &id005 ['#114781', '#1D5EA1', '#4E9AC6', '#92C5DE', '#ACD2E5', '#F7BC9F',
+      '#F4A582', '#DA6954', '#BC2C34', '#870A24']
+    intervals: &id006 [-16.0, -12.0, -8.0, -4.0, 0.0, 4.0, 8.0, 12.0, 16.0]
+    name: tasmin_winter
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - tasmin_winter
-    - tasmin_spring
-    - tasmin_summer
-    - tasmin_autumn
+  - colors: *id005
+    intervals: *id006
+    name: tasmin_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id005
+    intervals: *id006
+    name: tasmin_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id005
+    intervals: *id006
+    name: tasmin_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#FFBFBF'
-    - '#D45B48'
-    - '#A60000'
-    - '#750202'
-    intervals:
-    - 6.0
-    - 8.0
-    - 10.0
-    name: dtr
+  - colors: ['#FFBFBF', '#D45B48', '#A60000', '#750202']
+    intervals: [6.0, 8.0, 10.0]
+    name: dtr_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - dtr_annual
-  - colors:
-    - '#FFBFBF'
-    - '#D45B48'
-    - '#A60000'
-    - '#750202'
-    intervals:
-    - 6.0
-    - 8.0
-    - 10.0
-    name: dtr
+  - colors: &id007 ['#FFBFBF', '#D45B48', '#A60000', '#750202']
+    intervals: &id008 [6.0, 8.0, 10.0]
+    name: dtr_winter
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - dtr_winter
-    - dtr_spring
-    - dtr_summer
-    - dtr_autumn
+  - colors: *id007
+    intervals: *id008
+    name: dtr_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id007
+    intervals: *id008
+    name: dtr_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id007
+    intervals: *id008
+    name: dtr_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#8C510A'
-    - '#BF812D'
-    - '#F6E8C3'
-    - '#C7EAE5'
-    - '#35978F'
-    intervals:
-    - 50.0
-    - 75.0
-    - 100.0
-    - 125.0
-    name: dzc
+  - colors: ['#8C510A', '#BF812D', '#F6E8C3', '#C7EAE5', '#35978F']
+    intervals: [50.0, 75.0, 100.0, 125.0]
+    name: dzc_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - dzc_annual
-  - colors:
-    - '#F3F3F3'
-    - '#BF812D'
-    - '#F6E8C3'
-    - '#C7EAE5'
-    - '#35978F'
-    intervals:
-    - 1.0
-    - 15.0
-    - 30.0
-    - 45.0
-    name: dzc
+  - colors: &id009 ['#F3F3F3', '#BF812D', '#F6E8C3', '#C7EAE5', '#35978F']
+    intervals: &id010 [1.0, 15.0, 30.0, 45.0]
+    name: dzc_winter
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - dzc_winter
-    - dzc_spring
-    - dzc_summer
-    - dzc_autumn
+  - colors: *id009
+    intervals: *id010
+    name: dzc_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id009
+    intervals: *id010
+    name: dzc_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id009
+    intervals: *id010
+    name: dzc_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#bbffff'
-    - '#7fffd4'
-    - '#40e0d0'
-    - '#008b8b'
-    - '#27408b'
-    intervals:
-    - 100.0
-    - 150.0
-    - 200.0
-    - 250.0
-    name: fd
+  - colors: ['#bbffff', '#7fffd4', '#40e0d0', '#008b8b', '#27408b']
+    intervals: [100.0, 150.0, 200.0, 250.0]
+    name: fd_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - fd_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#ffffff'
-    - '#bc8f8f'
-    - '#8B0000'
-    intervals:
-    - 0.01
-    - 0.1
-    name: tasmin20ge
+  - colors: ['#ffffff', '#bc8f8f', '#8B0000']
+    intervals: [0.01, 0.1]
+    name: tasmin20ge_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - tasmin20ge_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#ffffff'
-    - '#FFD700'
-    - '#ff8c00'
-    - '#ff4500'
-    - '#CD0000'
-    - '#8B0000'
-    intervals:
-    - 1.0
-    - 15.0
-    - 30.0
-    - 45.0
-    - 60.0
-    name: tasmax20ge
+  - colors: ['#ffffff', '#FFD700', '#ff8c00', '#ff4500', '#CD0000', '#8B0000']
+    intervals: [1.0, 15.0, 30.0, 45.0, 60.0]
+    name: tasmax20ge_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - tasmax20ge_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#ffffff'
-    - '#ffefd5'
-    - '#eeb4b4'
-    - '#ff4500'
-    - '#cd0000'
-    - '#551a8b'
-    intervals:
-    - 0.1
-    - 0.5
-    - 1.0
-    - 1.5
-    - 2.0
-    name: norheatwave
+  - colors: ['#ffffff', '#ffefd5', '#eeb4b4', '#ff4500', '#cd0000', '#551a8b']
+    intervals: [0.1, 0.5, 1.0, 1.5, 2.0]
+    name: norheatwave_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - norheatwave_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#CCAA66'
-    - '#D9B97B'
-    - '#E6C991'
-    - '#F2DAA8'
-    - '#FFECBF'
-    - '#E3E69D'
-    - '#C7E07B'
-    - '#BEDF8D'
-    - '#B5DE9F'
-    - '#A8DAB0'
-    - '#9CD6C1'
-    - '#83C8CC'
-    - '#6ABBD8'
-    - '#42ADE2'
-    - '#1AA0ED'
-    - '#2692DB'
-    - '#3484C9'
-    - '#3A77B8'
-    - '#406AA8'
-    - '#425C98'
-    - '#45508A'
-    intervals:
-    - 300.0
-    - 400.0
-    - 500.0
-    - 600.0
-    - 700.0
-    - 800.0
-    - 1000.0
-    - 1250.0
-    - 1500.0
-    - 1750.0
-    - 2000.0
-    - 2250.0
-    - 2500.0
-    - 3000.0
-    - 3500.0
-    - 4000.0
-    - 4500.0
-    - 5000.0
-    - 5500.0
-    - 6000.0
-    name: pr
+  - colors: ['#CCAA66', '#D9B97B', '#E6C991', '#F2DAA8', '#FFECBF', '#E3E69D', '#C7E07B',
+      '#BEDF8D', '#B5DE9F', '#A8DAB0', '#9CD6C1', '#83C8CC', '#6ABBD8', '#42ADE2',
+      '#1AA0ED', '#2692DB', '#3484C9', '#3A77B8', '#406AA8', '#425C98', '#45508A']
+    intervals: [300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 1000.0, 1250.0, 1500.0,
+      1750.0, 2000.0, 2250.0, 2500.0, 3000.0, 3500.0, 4000.0, 4500.0, 5000.0, 5500.0,
+      6000.0]
+    name: pr_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - pr_annual
-  - colors:
-    - '#CCAA66'
-    - '#ECD19C'
-    - '#E3E69D'
-    - '#B9DE95'
-    - '#9CD6C1'
-    - '#56B4DD'
-    - '#2692DB'
-    - '#3C70B0'
-    - '#45508A'
-    intervals:
-    - 0.0
-    - 100.0
-    - 200.0
-    - 300.0
-    - 400.0
-    - 500.0
-    - 750.0
-    - 1000.0
-    - 1500.0
-    name: pr
+  - colors: &id011 ['#CCAA66', '#ECD19C', '#E3E69D', '#B9DE95', '#9CD6C1', '#56B4DD',
+      '#2692DB', '#3C70B0', '#45508A']
+    intervals: &id012 [0.0, 100.0, 200.0, 300.0, 400.0, 500.0, 750.0, 1000.0, 1500.0]
+    name: pr_winter
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - pr_winter
-    - pr_spring
-    - pr_summer
-    - pr_autumn
+  - colors: *id011
+    intervals: *id012
+    name: pr_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id011
+    intervals: *id012
+    name: pr_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id011
+    intervals: *id012
+    name: pr_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#CCAA66'
-    - '#F0D8A4'
-    - '#CFE184'
-    - '#ADDBA8'
-    - '#78C2D1'
-    - '#1D9CE7'
-    - '#3A75B6'
-    - '#45508A'
-    intervals:
-    - 85.0
-    - 105.0
-    - 125.0
-    - 145.0
-    - 165.0
-    - 185.0
-    - 205.0
-    name: pr1mm
+  - colors: ['#CCAA66', '#F0D8A4', '#CFE184', '#ADDBA8', '#78C2D1', '#1D9CE7', '#3A75B6',
+      '#45508A']
+    intervals: [85.0, 105.0, 125.0, 145.0, 165.0, 185.0, 205.0]
+    name: pr1mm_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - pr1mm_annual
-  - colors:
-    - '#CCAA66'
-    - '#F6E0AF'
-    - '#C1DF86'
-    - '#9CD6C1'
-    - '#34A9E5'
-    - '#377BBE'
-    - '#45508A'
-    intervals:
-    - 0.0
-    - 10.0
-    - 20.0
-    - 30.0
-    - 40.0
-    - 50.0
-    - 60.0
-    name: pr1mm
+  - colors: &id013 ['#CCAA66', '#F6E0AF', '#C1DF86', '#9CD6C1', '#34A9E5', '#377BBE',
+      '#45508A']
+    intervals: &id014 [0.0, 10.0, 20.0, 30.0, 40.0, 50.0, 60.0]
+    name: pr1mm_winter
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - pr1mm_winter
-    - pr1mm_spring
-    - pr1mm_summer
-    - pr1mm_autumn
+  - colors: *id013
+    intervals: *id014
+    name: pr1mm_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id013
+    intervals: *id014
+    name: pr1mm_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id013
+    intervals: *id014
+    name: pr1mm_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#CCAA66'
-    - '#FFECBF'
-    - '#B5DE9F'
-    - '#6ABBD8'
-    - '#3484C9'
-    - '#45508A'
-    intervals:
-    - 0.0
-    - 5.0
-    - 10.0
-    - 15.0
-    - 20.0
-    - 25.0
-    name: sdii
+  - colors: ['#CCAA66', '#FFECBF', '#B5DE9F', '#6ABBD8', '#3484C9', '#45508A']
+    intervals: [0.0, 5.0, 10.0, 15.0, 20.0, 25.0]
+    name: sdii_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - sdii_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#CCAA66'
-    - '#E8CC96'
-    - '#F2E9AF'
-    - '#C1DF86'
-    - '#A9DAAE'
-    - '#80C7CD'
-    - '#34A9E5'
-    - '#2E8AD1'
-    - '#3E6CAB'
-    - '#45508A'
-    intervals:
-    - 0.0
-    - 20.0
-    - 40.0
-    - 60.0
-    - 80.0
-    - 100.0
-    - 120.0
-    - 140.0
-    - 160.0
-    - 180.0
-    name: pr997
+  - colors: ['#CCAA66', '#E8CC96', '#F2E9AF', '#C1DF86', '#A9DAAE', '#80C7CD', '#34A9E5',
+      '#2E8AD1', '#3E6CAB', '#45508A']
+    intervals: [0.0, 20.0, 40.0, 60.0, 80.0, 100.0, 120.0, 140.0, 160.0, 180.0]
+    name: pr997_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - pr997_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#CCAA66'
-    - '#E8CC96'
-    - '#F2E9AF'
-    - '#C1DF86'
-    - '#A9DAAE'
-    - '#80C7CD'
-    - '#34A9E5'
-    - '#2E8AD1'
-    - '#3E6CAB'
-    - '#45508A'
-    intervals:
-    - 0.0
-    - 10.0
-    - 20.0
-    - 30.0
-    - 40.0
-    - 50.0
-    - 60.0
-    - 70.0
-    - 80.0
-    - 90.0
-    name: pr20mm
+  - colors: ['#CCAA66', '#E8CC96', '#F2E9AF', '#C1DF86', '#A9DAAE', '#80C7CD', '#34A9E5',
+      '#2E8AD1', '#3E6CAB', '#45508A']
+    intervals: [0.0, 10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0]
+    name: pr20mm_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - pr20mm_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#CCAA66'
-    - '#ECD19C'
-    - '#E3E69D'
-    - '#B9DE95'
-    - '#9CD6C1'
-    - '#56B4DD'
-    - '#2692DB'
-    - '#3C70B0'
-    - '#45508A'
-    intervals:
-    - 0.0
-    - 50.0
-    - 100.0
-    - 150.0
-    - 200.0
-    - 250.0
-    - 300.0
-    - 350.0
-    - 400.0
-    name: prmax5day
+  - colors: ['#CCAA66', '#ECD19C', '#E3E69D', '#B9DE95', '#9CD6C1', '#56B4DD', '#2692DB',
+      '#3C70B0', '#45508A']
+    intervals: [0.0, 50.0, 100.0, 150.0, 200.0, 250.0, 300.0, 350.0, 400.0]
+    name: prmax5day_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - prmax5day_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#b4dbad'
-    - '#62c7b7'
-    - '#30a5d3'
-    - '#5d5dbc'
-    - '#5b278d'
-    - '#310046'
-    intervals:
-    - 1.0
-    - 3.0
-    - 5.0
-    - 7.0
-    - 9.0
-    name: sfcWind
+  - colors: ['#b4dbad', '#62c7b7', '#30a5d3', '#5d5dbc', '#5b278d', '#310046']
+    intervals: [1.0, 3.0, 5.0, 7.0, 9.0]
+    name: sfcWind_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - sfcWind_annual
-  - colors:
-    - '#b4dbad'
-    - '#62c7b7'
-    - '#30a5d3'
-    - '#5d5dbc'
-    - '#5b278d'
-    - '#310046'
-    intervals:
-    - 1.0
-    - 3.0
-    - 5.0
-    - 7.0
-    - 9.0
-    name: sfcWind
+  - colors: &id015 ['#b4dbad', '#62c7b7', '#30a5d3', '#5d5dbc', '#5b278d', '#310046']
+    intervals: &id016 [1.0, 3.0, 5.0, 7.0, 9.0]
+    name: sfcWind_winter
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - sfcWind_winter
-    - sfcWind_spring
-    - sfcWind_summer
-    - sfcWind_autumn
+  - colors: *id015
+    intervals: *id016
+    name: sfcWind_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id015
+    intervals: *id016
+    name: sfcWind_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id015
+    intervals: *id016
+    name: sfcWind_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#b4dbad'
-    - '#62c7b7'
-    - '#30a5d3'
-    - '#5d5dbc'
-    - '#5b278d'
-    - '#310046'
-    intervals:
-    - 4.0
-    - 8.0
-    - 12.0
-    - 16.0
-    - 20.0
-    name: sfcWind99
+  - colors: ['#b4dbad', '#62c7b7', '#30a5d3', '#5d5dbc', '#5b278d', '#310046']
+    intervals: [4.0, 8.0, 12.0, 16.0, 20.0]
+    name: sfcWind99_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - sfcWind99_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#b4dbad'
-    - '#62c7b7'
-    - '#30a5d3'
-    - '#5d5dbc'
-    - '#5b278d'
-    - '#310046'
-    intervals:
-    - 8.0
-    - 12.0
-    - 16.0
-    - 20.0
-    - 24.0
-    name: sfcWind100yrRP
+  - colors: ['#b4dbad', '#62c7b7', '#30a5d3', '#5d5dbc', '#5b278d', '#310046']
+    intervals: [8.0, 12.0, 16.0, 20.0, 24.0]
+    name: sfcWind100yrRP_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - sfcWind100yrRP_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#b4dbad'
-    - '#62c7b7'
-    - '#30a5d3'
-    - '#5d5dbc'
-    - '#5b278d'
-    - '#310046'
-    intervals:
-    - 15.0
-    - 30.0
-    - 45.0
-    - 60.0
-    - 75.0
-    name: sfcWind10ms
+  - colors: ['#b4dbad', '#62c7b7', '#30a5d3', '#5d5dbc', '#5b278d', '#310046']
+    intervals: [15.0, 30.0, 45.0, 60.0, 75.0]
+    name: sfcWind10ms_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - sfcWind10ms_annual
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#e6c991'
-    - '#ffecbf'
-    - '#c7e07b'
-    - '#b5de9f'
-    - '#9cd6c1'
-    - '#6abbd8'
-    - '#1aa0ed'
-    - '#3484c9'
-    - '#406aa8'
-    intervals:
-    - 500.0
-    - 1000.0
-    - 1500.0
-    - 2000.0
-    - 2500.0
-    - 3000.0
-    - 3500.0
-    - 4000.0
-    name: mrro
+  - colors: ['#e6c991', '#ffecbf', '#c7e07b', '#b5de9f', '#9cd6c1', '#6abbd8', '#1aa0ed',
+      '#3484c9', '#406aa8']
+    intervals: [500.0, 1000.0, 1500.0, 2000.0, 2500.0, 3000.0, 3500.0, 4000.0]
+    name: mrro_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - mrro_annual
-  - colors:
-    - '#8f6d28'
-    - '#e6c991'
-    - '#ffecbf'
-    - '#c7e07b'
-    - '#9cd6c1'
-    - '#1aa0ed'
-    - '#3484c9'
-    - '#406aa8'
-    - '#45508a'
-    intervals:
-    - 50.0
-    - 100.0
-    - 200.0
-    - 300.0
-    - 400.0
-    - 500.0
-    - 1000.0
-    - 1500.0
-    name: mrro
+  - colors: &id017 ['#8f6d28', '#e6c991', '#ffecbf', '#c7e07b', '#9cd6c1', '#1aa0ed',
+      '#3484c9', '#406aa8', '#45508a']
+    intervals: &id018 [50.0, 100.0, 200.0, 300.0, 400.0, 500.0, 1000.0, 1500.0]
+    name: mrro_winter
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - mrro_winter
-    - mrro_spring
-    - mrro_summer
-    - mrro_autumn
+  - colors: *id017
+    intervals: *id018
+    name: mrro_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id017
+    intervals: *id018
+    name: mrro_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id017
+    intervals: *id018
+    name: mrro_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#ccaa66'
-    - '#ffecbf'
-    - '#9cd6c1'
-    - '#1aa0ed'
-    - '#45508a'
-    intervals:
-    - 100.0
-    - 200.0
-    - 300.0
-    - 400.0
-    name: evap
+  - colors: &id019 ['#ccaa66', '#ffecbf', '#9cd6c1', '#1aa0ed', '#45508a']
+    intervals: &id020 [100.0, 200.0, 300.0, 400.0]
+    name: evap_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - evap_annual
-    - evap_summer
+  - colors: *id019
+    intervals: *id020
+    name: evap_summer
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#ccf57a'
-    - '#d9ffff'
-    - '#b3ffff'
-    - '#80ecff'
-    - '#40ccff'
-    - '#0099ff'
-    - '#0019ff'
-    - '#000099'
-    - '#00005b'
-    intervals:
-    - 0.0
-    - 30.0
-    - 60.0
-    - 90.0
-    - 120.0
-    - 150.0
-    - 180.0
-    - 210.0
-    - 240.0
+  - colors: ['#ccf57a', '#d9ffff', '#b3ffff', '#80ecff', '#40ccff', '#0099ff', '#0019ff',
+      '#000099', '#00005b']
+    intervals: [0.0, 30.0, 60.0, 90.0, 120.0, 150.0, 180.0, 210.0, 240.0]
     name: swe60ge
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - swe60ge
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#ccaa66'
-    - '#ffecbf'
-    - '#9cd6c1'
-    - '#1aa0ed'
-    - '#45508a'
-    intervals:
-    - 50.0
-    - 75.0
-    - 100.0
-    - 125.0
+  - colors: ['#ccaa66', '#ffecbf', '#9cd6c1', '#1aa0ed', '#45508a']
+    intervals: [50.0, 75.0, 100.0, 125.0]
     name: mrso
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - mrso
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#fddbc7'
-    - '#f4a482'
-    - '#d65f4d'
-    - '#b2182a'
-    - '#67001f'
-    - '#420114'
-    intervals:
-    - 1.0
-    - 2.0
-    - 3.0
-    - 4.0
-    - 5.0
-    name: diff-tas
+  - colors: &id021 ['#fddbc7', '#f4a482', '#d65f4d', '#b2182a', '#67001f', '#420114']
+    intervals: &id022 [1.0, 2.0, 3.0, 4.0, 5.0]
+    name: diff-tas_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-tas_annual
-    - diff-tas_winter
-    - diff-tas_spring
-    - diff-tas_summer
-    - diff-tas_autumn
+  - colors: *id021
+    intervals: *id022
+    name: diff-tas_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id021
+    intervals: *id022
+    name: diff-tas_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id021
+    intervals: *id022
+    name: diff-tas_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id021
+    intervals: *id022
+    name: diff-tas_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#067953'
-    - '#1da276'
-    - '#52d6aa'
-    - '#8bf0ce'
-    - '#c7fae9'
-    intervals:
-    - -130.0
-    - -100.0
-    - -80.0
-    - -60.0
-    - -40.0
-    - 0.0
-    name: diff-tas0lt
+  - colors: &id023 ['#067953', '#1da276', '#52d6aa', '#8bf0ce', '#c7fae9']
+    intervals: &id024 [-130.0, -100.0, -80.0, -60.0, -40.0, 0.0]
+    name: diff-tas0lt_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-tas0lt_annual
-    - diff-tas0lt_winter
-    - diff-tas0lt_spring
-    - diff-tas0lt_summer
-    - diff-tas0lt_autumn
+  - colors: *id023
+    intervals: *id024
+    name: diff-tas0lt_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id023
+    intervals: *id024
+    name: diff-tas0lt_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id023
+    intervals: *id024
+    name: diff-tas0lt_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id023
+    intervals: *id024
+    name: diff-tas0lt_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#F7CAA8'
-    - '#F3AD78'
-    - '#E8804C'
-    - '#C9551A'
-    intervals:
-    - 20.0
-    - 40.0
-    - 60.0
-    name: diff-tas10gt
+  - colors: &id025 ['#F7CAA8', '#F3AD78', '#E8804C', '#C9551A']
+    intervals: &id026 [20.0, 40.0, 60.0]
+    name: diff-tas10gt_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-tas10gt_annual
-    - diff-tas10gt_winter
-    - diff-tas10gt_spring
-    - diff-tas10gt_summer
-    - diff-tas10gt_autumn
+  - colors: *id025
+    intervals: *id026
+    name: diff-tas10gt_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id025
+    intervals: *id026
+    name: diff-tas10gt_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id025
+    intervals: *id026
+    name: diff-tas10gt_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id025
+    intervals: *id026
+    name: diff-tas10gt_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#65442a'
-    - '#a49386'
-    - '#F3F3F3'
-    - '#9ecae1'
-    - '#3164bd'
-    intervals:
-    - -5.0
-    - -1.4
-    - 1.4
-    - 5.0
-    name: diff-fdgs
+  - colors: &id027 ['#65442a', '#a49386', '#F3F3F3', '#9ecae1', '#3164bd']
+    intervals: &id028 [-5.0, -1.4, 1.4, 5.0]
+    name: diff-fdgs_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-fdgs_annual
-    - diff-fdgs_winter
-    - diff-fdgs_spring
-    - diff-fdgs_summer
-    - diff-fdgs_autumn
+  - colors: *id027
+    intervals: *id028
+    name: diff-fdgs_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id027
+    intervals: *id028
+    name: diff-fdgs_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id027
+    intervals: *id028
+    name: diff-fdgs_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id027
+    intervals: *id028
+    name: diff-fdgs_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#fddbc7'
-    - '#f4a482'
-    - '#d65f4d'
-    - '#b2182a'
-    - '#67001f'
-    - '#420114'
-    intervals:
-    - 1.0
-    - 2.0
-    - 3.0
-    - 4.0
-    - 5.0
-    name: diff-tasmax
+  - colors: &id029 ['#fddbc7', '#f4a482', '#d65f4d', '#b2182a', '#67001f', '#420114']
+    intervals: &id030 [1.0, 2.0, 3.0, 4.0, 5.0]
+    name: diff-tasmax_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-tasmax_annual
-    - diff-tasmax_winter
-    - diff-tasmax_spring
-    - diff-tasmax_summer
-    - diff-tasmax_autumn
+  - colors: *id029
+    intervals: *id030
+    name: diff-tasmax_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id029
+    intervals: *id030
+    name: diff-tasmax_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id029
+    intervals: *id030
+    name: diff-tasmax_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id029
+    intervals: *id030
+    name: diff-tasmax_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#fddbc7'
-    - '#f4a482'
-    - '#d65f4d'
-    - '#b2182a'
-    - '#67001f'
-    - '#420114'
-    - '#0f0005'
-    intervals:
-    - 1.0
-    - 2.0
-    - 3.0
-    - 4.0
-    - 5.0
-    - 6.0
-    name: diff-tasmin
+  - colors: &id031 ['#fddbc7', '#f4a482', '#d65f4d', '#b2182a', '#67001f', '#420114',
+      '#0f0005']
+    intervals: &id032 [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]
+    name: diff-tasmin_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-tasmin_annual
-    - diff-tasmin_winter
-    - diff-tasmin_spring
-    - diff-tasmin_summer
-    - diff-tasmin_autumn
+  - colors: *id031
+    intervals: *id032
+    name: diff-tasmin_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id031
+    intervals: *id032
+    name: diff-tasmin_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id031
+    intervals: *id032
+    name: diff-tasmin_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id031
+    intervals: *id032
+    name: diff-tasmin_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#4392c3'
-    - '#92c5de'
-    - '#d1e5f0'
-    - '#fddbc7'
-    - '#f4a482'
-    intervals:
-    - -1.0
-    - -0.5
-    - 0.0
-    - 0.5
-    name: diff-dtr
+  - colors: &id033 ['#4392c3', '#92c5de', '#d1e5f0', '#fddbc7', '#f4a482']
+    intervals: &id034 [-1.0, -0.5, 0.0, 0.5]
+    name: diff-dtr_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-dtr_annual
-    - diff-dtr_winter
-    - diff-dtr_spring
-    - diff-dtr_summer
-    - diff-dtr_autumn
+  - colors: *id033
+    intervals: *id034
+    name: diff-dtr_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id033
+    intervals: *id034
+    name: diff-dtr_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id033
+    intervals: *id034
+    name: diff-dtr_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id033
+    intervals: *id034
+    name: diff-dtr_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#002b11'
-    - '#1D6936'
-    - '#72A472'
-    - '#ABC4AB'
-    - '#E5E5E5'
-    - '#D3B3E7'
-    - '#C282EA'
-    - '#A020F0'
-    intervals:
-    - -30.0
-    - -20.0
-    - -10.0
-    - -5.0
-    - 5.0
-    - 10.0
-    - 20.0
-    name: diff-dzc
+  - colors: &id035 ['#002b11', '#1D6936', '#72A472', '#ABC4AB', '#E5E5E5', '#D3B3E7',
+      '#C282EA', '#A020F0']
+    intervals: &id036 [-30.0, -20.0, -10.0, -5.0, 5.0, 10.0, 20.0]
+    name: diff-dzc_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-dzc_annual
-    - diff-dzc_winter
-    - diff-dzc_spring
-    - diff-dzc_summer
-    - diff-dzc_autumn
+  - colors: *id035
+    intervals: *id036
+    name: diff-dzc_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id035
+    intervals: *id036
+    name: diff-dzc_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id035
+    intervals: *id036
+    name: diff-dzc_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id035
+    intervals: *id036
+    name: diff-dzc_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#0a455e'
-    - '#197896'
-    - '#29a6c6'
-    - '#abeefd'
-    - '#F0F8FF'
-    intervals:
-    - -100.0
-    - -60.0
-    - -45.0
-    - -30.0
-    - -15.0
-    - 0.0
-    name: diff-fd
+  - colors: &id037 ['#0a455e', '#197896', '#29a6c6', '#abeefd', '#F0F8FF']
+    intervals: &id038 [-100.0, -60.0, -45.0, -30.0, -15.0, 0.0]
+    name: diff-fd_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-fd_annual
-    - diff-fd_winter
-    - diff-fd_spring
-    - diff-fd_summer
-    - diff-fd_autumn
+  - colors: *id037
+    intervals: *id038
+    name: diff-fd_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id037
+    intervals: *id038
+    name: diff-fd_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id037
+    intervals: *id038
+    name: diff-fd_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id037
+    intervals: *id038
+    name: diff-fd_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#ABC4AB'
-    - '#E5E5E5'
-    - '#fff0f5'
-    - '#D3B3E7'
-    - '#B151ED'
-    - '#810f7c'
-    intervals:
-    - -0.1
-    - 0.1
-    - 1.0
-    - 2.0
-    - 3.0
-    name: diff-tasmin20ge
+  - colors: &id039 ['#ABC4AB', '#E5E5E5', '#fff0f5', '#D3B3E7', '#B151ED', '#810f7c']
+    intervals: &id040 [-0.1, 0.1, 1.0, 2.0, 3.0]
+    name: diff-tasmin20ge_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-tasmin20ge_annual
-    - diff-tasmin20ge_winter
-    - diff-tasmin20ge_spring
-    - diff-tasmin20ge_summer
-    - diff-tasmin20ge_autumn
+  - colors: *id039
+    intervals: *id040
+    name: diff-tasmin20ge_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id039
+    intervals: *id040
+    name: diff-tasmin20ge_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id039
+    intervals: *id040
+    name: diff-tasmin20ge_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id039
+    intervals: *id040
+    name: diff-tasmin20ge_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#eee0e5'
-    - '#D3B3E7'
-    - '#B151ED'
-    - '#810f7c'
-    intervals:
-    - 10.0
-    - 20.0
-    - 30.0
-    name: diff-tasmax20ge
+  - colors: &id041 ['#eee0e5', '#D3B3E7', '#B151ED', '#810f7c']
+    intervals: &id042 [10.0, 20.0, 30.0]
+    name: diff-tasmax20ge_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-tasmax20ge_annual
-    - diff-tasmax20ge_winter
-    - diff-tasmax20ge_spring
-    - diff-tasmax20ge_summer
-    - diff-tasmax20ge_autumn
+  - colors: *id041
+    intervals: *id042
+    name: diff-tasmax20ge_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id041
+    intervals: *id042
+    name: diff-tasmax20ge_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id041
+    intervals: *id042
+    name: diff-tasmax20ge_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id041
+    intervals: *id042
+    name: diff-tasmax20ge_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#E5E5E5'
-    - '#fff0f5'
-    - '#D3B3E7'
-    - '#C282EA'
-    - '#B151ED'
-    - '#810f7c'
-    intervals:
-    - 0.5
-    - 1.0
-    - 2.0
-    - 3.0
-    - 4.0
-    name: diff-norheatwave
+  - colors: &id043 ['#E5E5E5', '#fff0f5', '#D3B3E7', '#C282EA', '#B151ED', '#810f7c']
+    intervals: &id044 [0.5, 1.0, 2.0, 3.0, 4.0]
+    name: diff-norheatwave_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-norheatwave_annual
-    - diff-norheatwave_winter
-    - diff-norheatwave_spring
-    - diff-norheatwave_summer
-    - diff-norheatwave_autumn
+  - colors: *id043
+    intervals: *id044
+    name: diff-norheatwave_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id043
+    intervals: *id044
+    name: diff-norheatwave_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id043
+    intervals: *id044
+    name: diff-norheatwave_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id043
+    intervals: *id044
+    name: diff-norheatwave_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#D7B36A'
-    - '#E9D39D'
-    - '#EEE8C8'
-    - '#CEE9DF'
-    - '#A0DAD1'
-    - '#6EC0B5'
-    - '#3A9B92'
-    - '#147870'
-    - '#00594F'
-    - '#003C30'
-    intervals:
-    - -8.0
-    - -4.0
-    - 0.0
-    - 4.0
-    - 8.0
-    - 12.0
-    - 16.0
-    - 20.0
-    - 24.0
-    name: change-pr
+  - colors: &id045 ['#D7B36A', '#E9D39D', '#EEE8C8', '#CEE9DF', '#A0DAD1', '#6EC0B5',
+      '#3A9B92', '#147870', '#00594F', '#003C30']
+    intervals: &id046 [-8.0, -4.0, 0.0, 4.0, 8.0, 12.0, 16.0, 20.0, 24.0]
+    name: change-pr_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - change-pr_annual
-    - change-pr_winter
-    - change-pr_spring
-    - change-pr_summer
-    - change-pr_autumn
+  - colors: *id045
+    intervals: *id046
+    name: change-pr_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id045
+    intervals: *id046
+    name: change-pr_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id045
+    intervals: *id046
+    name: change-pr_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id045
+    intervals: *id046
+    name: change-pr_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#543005'
-    - '#754308'
-    - '#965A11'
-    - '#B47726'
-    - '#CB9B4D'
-    - '#DFC27D'
-    - '#ECD8A7'
-    - '#ECE8C9'
-    - '#D0E9DE'
-    - '#AADED6'
-    - '#80CDC1'
-    - '#52ACA3'
-    - '#2A8D85'
-    intervals:
-    - -14.0
-    - -12.0
-    - -10.0
-    - -8.0
-    - -6.0
-    - -4.0
-    - -2.0
-    - 0.0
-    - 2.0
-    - 4.0
-    - 6.0
-    - 8.0
-    name: diff-pr1mm
+  - colors: &id047 ['#543005', '#754308', '#965A11', '#B47726', '#CB9B4D', '#DFC27D',
+      '#ECD8A7', '#ECE8C9', '#D0E9DE', '#AADED6', '#80CDC1', '#52ACA3', '#2A8D85']
+    intervals: &id048 [-14.0, -12.0, -10.0, -8.0, -6.0, -4.0, -2.0, 0.0, 2.0, 4.0,
+      6.0, 8.0]
+    name: diff-pr1mm_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-pr1mm_annual
-    - diff-pr1mm_winter
-    - diff-pr1mm_spring
-    - diff-pr1mm_summer
-    - diff-pr1mm_autumn
+  - colors: *id047
+    intervals: *id048
+    name: diff-pr1mm_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id047
+    intervals: *id048
+    name: diff-pr1mm_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id047
+    intervals: *id048
+    name: diff-pr1mm_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id047
+    intervals: *id048
+    name: diff-pr1mm_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#CD9E51'
-    - '#E5CC90'
-    - '#F1E8C6'
-    - '#CBE9E1'
-    - '#93D4CA'
-    - '#57AFA5'
-    - '#22857D'
-    - '#005E55'
-    - '#003C30'
-    intervals:
-    - -8.0
-    - -4.0
-    - 0.0
-    - 4.0
-    - 8.0
-    - 12.0
-    - 16.0
-    - 20.0
-    name: change-sdii
+  - colors: &id049 ['#CD9E51', '#E5CC90', '#F1E8C6', '#CBE9E1', '#93D4CA', '#57AFA5',
+      '#22857D', '#005E55', '#003C30']
+    intervals: &id050 [-8.0, -4.0, 0.0, 4.0, 8.0, 12.0, 16.0, 20.0]
+    name: change-sdii_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - change-sdii_annual
-    - change-sdii_winter
-    - change-sdii_spring
-    - change-sdii_summer
-    - change-sdii_autumn
+  - colors: *id049
+    intervals: *id050
+    name: change-sdii_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id049
+    intervals: *id050
+    name: change-sdii_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id049
+    intervals: *id050
+    name: change-sdii_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id049
+    intervals: *id050
+    name: change-sdii_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#92570E'
-    - '#C79141'
-    - '#E7D097'
-    - '#DEE9D3'
-    - '#9AD7CE'
-    - '#47A49B'
-    - '#076C64'
-    - '#003C30'
-    intervals:
-    - -20.0
-    - -10.0
-    - 0.0
-    - 10.0
-    - 20.0
-    - 30.0
-    - 40.0
-    name: change-pr997
+  - colors: &id051 ['#92570E', '#C79141', '#E7D097', '#DEE9D3', '#9AD7CE', '#47A49B',
+      '#076C64', '#003C30']
+    intervals: &id052 [-20.0, -10.0, 0.0, 10.0, 20.0, 30.0, 40.0]
+    name: change-pr997_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - change-pr997_annual
-    - change-pr997_winter
-    - change-pr997_spring
-    - change-pr997_summer
-    - change-pr997_autumn
+  - colors: *id051
+    intervals: *id052
+    name: change-pr997_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id051
+    intervals: *id052
+    name: change-pr997_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id051
+    intervals: *id052
+    name: change-pr997_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id051
+    intervals: *id052
+    name: change-pr997_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#E5CC90'
-    - '#F1E8C6'
-    - '#CBE9E1'
-    - '#93D4CA'
-    - '#57AFA5'
-    - '#22857D'
-    - '#005E55'
-    - '#003C30'
-    intervals:
-    - -2.0
-    - 0.0
-    - 2.0
-    - 4.0
-    - 6.0
-    - 8.0
-    - 10.0
-    name: diff-pr20mm
+  - colors: &id053 ['#E5CC90', '#F1E8C6', '#CBE9E1', '#93D4CA', '#57AFA5', '#22857D',
+      '#005E55', '#003C30']
+    intervals: &id054 [-2.0, 0.0, 2.0, 4.0, 6.0, 8.0, 10.0]
+    name: diff-pr20mm_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-pr20mm_annual
-    - diff-pr20mm_winter
-    - diff-pr20mm_spring
-    - diff-pr20mm_summer
-    - diff-pr20mm_autumn
+  - colors: *id053
+    intervals: *id054
+    name: diff-pr20mm_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id053
+    intervals: *id054
+    name: diff-pr20mm_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id053
+    intervals: *id054
+    name: diff-pr20mm_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id053
+    intervals: *id054
+    name: diff-pr20mm_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#C18633'
-    - '#D7B36A'
-    - '#E9D39D'
-    - '#EEE8C8'
-    - '#CEE9DF'
-    - '#A0DAD1'
-    - '#6EC0B5'
-    - '#3A9B92'
-    - '#147870'
-    - '#00594F'
-    - '#003C30'
-    intervals:
-    - -15.0
-    - -10.0
-    - -5.0
-    - 0.0
-    - 5.0
-    - 10.0
-    - 15.0
-    - 20.0
-    - 25.0
-    - 30.0
-    name: change-prmax5day
+  - colors: &id055 ['#C18633', '#D7B36A', '#E9D39D', '#EEE8C8', '#CEE9DF', '#A0DAD1',
+      '#6EC0B5', '#3A9B92', '#147870', '#00594F', '#003C30']
+    intervals: &id056 [-15.0, -10.0, -5.0, 0.0, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0]
+    name: change-prmax5day_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - change-prmax5day_annual
-    - change-prmax5day_winter
-    - change-prmax5day_spring
-    - change-prmax5day_summer
-    - change-prmax5day_autumn
+  - colors: *id055
+    intervals: *id056
+    name: change-prmax5day_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id055
+    intervals: *id056
+    name: change-prmax5day_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id055
+    intervals: *id056
+    name: change-prmax5day_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id055
+    intervals: *id056
+    name: change-prmax5day_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#40004B'
-    - '#6C2278'
-    - '#8C569C'
-    - '#AB88BB'
-    - '#CCB1D5'
-    - '#E5D6E6'
-    - '#DAEDD4'
-    - '#B3E0AD'
-    - '#7CC27D'
-    - '#439A51'
-    - '#166E31'
-    - '#00441B'
-    intervals:
-    - -5.0
-    - -4.0
-    - -3.0
-    - -2.0
-    - -1.0
-    - 0.0
-    - 1.0
-    - 2.0
-    - 3.0
-    - 4.0
-    - 5.0
-    name: change-sfcWind
+  - colors: &id057 ['#40004B', '#6C2278', '#8C569C', '#AB88BB', '#CCB1D5', '#E5D6E6',
+      '#DAEDD4', '#B3E0AD', '#7CC27D', '#439A51', '#166E31', '#00441B']
+    intervals: &id058 [-5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0]
+    name: change-sfcWind_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - change-sfcWind_annual
-    - change-sfcWind_winter
-    - change-sfcWind_spring
-    - change-sfcWind_summer
-    - change-sfcWind_autumn
+  - colors: *id057
+    intervals: *id058
+    name: change-sfcWind_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id057
+    intervals: *id058
+    name: change-sfcWind_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id057
+    intervals: *id058
+    name: change-sfcWind_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id057
+    intervals: *id058
+    name: change-sfcWind_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#1b7837'
-    - '#5aae61'
-    - '#a6dba0'
-    - '#d9f0d3'
-    - '#e7d4e8'
-    - '#c2a5cf'
-    - '#9970ab'
-    - '#762a83'
-    intervals:
-    - -3.0
-    - -2.0
-    - -1.0
-    - 0.0
-    - 1.0
-    - 2.0
-    - 3.0
-    name: change-sfcWind99
+  - colors: &id059 ['#1b7837', '#5aae61', '#a6dba0', '#d9f0d3', '#e7d4e8', '#c2a5cf',
+      '#9970ab', '#762a83']
+    intervals: &id060 [-3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0]
+    name: change-sfcWind99_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - change-sfcWind99_annual
-    - change-sfcWind99_winter
-    - change-sfcWind99_spring
-    - change-sfcWind99_summer
-    - change-sfcWind99_autumn
+  - colors: *id059
+    intervals: *id060
+    name: change-sfcWind99_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id059
+    intervals: *id060
+    name: change-sfcWind99_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id059
+    intervals: *id060
+    name: change-sfcWind99_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id059
+    intervals: *id060
+    name: change-sfcWind99_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#1b7837'
-    - '#5aae61'
-    - '#a6dba0'
-    - '#d9f0d3'
-    - '#e7d4e8'
-    - '#c2a5cf'
-    - '#9970ab'
-    - '#762a83'
-    intervals:
-    - -15.0
-    - -10.0
-    - -5.0
-    - 0.0
-    - 5.0
-    - 10.0
-    - 15.0
-    name: change-sfcWind100yrRP
+  - colors: &id061 ['#1b7837', '#5aae61', '#a6dba0', '#d9f0d3', '#e7d4e8', '#c2a5cf',
+      '#9970ab', '#762a83']
+    intervals: &id062 [-15.0, -10.0, -5.0, 0.0, 5.0, 10.0, 15.0]
+    name: change-sfcWind100yrRP_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - change-sfcWind100yrRP_annual
-    - change-sfcWind100yrRP_winter
-    - change-sfcWind100yrRP_spring
-    - change-sfcWind100yrRP_summer
-    - change-sfcWind100yrRP_autumn
+  - colors: *id061
+    intervals: *id062
+    name: change-sfcWind100yrRP_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id061
+    intervals: *id062
+    name: change-sfcWind100yrRP_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id061
+    intervals: *id062
+    name: change-sfcWind100yrRP_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id061
+    intervals: *id062
+    name: change-sfcWind100yrRP_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#1b7837'
-    - '#5aae61'
-    - '#a6dba0'
-    - '#d9f0d3'
-    - '#e7d4e8'
-    - '#c2a5cf'
-    - '#9970ab'
-    - '#762a83'
-    intervals:
-    - -3.0
-    - -2.0
-    - -1.0
-    - 0.0
-    - 1.0
-    - 2.0
-    - 3.0
-    name: change-sfcWind10ms
+  - colors: &id063 ['#1b7837', '#5aae61', '#a6dba0', '#d9f0d3', '#e7d4e8', '#c2a5cf',
+      '#9970ab', '#762a83']
+    intervals: &id064 [-3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0]
+    name: change-sfcWind10ms_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - change-sfcWind10ms_annual
-    - change-sfcWind10ms_winter
-    - change-sfcWind10ms_spring
-    - change-sfcWind10ms_summer
-    - change-sfcWind10ms_autumn
+  - colors: *id063
+    intervals: *id064
+    name: change-sfcWind10ms_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id063
+    intervals: *id064
+    name: change-sfcWind10ms_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id063
+    intervals: *id064
+    name: change-sfcWind10ms_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id063
+    intervals: *id064
+    name: change-sfcWind10ms_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#bf812d'
-    - '#dfc27d'
-    - '#f6e8c3'
-    - '#f5f5f5'
-    - '#c7eae5'
-    - '#80cdc1'
-    - '#35978f'
-    - '#01665e'
-    intervals:
-    - -10.0
-    - -5.0
-    - -1.0
-    - 1.0
-    - 5.0
-    - 10.0
-    - 15.0
-    name: change-mrro
+  - colors: ['#bf812d', '#dfc27d', '#f6e8c3', '#f5f5f5', '#c7eae5', '#80cdc1', '#35978f',
+      '#01665e']
+    intervals: [-10.0, -5.0, -1.0, 1.0, 5.0, 10.0, 15.0]
+    name: change-mrro_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - change-mrro_annual
-  - colors:
-    - '#8c510a'
-    - '#bf812d'
-    - '#dfc27d'
-    - '#f6e8c3'
-    - '#f5f5f5'
-    - '#c7eae5'
-    - '#80cdc1'
-    - '#35978f'
-    - '#01665e'
-    intervals:
-    - -75.0
-    - -35.0
-    - -15.0
-    - -5.0
-    - 5.0
-    - 15.0
-    - 35.0
-    - 75.0
-    name: change-mrro
+  - colors: &id065 ['#8c510a', '#bf812d', '#dfc27d', '#f6e8c3', '#f5f5f5', '#c7eae5',
+      '#80cdc1', '#35978f', '#01665e']
+    intervals: &id066 [-75.0, -35.0, -15.0, -5.0, 5.0, 15.0, 35.0, 75.0]
+    name: change-mrro_winter
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - change-mrro_winter
-    - change-mrro_spring
-    - change-mrro_summer
-    - change-mrro_autumn
+  - colors: *id065
+    intervals: *id066
+    name: change-mrro_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id065
+    intervals: *id066
+    name: change-mrro_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id065
+    intervals: *id066
+    name: change-mrro_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#8c510a'
-    - '#bf812d'
-    - '#dfc27d'
-    - '#f6e8c3'
-    - '#f5f5f5'
-    - '#c7eae5'
-    - '#80cdc1'
-    - '#35978f'
-    - '#01665e'
-    intervals:
-    - -400.0
-    - -200.0
-    - -100.0
-    - -50.0
-    - 50.0
-    - 100.0
-    - 200.0
-    - 400.0
-    name: diff-mrro
+  - colors: &id067 ['#8c510a', '#bf812d', '#dfc27d', '#f6e8c3', '#f5f5f5', '#c7eae5',
+      '#80cdc1', '#35978f', '#01665e']
+    intervals: &id068 [-400.0, -200.0, -100.0, -50.0, 50.0, 100.0, 200.0, 400.0]
+    name: diff-mrro_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-mrro_annual
-    - diff-mrro_winter
-    - diff-mrro_spring
-    - diff-mrro_summer
-    - diff-mrro_autumn
+  - colors: *id067
+    intervals: *id068
+    name: diff-mrro_winter
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id067
+    intervals: *id068
+    name: diff-mrro_spring
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id067
+    intervals: *id068
+    name: diff-mrro_summer
+    open_highest_interval: true
+    open_lowest_interval: true
+  - colors: *id067
+    intervals: *id068
+    name: diff-mrro_autumn
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#c7eae5'
-    - '#80cdc1'
-    - '#35978f'
-    - '#01665e'
-    - '#003c30'
-    intervals:
-    - 10.0
-    - 20.0
-    - 30.0
-    - 40.0
-    name: change-evap
+  - colors: &id069 ['#c7eae5', '#80cdc1', '#35978f', '#01665e', '#003c30']
+    intervals: &id070 [10.0, 20.0, 30.0, 40.0]
+    name: change-evap_annual
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - change-evap_annual
-    - change-evap_summer
+  - colors: *id069
+    intervals: *id070
+    name: change-evap_summer
+    open_highest_interval: true
+    open_lowest_interval: true
 - base_netcdf_directory: ''
   mapfiles_path: /mapfiles
   module: mapgen.modules.generic_quicklook
   module_function: generic_quicklook
   pattern: ''
   styles:
-  - colors:
-    - '#8D7B68'
-    - '#A4907C'
-    - '#C8B6A6'
-    - '#F1DEC9'
-    - '#D3E8F7'
-    intervals:
-    - -90.0
-    - -60.0
-    - -30.0
-    - 0.0
+  - colors: ['#8D7B68', '#A4907C', '#C8B6A6', '#F1DEC9', '#D3E8F7']
+    intervals: [-90.0, -60.0, -30.0, 0.0]
     name: diff-swe60ge
     open_highest_interval: true
     open_lowest_interval: true
-    variables:
-    - diff-swe60ge
