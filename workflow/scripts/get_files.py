@@ -134,7 +134,7 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
 
                 # Match common keys from folder name against keys from file name
                 if check_common_keys(folder_group, file_group) == False:
-                    if debug:
+                    if True: # debug:
                         print('Folder/filename DRS mismatch:')
                         print('subdir:', subdir)
                         print('file:', file)
@@ -158,11 +158,11 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
                     if not in_range:
                         continue # main loop
 
-                # Concat the subdir and the file name
-                relative_path = os.path.join(subdir, file)
+                # Concat the root and the file name
+                out_path = os.path.join(root, file)
                 
                 # Add to the output
-                outfiles.append(relative_path)
+                outfiles.append(out_path)
                 if return_groups:
                     outgroups.append(merged_groups)
 
