@@ -33,6 +33,7 @@ for collection in collections:
         # palettes defined at all?
         palettes = config.get('palettes', None)
         if palettes is None:
+            print(f'Skipping {varname} in {collection} - no palettes defined')
             continue
 
         # TODO: deduce the pattern based on collection config and variable name
@@ -42,11 +43,13 @@ for collection in collections:
         for palette in palettes:
             # parse colors into list
             if 'colors' not in palette:
+                print(f'Skipping {varname} in {collection} - no colors defined for palette')
                 continue
             colors = [x.strip() for x in palette['colors'].split(',')]
 
             # parse intervals into list
             if 'intervals' not in palette:
+                print(f'Skipping {varname} in {collection} - no intervals defined for palette')
                 continue
             intervals = [float(x) for x in palette['intervals'].split(',')]
 
@@ -69,17 +72,17 @@ for collection in collections:
             # append to config for all 
             var_styles.append(style_config)
 
-    # define variable level config
-    var_config = {
-        'pattern': '',
-        'base_netcdf_directory': '',
-        'module': 'mapgen.modules.generic_quicklook',
-        'module_function': 'generic_quicklook',
-        'mapfiles_path': '/mapfiles',
-        'styles': var_styles,
-    }
-    # append to WMS config
-    wms_config.append(var_config)
+        # define variable level config
+        var_config = {
+            'pattern': '',
+            'base_netcdf_directory': '',
+            'module': 'mapgen.modules.generic_quicklook',
+            'module_function': 'generic_quicklook',
+            'mapfiles_path': '/mapfiles',
+            'styles': var_styles,
+        }
+        # append to WMS config
+        wms_config.append(var_config)
 
 # write to YAML file
 output_filename = output_dir + 'wms_config.yaml'
