@@ -184,7 +184,7 @@ if __name__ == '__main__':
     collections = load_collections('../../config/collections')
 
     filters = {
-        'institution': ['KNMI'],
+        #'institution': ['KNMI'],
         #'version': [None],
         #'experiment': ['rcp45'],
         #'experiment': ['ssp370'],
@@ -192,16 +192,12 @@ if __name__ == '__main__':
         #'years': [[1980, 1990], [2020, 2030], 2090, [2095, 2100]],
     }
 
-    #print('Data path:', base_path)
-    print('Filters:')
-    for k, v in filters.items():
-        print(' ', k, ':', v)    
+    if len(filters) > 0:
+        print('Filters:')
+        for k, v in filters.items():
+            print(' ', k, ':', v)    
 
-    coll = 'DailyTimeSeries'
-    #coll = 'YearlyTimeSeries'
-    #coll = '30YearStatistics'
-    #coll = 'CORDEX-CMIP5'
-    #coll = 'CORDEX-CMIP6'
+    coll = '30YearStatistics'
     if len(sys.argv) > 1:
         coll = sys.argv[1]
 

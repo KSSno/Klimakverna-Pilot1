@@ -1,0 +1,7 @@
+{
+    "name"           : "ClimateStatistics",
+    "base_path"      : "/lustre/storeC-ext/users/kin2100/MET/annmeans_bc/ensmeans",
+    "filter_keys"    : ["parameter", "operator", "scenario", "method", "hydro_model", "start_year", "end_year", "years"],
+    "folder_pattern" : "^(?P<parameter>[^/]+)$",
+    "file_pattern"   : "^ensemble-mean_(?P<operator>[^_]+)_(?P<scenario>[^_]+)_(?P<method>[^_]+)_(?P<hydro_model>[^_]+)_norway_1km_annual_(?P<start_year>[0-9]{4})-(?P<end_year>[0-9]{4})\\.nc4?$"
+}
