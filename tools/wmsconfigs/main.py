@@ -54,8 +54,8 @@ for collection in collections:
             intervals = [float(x) for x in palette['intervals'].split(',')]
 
             # open intervals are default
-            open_lowest_interval = palette.get('OpenLowestInterval', True)
-            open_highest_interval = palette.get('OpenHighestInterval', True)
+            open_lowest_interval = palette.get('openLowestInterval', True)
+            open_highest_interval = palette.get('openHighestInterval', True)
 
             # add variable names
             # TODO: drop these. Instead print once per suffix and use full variable name as name
