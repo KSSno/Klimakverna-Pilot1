@@ -14,18 +14,18 @@ def update_metadata(
     global_attributes,
     objects_collection,
     file_pattern_list,
-    scenario_list
+    scenario_list,
 ):
 
     # Copy input file to the output location before editing
-    filename = os.path.basename(input_file)  # Discard the extension   
+    filename = os.path.basename(input_file)  # Discard the extension
     copyfile(input_file, output_file)
 
     add_common_global_attribute(output_file, global_attributes)
-    for object_type, pattern  in file_pattern_list.items():
-        if (fnmatch.fnmatch(input_file, pattern)):
+    for object_type, pattern in file_pattern_list.items():
+        if fnmatch.fnmatch(input_file, pattern):
             object = objects_collection.get(object_type)
-            
+
             # Deriving scenario from filename for different type of inputs(pr, tasmax20ge, norheatwave)
             if object:
                 parts = filename.split("_")
@@ -37,14 +37,11 @@ def update_metadata(
                     if scenario:
                         print(f"Scenario: {scenario}")
                     else:
-                        print(f"Warning: Scenario not found in scenario_list") 
+                        print(f"Warning: Scenario not found in scenario_list")
 
                 add_attributes_variables(
-                        output_file,
-                        object_type,
-                        object["attributes"],
-                        scenario
-                    )
+                    output_file, object_type, object["attributes"], scenario
+                )
 
     global modified
     if modified:
@@ -63,29 +60,32 @@ def add_common_global_attribute(output_file, global_attributes):
         # Check and update metadata attributes
         for key, value in global_attributes.items():
             if key not in nc.ncattrs():
-                nc.setncattr(key, value) 
-                modified=True
-                print(f"Updated global metadata {key}:{value}")   
-        
-#Adding variable attributes for different types of inputs(pr, tasmax20ge,norheatwave)
-def add_attributes_variables(output_file,variable_name, variable_attributes, scenario= None):
-    global modified 
+                nc.setncattr(key, value)
+                modified = True
+                print(f"Updated global metadata {key}:{value}")
+
+
+# Adding variable attributes for different types of inputs(pr, tasmax20ge,norheatwave)
+def add_attributes_variables(
+    output_file, variable_name, variable_attributes, scenario=None
+):
+    global modified
 
     with Dataset(output_file, "r+") as nc:
         # Check and update metadata attributes
         for key, value in variable_attributes.get("global", {}).items():
             if key not in nc.ncattrs():
-                if '{scenario}' in value:
-                    value = value.format(scenario=scenario)                             
-                nc.setncattr(key, value) 
-                modified=True
+                if "{scenario}" in value:
+                    value = value.format(scenario=scenario)
+                nc.setncattr(key, value)
+                modified = True
                 print(f"Updated global attribute {variable_name} {key}:{value}")
             if variable_name in nc.variables:
                 var = nc.variables[variable_name]
                 for key, value in variable_attributes.get("variable", {}).items():
                     if key not in var.ncattrs():
                         var.setncattr(key, value)
-                        modified=True
+                        modified = True
                         print(f"Updated variables {variable_name} {key}:{value}")
 
 
@@ -113,19 +113,18 @@ if __name__ == "__main__":
         input_file = "example.nc"
         output_file = "example_updated.nc"
         attributes = "attributes.json"
-        objects="objects.json"
-        pattern_list= "pattern_list.json"
-        
+        objects = "objects.json"
+        pattern_list = "pattern_list.json"
+
     # Load attributes from JSON
     with open(attributes, "r") as f:
         global_attributes = json.load(f)
     with open(objects, "r") as f:
         objects_collection = json.load(f)
-       
     with open(pattern_list, "r") as f:
         data = json.load(f)
     with open(template_variables, "r") as f:
-        templates = json.load(f)    
+        templates = json.load(f)
     # Extract the list from the "file_pattern" key
     file_pattern_list = data["file_pattern"]
     scenario_list = templates["scenario"]
@@ -136,5 +135,5 @@ if __name__ == "__main__":
         global_attributes,
         objects_collection,
         file_pattern_list,
-        scenario_list
+        scenario_list,
     )

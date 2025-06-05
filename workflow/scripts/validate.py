@@ -8,7 +8,10 @@ import os
 class NetCDFMetadata(BaseModel):
     title: str = Field(..., description="Title of the dataset")
     institution: str = Field(..., description="Institution providing the dataset")
-    bc_method: str = Field(default="Empirical quantile mapping (EQM) or EQM + 3DBC", description="Source of the data")
+    bc_method: str = Field(
+        default="Empirical quantile mapping (EQM) or EQM + 3DBC",
+        description="Source of the data",
+    )
     bc_method_id: str = Field(default="NVE-EQM or MET-3DBC")
     bc_period: str = Field(default="1985-2014")
     dataset_production_status: str = Field(default="Complete")
@@ -46,7 +49,9 @@ def check_datetime_iso(self) -> "NetCDFMetadata":
     try:
         dt = parser.isoparse(self.time_coverage_end)
     except ValueError:
-        raise ValueError(f"{self.time_coverage_end} not in ISO format(YYYY-MM-DDTHH:MM:SSZ)")
+        raise ValueError(
+            f"{self.time_coverage_end} not in ISO format(YYYY-MM-DDTHH:MM:SSZ)"
+        )
     except Exception as e:
         raise e
 
@@ -77,7 +82,8 @@ def validate_nc_file(file_path, ouput_dir):
     # Validate using Pydantic
     try:
         validated_data = NetCDFValidation(
-            global_attrs=NetCDFMetadata(**global_attrs), variable_pr=NetCDFVariablePr(**pr_attributes)
+            global_attrs=NetCDFMetadata(**global_attrs),
+            variable_pr=NetCDFVariablePr(**pr_attributes),
         )
         destination = os.path.join(ouput_dir, input_file)
         copyfile(input_file, ouput_dir)
