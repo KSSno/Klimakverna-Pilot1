@@ -1,0 +1,8 @@
+{
+    "name"           : "DailyReferenceData",
+    "base_path"      : ["/lustre/storeC-ext/users/kin2100/MET/ReferenceData"],
+    "filter_keys"    : ["source", "model", "parameter", "stem", "start_year"],
+    "folder_pattern" : "^(?P<source>[^/-]+)$",
+    "file_pattern"   : "^(?P<model>[^_]+)_?(?P<parameter>[^_]*)_?(?P<stem>.*)_(?P<start_year>[0-9]{4})\\.nc4?$"
+}
+

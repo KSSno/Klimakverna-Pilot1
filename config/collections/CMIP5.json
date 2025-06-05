@@ -1,0 +1,8 @@
+{
+    "name"          : "CMIP5",
+    "base_path"     : "/lustre/storeB/project/CMIP/CMIP5.monthly",
+    "filter_keys"   : ["table", "source", "scenario",
+                       "parameter", "start_year", "end_year", "years"],
+    "folder_pattern": "^(?P<scenario>[^/]+)$",
+    "file_pattern"  : "^(?P<parameter>[^_]+)_(?P<table>[^_]+)_(?P<source>[^_]+)_(?P<scenario>[^_]+)_(?P<variant_label>[ripf0-9]+)(?:_(?P<start_year>[0-9]{4})[0-9]*-(?P<end_year>[0-9]{4})[0-9]*)?\\.nc$"
+}

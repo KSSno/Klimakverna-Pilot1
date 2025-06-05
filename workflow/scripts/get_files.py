@@ -1,0 +1,214 @@
+#
+# Written by Tyge Løvset, NORCE Research, 2025 for Klimakverna.
+
+import os
+import sys
+import json
+import glob
+import re
+
+
+def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=False, debug=1):
+    """
+    Searches for files based on a flexible criteria. This function can be
+    used in conjunction with a JSON "collection" configuration file.
+    This config provides information about a specific collection of data files,
+    such as EURO-CORDEX, CMIP or DailyTimeSeries files. All files in a collection
+    should share a folder and filename structure. Se a full list of collections
+    in the next header [TODO].
+
+    Function arguments
+    ------------------
+    config        : A template dictionary for how to match files (filename or dictionary).
+    filters       : A dictionary with filtering options (e.g., file extensions, size, date).
+                    The available filter keys are specified in the config entry "filter_keys".
+    base_paths    : Root directories to start the search. If not specified, the ones in config are used.
+    return_groups : See "Return values".
+    debug         : 0=None, 1=DRS mismatch (default), 2=Non-matching subfolders and files, 3=Filtered files
+
+    Return values
+    -------------
+    The list elements of the files returned are triples: (base_path, subdirectory, file_name).
+    If the return_groups argument is True, it return both the list of files and a list of dicts with searchable path elements.
+
+    Year range filtering
+    --------------------
+    The "start_year" and "end_year" filter keys are treated specially to filter on range.
+    If only one of them is specified, it is treated as a half-open range.
+
+    In addition, there is a special filter key "years", which expects a list of a mix
+    of tuples (start, end) and single year entries. Both "years" and "start_year"/"end_year"
+    will be used in the filtering when both are specified.
+    """
+    if type(config_path_or_dict) is dict:
+        config = config_path_or_dict
+    else:
+        with open(config_path_or_dict, 'r') as f:
+            config = json.load(f)
+
+    if base_paths is None:
+        if 'base_path' in config:
+            base_paths = config['base_path']
+
+    if type(base_paths) is str:
+        base_paths = [base_paths]
+    elif type(base_paths) is not list:
+        print('Error: no "base_path" specified')
+        return (None, None) if return_groups else None
+
+    outfiles = []
+    outgroups = []
+
+    # Compile regular expressions:
+    re_folder = re.compile(config['folder_pattern'])
+    re_file = re.compile(config['file_pattern'])
+
+    # Parse year range filters:
+    flt_years = None
+    if 'years' in filters.keys():
+        flt_years = []  # allow both range and single year: "years": [[2020, 2030], 2050]
+        for y in filters['years']:
+            if type(y) in (list, tuple):
+                flt_years.append((int(y[0]), int(y[1])))
+            else:
+                flt_years.append((int(y), int(y)))
+
+    if 'start_year' in filters.keys() or 'end_year' in filters.keys():
+        if not flt_years:
+            flt_years = []
+        yend = int(filters['end_year']) if 'end_year' in filters.keys() else 10000
+        ystart = int(filters['start_year']) if 'start_year' in filters.keys() else -10000
+        flt_years.append((int(ystart), int(yend)))
+
+    # Outer loop: each base path:
+    for base_path in base_paths:
+        if base_path[-1] != '/':
+            base_path += '/'
+
+        baselen = len(base_path)
+
+        # Walk recursively through base_path subfolders:
+        for root, dirs, files in os.walk(base_path):
+            subdir = root[baselen:]
+
+            # Match the folder name
+            match = re.search(re_folder, subdir)
+
+            if not match:
+                if debug == 2:
+                    print('Subfolder not matched:', base_path, ':', subdir)
+                continue
+
+            folder_group = match.groupdict()
+
+            # Filter on the folder groups:
+            found = True
+            for key, val in filters.items():
+                if key in folder_group.keys():
+                    if not folder_group[key] in val:
+                        found = False
+                        break # filters loop
+            if not found:
+                if debug == 3:
+                    print('Filtered folder:', subdir)
+                    print('               ', folder_group)
+                continue # next dir
+
+            # Loop through each file in folder:
+            for file in files:
+                # Match the file name against RE patten
+                match = re.search(re_file, file)
+
+                if not match:
+                    if debug == 2:
+                        print('Filename not matched: %s : %s' % (root, file))
+                    continue # next file
+
+                file_group = match.groupdict()
+
+                # Filter on the file groups elements:
+                found = True
+                for key, val in filters.items():
+                    if key in file_group.keys():
+                        # Check for mismatch between key entry in folder group and file group:
+                        if debug == 1 and key in folder_group.keys() and folder_group[key] != file_group[key]:
+                            print('Folder/filename DRS mismatch:')
+                            print('subdir:', subdir)
+                            print('file:', file)
+                            print('foldergroup:', folder_group)
+                            print('filegroup:', file_group)
+                        if not file_group[key] in val:
+                            found = False
+                            break; # filters
+                if not found:
+                    if debug == 3:
+                        print('Filtered file: %s : %s' % (root, file))
+                        print('               ', file_group)
+                    continue # next file
+
+                # Merge the two groups
+                merged_groups = folder_group | file_group
+
+                # Special handing of 'start_year', 'end_year' range filter keys:
+                if flt_years and 'start_year' in merged_groups.keys():
+                    ystart = int(merged_groups['start_year'])
+                    yend = int(merged_groups['end_year']) if 'end_year' in merged_groups.keys() else ystart
+
+                    in_range = False
+                    for yr in flt_years:
+                        if ystart >= yr[0] and yend <= yr[1]:
+                            in_range = True
+                            break
+                    if not in_range:
+                        continue # next file
+
+                # Gather the output path as a triplet
+                out_path = (base_path, subdir, file)
+                
+                # Add to the output
+                outfiles.append(out_path)
+                if return_groups:
+                    outgroups.append(merged_groups)
+
+    return (outfiles, outgroups) if return_groups else outfiles
+
+
+def load_collections(collection_root):
+    collections = {}
+    for json_file in glob.glob(os.path.join(collection_root, '*.json')):
+        with open(json_file, 'r') as f:
+            print(json_file)
+            config = json.load(f)
+            collections[config['name']] = config
+    return collections
+
+
+
+if __name__ == '__main__':
+    collections = load_collections('../../config/collections')
+
+    filters = {
+        "period": ["near_future_mean", "far_future_mean", "ref_period_mean"],
+        "parameter": ["pr"],
+        "scenario": ["rcp45", 'ssp370'],
+        #"institution": "CLMcom",
+        #'years': [[1980, 1990], [2020, 2030], 2090, [2095, 2100]],
+    }
+
+    if len(filters) > 0:
+        print('Filters:')
+        for k, v in filters.items():
+            print(' ', k, ':', v)    
+
+    coll = '30YearStatistics'
+    if len(sys.argv) > 1:
+        coll = sys.argv[1]
+
+    print(collections[coll])
+    files, groups = get_files(collections[coll], filters, return_groups=True, debug=1)
+    #files, groups = get_files('../../config/collections/cordex_cmip5.json', filters, return_groups=True)
+
+    print('\nPrint the', len(files), 'found:')
+    for i in range(len(files)):
+        print(files[i])
+        print('   ', groups[i])

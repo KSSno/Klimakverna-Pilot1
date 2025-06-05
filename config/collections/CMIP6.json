@@ -1,0 +1,7 @@
+{
+    "name"          : "CMIP6",
+    "base_path"     : "/lustre/storeB/project/CMIP/CMIP6.monthly",
+    "filter_keys"   : ["scenario", "table", "source", "variant_label", "parameter"],
+    "folder_pattern": "^(?P<scenario>[^/]+)$",
+    "file_pattern"  : "^(?P<parameter>[^_]+)_(?P<table>[^_]+)_(?P<source>[^_]+)_(?P<scenario>[^_]+)_(?P<variant_label>[ripf0-9]+)\\.nc$"
+}
