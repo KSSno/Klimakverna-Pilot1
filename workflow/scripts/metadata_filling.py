@@ -8,12 +8,21 @@ import os
 modified = False
 
 
-def update_metadata(input_file, output_file, global_attributes, objects_collection, file_pattern_list, scenario_list):
+def update_metadata(
+    input_file,
+    output_file,
+    global_attributes,
+    objects_collection,
+    file_pattern_list,
+    scenario_list
+):
+
     # Copy input file to the output location before editing
     filename = os.path.basename(input_file)  # Discard the extension   
     copyfile(input_file, output_file)
-    add_common_global_attribute( output_file, global_attributes)
-    for  object_type, pattern  in file_pattern_list.items():
+
+    add_common_global_attribute(output_file, global_attributes)
+    for object_type, pattern  in file_pattern_list.items():
         if (fnmatch.fnmatch(input_file, pattern)):
             object = objects_collection.get(object_type)
             
@@ -36,6 +45,7 @@ def update_metadata(input_file, output_file, global_attributes, objects_collecti
                         object["attributes"],
                         scenario
                     )
+
     global modified
     if modified:
         with Dataset(output_file, "r+") as nc:
@@ -45,8 +55,8 @@ def update_metadata(input_file, output_file, global_attributes, objects_collecti
             modified = False
 
 
-def add_common_global_attribute(output_file,  global_attributes):
-    global modified 
+def add_common_global_attribute(output_file, global_attributes):
+    global modified
 
     # Open the copied file in 'r+' mode to edit in place
     with Dataset(output_file, "r+") as nc:
@@ -58,11 +68,11 @@ def add_common_global_attribute(output_file,  global_attributes):
                 print(f"Updated global metadata {key}:{value}")   
         
 #Adding variable attributes for different types of inputs(pr, tasmax20ge,norheatwave)
-def add_attributes_variables(output_file,variable_name, variable_attributes,scenario= None):
+def add_attributes_variables(output_file,variable_name, variable_attributes, scenario= None):
     global modified 
 
     with Dataset(output_file, "r+") as nc:
-    # Check and update metadata attributes
+        # Check and update metadata attributes
         for key, value in variable_attributes.get("global", {}).items():
             if key not in nc.ncattrs():
                 if '{scenario}' in value:
@@ -76,7 +86,7 @@ def add_attributes_variables(output_file,variable_name, variable_attributes,scen
                     if key not in var.ncattrs():
                         var.setncattr(key, value)
                         modified=True
-                        print(f"Updated variables {variable_name} {key}:{value}")    
+                        print(f"Updated variables {variable_name} {key}:{value}")
 
 
 # def print_global_attributes(nc_file):
@@ -97,7 +107,7 @@ if __name__ == "__main__":
         objects = snakemake.input[2]
         pattern_list = snakemake.input[3]
         template_variables = snakemake.input[4]
-       
+
     except NameError:
         # Default values for standalone testing
         input_file = "example.nc"
@@ -119,6 +129,12 @@ if __name__ == "__main__":
     # Extract the list from the "file_pattern" key
     file_pattern_list = data["file_pattern"]
     scenario_list = templates["scenario"]
-        
-    update_metadata(input_file, output_file, global_attributes, objects_collection, file_pattern_list, scenario_list)
 
+    update_metadata(
+        input_file,
+        output_file,
+        global_attributes,
+        objects_collection,
+        file_pattern_list,
+        scenario_list
+    )
