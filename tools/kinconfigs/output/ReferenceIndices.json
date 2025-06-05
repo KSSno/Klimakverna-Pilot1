@@ -86,12 +86,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "tas0lt_annual"
+          "tas0lt"
         ]
       }
     ],
     "varnames": [
-      "tas0lt_annual"
+      "tas0lt"
     ]
   },
   "tas10gt": {
@@ -127,12 +127,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "tas10gt_annual"
+          "tas10gt"
         ]
       }
     ],
     "varnames": [
-      "tas10gt_annual"
+      "tas10gt"
     ]
   },
   "gsl": {
@@ -168,12 +168,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "gsl_annual"
+          "gsl"
         ]
       }
     ],
     "varnames": [
-      "gsl_annual"
+      "gsl"
     ]
   },
   "degday5ge": {
@@ -202,8 +202,19 @@
         "threshold": 5.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#edf8e9,#a1d99b,#74c476,#41ab5d,#238b45,#005a32",
+        "intervals": "250,500,750,1000,1250",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
+        "variables": [
+          "degday5ge"
+        ]
+      }
+    ],
     "varnames": [
-      "degday5ge_annual"
+      "degday5ge"
     ]
   },
   "degday17le": {
@@ -232,8 +243,19 @@
         "threshold": 17.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#fee391,#fe9929,#993404",
+        "intervals": "4000,6000",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
+        "variables": [
+          "degday17le"
+        ]
+      }
+    ],
     "varnames": [
-      "degday17le_annual"
+      "degday17le"
     ]
   },
   "degday22ge": {
@@ -263,7 +285,7 @@
       }
     },
     "varnames": [
-      "degday22ge_annual"
+      "degday22ge"
     ]
   },
   "fdgs": {
@@ -295,12 +317,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "fdgs_annual"
+          "fdgs"
         ]
       }
     ],
     "varnames": [
-      "fdgs_annual"
+      "fdgs"
     ]
   },
   "tasmax": {
@@ -553,12 +575,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "fd_annual"
+          "fd"
         ]
       }
     ],
     "varnames": [
-      "fd_annual"
+      "fd"
     ]
   },
   "tasmin20ge": {
@@ -594,12 +616,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "tasmin20ge_annual"
+          "tasmin20ge"
         ]
       }
     ],
     "varnames": [
-      "tasmin20ge_annual"
+      "tasmin20ge"
     ]
   },
   "tasmax20ge": {
@@ -635,12 +657,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "tasmax20ge_annual"
+          "tasmax20ge"
         ]
       }
     ],
     "varnames": [
-      "tasmax20ge_annual"
+      "tasmax20ge"
     ]
   },
   "norheatwave": {
@@ -675,12 +697,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "norheatwave_annual"
+          "norheatwave"
         ]
       }
     ],
     "varnames": [
-      "norheatwave_annual"
+      "norheatwave"
     ]
   },
   "pr": {
@@ -824,12 +846,12 @@
         "openLowestInterval": false,
         "openHighestInterval": true,
         "variables": [
-          "sdii_annual"
+          "sdii"
         ]
       }
     ],
     "varnames": [
-      "sdii_annual"
+      "sdii"
     ]
   },
   "pr95ptot": {
@@ -895,12 +917,12 @@
         "openLowestInterval": false,
         "openHighestInterval": true,
         "variables": [
-          "pr997_annual"
+          "pr997"
         ]
       }
     ],
     "varnames": [
-      "pr997_annual"
+      "pr997"
     ]
   },
   "pr20mm": {
@@ -974,12 +996,12 @@
         "openLowestInterval": false,
         "openHighestInterval": true,
         "variables": [
-          "prmax5day_annual"
+          "prmax5day"
         ]
       }
     ],
     "varnames": [
-      "prmax5day_annual"
+      "prmax5day"
     ]
   },
   "sfcWind": {
@@ -1068,12 +1090,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "sfcWind99_annual"
+          "sfcWind99"
         ]
       }
     ],
     "varnames": [
-      "sfcWind99_annual"
+      "sfcWind99"
     ]
   },
   "sfcWind997": {
@@ -1134,12 +1156,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "sfcWind100yrRP_annual"
+          "sfcWind100yrRP"
         ]
       }
     ],
     "varnames": [
-      "sfcWind100yrRP_annual"
+      "sfcWind100yrRP"
     ]
   },
   "sfcWind10ms": {
@@ -1174,12 +1196,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "sfcWind10ms_annual"
+          "sfcWind10ms"
         ]
       }
     ],
     "varnames": [
-      "sfcWind10ms_annual"
+      "sfcWind10ms"
     ]
   },
   "mrro": {
@@ -1260,7 +1282,7 @@
     "palettes": [
       {
         "colors": "#ccaa66,#ffecbf,#9cd6c1,#1aa0ed,#45508a",
-        "intervals": "100, 200, 300, 400",
+        "intervals": "100,200,300,400",
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
@@ -1295,6 +1317,17 @@
         "title_no": "Største årlige snømengde for år, midlet over perioden 1991–2020."
       }
     },
+    "palettes": [
+      {
+        "colors": "#D9FFFF, #80ECFF, #38C9FE, #0099FF, #0019FF, #000099",
+        "intervals": "0,200,400,600,800,1000",
+        "openLowestInterval": false,
+        "openHighestInterval": true,
+        "variables": [
+          "swemax"
+        ]
+      }
+    ],
     "varnames": [
       "swemax"
     ]
@@ -1326,7 +1359,7 @@
     "palettes": [
       {
         "colors": "#ccf57a, #d9ffff, #b3ffff, #80ecff, #40ccff, #0099ff, #0019ff, #000099, #00005b",
-        "intervals": "0, 30, 60, 90, 120, 150, 180, 210, 240",
+        "intervals": "0,30,60,90,120,150,180,210,240",
         "openLowestInterval": false,
         "openHighestInterval": true,
         "variables": [
@@ -1362,6 +1395,17 @@
         "threshold": 120.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#ccf57a, #d9ffff, #b3ffff, #80ecff, #40ccff, #0099ff, #0019ff, #000099, #00005b",
+        "intervals": "0,30,60,90,120,150,180,210,240",
+        "openLowestInterval": false,
+        "openHighestInterval": true,
+        "variables": [
+          "swe120ge"
+        ]
+      }
+    ],
     "varnames": [
       "swe120ge"
     ]
@@ -1391,7 +1435,7 @@
     "palettes": [
       {
         "colors": "#ccaa66,#ffecbf,#9cd6c1,#1aa0ed,#45508a",
-        "intervals": "50, 75, 100, 125",
+        "intervals": "50,75,100,125",
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
@@ -1427,6 +1471,17 @@
         "threshold": 30.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#ffecbf #ccaa66 #8f6d28 #6e4f12 #000000",
+        "intervals": "20,30,40,50",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
+        "variables": [
+          "mrro30plt"
+        ]
+      }
+    ],
     "varnames": [
       "mrro30plt"
     ]

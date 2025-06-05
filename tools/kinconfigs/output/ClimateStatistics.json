@@ -78,20 +78,12 @@
         "openLowestInterval": false,
         "openHighestInterval": false,
         "variables": [
-          "diff-tas0lt_annual",
-          "diff-tas0lt_winter",
-          "diff-tas0lt_spring",
-          "diff-tas0lt_summer",
-          "diff-tas0lt_autumn"
+          "diff-tas0lt"
         ]
       }
     ],
     "varnames": [
-      "diff-tas0lt_annual",
-      "diff-tas0lt_winter",
-      "diff-tas0lt_spring",
-      "diff-tas0lt_summer",
-      "diff-tas0lt_autumn"
+      "diff-tas0lt"
     ]
   },
   "diff-tas10gt": {
@@ -122,25 +114,17 @@
     },
     "palettes": [
       {
-        "colors": "#F7CAA8,#F3AD78,#E8804C,#C9551A",
-        "intervals": "20,40,60",
+        "colors": "#fce9dc,#F7CAA8,#F3AD78,#E8804C,#C9551A",
+        "intervals": "15,30,45,60",
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "diff-tas10gt_annual",
-          "diff-tas10gt_winter",
-          "diff-tas10gt_spring",
-          "diff-tas10gt_summer",
-          "diff-tas10gt_autumn"
+          "diff-tas10gt"
         ]
       }
     ],
     "varnames": [
-      "diff-tas10gt_annual",
-      "diff-tas10gt_winter",
-      "diff-tas10gt_spring",
-      "diff-tas10gt_summer",
-      "diff-tas10gt_autumn"
+      "diff-tas10gt"
     ]
   },
   "diff-gsl": {
@@ -169,12 +153,19 @@
         "threshold": 5.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#caff70,#a2cd5a,#6e8b3d,#2b3618",
+        "intervals": "15,30,45",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
+        "variables": [
+          "diff-gsl"
+        ]
+      }
+    ],
     "varnames": [
-      "diff-gsl_annual",
-      "diff-gsl_winter",
-      "diff-gsl_spring",
-      "diff-gsl_summer",
-      "diff-gsl_autumn"
+      "diff-gsl"
     ]
   },
   "diff-degday5ge": {
@@ -203,12 +194,19 @@
         "threshold": 5.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#d8e4d8,#ABC4AB,#72A472,#1D6936,#00451b,#002b11",
+        "intervals": "100,200,300,400,500",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
+        "variables": [
+          "diff-degday5ge"
+        ]
+      }
+    ],
     "varnames": [
-      "diff-degday5ge_annual",
-      "diff-degday5ge_winter",
-      "diff-degday5ge_spring",
-      "diff-degday5ge_summer",
-      "diff-degday5ge_autumn"
+      "diff-degday5ge"
     ]
   },
   "diff-degday17le": {
@@ -237,12 +235,19 @@
         "threshold": 17.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#662506,#993404,#cc4c02,#fe9929,#fec44f,#fff7bc",
+        "intervals": "-1700,-1200,-1000,-800,-600,-400,-200",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-degday17le"
+        ]
+      }
+    ],
     "varnames": [
-      "diff-degday17le_annual",
-      "diff-degday17le_winter",
-      "diff-degday17le_spring",
-      "diff-degday17le_summer",
-      "diff-degday17le_autumn"
+      "diff-degday17le"
     ]
   },
   "diff-degday22ge": {
@@ -272,11 +277,7 @@
       }
     },
     "varnames": [
-      "diff-degday22ge_annual",
-      "diff-degday22ge_winter",
-      "diff-degday22ge_spring",
-      "diff-degday22ge_summer",
-      "diff-degday22ge_autumn"
+      "diff-degday22ge"
     ]
   },
   "diff-fdgs": {
@@ -309,20 +310,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "diff-fdgs_annual",
-          "diff-fdgs_winter",
-          "diff-fdgs_spring",
-          "diff-fdgs_summer",
-          "diff-fdgs_autumn"
+          "diff-fdgs"
         ]
       }
     ],
     "varnames": [
-      "diff-fdgs_annual",
-      "diff-fdgs_winter",
-      "diff-fdgs_spring",
-      "diff-fdgs_summer",
-      "diff-fdgs_autumn"
+      "diff-fdgs"
     ]
   },
   "diff-tasmax": {
@@ -545,20 +538,12 @@
         "openLowestInterval": false,
         "openHighestInterval": false,
         "variables": [
-          "diff-fd_annual",
-          "diff-fd_winter",
-          "diff-fd_spring",
-          "diff-fd_summer",
-          "diff-fd_autumn"
+          "diff-fd"
         ]
       }
     ],
     "varnames": [
-      "diff-fd_annual",
-      "diff-fd_winter",
-      "diff-fd_spring",
-      "diff-fd_summer",
-      "diff-fd_autumn"
+      "diff-fd"
     ]
   },
   "diff-tasmin20ge": {
@@ -594,20 +579,12 @@
         "openLowestInterval": false,
         "openHighestInterval": true,
         "variables": [
-          "diff-tasmin20ge_annual",
-          "diff-tasmin20ge_winter",
-          "diff-tasmin20ge_spring",
-          "diff-tasmin20ge_summer",
-          "diff-tasmin20ge_autumn"
+          "diff-tasmin20ge"
         ]
       }
     ],
     "varnames": [
-      "diff-tasmin20ge_annual",
-      "diff-tasmin20ge_winter",
-      "diff-tasmin20ge_spring",
-      "diff-tasmin20ge_summer",
-      "diff-tasmin20ge_autumn"
+      "diff-tasmin20ge"
     ]
   },
   "diff-tasmax20ge": {
@@ -643,20 +620,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "diff-tasmax20ge_annual",
-          "diff-tasmax20ge_winter",
-          "diff-tasmax20ge_spring",
-          "diff-tasmax20ge_summer",
-          "diff-tasmax20ge_autumn"
+          "diff-tasmax20ge"
         ]
       }
     ],
     "varnames": [
-      "diff-tasmax20ge_annual",
-      "diff-tasmax20ge_winter",
-      "diff-tasmax20ge_spring",
-      "diff-tasmax20ge_summer",
-      "diff-tasmax20ge_autumn"
+      "diff-tasmax20ge"
     ]
   },
   "diff-norheatwave": {
@@ -692,20 +661,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "diff-norheatwave_annual",
-          "diff-norheatwave_winter",
-          "diff-norheatwave_spring",
-          "diff-norheatwave_summer",
-          "diff-norheatwave_autumn"
+          "diff-norheatwave"
         ]
       }
     ],
     "varnames": [
-      "diff-norheatwave_annual",
-      "diff-norheatwave_winter",
-      "diff-norheatwave_spring",
-      "diff-norheatwave_summer",
-      "diff-norheatwave_autumn"
+      "diff-norheatwave"
     ]
   },
   "change-pr": {
@@ -833,20 +794,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "change-sdii_annual",
-          "change-sdii_winter",
-          "change-sdii_spring",
-          "change-sdii_summer",
-          "change-sdii_autumn"
+          "change-sdii"
         ]
       }
     ],
     "varnames": [
-      "change-sdii_annual",
-      "change-sdii_winter",
-      "change-sdii_spring",
-      "change-sdii_summer",
-      "change-sdii_autumn"
+      "change-sdii"
     ]
   },
   "diff-pr95p": {
@@ -942,20 +895,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "change-pr997_annual",
-          "change-pr997_winter",
-          "change-pr997_spring",
-          "change-pr997_summer",
-          "change-pr997_autumn"
+          "change-pr997"
         ]
       }
     ],
     "varnames": [
-      "change-pr997_annual",
-      "change-pr997_winter",
-      "change-pr997_spring",
-      "change-pr997_summer",
-      "change-pr997_autumn"
+      "change-pr997"
     ]
   },
   "diff-pr997p": {
@@ -1067,20 +1012,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "change-prmax5day_annual",
-          "change-prmax5day_winter",
-          "change-prmax5day_spring",
-          "change-prmax5day_summer",
-          "change-prmax5day_autumn"
+          "change-prmax5day"
         ]
       }
     ],
     "varnames": [
-      "change-prmax5day_annual",
-      "change-prmax5day_winter",
-      "change-prmax5day_spring",
-      "change-prmax5day_summer",
-      "change-prmax5day_autumn"
+      "change-prmax5day"
     ]
   },
   "change-sfcWind": {
@@ -1162,20 +1099,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "change-sfcWind99_annual",
-          "change-sfcWind99_winter",
-          "change-sfcWind99_spring",
-          "change-sfcWind99_summer",
-          "change-sfcWind99_autumn"
+          "change-sfcWind99"
         ]
       }
     ],
     "varnames": [
-      "change-sfcWind99_annual",
-      "change-sfcWind99_winter",
-      "change-sfcWind99_spring",
-      "change-sfcWind99_summer",
-      "change-sfcWind99_autumn"
+      "change-sfcWind99"
     ]
   },
   "change-sfcWind997": {
@@ -1238,20 +1167,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "change-sfcWind100yrRP_annual",
-          "change-sfcWind100yrRP_winter",
-          "change-sfcWind100yrRP_spring",
-          "change-sfcWind100yrRP_summer",
-          "change-sfcWind100yrRP_autumn"
+          "change-sfcWind100yrRP"
         ]
       }
     ],
     "varnames": [
-      "change-sfcWind100yrRP_annual",
-      "change-sfcWind100yrRP_winter",
-      "change-sfcWind100yrRP_spring",
-      "change-sfcWind100yrRP_summer",
-      "change-sfcWind100yrRP_autumn"
+      "change-sfcWind100yrRP"
     ]
   },
   "change-sfcWind10ms": {
@@ -1287,20 +1208,12 @@
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
-          "change-sfcWind10ms_annual",
-          "change-sfcWind10ms_winter",
-          "change-sfcWind10ms_spring",
-          "change-sfcWind10ms_summer",
-          "change-sfcWind10ms_autumn"
+          "change-sfcWind10ms"
         ]
       }
     ],
     "varnames": [
-      "change-sfcWind10ms_annual",
-      "change-sfcWind10ms_winter",
-      "change-sfcWind10ms_spring",
-      "change-sfcWind10ms_summer",
-      "change-sfcWind10ms_autumn"
+      "change-sfcWind10ms"
     ]
   },
   "change-mrro": {
@@ -1328,7 +1241,7 @@
     "palettes": [
       {
         "colors": "#bf812d,#dfc27d,#f6e8c3,#f5f5f5,#c7eae5,#80cdc1,#35978f,#01665e",
-        "intervals": "-10, -5,-1,1,5,10,15",
+        "intervals": "-10,-5,-1,1,5,10,15",
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
@@ -1381,7 +1294,7 @@
     "palettes": [
       {
         "colors": "#8c510a, #bf812d,#dfc27d,#f6e8c3,#f5f5f5,#c7eae5,#80cdc1,#35978f,#01665e",
-        "intervals": "-400, -200, -100, -50, 50, 100, 200, 400",
+        "intervals": "-400,-200,-100,-50,50,100,200,400",
         "openLowestInterval": true,
         "openHighestInterval": true,
         "variables": [
@@ -1462,6 +1375,17 @@
         "title_no": "Differanse i største årlige snømengde for år, under utslippsscenario {scenario}."
       }
     },
+    "palettes": [
+      {
+        "colors": "#000000,#255c36,#308201,#98ad5f,#b8d175,#ccf57a,#40ccff",
+        "intervals": "-500,-300,-200,-100,-50",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
+        "variables": [
+          "diff-swemax"
+        ]
+      }
+    ],
     "varnames": [
       "diff-swemax"
     ]
@@ -1493,10 +1417,10 @@
     },
     "palettes": [
       {
-        "colors": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7",
-        "intervals": "-90, -60, -30, 0",
+        "colors": "#8D7B68, #A4907C, #C8B6A6, #F1DEC9",
+        "intervals": "-90,-60,-30,0",
         "openLowestInterval": true,
-        "openHighestInterval": true,
+        "openHighestInterval": false,
         "variables": [
           "diff-swe60ge"
         ]
@@ -1531,6 +1455,17 @@
         "threshold": 120.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#712800, #A64B2A, #D7A86E, #FFEBC1",
+        "intervals": "-90,-60,-30,0",
+        "openLowestInterval": true,
+        "openHighestInterval": false,
+        "variables": [
+          "diff-swe120ge"
+        ]
+      }
+    ],
     "varnames": [
       "diff-swe120ge"
     ]
@@ -1557,6 +1492,17 @@
         "title_no": "Differanse i markvannsinnhold for sommersesongen, under utslippsscenario {scenario}."
       }
     },
+    "palettes": [
+      {
+        "colors": "#a66b1c,#f49857,#FFCC19,#f5f5f5,#199FED",
+        "intervals": "-15,-10,-2.5,2.5",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
+        "variables": [
+          "diff-mrso"
+        ]
+      }
+    ],
     "varnames": [
       "diff-mrso"
     ]
@@ -1586,6 +1532,17 @@
         "threshold": 30.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#003c30 #35978f #80cdc1 #F5F5F5 #dfc27d #bf812d #543005",
+        "intervals": "-20,-10,-6,-2,2,6,10,20",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
+        "variables": [
+          "diff-mrro30plt"
+        ]
+      }
+    ],
     "varnames": [
       "diff-mrro30plt"
     ]
@@ -1613,6 +1570,17 @@
         "title_no": "Alvorlig meteorologisk tørke for sommersesongen, under utslippsscenario SSP3-7.0."
       }
     },
+    "palettes": [
+      {
+        "colors": "#F5F5F5, #dfc27d, #bf812d, #543005",
+        "intervals": "0,2,5,8,11",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
+        "variables": [
+          "diff-spei7plt"
+        ]
+      }
+    ],
     "varnames": [
       "diff-spei7plt"
     ]
