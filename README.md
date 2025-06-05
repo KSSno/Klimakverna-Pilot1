@@ -97,16 +97,16 @@ testcase_2:
 
 ## Run calculation
 
-To check that configuration is valid and how many output files that will be generated, a dry run in snakemake is run by 
+To check that configuration is valid and how many output files that will be generated, a dry run in snakemake for `testcase_1` is run by 
 
 ```console
-snakemake -n
+snakemake -n run_testcase_1
 ```
 
 in the terminal. If everything is ok, the calculation is started by
 
 ```console
-snakemake --cores 1
+snakemake --cores 1 run_testcase_1 
 ```
 
 Run on PPI with qsub
