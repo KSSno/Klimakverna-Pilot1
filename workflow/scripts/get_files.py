@@ -19,7 +19,7 @@ def check_common_keys(dict1, dict2):
 
 
 
-def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=False, debug=False):
+def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=False, debug=1):
     """
     Searches for files based on a flexible criteria. This function can be
     used in conjunction with a JSON "collection" configuration file.
@@ -29,12 +29,13 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
     in the next header [TODO].
 
     Function overview
-    --------------------
-    config        : A template dictionary for how to match files.
+    -----------------
+    config        : A template dictionary for how to match files (filename or dictionary).
     filters       : A dictionary with filtering options (e.g., file extensions, size, date).
                     The available filter keys are specified in the config entry "filter_keys".
     base_paths    : Root directories to start the search. If not specified, the one in config is used.
     return_groups : Return both the list of files and a list of dicts with searchable path elements.
+    debug         : 0=None, 1=DRS mismatch (default), 2=Non-matching subfolders and files, 3=Filtered files
 
     Year range filtering
     --------------------
@@ -100,9 +101,10 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
                 match = re.search(re_folder, subdir)
 
                 if not match:
-                    if not subdir in unmatched:
-                        #print('Subfolder not matched:', os.path.join(base_path, subdir))
-                        unmatched.add(subdir)
+                    if debug == 2:
+                        if not subdir in unmatched:
+                            print('Subfolder not matched:', os.path.join(base_path, subdir))
+                            unmatched.add(subdir)
                     continue
 
                 folder_group = match.groupdict()
@@ -110,7 +112,7 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
                 # Match the file name againt RE patten
                 match = re.search(re_file, file)
                 if not match:
-                    if debug:
+                    if debug == 2:
                         print('Filename not matched: %s' % file)
                     continue
 
@@ -118,7 +120,7 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
 
                 # Match common keys from folder name against keys from file name
                 if check_common_keys(folder_group, file_group) == False:
-                    if True: # debug:
+                    if debug == 1: # default
                         print('Folder/filename DRS mismatch:')
                         print('subdir:', subdir)
                         print('file:', file)
@@ -137,8 +139,8 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
                             found = False
                             break;
                 if not found:
-                    if debug:
-                        print('filtered group: %s/%s' % (subdir, file))
+                    if debug == 3:
+                        print('Filtered file: %s/%s' % (subdir, file))
                         print('               ', merged_groups)
                     continue
                 
