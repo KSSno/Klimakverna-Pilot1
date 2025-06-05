@@ -8,8 +8,7 @@ import json
 testcase_config = config["testcase_7"]
 ATTRIBUTES = testcase_config["attributes"]
 VARIABLES = testcase_config["variables_pr"]
-INDEX = testcase_config["index_tasmax20ge"]
-MEAN = testcase_config["30_year_mean"]
+OBJECTS = testcase_config["objects"]
 
 UPDATED_NC_OUT = config["updated_nc"]
 INPUT_DIR = config["input_nc"]
