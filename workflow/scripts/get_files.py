@@ -1,4 +1,4 @@
-''#
+#
 # Written by Tyge Løvset, NORCE Research, 2025 for Klimakverna.
 
 import os
@@ -6,17 +6,6 @@ import sys
 import json
 import glob
 import re
-
-def check_common_keys(dict1, dict2):
-    """
-    Returns True only if all common keys are equal
-    """
-    common_keys = dict1.keys() & dict2.keys() # Find common keys using set intersection
-    for key in common_keys:
-        if dict1[key] != dict2[key]:
-            return False
-    return True
-
 
 
 def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=False, debug=1):
@@ -70,86 +59,96 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
     outfiles = []
     outgroups = []
 
+    # Compile regular expressions:
+    re_folder = re.compile(config['folder_pattern'])
+    re_file = re.compile(config['file_pattern'])
+
+    # Parse year range filters:
+    flt_years = None
+    if 'years' in filters.keys():
+        flt_years = []  # allow both range and single year: "years": [[2020, 2030], 2050]
+        for y in filters['years']:
+            if type(y) in (list, tuple):
+                flt_years.append((int(y[0]), int(y[1])))
+            else:
+                flt_years.append((int(y), int(y)))
+
+    if 'start_year' in filters.keys() or 'end_year' in filters.keys():
+        if not flt_years:
+            flt_years = []
+        yend = int(filters['end_year']) if 'end_year' in filters.keys() else 10000
+        ystart = int(filters['start_year']) if 'start_year' in filters.keys() else -10000
+        flt_years.append((int(ystart), int(yend)))
+
     # Outer loop: each base path:
     for base_path in base_paths:
         if base_path[-1] != '/':
             base_path += '/'
 
         baselen = len(base_path)
-        unmatched = set()
 
-        re_folder = re.compile(config['folder_pattern'])
-        re_file = re.compile(config['file_pattern'])
-
-        flt_years = None
-        if 'years' in filters.keys():
-            flt_years = []  # allow both range and single year: "years": [[2020, 2030], 2050]
-            for y in filters['years']:
-                if type(y) in (list, tuple):
-                    flt_years.append((int(y[0]), int(y[1])))
-                else:
-                    flt_years.append((int(y), int(y)))
-
-        if 'start_year' in filters.keys() or 'end_year' in filters.keys():
-            if not flt_years:
-                flt_years = []
-            yend = int(filters['end_year']) if 'end_year' in filters.keys() else 10000
-            ystart = int(filters['start_year']) if 'start_year' in filters.keys() else -10000
-            flt_years.append((int(ystart), int(yend)))
-
-        # Main loop:
+        # Walk recursively through base_path subfolders:
         for root, dirs, files in os.walk(base_path):
             subdir = root[baselen:]
 
+            # Match the folder name
+            match = re.search(re_folder, subdir)
+
+            if not match:
+                if debug == 2:
+                    print('Subfolder not matched:', base_path, ':', subdir)
+                continue
+
+            folder_group = match.groupdict()
+
+            # Filter on the folder groups:
+            found = True
+            for key, val in filters.items():
+                if key in folder_group.keys():
+                    if not folder_group[key] in val:
+                        found = False
+                        break # filters loop
+            if not found:
+                if debug == 3:
+                    print('Filtered folder:', subdir)
+                    print('               ', folder_group)
+                continue # next dir
+
+            # Loop through each file in folder:
             for file in files:
-                # Match the folder name
-                match = re.search(re_folder, subdir)
-
-                if not match:
-                    if debug == 2:
-                        if not subdir in unmatched:
-                            print('Subfolder not matched:', os.path.join(base_path, subdir))
-                            unmatched.add(subdir)
-                    continue
-
-                folder_group = match.groupdict()
-
-                # Match the file name againt RE patten
+                # Match the file name against RE patten
                 match = re.search(re_file, file)
+
                 if not match:
                     if debug == 2:
-                        print('Filename not matched: %s' % os.path.join(subdir, file))
-                    continue
+                        print('Filename not matched: %s : %s' % (root, file))
+                    continue # next file
 
                 file_group = match.groupdict()
 
-                # Match common keys from folder name against keys from file name
-                if check_common_keys(folder_group, file_group) == False:
-                    if debug == 1: # default
-                        print('Folder/filename DRS mismatch:')
-                        print('subdir:', subdir)
-                        print('file:', file)
-                        print('foldergroup:', folder_group)
-                        print('filegroup:', file_group)
-                    continue
-                
+                # Filter on the file groups elements:
+                found = True
+                for key, val in filters.items():
+                    if key in file_group.keys():
+                        # Check for mismatch between key entry in folder group and file group:
+                        if debug == 1 and key in folder_group.keys() and folder_group[key] != file_group[key]:
+                            print('Folder/filename DRS mismatch:')
+                            print('subdir:', subdir)
+                            print('file:', file)
+                            print('foldergroup:', folder_group)
+                            print('filegroup:', file_group)
+                        if not file_group[key] in val:
+                            found = False
+                            break; # filters
+                if not found:
+                    if debug == 3:
+                        print('Filtered file: %s : %s' % (root, file))
+                        print('               ', file_group)
+                    continue # next file
+
                 # Merge the two groups
                 merged_groups = folder_group | file_group
 
-                # Filter on the merged groups:
-                found = True
-                for key, val in filters.items():
-                    if key in merged_groups.keys():
-                        if not merged_groups[key] in val:
-                            found = False
-                            break;
-                if not found:
-                    if debug == 3:
-                        print('Filtered file: %s/%s' % (subdir, file))
-                        print('               ', merged_groups)
-                    continue
-                
-                
                 # Special handing of 'start_year', 'end_year' range filter keys:
                 if flt_years and 'start_year' in merged_groups.keys():
                     ystart = int(merged_groups['start_year'])
@@ -161,7 +160,7 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
                             in_range = True
                             break
                     if not in_range:
-                        continue # main loop
+                        continue # next file
 
                 # Gather the output path as a triplet
                 out_path = (base_path, subdir, file)
@@ -191,7 +190,7 @@ if __name__ == '__main__':
     filters = {
         "period": ["near_future_mean", "far_future_mean", "ref_period_mean"],
         "parameter": ["pr"],
-        "scenario": ["rcp26", "rcp45", 'ssp370'],
+        "scenario": ["rcp45", 'ssp370'],
         #"institution": "CLMcom",
         #'years': [[1980, 1990], [2020, 2030], 2090, [2095, 2100]],
     }
