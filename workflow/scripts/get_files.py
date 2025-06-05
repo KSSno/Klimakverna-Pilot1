@@ -113,7 +113,7 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
                 match = re.search(re_file, file)
                 if not match:
                     if debug == 2:
-                        print('Filename not matched: %s' % file)
+                        print('Filename not matched: %s' % os.path.join(subdir, file))
                     continue
 
                 file_group = match.groupdict()
@@ -201,7 +201,7 @@ if __name__ == '__main__':
         coll = sys.argv[1]
 
     print(collections[coll])
-    files, groups = get_files(collections[coll], filters, return_groups=True)
+    files, groups = get_files(collections[coll], filters, return_groups=True, debug=1)
     #files, groups = get_files('../../config/collections/cordex_cmip5.json', filters, return_groups=True)
 
     print('\nPrint the', len(files), 'found:')
