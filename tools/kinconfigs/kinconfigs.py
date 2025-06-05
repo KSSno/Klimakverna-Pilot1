@@ -2,47 +2,43 @@
 
 import pandas as pd
 import json
-
-# directories
-basedir = "tools/kinconfigs/"
-input_dir = basedir + "input/"
-output_dir = basedir + "output/"
+from pathlib import Path
 
 # Note: global metadata (metadata.json) will be made manually
 
-# Which collection files should be used
-# Header row 1: Indicates type of attribute. One of {global, data variable, variable:<string>}.
-# Header row 2: Index "Variabelnavn" plus pivoted attribute field names
-# Rows: One per variable
-collections = [
-    #"DailyReferenceData",
-    "ReferenceIndices",
-    "DailyTimeSeries",
-    #"YearlyTimeSeries",
-    #"30YearStatistics",
-    "ClimateStatistics",
-    #"RegionalStatistics"
-]
 
-# Path of palettes file (Note: specifically for collections ClimateStatistics and ReferenceIndices)
-# Header: Collection, Variable, Suffixes, Palette, Intervals, OpenLeft, OpenRight
-# Collection: Refers to the collection of the variable, e.g. ReferenceIndices, ClimateStatistics
-# Variable: (object level) variable name as used in other contexts
-# Suffixes: Comma separated list of suffixes that will be used to create variable names. May be empty.
-#     Example: Variable "tas", Suffixes "winter,summer": variable names will be {tas_winter, tas_summer}
-# Palette: Comma separated list of hex codes
-# Intervals: Comma separated list of interval limits
-# OpenLeft and OpenRight: Boolean indicators defining the type of interval
-palette_file = input_dir + "palettes.csv"
+# parse palette CSV file to extract palettes
+def parse_palette_file(input_dir):
+    """
+    Columns of palette CSV:
+        Collection: Refers to the collection of the variable, e.g. ReferenceIndices, ClimateStatistics
+        Variable: (object level) variable name as used in other contexts
+        Suffixes: Comma separated list of suffixes that will be used to create variable names. May be empty.
+            Example: Variable "tas", Suffixes "winter,summer": variable names will be {tas_winter, tas_summer}
+        Palette: Comma separated list of hex codes
+        Intervals: Comma separated list of interval limits
+        OpenLeft and OpenRight: Boolean indicators defining the type of interval
+    """
+    palette_file = input_dir / "palettes.csv"
+    if not palette_file.exists():
+        print(f"Palettes file {palette_file} does not exist. Please create it.")
+        return None
 
-# First cache palettes
-df_pal = pd.read_csv(palette_file, sep=",", header=0)
-df_pal = df_pal.set_index("Variable")
+    # cache palettes
+    df_pal = pd.read_csv(palette_file, sep=",", header=0)
+    df_pal = df_pal.set_index("Variable")
+
+    return df_pal
 
 
-# create json file for given collection
-def create_collection_config(collection):
-    filepath = input_dir + collection + ".csv"
+# parse collection CSV files to extract metadata and palettes
+def create_collection_config(collection, palettes):
+    """
+    Header rows of collection CSV files:
+        Header row 1: Indicates type of attribute. One of {global, data variable, variable:<string>}.
+        Header row 2: Index "Variabelnavn" plus pivoted attribute field names
+    """
+    filepath = input_dir / f"{collection}.csv"
     df_col = pd.read_csv(filepath, sep=",", header=[0, 1])
     # sort by type of attribute
     df_col = df_col.T.sort_index().T
@@ -54,16 +50,16 @@ def create_collection_config(collection):
         varname = row["attr_typename"]["Variabelnavn"].strip()
         row = row.drop("attr_typename")
 
-        config[varname] = object_config(collection, varname, row)
+        config[varname] = object_config(collection, varname, row, palettes)
 
     # write to json file matching collection name
-    config_filename = output_dir + collection + ".json"
+    config_filename = output_dir / f"{collection}.json"
     with open(config_filename, "w", encoding="utf-8") as f:
         json.dump(config, f, indent=2, ensure_ascii=False)
 
 
 # return dict of all config for one object
-def object_config(collection, varname, row):
+def object_config(collection, varname, row, palettes):
     varconfig = {}
 
     # set metadata config if any
@@ -72,7 +68,7 @@ def object_config(collection, varname, row):
         varconfig["metadata"] = metadata
 
     # set palette config if any
-    palettes, varnames = object_config_palettes(collection, varname, row)
+    palettes, varnames = object_config_palettes(collection, varname, row, palettes)
     if palettes is not None and len(palettes) > 0:
         varconfig["palettes"] = palettes
 
@@ -104,15 +100,15 @@ def object_config_metadata(collection, varname, row):
 
 
 # define palette config
-def object_config_palettes(collection, varname, row):
+def object_config_palettes(collection, varname, row, palettes):
     # skip if nothing defined for this collection
-    df_pal_sub = df_pal[df_pal["Collection"] == collection]
+    df_pal_sub = palettes[palettes["Collection"] == collection]
     if len(df_pal_sub) == 0:
         return None, [varname]
 
     # skip if nothing defined for this variable
     if varname not in df_pal_sub.index:
-        print("Did not find", collection, "variable", varname, "in palette CSV")
+        print(f"Did not find {collection} variable {varname} in palette CSV")
         return None, [varname]
 
     df_pal_rows = df_pal_sub.loc[[varname]]
@@ -135,7 +131,7 @@ def object_config_palettes(collection, varname, row):
         nanpal = pd.isna(row["Palette"])
         nanint = pd.isna(row["Intervals"])
         if nanpal or nanint:
-            print("Skipping incomplete definition for", collection, "variable", varname)
+            print(f"Skipping incomplete definition for {collection} variable {varname}")
             continue
 
         # add row to config
@@ -154,5 +150,29 @@ def object_config_palettes(collection, varname, row):
 
 # when run, create json for all defined collections
 if __name__ == "__main__":
+    # directories
+    basedir = Path(__file__).resolve().parent
+    input_dir = basedir / "input"
+    output_dir = basedir / "output"
+    palette_file = input_dir / "palettes.csv"
+
+    # collections to use
+    collections = [
+        # "DailyReferenceData",
+        "ReferenceIndices",
+        "DailyTimeSeries",
+        # "YearlyTimeSeries",
+        # "30YearStatistics",
+        "ClimateStatistics",
+        # "RegionalStatistics"
+    ]
+
+    # parse palette file
+    palettes = parse_palette_file(input_dir)
+    if palettes is None:
+        print("No palettes defined. Please create palettes.csv in the input directory.")
+        exit(1)
+
+    # loop over all collections and create config files
     for collection in collections:
-        create_collection_config(collection)
+        create_collection_config(collection, palettes)

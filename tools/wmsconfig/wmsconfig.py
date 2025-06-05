@@ -3,6 +3,7 @@
 import pandas as pd
 import json
 import yaml
+from pathlib import Path
 
 
 # setup style list for one variable in a collection
@@ -12,7 +13,7 @@ def style_config_from_variable(collection, varname, palettes):
     for palette in palettes:
         # parse colors into list
         if "colors" not in palette:
-            print(f"Skipping {varname} in {collection} - no colors defined for palette")
+            print(f"Skipping {varname} in {collection}: no colors defined for palette")
             return None
 
         colors = [x.strip() for x in palette["colors"].split(",")]
@@ -20,7 +21,7 @@ def style_config_from_variable(collection, varname, palettes):
         # parse intervals into list
         if "intervals" not in palette:
             print(
-                f"Skipping {varname} in {collection} - no intervals defined for palette"
+                f"Skipping {varname} in {collection}: no intervals defined for palette"
             )
             return None
 
@@ -52,7 +53,7 @@ def style_config_from_variable(collection, varname, palettes):
 # for one file of objects in a collection, extract the information needed for WMS config
 def wms_config_from_file(input_dir, collection):
     # read object config from file
-    filepath = input_dir + collection + ".json"
+    filepath = input_dir / f"{collection}.json"
     with open(filepath, "r", encoding="utf-8") as f:
         object_config = json.load(f)
 
@@ -62,7 +63,7 @@ def wms_config_from_file(input_dir, collection):
         # palettes defined at all?
         palettes = config.get("palettes", None)
         if palettes is None:
-            print(f"Skipping {varname} in {collection} - no palettes defined")
+            print(f"Skipping {varname} in {collection}: no palettes defined")
             continue
 
         # TODO: deduce the pattern based on collection config and variable name
@@ -99,7 +100,7 @@ def produce_wms_config(input_dir, output_dir, collections):
             wms_config.extend(collection_config)
 
     # write to YAML file
-    output_filename = output_dir + "wms_config.yaml"
+    output_filename = output_dir / "wms_config.yaml"
     with open(output_filename, "w", encoding="utf-8") as f:
         yaml.dump(
             wms_config,
@@ -112,8 +113,9 @@ def produce_wms_config(input_dir, output_dir, collections):
 
 if __name__ == "__main__":
     # directories
-    input_dir = "tools/kinconfigs/output/"
-    output_dir = "tools/wmsconfigs/output/"
+    basedir = Path(__file__).resolve().parent
+    input_dir = basedir / "../kinconfigs/output"
+    output_dir = basedir / "output"
 
     # collections that should be published through WMS
     collections = [
