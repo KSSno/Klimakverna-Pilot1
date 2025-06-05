@@ -1,27 +1,27 @@
-#!/usr/bin/python3 
+#!/usr/bin/python3
 
 import pandas as pd
 import json
 
 # directories
-basedir = 'tools/kinconfigs/'
-input_dir = basedir + 'input/'
-output_dir = basedir + 'output/'
+basedir = "tools/kinconfigs/"
+input_dir = basedir + "input/"
+output_dir = basedir + "output/"
 
 # Note: global metadata (metadata.json) will be made manually
 
 # Which collection files should be used
 # Header row 1: Indicates type of attribute. One of {global, data variable, variable:<string>}.
-# Header row 2: Index 'Variabelnavn' plus pivoted attribute field names
+# Header row 2: Index "Variabelnavn" plus pivoted attribute field names
 # Rows: One per variable
 collections = [
-    #'DailyReferenceData',
-    'ReferenceIndices',
-    'DailyTimeSeries',
-    #'YearlyTimeSeries',
-    #'30YearStatistics',
-    'ClimateStatistics',
-    #'RegionalStatistics'
+    #"DailyReferenceData",
+    "ReferenceIndices",
+    "DailyTimeSeries",
+    #"YearlyTimeSeries",
+    #"30YearStatistics",
+    "ClimateStatistics",
+    #"RegionalStatistics"
 ]
 
 # Path of palettes file (Note: specifically for collections ClimateStatistics and ReferenceIndices)
@@ -29,20 +29,21 @@ collections = [
 # Collection: Refers to the collection of the variable, e.g. ReferenceIndices, ClimateStatistics
 # Variable: (object level) variable name as used in other contexts
 # Suffixes: Comma separated list of suffixes that will be used to create variable names. May be empty.
-#     Example: Variable 'tas', Suffixes 'winter,summer': variable names will be {tas_winter, tas_summer}
+#     Example: Variable "tas", Suffixes "winter,summer": variable names will be {tas_winter, tas_summer}
 # Palette: Comma separated list of hex codes
 # Intervals: Comma separated list of interval limits
 # OpenLeft and OpenRight: Boolean indicators defining the type of interval
-palette_file = input_dir + 'palettes.csv'
+palette_file = input_dir + "palettes.csv"
 
 # First cache palettes
-df_pal = pd.read_csv(palette_file, sep=',', header=0)
-df_pal = df_pal.set_index('Variable')
+df_pal = pd.read_csv(palette_file, sep=",", header=0)
+df_pal = df_pal.set_index("Variable")
+
 
 # create json file for given collection
 def create_collection_config(collection):
-    filepath = input_dir + collection + '.csv'
-    df_col = pd.read_csv(filepath, sep=',', header=[0,1])
+    filepath = input_dir + collection + ".csv"
+    df_col = pd.read_csv(filepath, sep=",", header=[0, 1])
     # sort by type of attribute
     df_col = df_col.T.sort_index().T
 
@@ -50,14 +51,14 @@ def create_collection_config(collection):
     config = {}
     for _, row in df_col.iterrows():
         # extract and remove variable name
-        varname = row['attr_typename']['Variabelnavn'].strip()
-        row = row.drop('attr_typename')
+        varname = row["attr_typename"]["Variabelnavn"].strip()
+        row = row.drop("attr_typename")
 
         config[varname] = object_config(collection, varname, row)
 
     # write to json file matching collection name
-    config_filename = output_dir + collection + '.json'
-    with open(config_filename, "w", encoding='utf-8') as f:
+    config_filename = output_dir + collection + ".json"
+    with open(config_filename, "w", encoding="utf-8") as f:
         json.dump(config, f, indent=2, ensure_ascii=False)
 
 
@@ -68,15 +69,15 @@ def object_config(collection, varname, row):
     # set metadata config if any
     metadata = object_config_metadata(collection, varname, row)
     if metadata is not None:
-        varconfig['metadata'] = metadata
+        varconfig["metadata"] = metadata
 
     # set palette config if any
     palettes, varnames = object_config_palettes(collection, varname, row)
     if palettes is not None and len(palettes) > 0:
-        varconfig['palettes'] = palettes
+        varconfig["palettes"] = palettes
 
     # set varnames config
-    varconfig['varnames'] = varnames
+    varconfig["varnames"] = varnames
 
     return varconfig
 
@@ -92,7 +93,9 @@ def object_config_metadata(collection, varname, row):
         # pandas dataframe to dict
         dict_wnans = row[attr_type].to_dict()
         # omit nan fields
-        dict_nonan = {k: dict_wnans[k] for k in dict_wnans if not pd.isna(dict_wnans[k])}
+        dict_nonan = {
+            k: dict_wnans[k] for k in dict_wnans if not pd.isna(dict_wnans[k])
+        }
         # add to config if any fields were defined for this varname
         if len(dict_nonan) > 0:
             metadata_config[attr_type] = dict_nonan
@@ -103,13 +106,13 @@ def object_config_metadata(collection, varname, row):
 # define palette config
 def object_config_palettes(collection, varname, row):
     # skip if nothing defined for this collection
-    df_pal_sub = df_pal[df_pal['Collection'] == collection]
+    df_pal_sub = df_pal[df_pal["Collection"] == collection]
     if len(df_pal_sub) == 0:
         return None, [varname]
 
     # skip if nothing defined for this variable
     if varname not in df_pal_sub.index:
-        print('Did not find', collection, 'variable', varname, 'in palette CSV')
+        print("Did not find", collection, "variable", varname, "in palette CSV")
         return None, [varname]
 
     df_pal_rows = df_pal_sub.loc[[varname]]
@@ -119,30 +122,32 @@ def object_config_palettes(collection, varname, row):
     all_varnames = []
     for _, row in df_pal_rows.iterrows():
         # deduce variable names for this palette config
-        if pd.isna(row['Suffixes']):
+        if pd.isna(row["Suffixes"]):
             varnames = [varname]
         else:
-            suffixes = [x.strip() for x in row['Suffixes'].split(',')]
-            varnames = [varname + '_' + v for v in suffixes]
+            suffixes = [x.strip() for x in row["Suffixes"].split(",")]
+            varnames = [varname + "_" + v for v in suffixes]
 
         # save list of variable names for later
         all_varnames.extend(varnames)
 
         # are palettes and intervals both defined?
-        nanpal = pd.isna(row['Palette'])
-        nanint = pd.isna(row['Intervals'])
+        nanpal = pd.isna(row["Palette"])
+        nanint = pd.isna(row["Intervals"])
         if nanpal or nanint:
-            print('Skipping incomplete definition for', collection, 'variable', varname)
+            print("Skipping incomplete definition for", collection, "variable", varname)
             continue
 
         # add row to config
-        palette_config.append({
-            'colors': row['Palette'],
-            'intervals': row['Intervals'],
-            'openLowestInterval': row['OpenLeft'],
-            'openHighestInterval': row['OpenRight'],
-            'variables': varnames
-        })
+        palette_config.append(
+            {
+                "colors": row["Palette"],
+                "intervals": row["Intervals"],
+                "openLowestInterval": row["OpenLeft"],
+                "openHighestInterval": row["OpenRight"],
+                "variables": varnames,
+            }
+        )
 
     return palette_config, all_varnames
 
