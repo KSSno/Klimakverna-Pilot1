@@ -1,0 +1,103 @@
+{
+    "norheatwave":{
+        "attributes":{
+            "global": {
+                "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > WEATHER EVENTS > HEAT WAVE, GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+                "source": "Climate indicator",
+                "iso_topic_category": "climatologyMeteorologyAtmosphere",
+                "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+                "creator_role": "Investigator, Technical contact, Technical contact, Metadata author, Metadata author",
+                "creator_type": "person, person, person, person, person",
+                "creator_email": "klimavakten@met.no, klimavakten@met.no, climatedata@nve.no, climatedata@nve.no, climatedata@nve.no",
+                "creator_name": "Helga Therese Tilley Tajet, Andreas Dobler, Wai Kwok Wong, Irene Brox Nilsen, Sigrid Jørgensen Bakke",
+                "institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE)",
+                "institution_short_name": "MET Norway, NVE",
+                "title":"Annual difference in number of Norwegian heatwave events between reference and future periods using forcing scenario {scenario}",
+                "title_no":"Endring i antall norske hetebølger for år, ved bruk av utviklingsbane {scenario}."
+            },
+            "variable": {
+                "_FillValue": "1.e+20f",
+                "long_name": "Difference in number of Norwegian heatwave events between reference and future periods",
+                "standard_name": "",
+                "norwegian_name": "Endring i antall norske varmebølger",
+                "description": "DIfference in norwegian heat wave events. Change in the number of events with maximum temperature above or equal to 27 degrees (tasmax>=27°C) five days in a row between the reference period (1991-2020) and a future period. The first time step represents the future period 2041-2070, and the second time step represents the future period 2071-2100.",
+                "norwegian_description": "Differanse i norske hetebølgehendelser. Endring i antall hendelser med maksimumstemperatur over eller like 27 grader (tasmax>=27°C) fem dager på rad mellom referanseperioden (1991-2020) og en fremtidsperiode. Første tidsskritt representerer fremtidsperioden 2041-2070, og andre tidsskritt representerer fremtidsperioden 2071-2100.",
+                "units": "1",
+                "coordinates": "lat lon",
+                "grid_mapping": "projection_utm",
+                "timeinfo": "18UTC-18UTC",
+                "cell_methods": "time: max time:sum time: mean",
+                "threshold": "28"
+            }
+        },
+        "scenario_index":2
+
+    },
+    "pr":{
+        "attributes":{
+            "global": {
+                
+                "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+                "source": "Numerical Simulation",
+                "iso_topic_category": "climatologyMeteorologyAtmosphere",
+                "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+                "creator_role": "Investigator, Technical contact, Technical contact, Metadata author, Metadata author",
+                "creator_type": "person, person, person, person, person",
+                "creator_email": "klimavakten@met.no, klimavakten@met.no, climatedata@nve.no, climatedata@nve.no, climatedata@nve.no",
+                "creator_name": "Julia Lutz, Andreas Dobler, Wai Kwok Wong, Irene Brox Nilsen, Sigrid Jørgensen Bakke",
+                "institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE)",
+                "institution_short_name": "MET Norway, NVE",
+                "product_name": "Bias-adjusted precipitation projections for Norway, 1 km2 spatial resolution",
+                "title": "Daily bias-adjusted precipitation using forcing scenario {scenario}",
+                "title_no":"Biasjustert nedbør for døgn, ved bruk av utviklingsbane {scenario}"
+            },
+            "variable": {
+                "_FillValue": "1.e+20f",
+                "long_name": "Bias-Adjusted Precipitation",
+                "standard_name": "precipitation_flux",
+                "units": "kg m-2 s-1",
+                "coordinates": "lat lon",
+                "grid_mapping": "projection_utm",
+                "timeinfo": "06-06 UTC",
+                "cell_methods": "time: mean"
+            }
+        },
+        "scenario_index":1
+    },
+    "tasmax20ge":{
+        "attributes":{
+            "global": {
+        
+                "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+                "source": "Climate indicator",
+                "iso_topic_category": "climatologyMeteorologyAtmosphere",
+                "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+                "creator_role": "Investigator, Technical contact, Metadata author, Metadata author",
+                "creator_type": "person, person, person, person",
+                "creator_email": "klimavakten@met.no, klimavakten@met.no, climatedata@nve.no, climatedata@nve.no",
+                "creator_name": "Helga Therese Tilley Tajet, Cristian Lussana, Irene Brox Nilsen, Sigrid Jørgensen Bakke",
+                "institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Water Resources and Energy Directorate (NVE)",
+                "institution_short_name": "MET Norway, NVE",
+                "title": "Annual number of nordic summer days using forcing scenario {scenario}",
+                "title_no": "Antall nordiske sommerdager for år, ved bruk av utviklingsbane {scenario}"
+            },
+            "variable": {
+                "_FillValue": "1.e+20f",
+                "long_name": "Number of nordic summer days",
+                "standard_name": "number_of_days_with_air_temperature_above_threshold",
+                "norwegian_name": "Antall nordiske sommerdager",
+                "description": "Nordic summer days. Number of days with maximum temperature above or equal to 20 degrees (tasmax>=20 °C) for the period _PERIOD_",
+                "norwegian_description": "Nordiske sommerdager. Antall dager med maksimumstemperatur over eller lik 20 grader (tasmax>=20 °C) for perioden _PERIOD_",
+                "units": "1",
+                "coordinates": "lat lon",
+                "grid_mapping": "projection_utm",
+                "timeinfo": "18UTC-18UTC",
+                "cell_methods": "time: max time: mean",
+                "threshold": "20"
+            }
+        },
+        "scenario_index":1
+    }
+
+       
+}
