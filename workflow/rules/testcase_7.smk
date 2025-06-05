@@ -7,7 +7,6 @@ import json
 
 testcase_config = config["testcase_7"]
 ATTRIBUTES = testcase_config["attributes"]
-VARIABLES = testcase_config["variables_pr"]
 OBJECTS = testcase_config["objects"]
 
 UPDATED_NC_OUT = testcase_config["updated_nc"]
