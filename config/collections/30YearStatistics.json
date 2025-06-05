@@ -1,6 +1,7 @@
 {
     "name"           : "30YearStatistics",
-    "base_path"      : "/lustre/storeC-ext/users/kin2100/MET/annmeans_bc",
+    "base_path"      : ["/lustre/storeC-ext/users/kin2100/MET/annmeans_bc/",
+                        "/lustre/storeC-ext/users/kin2100/MET/annmeans_bc/CMIP6/"],
     "filter_keys"    : ["period", "parameter",
                         "operator", "gcm_id", "variant_label", "rcm_id", "scenario", "method", "hydro_model"],
     "folder_pattern" : "^(?P<period>[^/]+)/(?P<parameter>[^/]+)$",

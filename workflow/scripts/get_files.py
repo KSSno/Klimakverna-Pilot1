@@ -28,14 +28,19 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
     should share a folder and filename structure. Se a full list of collections
     in the next header [TODO].
 
-    Function overview
-    -----------------
+    Function arguments
+    ------------------
     config        : A template dictionary for how to match files (filename or dictionary).
     filters       : A dictionary with filtering options (e.g., file extensions, size, date).
                     The available filter keys are specified in the config entry "filter_keys".
-    base_paths    : Root directories to start the search. If not specified, the one in config is used.
-    return_groups : Return both the list of files and a list of dicts with searchable path elements.
+    base_paths    : Root directories to start the search. If not specified, the ones in config are used.
+    return_groups : See "Return values".
     debug         : 0=None, 1=DRS mismatch (default), 2=Non-matching subfolders and files, 3=Filtered files
+
+    Return values
+    -------------
+    The list elements of the files returned are triples: (base_path, subdirectory, file_name).
+    If the return_groups argument is True, it return both the list of files and a list of dicts with searchable path elements.
 
     Year range filtering
     --------------------
@@ -158,8 +163,8 @@ def get_files(config_path_or_dict, filters={}, base_paths=None, return_groups=Fa
                     if not in_range:
                         continue # main loop
 
-                # Concat the root and the file name
-                out_path = os.path.join(root, file)
+                # Gather the output path as a triplet
+                out_path = (base_path, subdir, file)
                 
                 # Add to the output
                 outfiles.append(out_path)
@@ -186,7 +191,7 @@ if __name__ == '__main__':
     filters = {
         "period": ["near_future_mean", "far_future_mean", "ref_period_mean"],
         "parameter": ["pr"],
-        "scenario": ["rcp26", "rcp45"],
+        "scenario": ["rcp26", "rcp45", 'ssp370'],
         #"institution": "CLMcom",
         #'years': [[1980, 1990], [2020, 2030], 2090, [2095, 2100]],
     }
