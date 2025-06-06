@@ -8,38 +8,67 @@ from pathlib import Path
 
 
 # parse palette CSV file to extract palettes
-def parse_palette_file(input_dir):
+def parse_palette_file(palette_file):
     """
     Columns of palette CSV:
-        Collection: Refers to the collection of the variable, e.g. ReferenceIndices, ClimateStatistics
-        Variable: (object level) variable name as used in other contexts
-        Suffixes: Comma separated list of suffixes that will be used to create variable names. May be empty.
-            Example: Variable "tas", Suffixes "winter,summer": variable names will be {tas_winter, tas_summer}
-        Palette: Comma separated list of hex codes
-        Intervals: Comma separated list of interval limits
-        OpenLeft and OpenRight: Boolean indicators defining the type of interval
+        Collection:
+            Refers to the collection of the variable,
+            e.g. ReferenceIndices, ClimateStatistics
+        Variable:
+            (object level) variable name as used in other contexts
+        Suffixes:
+            Comma separated list of suffixes that will be used
+            to create variable names. May be empty.
+                Example: Variable "tas", Suffixes "winter,summer":
+                variable names will be {tas_winter, tas_summer}
+        Palette:
+            Comma separated list of hex codes
+        Intervals:
+            Comma separated list of interval limits
+        OpenLeft and OpenRight:
+            Boolean indicators defining the type of interval
     """
-    palette_file = input_dir / "palettes.csv"
-    if not palette_file.exists():
-        print(f"Palettes file {palette_file} does not exist. Please create it.")
-        return None
 
     # cache palettes
-    df_pal = pd.read_csv(palette_file, sep=",", header=0)
-    df_pal = df_pal.set_index("Variable")
-
-    return df_pal
+    try:
+        df_pal = pd.read_csv(palette_file, sep=",", header=0)
+        df_pal = df_pal.set_index("Variable")
+    except FileNotFoundError:
+        print(f"Palettes file {palette_file} does not exist. Please create it.")
+        return None
+    except pd.errors.ParserError as e:
+        print(f"Error parsing {palette_file}: {e}")
+        return None
+    else:
+        return df_pal
 
 
 # parse collection CSV files to extract metadata and palettes
-def create_collection_config(collection, palettes):
+def create_collection_config(input_dir, output_dir, collection, palettes):
     """
     Header rows of collection CSV files:
-        Header row 1: Indicates type of attribute. One of {global, data variable, variable:<string>}.
-        Header row 2: Index "Variabelnavn" plus pivoted attribute field names
+        Header row 1:
+            Indicates type of attribute.
+            One of {global, data variable, variable:<string>}.
+        Header row 2:
+            Index "Variabelnavn" plus pivoted attribute field names
     """
+
+    # open and parse parameter CSV file for given collection
     filepath = input_dir / f"{collection}.csv"
-    df_col = pd.read_csv(filepath, sep=",", header=[0, 1])
+
+    try:
+        df_col = pd.read_csv(filepath, sep=",", header=[0, 1])
+    except FileNotFoundError:
+        print(f"Parameter file {filepath} not found.")
+        return None
+    except pd.errors.ParserError as e:
+        print(f"Error parsing {filepath}: {e}")
+        return None
+    except ValueError as e:
+        print(f"Error reading {filepath}: {e}")
+        return None
+
     # sort by type of attribute
     df_col = df_col.T.sort_index().T
 
@@ -168,11 +197,10 @@ if __name__ == "__main__":
     ]
 
     # parse palette file
-    palettes = parse_palette_file(input_dir)
+    palettes = parse_palette_file(palette_file)
     if palettes is None:
-        print("No palettes defined. Please create palettes.csv in the input directory.")
         exit(1)
 
     # loop over all collections and create config files
     for collection in collections:
-        create_collection_config(collection, palettes)
+        create_collection_config(input_dir, output_dir, collection, palettes)
