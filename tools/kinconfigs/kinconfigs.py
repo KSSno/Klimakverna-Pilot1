@@ -10,12 +10,12 @@ from pathlib import Path
 # parse palette CSV file to extract palettes
 def parse_palette_file(palette_file):
     """
-    Columns of palette CSV:
+    Columns of palette CSV, can be in any order:
         Collection:
             Refers to the collection of the variable,
             e.g. ReferenceIndices, ClimateStatistics
         Variable:
-            (object level) variable name as used in other contexts
+            (Parameter level) variable name as used in other contexts
         Suffixes:
             Comma separated list of suffixes that will be used
             to create variable names. May be empty.
@@ -48,10 +48,11 @@ def create_collection_config(input_dir, output_dir, collection, palettes):
     """
     Header rows of collection CSV files:
         Header row 1:
-            Indicates type of attribute.
-            One of {global, data variable, variable:<string>}.
+            Indicates type of attribute. One of:
+            {attr_typename, global, data variables, variable:<string>}
         Header row 2:
-            Index "Variabelnavn" plus pivoted attribute field names
+            Index "Variabelnavn" plus pivoted attribute field names.
+            Columns can be in any order
     """
 
     # open and parse parameter CSV file for given collection
