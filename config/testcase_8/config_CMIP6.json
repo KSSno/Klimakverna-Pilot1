@@ -1,0 +1,56 @@
+{
+    "indicator": {
+        "id": "102",
+        "description": "Annual mean precipitation by period",
+        "units": "kg m-2 s-1"
+    },
+    "variable": {
+        "name": "pr",
+        "description": "Precipitation",
+        "units": "kg m-2 s-1"
+    },
+    "calculation_type": {
+        "30YearStatistics": "mean"
+    },
+    "periods": {
+        "hist": {
+            "description": "Histroical period",
+            "valid_period": {
+                "start": 1991,
+                "end": 2020
+            }
+        },
+        "nf": {
+            "description": "Near future (mid-century)",
+            "valid_period": {
+                "start": 2041,
+                "end": 2070
+            }
+        },
+        "ff": {
+            "description": "Far future (end-of-century)",
+            "valid_period": {
+                "start": 2071,
+                "end": 2100
+            }
+        }
+    },
+    "scenarios": {
+        "hist": {
+            "description": "Histroical values, refernce period",
+            "color": "#66C2A5"
+        },
+        "ssp370": {
+            "description": "2nd worst scenario (SSP370)",
+            "color": "#FC8D62"
+        }
+    },
+    "models": [
+        "cnrm_hclim"
+    ],
+    "bias_method": "3DBC",
+    "region": {
+        "id": 3,
+        "shapefile": "/lustre/storeC-ext/users/klimakverna/development/kaja/data/shapefile"
+    }
+}
