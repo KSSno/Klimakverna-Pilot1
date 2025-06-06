@@ -1,0 +1,1434 @@
+{
+  "tas": {
+    "metadata": {
+      "data variables": {
+        "long_name": "mean air temperature",
+        "norwegian_name": "middeltemperatur",
+        "standard_name": "air_temperature",
+        "units": "degC"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Ole Einar Tveito, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > SURFACE TEMPERATURE > AIR TEMPERATURE, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Mean air temperature (ca. 2 meters above ground) for year or season, for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Gjennomsnittlig lufttemperatur (ca 2 meter over bakken) for år eller sesong, for perioden 1991-2020, med 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal mean air temperature averaged over the period 1991–2020.",
+        "title_no": "middeltemperatur for år eller sesonger, midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#114781,#2A72B2,#4E9AC6,#92C5DE,#C8E0ED,#FBD3BD,#F7BC9F,#F4A582,#CB4B43,#BC2C34",
+        "intervals": "-8,-6,-4,-2,0,2,4,6,8",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "tas_annual"
+        ]
+      },
+      {
+        "colors": "#114781,#1D5EA1,#4E9AC6,#92C5DE,#ACD2E5,#F7BC9F,#F4A582,#DA6954,#BC2C34,#870A24",
+        "intervals": "-16,-12,-8,-4,0,4,8,12,16",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "tas_winter",
+          "tas_spring",
+          "tas_summer",
+          "tas_autumn"
+        ]
+      }
+    ],
+    "varnames": [
+      "tas_annual",
+      "tas_winter",
+      "tas_spring",
+      "tas_summer",
+      "tas_autumn"
+    ]
+  },
+  "tas0lt": {
+    "metadata": {
+      "data variables": {
+        "long_name": "winter season length",
+        "norwegian_name": "vintersesongens lengde",
+        "standard_name": "spell_length_of_days_with_air_temperature_below_threshold",
+        "units": "day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler, Ole Einar Tveito",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Number of days with an average air temperature below zero degrees (tas <0 °C) for the period 1991-2020, at a 1x1 km spatial resolution. Based on daily temperature normals.",
+        "summary_no": "Antall dager med gjennomsnittlig lufttemperatur under null grader (tas<0 °C) for perioden 1991-2020, for 1x1 km romlig oppløsning. Basert på døgnnormaler for temperatur.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal winter season length averaged over the period 1991–2020.",
+        "title_no": "vintersesongens lengde for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 0.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#F3F3F3,#ccfafc,#89F2FA,#30C3CD,#1697B7,#0A6880",
+        "intervals": "1,100,150,200,250",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "tas0lt_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "tas0lt_annual"
+    ]
+  },
+  "tas10gt": {
+    "metadata": {
+      "data variables": {
+        "long_name": "summer season length",
+        "norwegian_name": "sommeresesongens lengde",
+        "standard_name": "spell_length_of_days_with_air_temperature_above_threshold",
+        "units": "day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler, Ole Einar Tveito",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Number of days with an average air temperature above 10 degrees (tas>10 °C) for the period 1991-2020, at a 1x1 km spatial resolution. Based on daily temperature normals.",
+        "summary_no": "Antall dager med gjennomsnittlig lufttemperatur over 10 grader (tas>10 °C) for perioden 1991-2020, for 1x1 km romlig oppløsning. Basert på døgnnormaler for temperatur.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal summer season length averaged over the period 1991–2020.",
+        "title_no": "sommeresesongens lengde for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 10.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#F3F3F3,#ffe5e5,#ffbfbf,#e99696,#cc6161,#a84848",
+        "intervals": "1,30,60,90,120",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "tas10gt_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "tas10gt_annual"
+    ]
+  },
+  "gsl": {
+    "metadata": {
+      "data variables": {
+        "long_name": "growing season length",
+        "norwegian_name": "vekstsesongens lengde",
+        "standard_name": "spell_length_of_days_with_air_temperature_above_threshold",
+        "units": "day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler, Ole Einar Tveito",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > LAND SURFACE/AGRICULTURE INDICATORS > LENGTH OF GROWING SEASON, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Number of days with an average air temperature above or equal to 5 degrees (tas>=5 °C) for the period 1991-2020, at a 1x1 km spatial resolution. Based on daily temperature normals.",
+        "summary_no": "Antall dager med gjennomsnittlig lufttemperatur over eller lik 5 grader (tas>=5 °C) for perioden 1991-2020, for 1x1 km romlig oppløsning. Basert på døgnnormaler for temperatur. ",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal growing season length averaged over the period 1991–2020.",
+        "title_no": "vekstsesongens lengde for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 5.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#ffffcc,#d9f0a3,#addd8e,#78c679,#41ab5d,#006837,#004529",
+        "intervals": "60,90,120,150,180,210",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "gsl_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "gsl_annual"
+    ]
+  },
+  "degday5ge": {
+    "metadata": {
+      "data variables": {
+        "long_name": "growing degree-days",
+        "norwegian_name": "vekstgraddager",
+        "standard_name": "integral_wrt_time_of_air_temperature_excess",
+        "units": "degC day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler, Ole Einar Tveito",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES > GROWING DEGREE DAYS, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Sum of degree days above 5 degrees (tas>5ºC) for the period 1991-2020, at a 1x1 km spatial resolution. Growing degree days, also called growing degree numbers, are the sum of the heat of the day and are a measure of how good the conditions are for plant growth. The heat sum for a day is defined as the number of degrees the daily average temperature is above a threshold value. Based on daily temperature normals.",
+        "summary_no": "Sum av graddager over 5 grader (tas>5°C) for perioden 1991-2020, for 1x1 km romlig oppløsning. Vekstgraddager, også kalt vekstgradtall, er døgnet sin varmesum og er et mål på hvor gode forhold det er for planters vekst. Varmesummen til en dag er definert som antall grader døgnmiddeltemperaturen ligger over en terskelverdi. Basert på døgnnormaler for temperatur.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal growing degree-days averaged over the period 1991–2020.",
+        "title_no": "vekstgraddager for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 5.0
+      }
+    },
+    "varnames": [
+      "degday5ge_annual"
+    ]
+  },
+  "degday17le": {
+    "metadata": {
+      "data variables": {
+        "long_name": "energy degree-days",
+        "norwegian_name": "energigraddager",
+        "standard_name": "integral_wrt_time_of_air_temperature_excess",
+        "units": "degC day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler, Ole Einar Tveito",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES > GROWING DEGREE DAYS, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Sum of degree days under 17 degrees (tas<17ºC) for the period 1991-2020, at a 1x1 km spatial resolution. Based on daily temperature normals.",
+        "summary_no": "Sum av graddager under 17 grader (tas<17°C) for perioden 1991-2020, for 1x1 km romlig oppløsning. Basert på døgnnormaler for temperatur.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal energy degree-days averaged over the period 1991–2020.",
+        "title_no": "energigraddager for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 17.0
+      }
+    },
+    "varnames": [
+      "degday17le_annual"
+    ]
+  },
+  "degday22ge": {
+    "metadata": {
+      "data variables": {
+        "long_name": "cooling degree-days",
+        "norwegian_name": "avkjølingsgraddager",
+        "standard_name": "integral_wrt_time_of_air_temperature_excess",
+        "units": "degC day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler, Ole Einar Tveito",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES > COOLING DEGREE DAYS, GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > ATMOSPHERIC TEMPERATURE INDICES > COOLING DEGREE DAYS, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Sum of degree days above 22 degrees (tas>22°C) for the period 1991-2020, at a 1x1 km spatial resolution. Based on daily temperature normals.",
+        "summary_no": "Sum av graddager over 22 grader (tas >22°C) for perioden 1991-2020, for 1x1 km romlig oppløsning. Basert på døgnnormaler for temperatur. ",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal cooling degree-days averaged over the period 1991–2020.",
+        "title_no": "avkjølingsgraddager for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 22.0
+      }
+    },
+    "varnames": [
+      "degday22ge_annual"
+    ]
+  },
+  "fdgs": {
+    "metadata": {
+      "data variables": {
+        "long_name": "frost days in the growing season",
+        "norwegian_name": "frostdager i vekstsesongen",
+        "units": "day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Andreas Dobler, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Number of days with minimum temperature below 0 degrees (tasmin<0 °C) in the growing season, computed for each year separately for the period 1991-2020, at a 1x1 km spatial resolution. .",
+        "summary_no": "Antall dager med minimumstemperatur under 0 grader (tasmin<0 °C) i vekstsesongen beregnet for hvert enkelt år for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal frost days in the growing season averaged over the period 1991–2020.",
+        "title_no": "frostdager i vekstsesongen for år eller sesonger, midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#F3F3F3,#bdc9e1,#67a9cf,#016c59",
+        "intervals": "0.5,5,10",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "fdgs_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "fdgs_annual"
+    ]
+  },
+  "tasmax": {
+    "metadata": {
+      "data variables": {
+        "long_name": "maximum air temperature",
+        "norwegian_name": "maksimumstemperatur",
+        "standard_name": "air_temperature",
+        "units": "degC"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Irene Brox Nilsen, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > SURFACE TEMPERATURE > MAXIMUM/MINIMUM TEMPERATURE > 24 HOUR MAXIMUM TEMPERATURE, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "The average of each day's highest air temperature (approx. 2 meters above the ground) for year or season, for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Gjennomsnittet av hvert døgns høyeste lufttemperatur (ca 2 meter over bakken) for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning. ",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal maximum air temperature averaged over the period 1991–2020.",
+        "title_no": "maksimumstemperatur for år eller sesonger, midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#114781,#2A72B2,#4E9AC6,#92C5DE,#C8E0ED,#FBD3BD,#F7BC9F,#F4A582,#CB4B43,#BC2C34",
+        "intervals": "-8,-6,-4,-2,0,2,4,6,8",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "tasmax_annual"
+        ]
+      },
+      {
+        "colors": "#114781,#1D5EA1,#4E9AC6,#92C5DE,#ACD2E5,#F7BC9F,#F4A582,#DA6954,#BC2C34,#870A24",
+        "intervals": "-16,-12,-8,-4,0,4,8,12,16",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "tasmax_winter",
+          "tasmax_spring",
+          "tasmax_summer",
+          "tasmax_autumn"
+        ]
+      }
+    ],
+    "varnames": [
+      "tasmax_annual",
+      "tasmax_winter",
+      "tasmax_spring",
+      "tasmax_summer",
+      "tasmax_autumn"
+    ]
+  },
+  "tasmin": {
+    "metadata": {
+      "data variables": {
+        "long_name": "minimum air temperature",
+        "norwegian_name": "minimumstemperatur",
+        "standard_name": "air_temperature",
+        "units": "degC"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Irene Brox Nilsen, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > SURFACE TEMPERATURE > MAXIMUM/MINIMUM TEMPERATURE > 24 HOUR MINIMUM TEMPERATURE, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Average of each day's lowest air temperature (approx. 2 meters above the ground) for year or season, for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Gjennomsnittet av hvert døgns laveste lufttemperatur (ca 2 meter over bakken) for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal minimum air temperature averaged over the period 1991–2020.",
+        "title_no": "minimumstemperatur for år eller sesonger, midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#114781,#2A72B2,#4E9AC6,#92C5DE,#C8E0ED,#FBD3BD,#F7BC9F,#F4A582,#CB4B43,#BC2C34",
+        "intervals": "-8,-6,-4,-2,0,2,4,6,8",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "tasmin_annual"
+        ]
+      },
+      {
+        "colors": "#114781,#1D5EA1,#4E9AC6,#92C5DE,#ACD2E5,#F7BC9F,#F4A582,#DA6954,#BC2C34,#870A24",
+        "intervals": "-16,-12,-8,-4,0,4,8,12,16",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "tasmin_winter",
+          "tasmin_spring",
+          "tasmin_summer",
+          "tasmin_autumn"
+        ]
+      }
+    ],
+    "varnames": [
+      "tasmin_annual",
+      "tasmin_winter",
+      "tasmin_spring",
+      "tasmin_summer",
+      "tasmin_autumn"
+    ]
+  },
+  "dtr": {
+    "metadata": {
+      "data variables": {
+        "long_name": "daily air temperature range",
+        "norwegian_name": "døgnlig temperaturspenn",
+        "units": "degC"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Irene Brox Nilsen, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Average difference between maximum and minimum temperature (approx. 2 meters above the ground) for year or season, for the period 1991-2020, at a 1x1 km spatial resolution. ",
+        "summary_no": "Gjennomsnittlig forskjell mellom minimumstemperatur og maximumstemperatur (ca 2 meter over bakken) for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal daily air temperature range averaged over the period 1991–2020.",
+        "title_no": "døgnlig temperaturspenn for år eller sesonger, midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#FFBFBF, #D45B48,#A60000, #750202",
+        "intervals": "6,8,10",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "dtr_annual"
+        ]
+      },
+      {
+        "colors": "#FFBFBF, #D45B48,#A60000, #750202",
+        "intervals": "6,8,10",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "dtr_winter",
+          "dtr_spring",
+          "dtr_summer",
+          "dtr_autumn"
+        ]
+      }
+    ],
+    "varnames": [
+      "dtr_annual",
+      "dtr_winter",
+      "dtr_spring",
+      "dtr_summer",
+      "dtr_autumn"
+    ]
+  },
+  "dzc": {
+    "metadata": {
+      "data variables": {
+        "long_name": "days with zero-crossings",
+        "norwegian_name": "nullgradspasseringer",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Irene Brox Nilsen, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Number of days with air temperature crossing zero degrees (tasmax>0 og tasmin<0) for year or season, for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Antall dager som lufttemperaturen krysser null grader (tasmax>0 og tasmin<0) for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning. ",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal {$long_name} averaged over the period 1991–2020.",
+        "title_no": "nullgradspasseringer for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 0.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#8C510A,#BF812D, #F6E8C3, #C7EAE5,#35978F",
+        "intervals": "50,75,100,125",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "dzc_annual"
+        ]
+      },
+      {
+        "colors": "#F3F3F3,#BF812D, #F6E8C3, #C7EAE5,#35978F",
+        "intervals": "1,15,30,45",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "dzc_winter",
+          "dzc_spring",
+          "dzc_summer",
+          "dzc_autumn"
+        ]
+      }
+    ],
+    "varnames": [
+      "dzc_annual",
+      "dzc_winter",
+      "dzc_spring",
+      "dzc_summer",
+      "dzc_autumn"
+    ]
+  },
+  "fd": {
+    "metadata": {
+      "data variables": {
+        "long_name": "frost days ",
+        "norwegian_name": "frostdager",
+        "standard_name": "number_of_days_with_air_temperature_below_threshold",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Irene Brox Nilsen, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Number of days with minimum temperature below zero (tasmin<=0 °C) for the period 1991-2020, at a 1x1 km spatial resolution. ",
+        "summary_no": "Antall dager med minimumstemperatur under null (tasmin<=0 °C) for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal days with zero-crossings averaged over the period 1991–2020.",
+        "title_no": "frostdager for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 0.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#bbffff,#7fffd4,#40e0d0,#008b8b,#27408b",
+        "intervals": "100,150,200,250",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "fd_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "fd_annual"
+    ]
+  },
+  "tasmin20ge": {
+    "metadata": {
+      "data variables": {
+        "long_name": "tropical nights ",
+        "norwegian_name": "tropenattsdøgn",
+        "standard_name": "number_of_days_with_air_temperature_above_threshold",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Irene Brox Nilsen, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Number of days with minimum temperature above or equal to 20 degrees (tasmin>=20 °C) for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Antall døgn med minimumstemperatur over eller lik 20 grader (tasmin>=20 °C) for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal tropical nights averaged over the period 1991–2020.",
+        "title_no": "tropenattsdøgn for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 20.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#ffffff,#bc8f8f,#8B0000",
+        "intervals": "0.01,0.1",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "tasmin20ge_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "tasmin20ge_annual"
+    ]
+  },
+  "tasmax20ge": {
+    "metadata": {
+      "data variables": {
+        "long_name": "nordic summer days",
+        "norwegian_name": "nordiske sommerdager",
+        "standard_name": "number_of_days_with_air_temperature_above_threshold",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Irene Brox Nilsen, Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Number of days with maximum temperature above or equal to 20 degrees (tasmax>=20 °C) for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Antall dager med maksimumstemperatur over eller lik 20 grader (tasmax>=20 °C) for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal nordic summer days averaged over the period 1991–2020.",
+        "title_no": "nordiske sommerdager for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 20.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#ffffff,#FFD700,#ff8c00,#ff4500,#CD0000,#8B0000",
+        "intervals": "1,15,30,45,60",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "tasmax20ge_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "tasmax20ge_annual"
+    ]
+  },
+  "norheatwave": {
+    "metadata": {
+      "data variables": {
+        "long_name": "norwegian heatwave events ",
+        "norwegian_name": "norske hetebølger",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway)  ",
+        "creator_name": "Helga Therese Tilley Tajet",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > WEATHER EVENTS > HEAT WAVE, GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > TEMPERATURE INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Number of events with maximum temperature above or equal to 27 degrees (tasmax>=27°C) five days in a row for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Antall hendelser med maksimumstemperatur over eller lik 27 grader (tasmax>=27°C) fem dager på rad for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal norwegian heatwave events averaged over the period 1991–2020.",
+        "title_no": "norske hetebølger for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 27.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#ffffff,#ffefd5,#eeb4b4,#ff4500,#cd0000,#551a8b",
+        "intervals": "0.1,0.5,1,1.5,2",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "norheatwave_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "norheatwave_annual"
+    ]
+  },
+  "pr": {
+    "metadata": {
+      "data variables": {
+        "long_name": "precipitation amount",
+        "norwegian_name": "nedbørsum",
+        "standard_name": "precipitation_amount",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Ole Einar Tveito, Julia Lutz",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Mean precipitation sum for year or season, for the period 1991-2020, at a 1x1 km spatial resolution. kg m-2 equals mm.",
+        "summary_no": "Gjennomsnittlig nedbørsum for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning. (kg m-2 tilsvarer mm)",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal precipitation amount averaged over the period 1991–2020.",
+        "title_no": "nedbørsum for år eller sesonger, midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#CCAA66, #D9B97B, #E6C991, #F2DAA8, #FFECBF, #E3E69D, #C7E07B, #BEDF8D, #B5DE9F, #A8DAB0, #9CD6C1, #83C8CC, #6ABBD8, #42ADE2, #1AA0ED, #2692DB, #3484C9, #3A77B8, #406AA8, #425C98, #45508A",
+        "intervals": "300, 400, 500, 600, 700, 800, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "pr_annual"
+        ]
+      },
+      {
+        "colors": "#CCAA66, #ECD19C, #E3E69D, #B9DE95, #9CD6C1, #56B4DD, #2692DB, #3C70B0, #45508A",
+        "intervals": "0, 100, 200, 300, 400, 500, 750, 1000, 1500",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "pr_winter",
+          "pr_spring",
+          "pr_summer",
+          "pr_autumn"
+        ]
+      }
+    ],
+    "varnames": [
+      "pr_annual",
+      "pr_winter",
+      "pr_spring",
+      "pr_summer",
+      "pr_autumn"
+    ]
+  },
+  "pr1mm": {
+    "metadata": {
+      "data variables": {
+        "long_name": "wet days",
+        "norwegian_name": "våte dager",
+        "standard_name": "number_of_wet_days",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Number of days with precipitation exceeding 1 mm (pr>1 mm) for year or season, for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Antall dager med nedbør over eller lik 1 mm (pr>=1 mm) for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal wet days averaged over the period 1991–2020.",
+        "title_no": "våte dager for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 1.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#CCAA66, #F0D8A4, #CFE184, #ADDBA8, #78C2D1, #1D9CE7, #3A75B6, #45508A",
+        "intervals": "85, 105, 125, 145, 165, 185, 205",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "pr1mm_annual"
+        ]
+      },
+      {
+        "colors": "#CCAA66, #F6E0AF, #C1DF86, #9CD6C1, #34A9E5, #377BBE, #45508A",
+        "intervals": "0, 10, 20, 30, 40, 50, 60",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "pr1mm_winter",
+          "pr1mm_spring",
+          "pr1mm_summer",
+          "pr1mm_autumn"
+        ]
+      }
+    ],
+    "varnames": [
+      "pr1mm_annual",
+      "pr1mm_winter",
+      "pr1mm_spring",
+      "pr1mm_summer",
+      "pr1mm_autumn"
+    ]
+  },
+  "sdii": {
+    "metadata": {
+      "data variables": {
+        "long_name": "wet day precipitation amount",
+        "norwegian_name": "nedbørmengde på våte dager",
+        "standard_name": "simple_daily_intensity",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Mean precipitation sum on wet days (pr >= 1mm) given as mm/day for the period 1991-2020, for year or season, at a 1x1 km spatial resolution. (kg m-2 equals mm)",
+        "summary_no": "Gjennomsnittlig nedbørsum på våte dager (pr >= 1mm) gitt som mm/døgn for perioden 1991-2020, for år eller sesong, for 1x1 km romlig oppløsning. (kg m-2 tilsvarer mm) ",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal wet day precipitation amount averaged over the period 1991–2020.",
+        "title_no": "nedbørmengde på våte dager for år eller sesonger, midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#CCAA66, #FFECBF, #B5DE9F, #6ABBD8, #3484C9, #45508A",
+        "intervals": "0, 5, 10, 15, 20, 25",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "sdii_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "sdii_annual"
+    ]
+  },
+  "pr95ptot": {
+    "metadata": {
+      "data variables": {
+        "long_name": "precipitation fraction due to very wet days ",
+        "norwegian_name": "nedbørandel fra veldig våte dager",
+        "standard_name": "precipitation_percent_due_to_R95p_days",
+        "units": "%"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Percentage fraction of precipitation on very wet days (number of days with precipitation exceeding the 95 percentile) for year or season, for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Prosentandel av nedbør på svært våte dager (antall dager med nedbør over 95-persentilen) for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal precipitation fraction due to very wet days averaged over the period 1991–2020.",
+        "title_no": "nedbørandel fra veldig våte dager for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 95.0
+      }
+    },
+    "varnames": [
+      "pr95ptot"
+    ]
+  },
+  "pr997": {
+    "metadata": {
+      "data variables": {
+        "long_name": "very heavy precipitation",
+        "norwegian_name": "svært kraftig nedbør",
+        "standard_name": "precipitation_percentile_99point7_of_reference_period",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "99.7 percentile of daily precipitation for year or season, for the period 1991-2020, at a 1x1 km spatial resolution. kg m-2 equals mm.",
+        "summary_no": "99,7 persentil for døgnnedbør for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning. (kg m-2 tilsvarer mm)",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal very heavy precipitation averaged over the period 1991–2020.",
+        "title_no": "svært kraftig nedbør for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 99.7
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#CCAA66, #E8CC96, #F2E9AF, #C1DF86, #A9DAAE, #80C7CD, #34A9E5, #2E8AD1, #3E6CAB, #45508A",
+        "intervals": "0, 20, 40, 60, 80, 100, 120, 140, 160, 180",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "pr997_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "pr997_annual"
+    ]
+  },
+  "pr20mm": {
+    "metadata": {
+      "data variables": {
+        "long_name": "days with heavy precipitation ",
+        "norwegian_name": "døgn med kraftig nedbør",
+        "standard_name": "very_heavy_precipitation_days",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Number of days with daily precipitation above or equal to 20 mm (pr>=20mm) for year or season, for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Antall dager med nedbør over eller lik 20 mm (pr>=20mm) for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal days with heavy precipitation averaged over the period 1991–2020.",
+        "title_no": "dager med kraftig nedbør for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 20.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#CCAA66, #E8CC96, #F2E9AF, #C1DF86, #A9DAAE, #80C7CD, #34A9E5, #2E8AD1, #3E6CAB, #45508A",
+        "intervals": "0, 10, 20, 30, 40, 50, 60, 70, 80,90",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "pr20mm_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "pr20mm_annual"
+    ]
+  },
+  "prmax5day": {
+    "metadata": {
+      "data variables": {
+        "long_name": "maximum 5-day precipitation amount",
+        "norwegian_name": "høyeste femdagers nedbørsum",
+        "standard_name": "highest_five_day_precipitation_amount",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Julia Lutz, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > ATMOSPHERIC/OCEAN INDICATORS > PRECIPITATION INDICES, GCMDSK:EARTH SCIENCE > ATMOSPHERE > PRECIPITATION, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Highest annual precipitation amount over five consecutive days for the period 1991-2020, at a 1x1 km spatial resolution. kg m-2 equals mm.",
+        "summary_no": "Høyeste årlige nedbørmengde i løpet av fem påfølgende dager for perioden 1991-2020, for 1x1 km romlig oppløsning. (kg m-2 tilsvarer mm)",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal maximum 5-day precipitation amount averaged over the period 1991–2020.",
+        "title_no": "høyeste femdagers nedbørsum for år eller sesonger, midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#CCAA66, #ECD19C, #E3E69D, #B9DE95, #9CD6C1, #56B4DD, #2692DB, #3C70B0, #45508A",
+        "intervals": "0, 50, 100, 150, 200, 250, 300, 350, 400",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "prmax5day_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "prmax5day_annual"
+    ]
+  },
+  "sfcWind": {
+    "metadata": {
+      "data variables": {
+        "long_name": "mean wind speed",
+        "norwegian_name": "middelvind",
+        "standard_name": "wind_speed",
+        "units": "m/s"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Jan Erik Haugen, Cristian Lussana",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WINDS > WIND INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Mean wind speed (ca 10 meters above ground) for year or season, for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Gjennomsnittlig vind (ca 10 meter over bakken) for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal mean wind speed averaged over the period 1991–2020.",
+        "title_no": "middelvind for år eller sesonger, midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046",
+        "intervals": "1,3,5,7,9",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "sfcWind_annual"
+        ]
+      },
+      {
+        "colors": "#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046",
+        "intervals": "1,3,5,7,9",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "sfcWind_winter",
+          "sfcWind_spring",
+          "sfcWind_summer",
+          "sfcWind_autumn"
+        ]
+      }
+    ],
+    "varnames": [
+      "sfcWind_annual",
+      "sfcWind_winter",
+      "sfcWind_spring",
+      "sfcWind_summer",
+      "sfcWind_autumn"
+    ]
+  },
+  "sfcWind99": {
+    "metadata": {
+      "data variables": {
+        "long_name": "strong wind",
+        "norwegian_name": "kraftig vind",
+        "units": "m/s"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Jan Erik Haugen, Cristian Lussana",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WINDS > WIND INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "99 percentile of daily wind speed, for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "99 persentil for døgnmiddelvind for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal strong wind averaged over the period 1991–2020.",
+        "title_no": "kraftig vind for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 99.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046",
+        "intervals": "4,8,12,16,20",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "sfcWind99_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "sfcWind99_annual"
+    ]
+  },
+  "sfcWind997": {
+    "metadata": {
+      "data variables": {
+        "long_name": "very strong wind",
+        "norwegian_name": "svært kraftig vind",
+        "units": "m/s"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Jan Erik Haugen, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WINDS > WIND INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "99.7 percentile of daily wind speed, for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "99,7 persentil for døgnmiddelvind for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal very strong wind averaged over the period 1991–2020.",
+        "title_no": "svært kraftig vind for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 99.7
+      }
+    },
+    "varnames": [
+      "sfcWind997"
+    ]
+  },
+  "sfcWind100yrRP": {
+    "metadata": {
+      "data variables": {
+        "long_name": "100-year return level for wind speed",
+        "norwegian_name": "100-års returverdi for vind",
+        "units": "m/s"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Jan Erik Haugen, Andreas Dobler",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WINDS > WIND INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Average 100-year return value of daily mean wind speed, for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Gjennomsnittlig 100-år returverdi av døgnmiddelvind for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal 100-year return level for wind speed averaged over the period 1991–2020.",
+        "title_no": "100-års returverdi for vind for år eller sesonger, midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046",
+        "intervals": "8,12,16,20,24",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "sfcWind100yrRP_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "sfcWind100yrRP_annual"
+    ]
+  },
+  "sfcWind10ms": {
+    "metadata": {
+      "data variables": {
+        "long_name": "windy days",
+        "norwegian_name": "døgn med mye vind",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "klimavakten@met.no, klimavakten@met.no",
+        "creator_institution": "Norwegian Meteorological Institute (MET Norway), Norwegian Meteorological Institute (MET Norway)",
+        "creator_name": "Jan Erik Haugen, Cristian Lussana",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WINDS > WIND INDICES, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Number of days with mean wind speed above 10 m/s, for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Antall dager med middelvind over 10 m/s (sfc > 10m/s) for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title": "Annual or seasonal windy days averaged over the period 1991–2020.",
+        "title_no": "dager med mye vind for år eller sesonger, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 10.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046",
+        "intervals": "15,30,45,60,75",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "sfcWind10ms_annual"
+        ]
+      }
+    ],
+    "varnames": [
+      "sfcWind10ms_annual"
+    ]
+  },
+  "mrro": {
+    "metadata": {
+      "data variables": {
+        "long_name": "mean runoff amount",
+        "norwegian_name": "avrenning",
+        "standard_name": "runoff_amount",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Ingjerd Haddeland",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > TERRESTRIAL HYDROSPHERE INDICATORS > FRESHWATER RUNOFF, GCMDSK:EARTH SCIENCE > TERRESTRIAL HYDROSPHERE > SURFACE WATER > SURFACE WATER PROCESSES/MEASUREMENTS > RUNOFF, GEMET:geological / hydrological, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Mean runoff amount for year or season, for the period 1991-2020, at a 1x1 km spatial resolution. kg m-2 equals mm.",
+        "summary_no": "Gjennomsnittlig avrenningsum for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning. (kg m-2 tilsvarer mm)",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title_no": "Avrenning for år eller årstider, midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#e6c991,#ffecbf,#c7e07b,#b5de9f,#9cd6c1,#6abbd8,#1aa0ed,#3484c9, #406aa8",
+        "intervals": "500,1000,1500,2000,2500,3000,3500,4000",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "mrro_annual"
+        ]
+      },
+      {
+        "colors": "#8f6d28,#e6c991,#ffecbf,#c7e07b,#9cd6c1,#1aa0ed,#3484c9,#406aa8,#45508a",
+        "intervals": "50,100,200,300,400,500,1000,1500",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "mrro_winter",
+          "mrro_spring",
+          "mrro_summer",
+          "mrro_autumn"
+        ]
+      }
+    ],
+    "varnames": [
+      "mrro_annual",
+      "mrro_winter",
+      "mrro_spring",
+      "mrro_summer",
+      "mrro_autumn"
+    ]
+  },
+  "evap": {
+    "metadata": {
+      "data variables": {
+        "long_name": "mean evapotranspiration amount",
+        "norwegian_name": "fordampning",
+        "standard_name": "water_evapotranspiration_amount",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Ingjerd Haddeland",
+        "keywords": "GCMDSK:EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WATER VAPOR > WATER VAPOR PROCESSES > EVAPOTRANSPIRATION, GEMET:geological / hydrological, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Mean evapotranspiration amount for year or season, for the period 1991-2020, at a 1x1 km spatial resolution. kg m-2 equals mm.",
+        "summary_no": "Gjennomsnittlig fordampningsum for år eller sesong, for perioden 1991-2020, for 1x1 km romlig oppløsning. (kg m-2 tilsvarer mm)",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title_no": "Fordampning for år eller årstider, midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#ccaa66,#ffecbf,#9cd6c1,#1aa0ed,#45508a",
+        "intervals": "100, 200, 300, 400",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "evap_annual",
+          "evap_summer"
+        ]
+      }
+    ],
+    "varnames": [
+      "evap_annual",
+      "evap_summer"
+    ]
+  },
+  "swemax": {
+    "metadata": {
+      "data variables": {
+        "long_name": "annual maximum snow water equivalent",
+        "norwegian_name": "største årlige snømengde ",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Ingjerd Haddeland",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > CRYOSPHERIC INDICATORS, GCMDSK:EARTH SCIENCE > CRYOSPHERE > SNOW/ICE > SNOW WATER EQUIVALENT, GEMET:Surface Snow Amount, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Mean annual maximum snow water equivalent for the period 1991-2020, at a 1x1 km spatial resolution. kg m-2 equals mm.",
+        "summary_no": "Gjennomsnittlig årlig maksimal snømengde (mm vann snøen representerer den dagen i året det er maksimalt med snø), for perioden 1991-2020, for 1x1 km romlig oppløsning. (kg m-2 tilsvarer mm)",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title_no": "Største årlige snømengde for år, midlet over perioden 1991–2020."
+      }
+    },
+    "varnames": [
+      "swemax"
+    ]
+  },
+  "swe60ge": {
+    "metadata": {
+      "data variables": {
+        "long_name": "ski season",
+        "norwegian_name": "skisesongens lengde",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Ingjerd Haddeland",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > CRYOSPHERIC INDICATORS > SNOW COVER, GCMDSK:EARTH SCIENCE > CRYOSPHERE > SNOW/ICE > SNOW COVER, GEMET:geological / hydrological, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Mean annual number of skiing days, for the period 1991-2020, at a 1x1 km spatial resolution. Skiing days are defined as days with snow water equivalent more than 60 mm (equals snow depth more than 25 cm when the snow density is 0.25 kg/L).",
+        "summary_no": "Skisesongens lengde, for perioden 1991-2020, for 1x1 km romlig oppløsning. Skisesong er definerert som gjennomsnittlig antall døgn per år med snøvannekvivalent over 60 mm (tilsvarer snødybde cirka 25 cm, når tettheten settes til 0,25 kg/L).",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title_no": "Skisesongens lengde for år, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 60.0
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#ccf57a, #d9ffff, #b3ffff, #80ecff, #40ccff, #0099ff, #0019ff, #000099, #00005b",
+        "intervals": "0, 30, 60, 90, 120, 150, 180, 210, 240",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "swe60ge"
+        ]
+      }
+    ],
+    "varnames": [
+      "swe60ge"
+    ]
+  },
+  "swe120ge": {
+    "metadata": {
+      "data variables": {
+        "long_name": "ski touring season",
+        "norwegian_name": "topptursesongens lengde",
+        "units": "1"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Ingjerd Haddeland",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > CRYOSPHERIC INDICATORS > SNOW COVER, GCMDSK:EARTH SCIENCE > CRYOSPHERE > SNOW/ICE > SNOW COVER, GEMET:geological / hydrological, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Mean annual number of ski mountaineering days, for the period 1991-2020, at a 1x1 km spatial resolution. Ski mountaineering days are defined as days with snow water equivalent more than 120 mm (equals snow depth more than 50 cm when the snow density is 0.25 kg/L).",
+        "summary_no": "Topptursesongens lengde, for perioden 1991-2020, for 1x1 km romlig oppløsning. Topptursesong er definert som gjennomsnittlig antall døgn per år med snøvannekvivalent over 120 mm (tilsvarer snødybde cirka 50 cm, når tettheten settes til 0,25 kg/L).",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title_no": "Topptursesongens lengde for år, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 120.0
+      }
+    },
+    "varnames": [
+      "swe120ge"
+    ]
+  },
+  "mrso": {
+    "metadata": {
+      "data variables": {
+        "long_name": "soil moisture content",
+        "norwegian_name": "markvannsinnhold",
+        "standard_name": "mass_content_of_water_in_soil",
+        "units": "kg m-2"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Shaochun Huang, Ingjerd Haddeland",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > LAND SURFACE/AGRICULTURE INDICATORS > SOIL MOISTURE, GCMDSK:EARTH SCIENCE > LAND SURFACE > SOILS > SOIL MOISTURE/WATER CONTENT, GEMET:Soil Moisture Content, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Mean soil moisture content (May, June, July, August and September) for the period 1991-2020, at a 1x1 km spatial resolution.",
+        "summary_no": "Gjennomsnittlig markvannsinnhold (mai, juni, juli, august og september), for perioden 1991-2020, for 1x1 km romlig oppløsning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title_no": "Markvannsinnhold for sommersesongen (mai til og med september), midlet over perioden 1991–2020."
+      }
+    },
+    "palettes": [
+      {
+        "colors": "#ccaa66,#ffecbf,#9cd6c1,#1aa0ed,#45508a",
+        "intervals": "50, 75, 100, 125",
+        "openLowestInterval": false,
+        "openHighestInterval": false,
+        "variables": [
+          "mrso"
+        ]
+      }
+    ],
+    "varnames": [
+      "mrso"
+    ]
+  },
+  "mrro30plt": {
+    "metadata": {
+      "data variables": {
+        "long_name": "hydrological drought duration ",
+        "norwegian_name": "varighet av hydrologisk tørke ",
+        "units": "day"
+      },
+      "global": {
+        "collection": "GEONOR,KSS",
+        "creator_email": "climatedata@nve.no, climatedata@nve.no",
+        "creator_institution": "Norwegian Water Resources and Energy Directorate (NVE), Norwegian Water Resources and Energy Directorate (NVE)",
+        "creator_name": "Wai Kwok Wong, Shaochun Huang",
+        "keywords": "GCMDSK:EARTH SCIENCE > CLIMATE INDICATORS > LAND SURFACE/AGRICULTURE INDICATORS > DROUGHT DURATION, GCMDSK:EARTH SCIENCE > HUMAN DIMENSIONS > NATURAL HAZARDS > DROUGHTS > DROUGHT DURATION, GEMET:drought, NORTHEMES:Weather and climate",
+        "source": "Climate Indicator",
+        "summary": "Mean drought duration in summer (15. June to 15. October) for the period 1991-2020, at a 1x1 km spatial resolution. Drought duration represents hydrological drought and is defined as number of consecutive days with runoff below the 30th percentile from the flow duration curve for the reference period. The computation is based on smoothed daily runoff using the 11-day moving average procedure.",
+        "summary_no": "Gjennomsnittlig tørkevarighet for 15. juni til 15. oktober, for perioden 1991-2020, for 1x1 km romlig oppløsning. Tørkevarighet representerer hydrologisk tørke og er definert som antall sammenhengende dager med avrenning under 30-persentilen for referanseperioden. Beregningen er basert på 11-dagers glidende midling av daglig avrenning.",
+        "time_coverage_end": "2006-01-01T00:00:00Z",
+        "time_coverage_start": "2006-01-01T00:00:00Z",
+        "title_no": "Varighet av hydrologisk tørke for 15. juni til 15. oktober, midlet over perioden 1991–2020."
+      },
+      "variable:threshold": {
+        "threshold": 30.0
+      }
+    },
+    "varnames": [
+      "mrro30plt"
+    ]
+  }
+}

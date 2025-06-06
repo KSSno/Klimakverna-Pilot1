@@ -17,3 +17,6 @@ outputs/
 inputs/
 logs/
 .snakemake
+
+.ipynb_checkpoints
+*.ipynb

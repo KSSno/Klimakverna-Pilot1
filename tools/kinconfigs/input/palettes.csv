@@ -1,0 +1,82 @@
+Collection,Variable,Suffixes,Palette,Intervals,OpenLeft,OpenRight
+ReferenceIndices,tas,annual,"#114781,#2A72B2,#4E9AC6,#92C5DE,#C8E0ED,#FBD3BD,#F7BC9F,#F4A582,#CB4B43,#BC2C34","-8,-6,-4,-2,0,2,4,6,8",TRUE,TRUE
+ReferenceIndices,tas,"winter,spring,summer,autumn","#114781,#1D5EA1,#4E9AC6,#92C5DE,#ACD2E5,#F7BC9F,#F4A582,#DA6954,#BC2C34,#870A24","-16,-12,-8,-4,0,4,8,12,16",TRUE,TRUE
+ClimateStatistics,diff-tas,"annual,winter,spring,summer,autumn","#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114","1,2,3,4,5",TRUE,TRUE
+ReferenceIndices,tas0lt,annual,"#F3F3F3,#ccfafc,#89F2FA,#30C3CD,#1697B7,#0A6880","1,100,150,200,250",TRUE,TRUE
+ClimateStatistics,diff-tas0lt,"annual,winter,spring,summer,autumn","#067953,#1da276,#52d6aa,#8bf0ce,#c7fae9","-130,-100,-80,-60,-40,0",FALSE,FALSE
+ReferenceIndices,tas10gt,annual,"#F3F3F3,#ffe5e5,#ffbfbf,#e99696,#cc6161,#a84848","1,30,60,90,120",TRUE,TRUE
+ClimateStatistics,diff-tas10gt,"annual,winter,spring,summer,autumn","#F7CAA8,#F3AD78,#E8804C,#C9551A","20,40,60",TRUE,TRUE
+ReferenceIndices,degday17le,annual,,,TRUE,TRUE
+ClimateStatistics,diff-degday17le,"annual,winter,spring,summer,autumn",,,TRUE,TRUE
+ReferenceIndices,gsl,annual,"#ffffcc,#d9f0a3,#addd8e,#78c679,#41ab5d,#006837,#004529","60,90,120,150,180,210",TRUE,TRUE
+ClimateStatistics,diff-gsl,"annual,winter,spring,summer,autumn",,,TRUE,TRUE
+ReferenceIndices,degday5ge,annual,,,TRUE,TRUE
+ClimateStatistics,diff-degday5ge,"annual,winter,spring,summer,autumn",,,TRUE,TRUE
+ReferenceIndices,fdgs,annual,"#F3F3F3,#bdc9e1,#67a9cf,#016c59","0.5,5,10",TRUE,TRUE
+ClimateStatistics,diff-fdgs,"annual,winter,spring,summer,autumn","#65442a,#a49386, #F3F3F3,#9ecae1,#3164bd","-5,-1.4,1.4,5",TRUE,TRUE
+ReferenceIndices,tasmax,annual,"#114781,#2A72B2,#4E9AC6,#92C5DE,#C8E0ED,#FBD3BD,#F7BC9F,#F4A582,#CB4B43,#BC2C34","-8,-6,-4,-2,0,2,4,6,8",TRUE,TRUE
+ReferenceIndices,tasmax,"winter,spring,summer,autumn","#114781,#1D5EA1,#4E9AC6,#92C5DE,#ACD2E5,#F7BC9F,#F4A582,#DA6954,#BC2C34,#870A24","-16,-12,-8,-4,0,4,8,12,16",TRUE,TRUE
+ClimateStatistics,diff-tasmax,"annual,winter,spring,summer,autumn","#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114","1,2,3,4,5",TRUE,TRUE
+ReferenceIndices,tasmin,annual,"#114781,#2A72B2,#4E9AC6,#92C5DE,#C8E0ED,#FBD3BD,#F7BC9F,#F4A582,#CB4B43,#BC2C34","-8,-6,-4,-2,0,2,4,6,8",TRUE,TRUE
+ReferenceIndices,tasmin,"winter,spring,summer,autumn","#114781,#1D5EA1,#4E9AC6,#92C5DE,#ACD2E5,#F7BC9F,#F4A582,#DA6954,#BC2C34,#870A24","-16,-12,-8,-4,0,4,8,12,16",TRUE,TRUE
+ClimateStatistics,diff-tasmin,"annual,winter,spring,summer,autumn","#fddbc7,#f4a482,#d65f4d,#b2182a,#67001f,#420114,#0f0005","1,2,3,4,5,6",TRUE,TRUE
+ReferenceIndices,dtr,annual,"#FFBFBF, #D45B48,#A60000, #750202","6,8,10",TRUE,TRUE
+ReferenceIndices,dtr,"winter,spring,summer,autumn","#FFBFBF, #D45B48,#A60000, #750202","6,8,10",TRUE,TRUE
+ClimateStatistics,diff-dtr,"annual,winter,spring,summer,autumn","#4392c3,#92c5de,#d1e5f0,#fddbc7,#f4a482","-1,-0.5,0,0.5",TRUE,TRUE
+ReferenceIndices,dzc,annual,"#8C510A,#BF812D, #F6E8C3, #C7EAE5,#35978F","50,75,100,125",TRUE,TRUE
+ReferenceIndices,dzc,"winter,spring,summer,autumn","#F3F3F3,#BF812D, #F6E8C3, #C7EAE5,#35978F","1,15,30,45",TRUE,TRUE
+ClimateStatistics,diff-dzc,"annual,winter,spring,summer,autumn","#002b11,#1D6936,#72A472,#ABC4AB,#E5E5E5,#D3B3E7,#C282EA,#A020F0","-30,-20,-10,-5,5,10,20",TRUE,TRUE
+ReferenceIndices,fd,annual,"#bbffff,#7fffd4,#40e0d0,#008b8b,#27408b","100,150,200,250",TRUE,TRUE
+ClimateStatistics,diff-fd,"annual,winter,spring,summer,autumn","#0a455e, #197896, #29a6c6, #abeefd,#F0F8FF","-100,-60,-45,-30,-15, 0",FALSE,FALSE
+ReferenceIndices,tasmin20ge,annual,"#ffffff,#bc8f8f,#8B0000","0.01,0.1",TRUE,TRUE
+ClimateStatistics,diff-tasmin20ge,"annual,winter,spring,summer,autumn","#ABC4AB,#E5E5E5,#fff0f5,#D3B3E7,#B151ED,#810f7c","-0.1,0.1,1,2,3",FALSE,TRUE
+ReferenceIndices,tasmax20ge,annual,"#ffffff,#FFD700,#ff8c00,#ff4500,#CD0000,#8B0000","1,15,30,45,60",TRUE,TRUE
+ClimateStatistics,diff-tasmax20ge,"annual,winter,spring,summer,autumn","#eee0e5,#D3B3E7,#B151ED,#810f7c","10,20,30",TRUE,TRUE
+ReferenceIndices,norheatwave,annual,"#ffffff,#ffefd5,#eeb4b4,#ff4500,#cd0000,#551a8b","0.1,0.5,1,1.5,2",TRUE,TRUE
+ClimateStatistics,diff-norheatwave,"annual,winter,spring,summer,autumn","#E5E5E5,#fff0f5,#D3B3E7,#C282EA,#B151ED,#810f7c","0.5,1,2,3,4",TRUE,TRUE
+ReferenceIndices,degday22ge,annual,,,TRUE,TRUE
+ClimateStatistics,diff-degday22ge,"annual,winter,spring,summer,autumn",,,TRUE,TRUE
+ReferenceIndices,pr,annual,"#CCAA66, #D9B97B, #E6C991, #F2DAA8, #FFECBF, #E3E69D, #C7E07B, #BEDF8D, #B5DE9F, #A8DAB0, #9CD6C1, #83C8CC, #6ABBD8, #42ADE2, #1AA0ED, #2692DB, #3484C9, #3A77B8, #406AA8, #425C98, #45508A","300, 400, 500, 600, 700, 800, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000",TRUE,TRUE
+ReferenceIndices,pr,"winter,spring,summer,autumn","#CCAA66, #ECD19C, #E3E69D, #B9DE95, #9CD6C1, #56B4DD, #2692DB, #3C70B0, #45508A","0, 100, 200, 300, 400, 500, 750, 1000, 1500",FALSE,TRUE
+ClimateStatistics,change-pr,"annual,winter,spring,summer,autumn","#D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30","-8, -4, 0, 4, 8, 12, 16, 20, 24",TRUE,TRUE
+ReferenceIndices,pr1mm,annual,"#CCAA66, #F0D8A4, #CFE184, #ADDBA8, #78C2D1, #1D9CE7, #3A75B6, #45508A","85, 105, 125, 145, 165, 185, 205",TRUE,TRUE
+ReferenceIndices,pr1mm,"winter,spring,summer,autumn","#CCAA66, #F6E0AF, #C1DF86, #9CD6C1, #34A9E5, #377BBE, #45508A","0, 10, 20, 30, 40, 50, 60",FALSE,TRUE
+ClimateStatistics,diff-pr1mm,"annual,winter,spring,summer,autumn","#543005, #754308, #965A11, #B47726, #CB9B4D, #DFC27D, #ECD8A7, #ECE8C9, #D0E9DE, #AADED6, #80CDC1, #52ACA3, #2A8D85","-14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8",TRUE,TRUE
+ReferenceIndices,sdii,annual,"#CCAA66, #FFECBF, #B5DE9F, #6ABBD8, #3484C9, #45508A","0, 5, 10, 15, 20, 25",FALSE,TRUE
+ClimateStatistics,change-sdii,"annual,winter,spring,summer,autumn","#CD9E51, #E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30","-8, -4, 0, 4, 8, 12, 16, 20",TRUE,TRUE
+ReferenceIndices,pr997,annual,"#CCAA66, #E8CC96, #F2E9AF, #C1DF86, #A9DAAE, #80C7CD, #34A9E5, #2E8AD1, #3E6CAB, #45508A","0, 20, 40, 60, 80, 100, 120, 140, 160, 180",FALSE,TRUE
+ClimateStatistics,change-pr997,"annual,winter,spring,summer,autumn","#92570E, #C79141, #E7D097, #DEE9D3, #9AD7CE, #47A49B, #076C64, #003C30","-20, -10, 0, 10, 20, 30, 40",TRUE,TRUE
+ReferenceIndices,diff-pr997p,"annual,winter,spring,summer,autumn","#D1A65A, #F2E2B9, #BCE5DF, #5FB5AB, #0F746C, #003C30","-0.5, 0, 0.5, 1, 1.5",TRUE,TRUE
+ReferenceIndices,pr20mm,annual,"#CCAA66, #E8CC96, #F2E9AF, #C1DF86, #A9DAAE, #80C7CD, #34A9E5, #2E8AD1, #3E6CAB, #45508A","0, 10, 20, 30, 40, 50, 60, 70, 80,90",FALSE,TRUE
+,pr20mm,"winter,spring,summer,autumn","#CCAA66, #FFECBF, #B5DE9F, #6ABBD8, #3484C9, #45508A","0, 5, 10, 15, 20, 25",TRUE,TRUE
+ClimateStatistics,diff-pr20mm,"annual,winter,spring,summer,autumn","#E5CC90, #F1E8C6, #CBE9E1, #93D4CA, #57AFA5, #22857D, #005E55, #003C30","-2, 0, 2, 4, 6, 8, 10",TRUE,TRUE
+ReferenceIndices,prmax5day,annual,"#CCAA66, #ECD19C, #E3E69D, #B9DE95, #9CD6C1, #56B4DD, #2692DB, #3C70B0, #45508A","0, 50, 100, 150, 200, 250, 300, 350, 400",FALSE,TRUE
+ClimateStatistics,change-prmax5day,"annual,winter,spring,summer,autumn","#C18633, #D7B36A, #E9D39D, #EEE8C8, #CEE9DF, #A0DAD1, #6EC0B5, #3A9B92, #147870, #00594F, #003C30","-15, -10, -5, 0, 5, 10, 15, 20, 25, 30",TRUE,TRUE
+ReferenceIndices,sfcWind,annual,"#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046","1,3,5,7,9",TRUE,TRUE
+ReferenceIndices,sfcWind,"winter,spring,summer,autumn","#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046","1,3,5,7,9",TRUE,TRUE
+ClimateStatistics,change-sfcWind,"annual,winter,spring,summer,autumn","#40004B, #6C2278, #8C569C, #AB88BB, #CCB1D5, #E5D6E6, #DAEDD4, #B3E0AD, #7CC27D, #439A51, #166E31, #00441B","-5,-4,-3,-2,-1,0,1,2,3,4,5",TRUE,TRUE
+ReferenceIndices,sfcWind99,annual,"#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046","4,8,12,16,20",TRUE,TRUE
+ClimateStatistics,change-sfcWind99,"annual,winter,spring,summer,autumn","#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83","-3,-2,-1,0,1,2,3",TRUE,TRUE
+ReferenceIndices,sfcWind100yrRP,annual,"#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046","8,12,16,20,24",TRUE,TRUE
+ClimateStatistics,change-sfcWind100yrRP,"annual,winter,spring,summer,autumn","#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83","-15,-10,-5,0,5,10,15",TRUE,TRUE
+ReferenceIndices,sfcWind10ms,annual,"#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046","15,30,45,60,75",TRUE,TRUE
+ClimateStatistics,change-sfcWind10ms,"annual,winter,spring,summer,autumn","#1b7837,#5aae61,#a6dba0,#d9f0d3,#e7d4e8,#c2a5cf,#9970ab,#762a83","-3,-2,-1,0,1,2,3",TRUE,TRUE
+ReferenceIndices,mrro,annual,"#e6c991,#ffecbf,#c7e07b,#b5de9f,#9cd6c1,#6abbd8,#1aa0ed,#3484c9, #406aa8","500,1000,1500,2000,2500,3000,3500,4000",TRUE,TRUE
+ReferenceIndices,mrro,"winter,spring,summer,autumn","#8f6d28,#e6c991,#ffecbf,#c7e07b,#9cd6c1,#1aa0ed,#3484c9,#406aa8,#45508a","50,100,200,300,400,500,1000,1500",TRUE,TRUE
+ClimateStatistics,change-mrro,annual,"#bf812d,#dfc27d,#f6e8c3,#f5f5f5,#c7eae5,#80cdc1,#35978f,#01665e","-10, -5,-1,1,5,10,15",TRUE,TRUE
+ClimateStatistics,change-mrro,"winter,spring,summer,autumn","#8c510a, #bf812d,#dfc27d,#f6e8c3,#f5f5f5,#c7eae5,#80cdc1,#35978f,#01665e","-75,-35,-15,-5,5,15,35,75",TRUE,TRUE
+ClimateStatistics,diff-mrro,"annual,winter,spring,summer,autumn","#8c510a, #bf812d,#dfc27d,#f6e8c3,#f5f5f5,#c7eae5,#80cdc1,#35978f,#01665e","-400, -200, -100, -50, 50, 100, 200, 400",TRUE,TRUE
+ReferenceIndices,evap,"annual, summer","#ccaa66,#ffecbf,#9cd6c1,#1aa0ed,#45508a","100, 200, 300, 400",TRUE,TRUE
+ClimateStatistics,change-evap,"annual, summer","#c7eae5,#80cdc1,#35978f,#01665e, #003c30","10,20,30,40",TRUE,TRUE
+ClimateStatistics,diff-evap,"annual, summer","#c7eae5,#80cdc1,#35978f,#01665e, #003c30","5,20,35,50",TRUE,TRUE
+ReferenceIndices,swemax,,,,TRUE,TRUE
+ClimateStatistics,diff-swemax,,,,TRUE,TRUE
+ReferenceIndices,swe60ge,,"#ccf57a, #d9ffff, #b3ffff, #80ecff, #40ccff, #0099ff, #0019ff, #000099, #00005b","0, 30, 60, 90, 120, 150, 180, 210, 240",FALSE,TRUE
+ClimateStatistics,diff-swe60ge,,"#8D7B68, #A4907C, #C8B6A6, #F1DEC9, #D3E8F7","-90, -60, -30, 0",TRUE,TRUE
+ReferenceIndices,swe120ge,,,,FALSE,TRUE
+ClimateStatistics,diff-swe120ge,,,,TRUE,TRUE
+ReferenceIndices,mrso,,"#ccaa66,#ffecbf,#9cd6c1,#1aa0ed,#45508a","50, 75, 100, 125",TRUE,TRUE
+ClimateStatistics,diff-mrso,,,,TRUE,TRUE
+ReferenceIndices,mrro30plt,,,,TRUE,TRUE
+ClimateStatistics,diff-mrro30plt,,,,TRUE,TRUE
+ClimateStatistics,diff-spei7plt,,,,TRUE,TRUE
