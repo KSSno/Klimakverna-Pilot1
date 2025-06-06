@@ -1,4 +1,4 @@
-name: klima
+name: klimakverne
 channels:
   - bioconda
   - conda-forge
@@ -15,5 +15,7 @@ dependencies:
   - python-cdo
   - plotnine
   - pip
-  - pip:
-    - git+https://github.com/metno/py-mmd-tools.git 
+  - conda-forge::gdal
+  - geopandas
+  - rasterio
+  - r-base
