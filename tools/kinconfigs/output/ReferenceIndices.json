@@ -26,8 +26,8 @@
       {
         "colors": "#114781,#2A72B2,#4E9AC6,#92C5DE,#C8E0ED,#FBD3BD,#F7BC9F,#F4A582,#CB4B43,#BC2C34",
         "intervals": "-8,-6,-4,-2,0,2,4,6,8",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "tas_annual"
         ]
@@ -35,8 +35,8 @@
       {
         "colors": "#114781,#1D5EA1,#4E9AC6,#92C5DE,#ACD2E5,#F7BC9F,#F4A582,#DA6954,#BC2C34,#870A24",
         "intervals": "-16,-12,-8,-4,0,4,8,12,16",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "tas_winter",
           "tas_spring",
@@ -83,15 +83,15 @@
       {
         "colors": "#F3F3F3,#ccfafc,#89F2FA,#30C3CD,#1697B7,#0A6880",
         "intervals": "1,100,150,200,250",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
-          "tas0lt_annual"
+          "tas0lt"
         ]
       }
     ],
     "varnames": [
-      "tas0lt_annual"
+      "tas0lt"
     ]
   },
   "tas10gt": {
@@ -124,15 +124,15 @@
       {
         "colors": "#F3F3F3,#ffe5e5,#ffbfbf,#e99696,#cc6161,#a84848",
         "intervals": "1,30,60,90,120",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
-          "tas10gt_annual"
+          "tas10gt"
         ]
       }
     ],
     "varnames": [
-      "tas10gt_annual"
+      "tas10gt"
     ]
   },
   "gsl": {
@@ -165,15 +165,15 @@
       {
         "colors": "#ffffcc,#d9f0a3,#addd8e,#78c679,#41ab5d,#006837,#004529",
         "intervals": "60,90,120,150,180,210",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
-          "gsl_annual"
+          "gsl"
         ]
       }
     ],
     "varnames": [
-      "gsl_annual"
+      "gsl"
     ]
   },
   "degday5ge": {
@@ -202,8 +202,19 @@
         "threshold": 5.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#edf8e9,#a1d99b,#74c476,#41ab5d,#238b45,#005a32",
+        "intervals": "250,500,750,1000,1250",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
+        "variables": [
+          "degday5ge"
+        ]
+      }
+    ],
     "varnames": [
-      "degday5ge_annual"
+      "degday5ge"
     ]
   },
   "degday17le": {
@@ -232,8 +243,19 @@
         "threshold": 17.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#fee391,#fe9929,#993404",
+        "intervals": "4000,6000",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
+        "variables": [
+          "degday17le"
+        ]
+      }
+    ],
     "varnames": [
-      "degday17le_annual"
+      "degday17le"
     ]
   },
   "degday22ge": {
@@ -263,7 +285,7 @@
       }
     },
     "varnames": [
-      "degday22ge_annual"
+      "degday22ge"
     ]
   },
   "fdgs": {
@@ -292,15 +314,15 @@
       {
         "colors": "#F3F3F3,#bdc9e1,#67a9cf,#016c59",
         "intervals": "0.5,5,10",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
-          "fdgs_annual"
+          "fdgs"
         ]
       }
     ],
     "varnames": [
-      "fdgs_annual"
+      "fdgs"
     ]
   },
   "tasmax": {
@@ -330,8 +352,8 @@
       {
         "colors": "#114781,#2A72B2,#4E9AC6,#92C5DE,#C8E0ED,#FBD3BD,#F7BC9F,#F4A582,#CB4B43,#BC2C34",
         "intervals": "-8,-6,-4,-2,0,2,4,6,8",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "tasmax_annual"
         ]
@@ -339,8 +361,8 @@
       {
         "colors": "#114781,#1D5EA1,#4E9AC6,#92C5DE,#ACD2E5,#F7BC9F,#F4A582,#DA6954,#BC2C34,#870A24",
         "intervals": "-16,-12,-8,-4,0,4,8,12,16",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "tasmax_winter",
           "tasmax_spring",
@@ -384,8 +406,8 @@
       {
         "colors": "#114781,#2A72B2,#4E9AC6,#92C5DE,#C8E0ED,#FBD3BD,#F7BC9F,#F4A582,#CB4B43,#BC2C34",
         "intervals": "-8,-6,-4,-2,0,2,4,6,8",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "tasmin_annual"
         ]
@@ -393,8 +415,8 @@
       {
         "colors": "#114781,#1D5EA1,#4E9AC6,#92C5DE,#ACD2E5,#F7BC9F,#F4A582,#DA6954,#BC2C34,#870A24",
         "intervals": "-16,-12,-8,-4,0,4,8,12,16",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "tasmin_winter",
           "tasmin_spring",
@@ -437,8 +459,8 @@
       {
         "colors": "#FFBFBF, #D45B48,#A60000, #750202",
         "intervals": "6,8,10",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "dtr_annual"
         ]
@@ -446,8 +468,8 @@
       {
         "colors": "#FFBFBF, #D45B48,#A60000, #750202",
         "intervals": "6,8,10",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "dtr_winter",
           "dtr_spring",
@@ -493,8 +515,8 @@
       {
         "colors": "#8C510A,#BF812D, #F6E8C3, #C7EAE5,#35978F",
         "intervals": "50,75,100,125",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "dzc_annual"
         ]
@@ -502,8 +524,8 @@
       {
         "colors": "#F3F3F3,#BF812D, #F6E8C3, #C7EAE5,#35978F",
         "intervals": "1,15,30,45",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "dzc_winter",
           "dzc_spring",
@@ -550,15 +572,15 @@
       {
         "colors": "#bbffff,#7fffd4,#40e0d0,#008b8b,#27408b",
         "intervals": "100,150,200,250",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
-          "fd_annual"
+          "fd"
         ]
       }
     ],
     "varnames": [
-      "fd_annual"
+      "fd"
     ]
   },
   "tasmin20ge": {
@@ -591,15 +613,15 @@
       {
         "colors": "#ffffff,#bc8f8f,#8B0000",
         "intervals": "0.01,0.1",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
-          "tasmin20ge_annual"
+          "tasmin20ge"
         ]
       }
     ],
     "varnames": [
-      "tasmin20ge_annual"
+      "tasmin20ge"
     ]
   },
   "tasmax20ge": {
@@ -632,15 +654,15 @@
       {
         "colors": "#ffffff,#FFD700,#ff8c00,#ff4500,#CD0000,#8B0000",
         "intervals": "1,15,30,45,60",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
-          "tasmax20ge_annual"
+          "tasmax20ge"
         ]
       }
     ],
     "varnames": [
-      "tasmax20ge_annual"
+      "tasmax20ge"
     ]
   },
   "norheatwave": {
@@ -672,15 +694,15 @@
       {
         "colors": "#ffffff,#ffefd5,#eeb4b4,#ff4500,#cd0000,#551a8b",
         "intervals": "0.1,0.5,1,1.5,2",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
-          "norheatwave_annual"
+          "norheatwave"
         ]
       }
     ],
     "varnames": [
-      "norheatwave_annual"
+      "norheatwave"
     ]
   },
   "pr": {
@@ -710,8 +732,8 @@
       {
         "colors": "#CCAA66, #D9B97B, #E6C991, #F2DAA8, #FFECBF, #E3E69D, #C7E07B, #BEDF8D, #B5DE9F, #A8DAB0, #9CD6C1, #83C8CC, #6ABBD8, #42ADE2, #1AA0ED, #2692DB, #3484C9, #3A77B8, #406AA8, #425C98, #45508A",
         "intervals": "300, 400, 500, 600, 700, 800, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "pr_annual"
         ]
@@ -720,7 +742,7 @@
         "colors": "#CCAA66, #ECD19C, #E3E69D, #B9DE95, #9CD6C1, #56B4DD, #2692DB, #3C70B0, #45508A",
         "intervals": "0, 100, 200, 300, 400, 500, 750, 1000, 1500",
         "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openHighestInterval": true,
         "variables": [
           "pr_winter",
           "pr_spring",
@@ -767,8 +789,8 @@
       {
         "colors": "#CCAA66, #F0D8A4, #CFE184, #ADDBA8, #78C2D1, #1D9CE7, #3A75B6, #45508A",
         "intervals": "85, 105, 125, 145, 165, 185, 205",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "pr1mm_annual"
         ]
@@ -777,7 +799,7 @@
         "colors": "#CCAA66, #F6E0AF, #C1DF86, #9CD6C1, #34A9E5, #377BBE, #45508A",
         "intervals": "0, 10, 20, 30, 40, 50, 60",
         "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openHighestInterval": true,
         "variables": [
           "pr1mm_winter",
           "pr1mm_spring",
@@ -822,14 +844,14 @@
         "colors": "#CCAA66, #FFECBF, #B5DE9F, #6ABBD8, #3484C9, #45508A",
         "intervals": "0, 5, 10, 15, 20, 25",
         "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openHighestInterval": true,
         "variables": [
-          "sdii_annual"
+          "sdii"
         ]
       }
     ],
     "varnames": [
-      "sdii_annual"
+      "sdii"
     ]
   },
   "pr95ptot": {
@@ -893,14 +915,14 @@
         "colors": "#CCAA66, #E8CC96, #F2E9AF, #C1DF86, #A9DAAE, #80C7CD, #34A9E5, #2E8AD1, #3E6CAB, #45508A",
         "intervals": "0, 20, 40, 60, 80, 100, 120, 140, 160, 180",
         "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openHighestInterval": true,
         "variables": [
-          "pr997_annual"
+          "pr997"
         ]
       }
     ],
     "varnames": [
-      "pr997_annual"
+      "pr997"
     ]
   },
   "pr20mm": {
@@ -934,7 +956,7 @@
         "colors": "#CCAA66, #E8CC96, #F2E9AF, #C1DF86, #A9DAAE, #80C7CD, #34A9E5, #2E8AD1, #3E6CAB, #45508A",
         "intervals": "0, 10, 20, 30, 40, 50, 60, 70, 80,90",
         "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openHighestInterval": true,
         "variables": [
           "pr20mm_annual"
         ]
@@ -972,14 +994,14 @@
         "colors": "#CCAA66, #ECD19C, #E3E69D, #B9DE95, #9CD6C1, #56B4DD, #2692DB, #3C70B0, #45508A",
         "intervals": "0, 50, 100, 150, 200, 250, 300, 350, 400",
         "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openHighestInterval": true,
         "variables": [
-          "prmax5day_annual"
+          "prmax5day"
         ]
       }
     ],
     "varnames": [
-      "prmax5day_annual"
+      "prmax5day"
     ]
   },
   "sfcWind": {
@@ -1009,8 +1031,8 @@
       {
         "colors": "#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046",
         "intervals": "1,3,5,7,9",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "sfcWind_annual"
         ]
@@ -1018,8 +1040,8 @@
       {
         "colors": "#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046",
         "intervals": "1,3,5,7,9",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "sfcWind_winter",
           "sfcWind_spring",
@@ -1065,15 +1087,15 @@
       {
         "colors": "#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046",
         "intervals": "4,8,12,16,20",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
-          "sfcWind99_annual"
+          "sfcWind99"
         ]
       }
     ],
     "varnames": [
-      "sfcWind99_annual"
+      "sfcWind99"
     ]
   },
   "sfcWind997": {
@@ -1131,15 +1153,15 @@
       {
         "colors": "#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046",
         "intervals": "8,12,16,20,24",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
-          "sfcWind100yrRP_annual"
+          "sfcWind100yrRP"
         ]
       }
     ],
     "varnames": [
-      "sfcWind100yrRP_annual"
+      "sfcWind100yrRP"
     ]
   },
   "sfcWind10ms": {
@@ -1171,15 +1193,15 @@
       {
         "colors": "#b4dbad,#62c7b7,#30a5d3,#5d5dbc,#5b278d,#310046",
         "intervals": "15,30,45,60,75",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
-          "sfcWind10ms_annual"
+          "sfcWind10ms"
         ]
       }
     ],
     "varnames": [
-      "sfcWind10ms_annual"
+      "sfcWind10ms"
     ]
   },
   "mrro": {
@@ -1208,8 +1230,8 @@
       {
         "colors": "#e6c991,#ffecbf,#c7e07b,#b5de9f,#9cd6c1,#6abbd8,#1aa0ed,#3484c9, #406aa8",
         "intervals": "500,1000,1500,2000,2500,3000,3500,4000",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "mrro_annual"
         ]
@@ -1217,8 +1239,8 @@
       {
         "colors": "#8f6d28,#e6c991,#ffecbf,#c7e07b,#9cd6c1,#1aa0ed,#3484c9,#406aa8,#45508a",
         "intervals": "50,100,200,300,400,500,1000,1500",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "mrro_winter",
           "mrro_spring",
@@ -1260,9 +1282,9 @@
     "palettes": [
       {
         "colors": "#ccaa66,#ffecbf,#9cd6c1,#1aa0ed,#45508a",
-        "intervals": "100, 200, 300, 400",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "intervals": "100,200,300,400",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "evap_annual",
           "evap_summer"
@@ -1295,6 +1317,17 @@
         "title_no": "Største årlige snømengde for år, midlet over perioden 1991–2020."
       }
     },
+    "palettes": [
+      {
+        "colors": "#D9FFFF, #80ECFF, #38C9FE, #0099FF, #0019FF, #000099",
+        "intervals": "0,200,400,600,800,1000",
+        "openLowestInterval": false,
+        "openHighestInterval": true,
+        "variables": [
+          "swemax"
+        ]
+      }
+    ],
     "varnames": [
       "swemax"
     ]
@@ -1326,9 +1359,9 @@
     "palettes": [
       {
         "colors": "#ccf57a, #d9ffff, #b3ffff, #80ecff, #40ccff, #0099ff, #0019ff, #000099, #00005b",
-        "intervals": "0, 30, 60, 90, 120, 150, 180, 210, 240",
+        "intervals": "0,30,60,90,120,150,180,210,240",
         "openLowestInterval": false,
-        "openHighestInterval": false,
+        "openHighestInterval": true,
         "variables": [
           "swe60ge"
         ]
@@ -1362,6 +1395,17 @@
         "threshold": 120.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#ccf57a, #d9ffff, #b3ffff, #80ecff, #40ccff, #0099ff, #0019ff, #000099, #00005b",
+        "intervals": "0,30,60,90,120,150,180,210,240",
+        "openLowestInterval": false,
+        "openHighestInterval": true,
+        "variables": [
+          "swe120ge"
+        ]
+      }
+    ],
     "varnames": [
       "swe120ge"
     ]
@@ -1391,9 +1435,9 @@
     "palettes": [
       {
         "colors": "#ccaa66,#ffecbf,#9cd6c1,#1aa0ed,#45508a",
-        "intervals": "50, 75, 100, 125",
-        "openLowestInterval": false,
-        "openHighestInterval": false,
+        "intervals": "50,75,100,125",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
         "variables": [
           "mrso"
         ]
@@ -1427,6 +1471,17 @@
         "threshold": 30.0
       }
     },
+    "palettes": [
+      {
+        "colors": "#ffecbf #ccaa66 #8f6d28 #6e4f12 #000000",
+        "intervals": "20,30,40,50",
+        "openLowestInterval": true,
+        "openHighestInterval": true,
+        "variables": [
+          "mrro30plt"
+        ]
+      }
+    ],
     "varnames": [
       "mrro30plt"
     ]
